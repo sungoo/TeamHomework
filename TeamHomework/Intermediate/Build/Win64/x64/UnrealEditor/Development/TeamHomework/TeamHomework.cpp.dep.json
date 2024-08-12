@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\source\\teamhomework\\teamhomework.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\teamhomeworkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\teamhomework\\definitions.teamhomework.h",
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\source\\teamhomework\\teamhomework.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
