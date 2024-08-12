@@ -11,10 +11,14 @@
     <None Include="..\..\Source\TeamHomeworkEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
       <Filter>Config</Filter>
     </None>
     <None Include="..\..\Config\DefaultEngine.ini">
@@ -29,6 +33,30 @@
     <Filter Include="Source\TeamHomework">
       <UniqueIdentifier>{F9F502D8-4D5E-3C58-BFA4-22D2455EEEFC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\Creature.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Creature.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyAnimInstance.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyAnimInstance.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyInventoryComponent.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyInventoryComponent.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyStatComponent.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyStatComponent.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <None Include="..\..\Source\TeamHomework\TeamHomework.Build.cs">
       <Filter>Source\TeamHomework</Filter>
     </None>
