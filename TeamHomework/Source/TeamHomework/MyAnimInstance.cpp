@@ -2,4 +2,60 @@
 
 
 #include "MyAnimInstance.h"
+#include "Creature.h"
+#include "GameFramework/PawnMovementComponent.h"
+#include "Animation/AnimMontage.h"
 
+UMyAnimInstance::UMyAnimInstance()
+{
+	static ConstructorHelpers::FObjectFinder<UAnimMontage> am
+	(TEXT("/Script/Engine.AnimMontage'/Game/BluePrint/Animation/MyAnimMontage.MyAnimMontage'"));
+
+	if (am.Succeeded())
+	{
+		_myAnimMontage = am.Object;
+	}
+}
+
+void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
+{
+	ACreature* creature = Cast<ACreature>(TryGetPawnOwner());
+	if (creature != nullptr)
+	{
+		_speed = creature->GetVelocity().Size();
+		_isFalling = creature->GetMovementComponent()->IsFalling();
+		_vertical = _vertical + (creature->_vertical - _vertical) * DeltaSeconds;
+		_horizontal = _horizontal + (creature->_horizontal - _horizontal) * DeltaSeconds;
+		_isDead = (creature->GetcurHP() <= 0);
+	}
+}
+
+void UMyAnimInstance::PlayAttackMontage()
+{
+	if (!Montage_IsPlaying(_myAnimMontage))
+	{
+		Montage_Play(_myAnimMontage);
+
+		// AMyCharacter* myCharacter = Cast<AMyCharacter>(TryGetPawnOwner());
+
+		// 구독신청을 한다.
+		// myCharacter->_myDelegate1.BindUObject(this, &UMyAnimInstance::DelegateTest);
+		// myCharacter->_myDelegate3.BindUObject(this, &UMyAnimInstance::DelegateTest2);
+	}
+}
+
+void UMyAnimInstance::JumpToSection(int32 sectionIndex)
+{
+	FName sectionName = FName(*FString::Printf(TEXT("Attack%d"), sectionIndex));
+	Montage_JumpToSection(sectionName);
+}
+
+void UMyAnimInstance::AnimNotify_AttackHit()
+{
+	_attackDelegate.Broadcast();
+}
+
+void UMyAnimInstance::AnimNotify_Death()
+{
+	_deathDelegate.Broadcast();
+}
