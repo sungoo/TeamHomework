@@ -21,20 +21,21 @@ ACreature::ACreature()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> sm(
-		TEXT("/Game/ParagonSunWukong/Characters/Heroes/Wukong/Meshes/Wukong.Wukong'")
-	);
-	
-	if (sm.Succeeded())
-	{
-		GetMesh()->SetSkeletalMesh(sm.Object);
-	}
-	
-	//Stat
-	_statCom = CreateDefaultSubobject<UMyStatComponent>(TEXT("Stat"));
-	//Inventory
-	_inventoryCom = CreateDefaultSubobject<UMyInventoryComponent>(TEXT("Inventory"));
+
+
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> sm
+	(TEXT("/Script/Engine.SkeletalMesh'/Game/ParagonSunWukong/Characters/Heroes/Wukong/Meshes/Wukong.Wukong'"));
+	 // );
+	 // 
+	 // if (sm.Succeeded())
+	 // {
+	 // 	GetMesh()->SetSkeletalMesh(sm.Object);
+	 // }
+	 
+	 //Stat
+	 _statCom = CreateDefaultSubobject<UMyStatComponent>(TEXT("Stat"));
+	 //Inventory
+	 _inventoryCom = CreateDefaultSubobject<UMyInventoryComponent>(TEXT("Inventory"));
 
 }
 

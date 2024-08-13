@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\teamhomework\\teamhomework\\source\\teamhomework\\myinventorycomponent.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\teamhomeworkeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\teamhomework\\definitions.teamhomework.h",
+            "d:\\teamhomework\\teamhomework\\source\\teamhomework\\myinventorycomponent.h",
+            "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\myinventorycomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

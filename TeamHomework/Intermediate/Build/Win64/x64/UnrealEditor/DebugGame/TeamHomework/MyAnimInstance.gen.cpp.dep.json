@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\myaniminstance.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\teamhomeworkeditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\teamhomework\\definitions.teamhomework.h",
+            "d:\\teamhomework\\teamhomework\\source\\teamhomework\\myaniminstance.h",
+            "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\myaniminstance.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
