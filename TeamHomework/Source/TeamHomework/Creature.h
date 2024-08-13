@@ -101,8 +101,6 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Item, meta = (AllowPrivateAccess = "true"))
 	class UMyInventoryComponent* _inventoryCom;
 
-	////클래스를 담을 수 있는 자료형
-	////TSubclassOf<class UMyInventoryUI>
 	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = UI, meta = (AllowPrivateAccess = "true"))
 	//class UWidgetComponent* _hpBarWidget;
 

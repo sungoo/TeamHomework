@@ -21,7 +21,16 @@ ACreature::ACreature()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> sm(
+		TEXT("/Script/Engine.SkeletalMesh'/Game/ParagonSunWukong/Characters/Heroes/Wukong/Meshes/Wukong.Wukong'")
+	);
 
+	if (sm.Succeeded())
+	{
+		GetMesh()->SetSkeletalMesh(sm.Object);
+	}
+	
 	//Stat
 	_statCom = CreateDefaultSubobject<UMyStatComponent>(TEXT("Stat"));
 	//Inventory
@@ -49,7 +58,7 @@ void ACreature::PostInitializeComponents()
 		//_animInstance->_deathDelegate.AddUObject(this, &AMyCharacter::Disable);
 	}
 
-	//_statCom->SetLevelAndInit(1);
+	_statCom->SetLevelAndInit(1);
 
 	//_hpBarWidget->InitWidget();
 	//auto hpBar = Cast<UMyHpBar>(_hpBarWidget->GetUserWidgetObject());
@@ -159,9 +168,9 @@ void ACreature::AttackHit()
 		UE_LOG(LogTemp, Log, TEXT("HitActor : %s"), *hitResult.GetActor()->GetName());
 
 		//Todo : Takedamage
-		/*FDamageEvent damageEvent;
+		FDamageEvent damageEvent;
 		hitResult.GetActor()->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
-		_hitPoint = hitResult.ImpactPoint;*/
+		_hitPoint = hitResult.ImpactPoint;
 
 		//_attackHitEvent.Broadcast();
 		//EffectManager->Play("Shoot", _hitPoint);
@@ -177,7 +186,7 @@ float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, ACont
 {
 	float damage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
 
-	//float damaged = -_statCom->AddCurHP(-Damage);
+	float damaged = -_statCom->AddCurHP(-Damage);
 
 	//if (_animInstance != nullptr && _statCom->GetCurHP() > 0)
 	//{
@@ -196,7 +205,6 @@ float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, ACont
 
 int32 ACreature::GetcurHP()
 {
-	//return _statCom->GetCurHP();
-	return 0;
+	return _statCom->GetCurHP();
 }
 
