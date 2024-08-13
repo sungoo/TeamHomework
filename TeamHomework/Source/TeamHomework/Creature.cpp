@@ -23,7 +23,7 @@ ACreature::ACreature()
 	PrimaryActorTick.bCanEverTick = true;
 	
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> sm(
-		TEXT("/Game/ParagonSunWukong/Characters/Heroes/Wukong/Meshes/Wukong.Wukong'")
+		TEXT("")
 	);
 	
 	if (sm.Succeeded())

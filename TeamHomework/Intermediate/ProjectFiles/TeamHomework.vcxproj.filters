@@ -45,6 +45,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\MyAnimInstance.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyHpBar.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyHpBar.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyInventoryComponent.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
