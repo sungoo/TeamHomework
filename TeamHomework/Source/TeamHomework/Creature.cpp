@@ -21,6 +21,7 @@ ACreature::ACreature()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+<<<<<<< HEAD
 
 
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> sm
@@ -36,6 +37,22 @@ ACreature::ACreature()
 	 _statCom = CreateDefaultSubobject<UMyStatComponent>(TEXT("Stat"));
 	 //Inventory
 	 _inventoryCom = CreateDefaultSubobject<UMyInventoryComponent>(TEXT("Inventory"));
+=======
+	
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> sm(
+		TEXT("")
+	);
+	
+	if (sm.Succeeded())
+	{
+		GetMesh()->SetSkeletalMesh(sm.Object);
+	}
+	
+	//Stat
+	_statCom = CreateDefaultSubobject<UMyStatComponent>(TEXT("Stat"));
+	//Inventory
+	_inventoryCom = CreateDefaultSubobject<UMyInventoryComponent>(TEXT("Inventory"));
+>>>>>>> HP-bar-component
 
 }
 
