@@ -24,5 +24,13 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+	//Succeed = true / fail = false
+	bool PutItem(class AMyItem* item);
+	bool DropItem(int32 itemIndex);
+private:
+	UPROPERTY()
+	TArray<class AMyItem*> _items;
+
+	UPROPERTY()
+	int32 _inventoryMax;
 };

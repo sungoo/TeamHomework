@@ -7,7 +7,9 @@
         "Includes": [
             "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\teamhomework\\definitions.teamhomework.h",
             "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\source\\teamhomework\\myinventorycomponent.h",
-            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\myinventorycomponent.generated.h"
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\myinventorycomponent.generated.h",
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\source\\teamhomework\\myitem.h",
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\myitem.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -67,8 +67,8 @@ void ACreature::PostInitializeComponents()
 	if (_animInstance->IsValidLowLevel())
 	{
 		_animInstance->OnMontageEnded.AddDynamic(this, &ACreature::OnAttackEnded);
-		//_animInstance->_attackDelegate.AddUObject(this, &AMyCharacter::AttackHit);
-		//_animInstance->_deathDelegate.AddUObject(this, &AMyCharacter::Disable);
+		_animInstance->_attackDelegate.AddUObject(this, &ACreature::AttackHit);
+		_animInstance->_deathDelegate.AddUObject(this, &ACreature::Disable);
 	}
 
 	_statCom->SetLevelAndInit(1);
@@ -78,14 +78,12 @@ void ACreature::PostInitializeComponents()
 	if (hpBar)
 	{
 		_statCom->_hpChangedDelegate.AddUObject(hpBar, &UMyHpBar::SetHpBarValue);
-		//_statCom->_hpChangedDelegate.AddUObject(this, &AMyCharacter::PlayHitNiagara);
-		//_statCom->_deathDelegate.AddUObject(this, &AMyCharacter::PlayDeathNiagara);
 	}
 }
 
 void ACreature::Init()
 {
-	//_statCom->Reset();
+	_statCom->Reset();
 
 	_isActive = true;
 	SetActorHiddenInGame(false);
@@ -201,18 +199,18 @@ float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, ACont
 
 	float damaged = -_statCom->AddCurHP(-Damage);
 
-	//if (_animInstance != nullptr && _statCom->GetCurHP() > 0)
-	//{
-	//	_animInstance->PlayDamagedMontage();
-	//}
+	if (_animInstance != nullptr && _statCom->GetCurHP() > 0)
+	{
+		_animInstance->PlayAttackMontage();
+	}
 
-	//if (_animInstance != nullptr && _statCom->GetCurHP() <= 0)
-	//{
-	//	_statCom->AddCurHP(-999);// _hp = 0
-	//	_isActive = false;
-	//	_animInstance->PlayDeathMontage();
-	//	DropAllItems();
-	//}
+	if (_animInstance != nullptr && _statCom->GetCurHP() <= 0)
+	{
+		_statCom->AddCurHP(-999);// _hp = 0
+		_isActive = false;
+		
+		//DropAllItems();
+	}
 	return damage;
 }
 
