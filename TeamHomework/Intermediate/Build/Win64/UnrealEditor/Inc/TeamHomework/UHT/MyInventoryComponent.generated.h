@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAMHOMEWORK_MyInventoryComponent_generated_h
 
-#define FID_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMyInventoryComponent(); \
 	friend struct Z_Construct_UClass_UMyInventoryComponent_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UMyInventoryComponent)
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UMyInventoryComponent(UMyInventoryComponent&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~UMyInventoryComponent();
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_10_PROLOG
-#define FID_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_GENERATED_BODY \
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_10_PROLOG
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_INCLASS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class UMyInventoryComponent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_MyInventoryComponent_h
+#define CURRENT_FILE_ID FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
