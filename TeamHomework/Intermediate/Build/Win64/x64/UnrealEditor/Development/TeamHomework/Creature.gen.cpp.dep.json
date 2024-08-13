@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\creature.gen.cpp",
+        "Source": "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\creature.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\teamhomeworkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\teamhomeworkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\teamhomework\\definitions.teamhomework.h",
-            "d:\\teamhomework\\teamhomework\\source\\teamhomework\\creature.h",
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\teamhomework\\definitions.teamhomework.h",
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\source\\teamhomework\\creature.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
@@ -15,7 +15,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
-            "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\creature.generated.h"
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\creature.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
