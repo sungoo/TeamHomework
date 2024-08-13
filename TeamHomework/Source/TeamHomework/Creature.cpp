@@ -3,6 +3,8 @@
 
 #include "Creature.h"
 
+#include "Materials/MaterialParameterCollection.h"
+
 #include "MyAnimInstance.h"
 #include "MyInventoryComponent.h"
 #include "MyStatComponent.h"
@@ -26,29 +28,29 @@ ACreature::ACreature()
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> sm
 	(TEXT("/Script/Engine.SkeletalMesh'/Game/ParagonSunWukong/Characters/Heroes/Wukong/Meshes/Wukong.Wukong'"));
 	 
-	 if (sm.Succeeded())
-	 {
-	 	GetMesh()->SetSkeletalMesh(sm.Object);
-	 }
+	if (sm.Succeeded())
+	{
+	GetMesh()->SetSkeletalMesh(sm.Object);
+	}
 	 
-	 //Stat
-	 _statCom = CreateDefaultSubobject<UMyStatComponent>(TEXT("Stat"));
-	 //Inventory
-	 _inventoryCom = CreateDefaultSubobject<UMyInventoryComponent>(TEXT("Inventory"));
+	//Stat
+	_statCom = CreateDefaultSubobject<UMyStatComponent>(TEXT("Stat"));
+	//Inventory
+	_inventoryCom = CreateDefaultSubobject<UMyInventoryComponent>(TEXT("Inventory"));
 
-	 //hpbar
-	 _hpBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("Widget"));
-	 _hpBarWidget->SetupAttachment(GetMesh());
-	 _hpBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
-	 _hpBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 230.0f));
+	//hpbar
+	_hpBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("Widget"));
+	_hpBarWidget->SetupAttachment(GetMesh());
+	_hpBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
+	_hpBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 230.0f));
 
-	 static ConstructorHelpers::FClassFinder<UUserWidget> hpBar(
-		 TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/Blueprint/UI/MyHpBar_BP.MyHpBar_BP_C'")
-	 );
-	 if (hpBar.Succeeded())
-	 {
-		 _hpBarWidget->SetWidgetClass(hpBar.Class);
-	 }
+	static ConstructorHelpers::FClassFinder<UUserWidget> hpBar(
+		TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/Blueprint/UI/MyHpBar_BP.MyHpBar_BP_C'")
+	);
+	if (hpBar.Succeeded())
+	{
+		_hpBarWidget->SetWidgetClass(hpBar.Class);
+	}
 }
 
 //Called when the game starts or when spawned
