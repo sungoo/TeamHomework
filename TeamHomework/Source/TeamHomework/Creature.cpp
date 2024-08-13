@@ -6,6 +6,7 @@
 #include "MyAnimInstance.h"
 #include "MyInventoryComponent.h"
 #include "MyStatComponent.h"
+#include "MyHpBar.h"
 
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -35,6 +36,19 @@ ACreature::ACreature()
 	 //Inventory
 	 _inventoryCom = CreateDefaultSubobject<UMyInventoryComponent>(TEXT("Inventory"));
 
+	 //hpbar
+	 _hpBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("Widget"));
+	 _hpBarWidget->SetupAttachment(GetMesh());
+	 _hpBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
+	 _hpBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 230.0f));
+
+	 static ConstructorHelpers::FClassFinder<UUserWidget> hpBar(
+		 TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/Blueprint/UI/MyHpBar_BP.MyHpBar_BP_C'")
+	 );
+	 if (hpBar.Succeeded())
+	 {
+		 _hpBarWidget->SetWidgetClass(hpBar.Class);
+	 }
 }
 
 //Called when the game starts or when spawned
@@ -59,14 +73,14 @@ void ACreature::PostInitializeComponents()
 
 	_statCom->SetLevelAndInit(1);
 
-	//_hpBarWidget->InitWidget();
-	//auto hpBar = Cast<UMyHpBar>(_hpBarWidget->GetUserWidgetObject());
-	//if (hpBar)
-	//{
-	//	_statCom->_hpChangedDelegate.AddUObject(hpBar, &UMyHpBar::SetHpBarValue);
-	//	//_statCom->_hpChangedDelegate.AddUObject(this, &AMyCharacter::PlayHitNiagara);
-	//	//_statCom->_deathDelegate.AddUObject(this, &AMyCharacter::PlayDeathNiagara);
-	//}
+	_hpBarWidget->InitWidget();
+	auto hpBar = Cast<UMyHpBar>(_hpBarWidget->GetUserWidgetObject());
+	if (hpBar)
+	{
+		_statCom->_hpChangedDelegate.AddUObject(hpBar, &UMyHpBar::SetHpBarValue);
+		//_statCom->_hpChangedDelegate.AddUObject(this, &AMyCharacter::PlayHitNiagara);
+		//_statCom->_deathDelegate.AddUObject(this, &AMyCharacter::PlayDeathNiagara);
+	}
 }
 
 void ACreature::Init()

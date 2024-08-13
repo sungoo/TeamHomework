@@ -20,6 +20,7 @@ TEAMHOMEWORK_API UClass* Z_Construct_UClass_UMyInventoryComponent_NoRegister();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_UMyStatComponent_NoRegister();
 TEAMHOMEWORK_API UFunction* Z_Construct_UDelegateFunction_TeamHomework_Delegate_AttackHitEvent__DelegateSignature();
 TEAMHOMEWORK_API UFunction* Z_Construct_UDelegateFunction_TeamHomework_Delegate_Death__DelegateSignature();
+UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_TeamHomework();
 // End Cross Module References
 
@@ -320,6 +321,12 @@ struct Z_Construct_UClass_ACreature_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Creature.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__hpBarWidget_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "UI" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Creature.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp__attackHitEvent;
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp__deathEvent;
@@ -334,6 +341,7 @@ struct Z_Construct_UClass_ACreature_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__isActive;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__statCom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__inventoryCom;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__hpBarWidget;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -367,6 +375,7 @@ void Z_Construct_UClass_ACreature_Statics::NewProp__isActive_SetBit(void* Obj)
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__isActive = { "_isActive", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ACreature), &Z_Construct_UClass_ACreature_Statics::NewProp__isActive_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__isActive_MetaData), NewProp__isActive_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__statCom = { "_statCom", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _statCom), Z_Construct_UClass_UMyStatComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__statCom_MetaData), NewProp__statCom_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__inventoryCom = { "_inventoryCom", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _inventoryCom), Z_Construct_UClass_UMyInventoryComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__inventoryCom_MetaData), NewProp__inventoryCom_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__hpBarWidget = { "_hpBarWidget", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _hpBarWidget), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__hpBarWidget_MetaData), NewProp__hpBarWidget_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACreature_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__attackHitEvent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__deathEvent,
@@ -379,6 +388,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACreature
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__isActive,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__statCom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__inventoryCom,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__hpBarWidget,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACreature_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACreature_Statics::DependentSingletons[])() = {
@@ -421,10 +431,10 @@ ACreature::~ACreature() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 3014056786U) },
+		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 1780071572U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_333045323(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_1250238434(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

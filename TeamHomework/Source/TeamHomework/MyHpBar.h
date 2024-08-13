@@ -14,6 +14,7 @@ class TEAMHOMEWORK_API UMyHpBar : public UUserWidget
 {
 	GENERATED_BODY()
 
+public:
 	void SetHpBarValue(float ratio);
 
 private:
