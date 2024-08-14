@@ -12,9 +12,6 @@ class UInputMappingContext;
 class AMyUIManager;
 struct FInputActionValue;
 
-DECLARE_DELEGATE(DelegateTest1);
-DECLARE_DELEGATE_OneParam(DelegateTestOneParam, int32);
-DECLARE_DELEGATE_TwoParams(DelegateTestTwoParam, int32, int32);
 DECLARE_MULTICAST_DELEGATE(Delegate_AttackEnded);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDelegate_AttackHitEvent);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDelegate_Death);
