@@ -12,12 +12,12 @@ class UInputMappingContext;
 class AMyUIManager;
 struct FInputActionValue;
 
-DECLARE_DELEGATE(DelegateTest1);
-DECLARE_DELEGATE_OneParam(DelegateTestOneParam, int32);
-DECLARE_DELEGATE_TwoParams(DelegateTestTwoParam, int32, int32);
 DECLARE_MULTICAST_DELEGATE(Delegate_AttackEnded);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDelegate_AttackHitEvent);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDelegate_Death);
+
+DECLARE_MULTICAST_DELEGATE(Delegate_ViewInventory);
+DECLARE_MULTICAST_DELEGATE(Delegate_AddItemToInventory);
 
 
 UCLASS()
@@ -53,26 +53,28 @@ public:
 	void OnAttackEnded(class UAnimMontage* Montage, bool bInterrupted);
 	UFUNCTION()
 	void AttackHit();
-	bool GetAttacked();
+
 	virtual float TakeDamage(
 		float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser
 	) override;
 	int32 GetcurHP();
 
-	//Item function
-	// bool ItemGetter(class AMyItem* item);
-	// void DropAllItems();
-
 	Delegate_AttackEnded _attackEndedDelegate;
-	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = Event, meta = (AllowPrivateAccess = "true"))
-	FDelegate_AttackHitEvent _attackHitEvent;
-	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = Event, meta = (AllowPrivateAccess = "true"))
-	FDelegate_Death _deathEvent;
 
-public:
+	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = Event, meta = (AllowPrivateAccess = "true"))
+	FDelegate_AttackHitEvent _attackHitEventDelegate;
+
+	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = Event, meta = (AllowPrivateAccess = "true"))
+	FDelegate_Death _deathEventDelegate;
+
+	Delegate_ViewInventory _viewInventoryDelegate;
+	Delegate_AddItemToInventory _addItemToInventoryDelegate;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	bool _isActive = true;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	bool isAttacked = false;
+	bool _isAttacking = false;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	float _vertical = 0.0f;
@@ -81,7 +83,7 @@ public:
 	float _horizontal = 0.0f;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
-	int _curAttackSection = 0;
+	int _curAttackIndex = 0;
 
 	//AttackHitPoint
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = AttackHit, meta = (AllowPrivateAccess = "true"))
@@ -90,9 +92,6 @@ public:
 	//Animation
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Animation, meta = (AllowPrivateAccess = "true"))
 	class UMyAnimInstance* _animInstance;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
-	bool _isActive = true;
 
 	//Componenets
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))

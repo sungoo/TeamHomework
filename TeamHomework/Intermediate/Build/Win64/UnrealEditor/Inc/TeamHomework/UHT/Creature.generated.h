@@ -15,11 +15,11 @@ class UAnimMontage;
 #endif
 #define TEAMHOMEWORK_Creature_generated_h
 
-#define FID_TeamHomework_Source_TeamHomework_Creature_h_19_DELEGATE \
+#define FID_TeamHomework_Source_TeamHomework_Creature_h_16_DELEGATE \
 TEAMHOMEWORK_API void FDelegate_AttackHitEvent_DelegateWrapper(const FMulticastScriptDelegate& Delegate_AttackHitEvent);
 
 
-#define FID_TeamHomework_Source_TeamHomework_Creature_h_20_DELEGATE \
+#define FID_TeamHomework_Source_TeamHomework_Creature_h_17_DELEGATE \
 TEAMHOMEWORK_API void FDelegate_Death_DelegateWrapper(const FMulticastScriptDelegate& Delegate_Death);
 
 

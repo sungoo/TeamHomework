@@ -33,26 +33,38 @@ void UMyInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 	// ...
 }
 
-bool UMyInventoryComponent::PutItem(AMyItem* item)
+void UMyInventoryComponent::AddItem(AMyItem* item)
 {
-	bool result = false;
-
-	if (_items.Num() < _inventoryMax)
+	if (item)
 	{
-		_items.Push(item);
-		result = true;
+		_items.Add(item);
+		item->SetActorHiddenInGame(true);
+		item->SetActorEnableCollision(false);
 	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Inventory is full!"));
-	}
-	return result;
 }
 
-bool UMyInventoryComponent::DropItem(int32 itemIndex)
+void UMyInventoryComponent::DropItem()
 {
-	bool result = false;
+	if (_items.Num() > 0)
+	{
+		AMyItem* item = _items[0];
+		if (item)
+		{
+			item->SetActorHiddenInGame(false);
+			item->SetActorEnableCollision(true);
 
-	return result;
+			FVector playerPlos = GetOwner()->GetActorLocation();
+
+			float randFloat = FMath::FRandRange(0, PI * 2.0f);
+
+			float X = cosf(randFloat) * 300.0f;
+			float Y = sinf(randFloat) * 300.0f;
+			FVector itemPos = playerPlos + FVector(X, Y, 0.0f);
+			itemPos.Z = 0.0f;
+			item->SetActorLocation(itemPos);
+
+			_items.Remove(item);
+		}
+	}
 }
 

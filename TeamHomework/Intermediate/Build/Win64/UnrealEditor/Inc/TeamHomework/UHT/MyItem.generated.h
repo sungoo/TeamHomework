@@ -9,10 +9,19 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
 #ifdef TEAMHOMEWORK_MyItem_generated_h
 #error "MyItem.generated.h already included, missing '#pragma once' in MyItem.h"
 #endif
 #define TEAMHOMEWORK_MyItem_generated_h
+
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execCharacterOverlapped); \
+	DECLARE_FUNCTION(execOnMyCharacterOverlapEnd); \
+	DECLARE_FUNCTION(execOnMyCharacterOverlap);
+
 
 #define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +48,7 @@ public: \
 #define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_TeamHomework_Source_TeamHomework_MyItem_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_MyItem_h_12_INCLASS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_MyItem_h_12_ENHANCED_CONSTRUCTORS \
 private: \

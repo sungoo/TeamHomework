@@ -108,7 +108,7 @@ void ACreature::Disable()
 	SetActorEnableCollision(false);
 	PrimaryActorTick.bCanEverTick = false;
 
-	//_deathEvent.Broadcast();
+	//_deathEventDelegate.Broadcast();
 	//EffectManager->Play("Death", GetActorLocation());
 
 	Unpossess();
@@ -139,7 +139,7 @@ void ACreature::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 void ACreature::OnAttackEnded(UAnimMontage* Montage, bool bInterrupted)
 {
 	UE_LOG(LogTemp, Log, TEXT("Attack Ended!"));
-	isAttacked = false;
+	_isAttacking = false;
 
 	_attackEndedDelegate.Broadcast();
 }
@@ -185,14 +185,9 @@ void ACreature::AttackHit()
 		hitResult.GetActor()->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
 		_hitPoint = hitResult.ImpactPoint;
 
-		//_attackHitEvent.Broadcast();
+		//_attackHitEventDelegate.Broadcast();
 		//EffectManager->Play("Shoot", _hitPoint);
 	}
-}
-
-bool ACreature::GetAttacked()
-{
-	return isAttacked;
 }
 
 float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)

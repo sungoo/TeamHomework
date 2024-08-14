@@ -57,6 +57,7 @@ void UMyStatComponent::SetHp(int32 hp)
 
 void UMyStatComponent::SetLevelAndInit(int level)
 {
+	// TODO
 }
 
 int UMyStatComponent::AddCurHP(float amount)

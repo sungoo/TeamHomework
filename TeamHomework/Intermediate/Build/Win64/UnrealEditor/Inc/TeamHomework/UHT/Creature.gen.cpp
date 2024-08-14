@@ -246,17 +246,22 @@ struct Z_Construct_UClass_ACreature_Statics
 		{ "IncludePath", "Creature.h" },
 		{ "ModuleRelativePath", "Creature.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__attackHitEvent_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__attackHitEventDelegate_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Event" },
 		{ "ModuleRelativePath", "Creature.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__deathEvent_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__deathEventDelegate_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Event" },
 		{ "ModuleRelativePath", "Creature.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_isAttacked_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isActive_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Stat" },
+		{ "ModuleRelativePath", "Creature.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isAttacking_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Creature.h" },
@@ -271,7 +276,7 @@ struct Z_Construct_UClass_ACreature_Statics
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Creature.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__curAttackSection_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__curAttackIndex_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Creature.h" },
@@ -298,11 +303,6 @@ struct Z_Construct_UClass_ACreature_Statics
 		{ "ToolTip", "Animation" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isActive_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Stat" },
-		{ "ModuleRelativePath", "Creature.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__statCom_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
@@ -328,17 +328,17 @@ struct Z_Construct_UClass_ACreature_Statics
 		{ "ModuleRelativePath", "Creature.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp__attackHitEvent;
-	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp__deathEvent;
-	static void NewProp_isAttacked_SetBit(void* Obj);
-	static const UECodeGen_Private::FBoolPropertyParams NewProp_isAttacked;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp__vertical;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp__horizontal;
-	static const UECodeGen_Private::FIntPropertyParams NewProp__curAttackSection;
-	static const UECodeGen_Private::FStructPropertyParams NewProp__hitPoint;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp__animInstance;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp__attackHitEventDelegate;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp__deathEventDelegate;
 	static void NewProp__isActive_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__isActive;
+	static void NewProp__isAttacking_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp__isAttacking;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp__vertical;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp__horizontal;
+	static const UECodeGen_Private::FIntPropertyParams NewProp__curAttackIndex;
+	static const UECodeGen_Private::FStructPropertyParams NewProp__hitPoint;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__animInstance;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__statCom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__inventoryCom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__hpBarWidget;
@@ -356,36 +356,36 @@ struct Z_Construct_UClass_ACreature_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__attackHitEvent = { "_attackHitEvent", nullptr, (EPropertyFlags)0x0010000010080001, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _attackHitEvent), Z_Construct_UDelegateFunction_TeamHomework_Delegate_AttackHitEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__attackHitEvent_MetaData), NewProp__attackHitEvent_MetaData) }; // 1263113971
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__deathEvent = { "_deathEvent", nullptr, (EPropertyFlags)0x0010000010080001, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _deathEvent), Z_Construct_UDelegateFunction_TeamHomework_Delegate_Death__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__deathEvent_MetaData), NewProp__deathEvent_MetaData) }; // 2614288937
-void Z_Construct_UClass_ACreature_Statics::NewProp_isAttacked_SetBit(void* Obj)
-{
-	((ACreature*)Obj)->isAttacked = 1;
-}
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp_isAttacked = { "isAttacked", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ACreature), &Z_Construct_UClass_ACreature_Statics::NewProp_isAttacked_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_isAttacked_MetaData), NewProp_isAttacked_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__vertical = { "_vertical", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _vertical), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__vertical_MetaData), NewProp__vertical_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__horizontal = { "_horizontal", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _horizontal), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__horizontal_MetaData), NewProp__horizontal_MetaData) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__curAttackSection = { "_curAttackSection", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _curAttackSection), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__curAttackSection_MetaData), NewProp__curAttackSection_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__hitPoint = { "_hitPoint", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _hitPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__hitPoint_MetaData), NewProp__hitPoint_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__animInstance = { "_animInstance", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _animInstance), Z_Construct_UClass_UMyAnimInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__animInstance_MetaData), NewProp__animInstance_MetaData) };
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__attackHitEventDelegate = { "_attackHitEventDelegate", nullptr, (EPropertyFlags)0x0010000010080001, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _attackHitEventDelegate), Z_Construct_UDelegateFunction_TeamHomework_Delegate_AttackHitEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__attackHitEventDelegate_MetaData), NewProp__attackHitEventDelegate_MetaData) }; // 1263113971
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__deathEventDelegate = { "_deathEventDelegate", nullptr, (EPropertyFlags)0x0010000010080001, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _deathEventDelegate), Z_Construct_UDelegateFunction_TeamHomework_Delegate_Death__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__deathEventDelegate_MetaData), NewProp__deathEventDelegate_MetaData) }; // 2614288937
 void Z_Construct_UClass_ACreature_Statics::NewProp__isActive_SetBit(void* Obj)
 {
 	((ACreature*)Obj)->_isActive = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__isActive = { "_isActive", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ACreature), &Z_Construct_UClass_ACreature_Statics::NewProp__isActive_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__isActive_MetaData), NewProp__isActive_MetaData) };
+void Z_Construct_UClass_ACreature_Statics::NewProp__isAttacking_SetBit(void* Obj)
+{
+	((ACreature*)Obj)->_isAttacking = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__isAttacking = { "_isAttacking", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ACreature), &Z_Construct_UClass_ACreature_Statics::NewProp__isAttacking_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__isAttacking_MetaData), NewProp__isAttacking_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__vertical = { "_vertical", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _vertical), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__vertical_MetaData), NewProp__vertical_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__horizontal = { "_horizontal", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _horizontal), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__horizontal_MetaData), NewProp__horizontal_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__curAttackIndex = { "_curAttackIndex", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _curAttackIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__curAttackIndex_MetaData), NewProp__curAttackIndex_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__hitPoint = { "_hitPoint", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _hitPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__hitPoint_MetaData), NewProp__hitPoint_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__animInstance = { "_animInstance", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _animInstance), Z_Construct_UClass_UMyAnimInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__animInstance_MetaData), NewProp__animInstance_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__statCom = { "_statCom", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _statCom), Z_Construct_UClass_UMyStatComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__statCom_MetaData), NewProp__statCom_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__inventoryCom = { "_inventoryCom", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _inventoryCom), Z_Construct_UClass_UMyInventoryComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__inventoryCom_MetaData), NewProp__inventoryCom_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__hpBarWidget = { "_hpBarWidget", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _hpBarWidget), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__hpBarWidget_MetaData), NewProp__hpBarWidget_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACreature_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__attackHitEvent,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__deathEvent,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp_isAttacked,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__attackHitEventDelegate,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__deathEventDelegate,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__isActive,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__isAttacking,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__vertical,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__horizontal,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__curAttackSection,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__curAttackIndex,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__hitPoint,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__animInstance,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__isActive,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__statCom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__inventoryCom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__hpBarWidget,
@@ -431,10 +431,10 @@ ACreature::~ACreature() {}
 struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 1780071572U) },
+		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 1377810012U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_1250238434(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_494630767(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
