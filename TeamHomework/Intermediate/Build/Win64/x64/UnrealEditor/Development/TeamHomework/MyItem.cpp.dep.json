@@ -1,13 +1,13 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\teamhomework\\teamhomework\\source\\teamhomework\\myitem.cpp",
+        "Source": "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\source\\teamhomework\\myitem.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\teamhomeworkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\teamhomeworkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\teamhomework\\definitions.teamhomework.h",
-            "d:\\teamhomework\\teamhomework\\source\\teamhomework\\myitem.h",
-            "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\myitem.generated.h"
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\teamhomework\\definitions.teamhomework.h",
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\source\\teamhomework\\myitem.h",
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\myitem.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
