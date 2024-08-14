@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\teamhomework.init.gen.cpp",
+        "Source": "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\unrealeditor\\inc\\teamhomework\\uht\\teamhomework.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\teamhomeworkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\teamhomeworkeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "d:\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\teamhomework\\definitions.teamhomework.h"
+            "c:\\users\\user\\desktop\\sga_study\\teamhomework\\teamhomework\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\teamhomework\\definitions.teamhomework.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
