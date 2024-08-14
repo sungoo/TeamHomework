@@ -17,6 +17,9 @@
 
 #include "MyAnimInstance.h"
 
+#include "MyGameInstance.h"
+#include "MyUIManager.h"
+
 
 AMyPlayer::AMyPlayer()
 {
@@ -126,7 +129,7 @@ void AMyPlayer::ViewInventory(const FInputActionValue& value)
 	
 	if (isPressed)
 	{
-		_viewInventoryDelegate.Broadcast();
+		UIManager->ToggleInventory();
 	}
 }
 
@@ -143,7 +146,7 @@ void AMyPlayer::TryGetItemEnd(const FInputActionValue& value)
 void AMyPlayer::AddItem(AMyItem* item)
 {
 	_inventoryCom->AddItem(item);
-	_addItemToInventoryDelegate.Broadcast();
+	UIManager->AddItem(_inventoryCom);
 
 	// TODO : 아이템 먹으면 stat 상승
 }

@@ -21,8 +21,120 @@ ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyItem();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyItem_NoRegister();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyPlayer_NoRegister();
+TEAMHOMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FItemDetail();
+TEAMHOMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FItemType();
 UPackage* Z_Construct_UPackage__Script_TeamHomework();
 // End Cross Module References
+
+// Begin ScriptStruct FItemType
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ItemType;
+class UScriptStruct* FItemType::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_ItemType.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_ItemType.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FItemType, (UObject*)Z_Construct_UPackage__Script_TeamHomework(), TEXT("ItemType"));
+	}
+	return Z_Registration_Info_UScriptStruct_ItemType.OuterSingleton;
+}
+template<> TEAMHOMEWORK_API UScriptStruct* StaticStruct<FItemType>()
+{
+	return FItemType::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FItemType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__texture_MetaData[] = {
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__texture;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FItemType>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FItemType_Statics::NewProp__texture = { "_texture", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemType, _texture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__texture_MetaData), NewProp__texture_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemType_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemType_Statics::NewProp__texture,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemType_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemType_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_TeamHomework,
+	nullptr,
+	&NewStructOps,
+	"ItemType",
+	Z_Construct_UScriptStruct_FItemType_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemType_Statics::PropPointers),
+	sizeof(FItemType),
+	alignof(FItemType),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemType_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FItemType_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FItemType()
+{
+	if (!Z_Registration_Info_UScriptStruct_ItemType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_ItemType.InnerSingleton, Z_Construct_UScriptStruct_FItemType_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_ItemType.InnerSingleton;
+}
+// End ScriptStruct FItemType
+
+// Begin ScriptStruct FItemDetail
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ItemDetail;
+class UScriptStruct* FItemDetail::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_ItemDetail.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_ItemDetail.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FItemDetail, (UObject*)Z_Construct_UPackage__Script_TeamHomework(), TEXT("ItemDetail"));
+	}
+	return Z_Registration_Info_UScriptStruct_ItemDetail.OuterSingleton;
+}
+template<> TEAMHOMEWORK_API UScriptStruct* StaticStruct<FItemDetail>()
+{
+	return FItemDetail::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FItemDetail_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FItemDetail>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemDetail_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_TeamHomework,
+	nullptr,
+	&NewStructOps,
+	"ItemDetail",
+	nullptr,
+	0,
+	sizeof(FItemDetail),
+	alignof(FItemDetail),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemDetail_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FItemDetail_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FItemDetail()
+{
+	if (!Z_Registration_Info_UScriptStruct_ItemDetail.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_ItemDetail.InnerSingleton, Z_Construct_UScriptStruct_FItemDetail_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_ItemDetail.InnerSingleton;
+}
+// End ScriptStruct FItemDetail
 
 // Begin Class AMyItem Function CharacterOverlapped
 struct Z_Construct_UFunction_AMyItem_CharacterOverlapped_Statics
@@ -236,17 +348,12 @@ struct Z_Construct_UClass_AMyItem_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__player_MetaData[] = {
 		{ "ModuleRelativePath", "MyItem.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__itemTexture_MetaData[] = {
-		{ "Category", "Item" },
-		{ "ModuleRelativePath", "MyItem.h" },
-	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__meshComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__trigger;
 	static void NewProp__isOverlapped_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__isOverlapped;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__player;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp__itemTexture;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -268,13 +375,11 @@ void Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped_SetBit(void* Obj)
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped = { "_isOverlapped", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMyItem), &Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__isOverlapped_MetaData), NewProp__isOverlapped_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__player = { "_player", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _player), Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__player_MetaData), NewProp__player_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__itemTexture = { "_itemTexture", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _itemTexture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__itemTexture_MetaData), NewProp__itemTexture_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyItem_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__meshComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__trigger,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__player,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__itemTexture,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMyItem_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMyItem_Statics::DependentSingletons[])() = {
@@ -316,13 +421,17 @@ AMyItem::~AMyItem() {}
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyItem_h_Statics
 {
+	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
+		{ FItemType::StaticStruct, Z_Construct_UScriptStruct_FItemType_Statics::NewStructOps, TEXT("ItemType"), &Z_Registration_Info_UScriptStruct_ItemType, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemType), 4276674331U) },
+		{ FItemDetail::StaticStruct, Z_Construct_UScriptStruct_FItemDetail_Statics::NewStructOps, TEXT("ItemDetail"), &Z_Registration_Info_UScriptStruct_ItemDetail, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemDetail), 556007008U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyItem, AMyItem::StaticClass, TEXT("AMyItem"), &Z_Registration_Info_UClass_AMyItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyItem), 2824458234U) },
+		{ Z_Construct_UClass_AMyItem, AMyItem::StaticClass, TEXT("AMyItem"), &Z_Registration_Info_UClass_AMyItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyItem), 3766222697U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyItem_h_1176089520(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyItem_h_2328519734(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ClassInfo),
-	nullptr, 0,
+	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -45,6 +45,18 @@
     <ClInclude Include="..\..\Source\TeamHomework\MyAnimInstance.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyGameInstance.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyGameInstance.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyGameModeBase.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyGameModeBase.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyHpBar.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
@@ -55,6 +67,12 @@
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\MyInventoryComponent.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyInventoryUI.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyInventoryUI.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyItem.cpp">
@@ -69,10 +87,22 @@
     <ClInclude Include="..\..\Source\TeamHomework\MyPlayer.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyPlayerController.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyPlayerController.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyStatComponent.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\MyStatComponent.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyUIManager.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyUIManager.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
     <None Include="..\..\Source\TeamHomework\TeamHomework.Build.cs">

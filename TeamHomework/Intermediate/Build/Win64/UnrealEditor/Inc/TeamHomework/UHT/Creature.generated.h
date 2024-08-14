@@ -23,14 +23,14 @@ TEAMHOMEWORK_API void FDelegate_AttackHitEvent_DelegateWrapper(const FMulticastS
 TEAMHOMEWORK_API void FDelegate_Death_DelegateWrapper(const FMulticastScriptDelegate& Delegate_Death);
 
 
-#define FID_TeamHomework_Source_TeamHomework_Creature_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_TeamHomework_Source_TeamHomework_Creature_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execAttackHit); \
 	DECLARE_FUNCTION(execOnAttackEnded); \
 	DECLARE_FUNCTION(execUnpossess); \
 	DECLARE_FUNCTION(execDisable);
 
 
-#define FID_TeamHomework_Source_TeamHomework_Creature_h_26_INCLASS_NO_PURE_DECLS \
+#define FID_TeamHomework_Source_TeamHomework_Creature_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACreature(); \
 	friend struct Z_Construct_UClass_ACreature_Statics; \
@@ -39,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(ACreature)
 
 
-#define FID_TeamHomework_Source_TeamHomework_Creature_h_26_ENHANCED_CONSTRUCTORS \
+#define FID_TeamHomework_Source_TeamHomework_Creature_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ACreature(ACreature&&); \
@@ -51,13 +51,13 @@ public: \
 	NO_API virtual ~ACreature();
 
 
-#define FID_TeamHomework_Source_TeamHomework_Creature_h_23_PROLOG
-#define FID_TeamHomework_Source_TeamHomework_Creature_h_26_GENERATED_BODY \
+#define FID_TeamHomework_Source_TeamHomework_Creature_h_19_PROLOG
+#define FID_TeamHomework_Source_TeamHomework_Creature_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_TeamHomework_Source_TeamHomework_Creature_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_Creature_h_26_INCLASS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_Creature_h_26_ENHANCED_CONSTRUCTORS \
+	FID_TeamHomework_Source_TeamHomework_Creature_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_Creature_h_22_INCLASS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_Creature_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

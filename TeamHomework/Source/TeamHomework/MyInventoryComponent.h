@@ -26,7 +26,7 @@ public:
 
 	void AddItem(class AMyItem* item);
 	void DropItem();
-private:
+
 	UPROPERTY()
 	TArray<class AMyItem*> _items;
 

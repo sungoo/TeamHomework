@@ -6,6 +6,28 @@
 #include "GameFramework/Actor.h"
 #include "MyItem.generated.h"
 
+USTRUCT()
+struct FItemType
+{
+	GENERATED_BODY()
+
+	FItemType() { _texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_Default.Tex_Default'")); };
+
+	UPROPERTY()
+	class UTexture2D* _texture;
+};
+
+
+USTRUCT()
+struct FItemDetail
+{
+	GENERATED_BODY()
+
+	FItemDetail() { _itemType = FItemType(); };
+
+	FItemType _itemType;
+};
+
 UCLASS()
 class TEAMHOMEWORK_API AMyItem : public AActor
 {
@@ -45,6 +67,5 @@ public:
 	UPROPERTY()
 	class AMyPlayer* _player;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Item")
-	class UTexture2D* _itemTexture;
+	FItemType _itemType;
 };

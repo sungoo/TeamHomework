@@ -31,15 +31,8 @@ AMyItem::AMyItem()
 	_trigger->SetCollisionProfileName(TEXT("MyItem"));
 	_trigger->SetSphereRadius(60.0f);
 
-	static ConstructorHelpers::FObjectFinder<UTexture2D> tex
-	(TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_tools_07.Tex_tools_07'"));
-
-	if (tex.Succeeded())
-	{
-		_itemTexture = tex.Object;
-	}
-
-	_itemTexture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_tools_07.Tex_tools_07'"));
+	UTexture2D* texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_tools_07.Tex_tools_07'"));
+	_itemType._texture = texture;
 }
 
 // Called when the game starts or when spawned

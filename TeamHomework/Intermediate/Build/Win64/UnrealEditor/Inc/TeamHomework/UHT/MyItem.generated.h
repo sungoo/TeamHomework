@@ -17,13 +17,27 @@ struct FHitResult;
 #endif
 #define TEAMHOMEWORK_MyItem_generated_h
 
-#define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FItemType_Statics; \
+	TEAMHOMEWORK_API static class UScriptStruct* StaticStruct();
+
+
+template<> TEAMHOMEWORK_API UScriptStruct* StaticStruct<struct FItemType>();
+
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_24_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FItemDetail_Statics; \
+	TEAMHOMEWORK_API static class UScriptStruct* StaticStruct();
+
+
+template<> TEAMHOMEWORK_API UScriptStruct* StaticStruct<struct FItemDetail>();
+
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_34_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execCharacterOverlapped); \
 	DECLARE_FUNCTION(execOnMyCharacterOverlapEnd); \
 	DECLARE_FUNCTION(execOnMyCharacterOverlap);
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_34_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyItem(); \
 	friend struct Z_Construct_UClass_AMyItem_Statics; \
@@ -32,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(AMyItem)
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_34_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyItem(AMyItem&&); \
@@ -44,13 +58,13 @@ public: \
 	NO_API virtual ~AMyItem();
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyItem_h_9_PROLOG
-#define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_GENERATED_BODY \
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_31_PROLOG
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_34_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_TeamHomework_Source_TeamHomework_MyItem_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_MyItem_h_12_INCLASS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_MyItem_h_12_ENHANCED_CONSTRUCTORS \
+	FID_TeamHomework_Source_TeamHomework_MyItem_h_34_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_MyItem_h_34_INCLASS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_MyItem_h_34_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

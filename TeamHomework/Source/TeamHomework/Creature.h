@@ -16,10 +16,6 @@ DECLARE_MULTICAST_DELEGATE(Delegate_AttackEnded);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDelegate_AttackHitEvent);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDelegate_Death);
 
-DECLARE_MULTICAST_DELEGATE(Delegate_ViewInventory);
-DECLARE_MULTICAST_DELEGATE(Delegate_AddItemToInventory);
-
-
 UCLASS()
 class TEAMHOMEWORK_API ACreature : public ACharacter
 {
@@ -66,9 +62,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = Event, meta = (AllowPrivateAccess = "true"))
 	FDelegate_Death _deathEventDelegate;
-
-	Delegate_ViewInventory _viewInventoryDelegate;
-	Delegate_AddItemToInventory _addItemToInventoryDelegate;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
 	bool _isActive = true;
