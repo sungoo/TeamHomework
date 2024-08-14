@@ -17,6 +17,7 @@ struct FHitResult;
 #endif
 #define TEAMHOMEWORK_MyItem_generated_h
 
+<<<<<<< HEAD
 #define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execCharacterOverlapped); \
 	DECLARE_FUNCTION(execOnMyCharacterOverlapEnd); \
@@ -24,6 +25,9 @@ struct FHitResult;
 
 
 #define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_INCLASS_NO_PURE_DECLS \
+=======
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_12_INCLASS_NO_PURE_DECLS \
+>>>>>>> MonsterAI
 private: \
 	static void StaticRegisterNativesAMyItem(); \
 	friend struct Z_Construct_UClass_AMyItem_Statics; \
@@ -32,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(AMyItem)
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyItem(AMyItem&&); \
@@ -44,13 +48,18 @@ public: \
 	NO_API virtual ~AMyItem();
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyItem_h_9_PROLOG
-#define FID_TeamHomework_Source_TeamHomework_MyItem_h_12_GENERATED_BODY \
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_9_PROLOG
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+<<<<<<< HEAD
 	FID_TeamHomework_Source_TeamHomework_MyItem_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_MyItem_h_12_INCLASS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_MyItem_h_12_ENHANCED_CONSTRUCTORS \
+=======
+	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_12_INCLASS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_12_ENHANCED_CONSTRUCTORS \
+>>>>>>> MonsterAI
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -58,7 +67,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class AMyItem>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_MyItem_h
+#define CURRENT_FILE_ID FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

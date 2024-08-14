@@ -23,13 +23,22 @@ void EmptyLinkFunctionForGeneratedCodeTeamHomework_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
+<<<<<<< HEAD
 				0x5B344030,
 				0x4AD278C0,
+=======
+				0x6ADCCA33,
+				0x495D1814,
+>>>>>>> MonsterAI
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_TeamHomework.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_TeamHomework.OuterSingleton;
 	}
+<<<<<<< HEAD
 	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TeamHomework(Z_Construct_UPackage__Script_TeamHomework, TEXT("/Script/TeamHomework"), Z_Registration_Info_UPackage__Script_TeamHomework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x5B344030, 0x4AD278C0));
+=======
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TeamHomework(Z_Construct_UPackage__Script_TeamHomework, TEXT("/Script/TeamHomework"), Z_Registration_Info_UPackage__Script_TeamHomework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x6ADCCA33, 0x495D1814));
+>>>>>>> MonsterAI
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
