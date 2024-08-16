@@ -99,6 +99,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\MyPlayerController.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyPlayerManager.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyPlayerManager.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyStatComponent.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>

@@ -25,7 +25,10 @@ void UMyGameInstance::Init()
 	FActorSpawnParameters params;
 	params.Name = TEXT("UIManager");
 	_uiManager = GetWorld()->SpawnActor<AMyUIManager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
-	// 
+	
+	params.Name = TEXT("PlayerManager");
+	_playerManager = GetWorld()->SpawnActor<AMyPlayerManager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
+
 	// params.Name = TEXT("EffectManager");
 	// _effectManager = GetWorld()->SpawnActor<AMyEffectManager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
 }

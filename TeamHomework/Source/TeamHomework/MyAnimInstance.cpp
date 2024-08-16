@@ -6,6 +6,8 @@
 #include "GameFramework/PawnMovementComponent.h"
 #include "Animation/AnimMontage.h"
 
+#include "MyGameInstance.h"
+
 UMyAnimInstance::UMyAnimInstance()
 {
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> am
