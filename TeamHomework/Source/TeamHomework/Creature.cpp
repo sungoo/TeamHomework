@@ -6,6 +6,7 @@
 #include "Materials/MaterialParameterCollection.h"
 
 #include "MyAnimInstance.h"
+#include "MyAIController.h"
 #include "MyInventoryComponent.h"
 #include "MyStatComponent.h"
 #include "MyHpBar.h"
@@ -51,6 +52,9 @@ ACreature::ACreature()
 	{
 		_hpBarWidget->SetWidgetClass(hpBar.Class);
 	}
+
+	//AI
+	APawn::AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 }
 
 //Called when the game starts or when spawned
@@ -92,14 +96,14 @@ void ACreature::Init()
 	SetActorEnableCollision(true);
 	PrimaryActorTick.bCanEverTick = true;
 
-	/*_statCom->_deathDelegate.AddUObject(this, &AMyCharacter::Unpossess);
+	_statCom->_deathDelegate.AddUObject(this, &ACreature::Unpossess);
 
 	if (_aiController && GetController() == nullptr)
 	{
 		auto ai_Controller = Cast<AMyAIController>(_aiController);
 		if (ai_Controller)
 			ai_Controller->Possess(this);
-	}*/
+	}
 }
 
 void ACreature::Disable()
