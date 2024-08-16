@@ -14,7 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAMHOMEWORK_MyGameInstance_generated_h
 
+<<<<<<< HEAD
 #define FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_22_INCLASS_NO_PURE_DECLS \
+=======
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_20_INCLASS_NO_PURE_DECLS \
+>>>>>>> Develop_V1
 private: \
 	static void StaticRegisterNativesUMyGameInstance(); \
 	friend struct Z_Construct_UClass_UMyGameInstance_Statics; \
@@ -23,7 +27,11 @@ public: \
 	DECLARE_SERIALIZER(UMyGameInstance)
 
 
+<<<<<<< HEAD
 #define FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_22_ENHANCED_CONSTRUCTORS \
+=======
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_20_ENHANCED_CONSTRUCTORS \
+>>>>>>> Develop_V1
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UMyGameInstance(UMyGameInstance&&); \
@@ -35,12 +43,21 @@ public: \
 	NO_API virtual ~UMyGameInstance();
 
 
+<<<<<<< HEAD
 #define FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_19_PROLOG
 #define FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_22_INCLASS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_22_ENHANCED_CONSTRUCTORS \
+=======
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_17_PROLOG
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_20_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_20_INCLASS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_20_ENHANCED_CONSTRUCTORS \
+>>>>>>> Develop_V1
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +65,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class UMyGameInstance>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_MyGameInstance_h
+#define CURRENT_FILE_ID FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -33,6 +33,12 @@
     <Filter Include="Source\TeamHomework">
       <UniqueIdentifier>{F9F502D8-4D5E-3C58-BFA4-22D2455EEEFC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\BTService_FindTarget.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTService_FindTarget.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\Creature.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
@@ -85,6 +91,12 @@
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\MyItem.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyMonster.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyMonster.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyPlayer.cpp">
