@@ -15,6 +15,7 @@
 			"MyMonster.gen.cpp.obj",
 			"MyPlayer.gen.cpp.obj",
 			"MyPlayerController.gen.cpp.obj",
+			"MyPlayerManager.gen.cpp.obj",
 			"MyStatComponent.gen.cpp.obj",
 			"MyUIManager.gen.cpp.obj",
 			"TeamHomework.init.gen.cpp.obj",
@@ -31,6 +32,7 @@
 			"MyMonster.cpp.obj",
 			"MyPlayer.cpp.obj",
 			"MyPlayerController.cpp.obj",
+			"MyPlayerManager.cpp.obj",
 			"MyStatComponent.cpp.obj",
 			"MyUIManager.cpp.obj",
 			"TeamHomework.cpp.obj"

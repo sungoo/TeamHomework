@@ -83,7 +83,7 @@ public:
 	FVector _hitPoint;
 
 	//Animation
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Animation, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation, meta = (AllowPrivateAccess = "true"))
 	class UMyAnimInstance* _animInstance;
 
 	//Componenets
