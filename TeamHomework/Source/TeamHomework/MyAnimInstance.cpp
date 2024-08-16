@@ -7,16 +7,17 @@
 #include "Animation/AnimMontage.h"
 
 #include "MyGameInstance.h"
+#include "MyPlayerManager.h"
 
 UMyAnimInstance::UMyAnimInstance()
 {
-	static ConstructorHelpers::FObjectFinder<UAnimMontage> am
-	(TEXT("/Script/Engine.AnimMontage'/Game/BluePrint/Animation/MyAnimMontage.MyAnimMontage'"));
-
-	if (am.Succeeded())
-	{
-		_myAnimMontage = am.Object;
-	}
+	// static ConstructorHelpers::FObjectFinder<UAnimMontage> am
+	// (TEXT("/Script/Engine.AnimMontage'/Game/BluePrint/Animation/KnightAnimMontage.KnightAnimMontage'"));
+	// 
+	// if (am.Succeeded())
+	// {
+	// 	_myAnimMontage = am.Object;
+	// }
 }
 
 void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
@@ -28,8 +29,14 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		_isFalling = creature->GetMovementComponent()->IsFalling();
 		_vertical = _vertical + (creature->_vertical - _vertical) * DeltaSeconds;
 		_horizontal = _horizontal + (creature->_horizontal - _horizontal) * DeltaSeconds;
+		_height = (_height + (creature->_height - _height) * DeltaSeconds) / _height;
 		_isDead = (creature->GetcurHP() <= 0);
 	}
+}
+
+void UMyAnimInstance::SetAnimMontage(UAnimMontage* animMontage)
+{
+	_myAnimMontage = animMontage;
 }
 
 void UMyAnimInstance::PlayAttackMontage()

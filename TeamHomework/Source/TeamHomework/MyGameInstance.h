@@ -13,7 +13,7 @@
  */
 
 #define UIManager Cast<UMyGameInstance>(GetGameInstance())->GetUIManager()
-#define PlayerManager Cast<UMyGameInstance>(GetGameInstance())->GetPlayerManager();
+#define PlayerManager Cast<UMyGameInstance>(GetGameInstance())->GetPlayerManager()
 // #define EffectManager Cast<UMyGameInstance>(GetGameInstance())->GetEffectManager()
 
 UCLASS()

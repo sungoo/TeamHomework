@@ -7,7 +7,7 @@
 AMyGameModeBase::AMyGameModeBase()
 {
 	static ConstructorHelpers::FClassFinder<AMyPlayer>
-		myPlayer (TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/MyPlayer_BP.MyPlayer_BP'"));
+		myPlayer (TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/MyPlayer_BP.MyPlayer_BP_C'"));
 
 	if (myPlayer.Succeeded())
 	{

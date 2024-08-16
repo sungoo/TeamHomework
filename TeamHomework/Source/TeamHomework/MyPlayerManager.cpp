@@ -15,7 +15,6 @@ AMyPlayerManager::AMyPlayerManager()
 void AMyPlayerManager::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
@@ -33,5 +32,45 @@ void AMyPlayerManager::SetPlayerType(EPlayerType type)
 EPlayerType AMyPlayerManager::GetPlayerType() const
 {
 	return EPlayerType();
+}
+
+FString AMyPlayerManager::SetMesh()
+{
+	FString meshPath;
+
+	switch (_playerType)
+	{
+	case EPlayerType::Knight:
+		meshPath = TEXT("/Script/Engine.SkeletalMesh'/Game/ParagonSunWukong/Characters/Heroes/Wukong/Meshes/Wukong.Wukong'");
+		break;
+	case EPlayerType::Archer:
+		// TODO
+		meshPath = TEXT("/Script/Engine.SkeletalMesh'/Game/ParagonSparrow/Characters/Heroes/Sparrow/Meshes/Sparrow.Sparrow'");
+		break;
+	default:
+		meshPath = TEXT("");
+	}
+
+	return meshPath;
+}
+
+FString AMyPlayerManager::SetAnimMontage()
+{
+	FString meshPath;
+
+	switch (_playerType)
+	{
+	case EPlayerType::Knight:
+		meshPath = TEXT("/Script/Engine.AnimMontage'/Game/Blueprint/Animation/Knight/KnightAnimMontage.KnightAnimMontage'");
+		break;
+	case EPlayerType::Archer:
+		// TODO
+		meshPath = TEXT("");
+		break;
+	default:
+		meshPath = TEXT("");
+	}
+
+	return meshPath;
 }
 

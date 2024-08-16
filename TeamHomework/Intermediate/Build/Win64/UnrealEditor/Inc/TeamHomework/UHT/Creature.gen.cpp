@@ -277,6 +277,11 @@ struct Z_Construct_UClass_ACreature_Statics
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Creature.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__height_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Creature.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__curAttackIndex_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
@@ -342,6 +347,7 @@ struct Z_Construct_UClass_ACreature_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__isAttacking;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp__vertical;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp__horizontal;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp__height;
 	static const UECodeGen_Private::FIntPropertyParams NewProp__curAttackIndex;
 	static const UECodeGen_Private::FStructPropertyParams NewProp__hitPoint;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__animInstance;
@@ -377,6 +383,7 @@ void Z_Construct_UClass_ACreature_Statics::NewProp__isAttacking_SetBit(void* Obj
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__isAttacking = { "_isAttacking", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ACreature), &Z_Construct_UClass_ACreature_Statics::NewProp__isAttacking_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__isAttacking_MetaData), NewProp__isAttacking_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__vertical = { "_vertical", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _vertical), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__vertical_MetaData), NewProp__vertical_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__horizontal = { "_horizontal", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _horizontal), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__horizontal_MetaData), NewProp__horizontal_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__height = { "_height", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _height), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__height_MetaData), NewProp__height_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__curAttackIndex = { "_curAttackIndex", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _curAttackIndex), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__curAttackIndex_MetaData), NewProp__curAttackIndex_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__hitPoint = { "_hitPoint", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _hitPoint), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__hitPoint_MetaData), NewProp__hitPoint_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__animInstance = { "_animInstance", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _animInstance), Z_Construct_UClass_UMyAnimInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__animInstance_MetaData), NewProp__animInstance_MetaData) };
@@ -391,6 +398,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACreature
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__isAttacking,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__vertical,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__horizontal,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__height,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__curAttackIndex,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__hitPoint,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACreature_Statics::NewProp__animInstance,
@@ -440,10 +448,10 @@ ACreature::~ACreature() {}
 struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 1937449314U) },
+		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 1589731576U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_1541015135(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_3484662590(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

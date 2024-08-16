@@ -84,10 +84,10 @@ AMyMonster::~AMyMonster() {}
 struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyMonster_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyMonster, AMyMonster::StaticClass, TEXT("AMyMonster"), &Z_Registration_Info_UClass_AMyMonster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyMonster), 2852919009U) },
+		{ Z_Construct_UClass_AMyMonster, AMyMonster::StaticClass, TEXT("AMyMonster"), &Z_Registration_Info_UClass_AMyMonster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyMonster), 2018953584U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyMonster_h_3366171839(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyMonster_h_1384020084(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyMonster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyMonster_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

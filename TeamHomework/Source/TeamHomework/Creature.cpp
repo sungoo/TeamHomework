@@ -26,13 +26,13 @@ ACreature::ACreature()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> sm
-	(TEXT("/Script/Engine.SkeletalMesh'/Game/ParagonSunWukong/Characters/Heroes/Wukong/Meshes/Wukong.Wukong'"));
-	 
-	if (sm.Succeeded())
-	{
-	GetMesh()->SetSkeletalMesh(sm.Object);
-	}
+	// static ConstructorHelpers::FObjectFinder<USkeletalMesh> sm
+	// (TEXT("/Script/Engine.SkeletalMesh'/Game/ParagonSunWukong/Characters/Heroes/Wukong/Meshes/Wukong.Wukong'"));
+	//  
+	// if (sm.Succeeded())
+	// {
+	// GetMesh()->SetSkeletalMesh(sm.Object);
+	// }
 	 
 	//Stat
 	_statCom = CreateDefaultSubobject<UMyStatComponent>(TEXT("Stat"));
@@ -61,21 +61,13 @@ ACreature::ACreature()
 void ACreature::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 	Init();
 }
 
 void ACreature::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
-
-	_animInstance = Cast<UMyAnimInstance>(GetMesh()->GetAnimInstance());
-	if (_animInstance->IsValidLowLevel())
-	{
-		_animInstance->OnMontageEnded.AddDynamic(this, &ACreature::OnAttackEnded);
-		_animInstance->_attackDelegate.AddUObject(this, &ACreature::AttackHit);
-		_animInstance->_deathDelegate.AddUObject(this, &ACreature::Disable);
-	}
 
 	_statCom->SetLevelAndInit(1);
 
@@ -84,6 +76,21 @@ void ACreature::PostInitializeComponents()
 	if (hpBar)
 	{
 		_statCom->_hpChangedDelegate.AddUObject(hpBar, &UMyHpBar::SetHpBarValue);
+	}
+}
+
+void ACreature::SetAnimation()
+{
+	_animInstance = Cast<UMyAnimInstance>(GetMesh()->GetAnimInstance());
+	if (_animInstance->IsValidLowLevel())
+	{
+		_animInstance->OnMontageEnded.AddDynamic(this, &ACreature::OnAttackEnded);
+		_animInstance->_attackDelegate.AddUObject(this, &ACreature::AttackHit);
+		_animInstance->_deathDelegate.AddUObject(this, &ACreature::Disable);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("no anim"));
 	}
 }
 

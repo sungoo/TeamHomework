@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Creature.h"
+#include "MyGameInstance.h"
 #include "MyPlayer.generated.h"
 
 /**
@@ -19,6 +20,11 @@ public:
 	AMyPlayer();
 
 public:
+	virtual void BeginPlay() override;
+	virtual void PostInitializeComponents() override;
+
+	virtual void SetAnimation();
+
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void Move(const FInputActionValue& value);
@@ -62,9 +68,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* _viewInventoryAction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SpringArm", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = SpringArm, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* _springArm;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* _camera;
 };

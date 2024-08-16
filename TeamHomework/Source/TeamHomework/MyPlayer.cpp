@@ -18,6 +18,7 @@
 #include "MyAnimInstance.h"
 
 #include "MyGameInstance.h"
+#include "MyPlayerManager.h"
 #include "MyUIManager.h"
 
 
@@ -32,6 +33,45 @@ AMyPlayer::AMyPlayer()
 
 	_springArm->TargetArmLength = 500.0f;
 	_springArm->SetRelativeRotation(FRotator(-35.0f, 0.0f, 0.0f));
+}
+
+void AMyPlayer::BeginPlay()
+{
+	Super::BeginPlay();
+
+	FString meshPath = PlayerManager->SetMesh();
+	USkeletalMesh* skeletalMesh = LoadObject<USkeletalMesh>(nullptr, *meshPath);
+	if (skeletalMesh)
+	{
+		GetMesh()->SetSkeletalMesh(skeletalMesh);
+	}
+
+	SetAnimation();
+}
+
+void AMyPlayer::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+}
+
+void AMyPlayer::SetAnimation()
+{
+	Super::SetAnimation();
+
+	FString montagePath = PlayerManager->SetAnimMontage();
+	UAnimMontage* animMontage = LoadObject<UAnimMontage>(nullptr, *montagePath);
+	if (animMontage)
+	{
+		if (_animInstance->IsValidLowLevel())
+		{
+			_animInstance->SetAnimMontage(animMontage);
+		}
+
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("no animinstance"));
+		}
+	}
 }
 
 void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -105,6 +145,8 @@ void AMyPlayer::JumpA(const FInputActionValue& value)
 	if (isPressed)
 	{
 		ACharacter::Jump();
+		FVector MoveMentVector = GetActorLocation();
+		_height = MoveMentVector.Z;
 	}
 }
 

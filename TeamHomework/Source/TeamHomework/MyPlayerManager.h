@@ -31,8 +31,10 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void SetPlayerType(EPlayerType type);
-
 	EPlayerType GetPlayerType() const;
+
+	FString SetMesh();
+	FString SetAnimMontage();
 
 private:
 	EPlayerType _playerType;
