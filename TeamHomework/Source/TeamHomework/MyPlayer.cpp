@@ -66,11 +66,6 @@ void AMyPlayer::SetAnimation()
 		{
 			_animInstance->SetAnimMontage(animMontage);
 		}
-
-		else
-		{
-			UE_LOG(LogTemp, Error, TEXT("no animinstance"));
-		}
 	}
 }
 

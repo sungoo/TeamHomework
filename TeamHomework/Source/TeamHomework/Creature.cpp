@@ -88,10 +88,6 @@ void ACreature::SetAnimation()
 		_animInstance->_attackDelegate.AddUObject(this, &ACreature::AttackHit);
 		_animInstance->_deathDelegate.AddUObject(this, &ACreature::Disable);
 	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("no anim"));
-	}
 }
 
 void ACreature::Init()
