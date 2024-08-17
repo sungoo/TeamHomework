@@ -4,19 +4,45 @@
 #include "MyGameModeBase.h"
 #include "MyPlayer.h"
 
+#include "MyGameInstance.h"
+#include "MyPlayerManager.h"
+
 AMyGameModeBase::AMyGameModeBase()
 {
-	static ConstructorHelpers::FClassFinder<AMyPlayer>
-		myPlayer (TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/MyPlayer_BP.MyPlayer_BP_C'"));
-
-	if (myPlayer.Succeeded())
-	{
-		DefaultPawnClass = myPlayer.Class;
-	}
 }
 
 void AMyGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	UClass* playerClass = PlayerManager->SetDefaultPawn();
+
+	if (playerClass)
+	{
+		DefaultPawnClass = playerClass;
+	}
+
+    APlayerController* playerController = GetWorld()->GetFirstPlayerController();
+    if (playerController)
+    {
+        // 스폰할 위치와 회전 설정
+        FVector spawnLocation = FVector(0.0f, 0.0f, 500.0f);  // 기본 위치
+        FRotator spawnRotation = FRotator::ZeroRotator;
+
+        // Pawn을 수동으로 스폰
+        APawn* spawnedPawn = GetWorld()->SpawnActor<APawn>(DefaultPawnClass, spawnLocation, spawnRotation);
+
+        if (spawnedPawn)
+        {
+            // PlayerController가 스폰된 Pawn을 소유하게 함
+            playerController->Possess(spawnedPawn);
+
+            UE_LOG(LogTemp, Log, TEXT("Pawn spawned and possessed successfully."));
+        }
+        else
+        {
+            UE_LOG(LogTemp, Error, TEXT("Failed to spawn pawn."));
+        }
+    }
 }
 

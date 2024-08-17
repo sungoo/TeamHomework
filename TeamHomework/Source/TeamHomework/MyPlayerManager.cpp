@@ -2,13 +2,16 @@
 
 
 #include "MyPlayerManager.h"
+#include "MyPlayer.h"
+#include "Knight.h"
+#include "Archer.h"
 
 // Sets default values
 AMyPlayerManager::AMyPlayerManager()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	_playerType = EPlayerType::Knight;
+	_playerType = EPlayerType::Archer;
 }
 
 // Called when the game starts or when spawned
@@ -24,6 +27,27 @@ void AMyPlayerManager::Tick(float DeltaTime)
 
 }
 
+UClass* AMyPlayerManager::SetDefaultPawn()
+{
+	FString defaultPath;
+	UClass* playerClass;
+
+	switch (_playerType)
+	{
+	case EPlayerType::Knight:
+		defaultPath = TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/Knight_BP.Knight_BP_C'");
+		playerClass = StaticLoadClass(AKnight::StaticClass(), nullptr, *defaultPath);		break;
+	case EPlayerType::Archer:
+		defaultPath = TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/Archer_BP.Archer_BP_C'");
+		playerClass = StaticLoadClass(AArcher::StaticClass(), nullptr, *defaultPath);		break;
+	default:
+		defaultPath = TEXT("");
+		playerClass = nullptr;
+	}
+
+	return playerClass;
+}
+
 void AMyPlayerManager::SetPlayerType(EPlayerType type)
 {
 	_playerType = type;
@@ -33,44 +57,3 @@ EPlayerType AMyPlayerManager::GetPlayerType() const
 {
 	return EPlayerType();
 }
-
-FString AMyPlayerManager::SetMesh()
-{
-	FString meshPath;
-
-	switch (_playerType)
-	{
-	case EPlayerType::Knight:
-		meshPath = TEXT("/Script/Engine.SkeletalMesh'/Game/ParagonSunWukong/Characters/Heroes/Wukong/Meshes/Wukong.Wukong'");
-		break;
-	case EPlayerType::Archer:
-		// TODO
-		meshPath = TEXT("/Script/Engine.SkeletalMesh'/Game/ParagonSparrow/Characters/Heroes/Sparrow/Meshes/Sparrow.Sparrow'");
-		break;
-	default:
-		meshPath = TEXT("");
-	}
-
-	return meshPath;
-}
-
-FString AMyPlayerManager::SetAnimMontage()
-{
-	FString meshPath;
-
-	switch (_playerType)
-	{
-	case EPlayerType::Knight:
-		meshPath = TEXT("/Script/Engine.AnimMontage'/Game/Blueprint/Animation/Knight/KnightAnimMontage.KnightAnimMontage'");
-		break;
-	case EPlayerType::Archer:
-		// TODO
-		meshPath = TEXT("");
-		break;
-	default:
-		meshPath = TEXT("");
-	}
-
-	return meshPath;
-}
-

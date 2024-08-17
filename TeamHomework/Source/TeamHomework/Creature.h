@@ -48,8 +48,8 @@ public:
 	//Attack function
 	UFUNCTION()
 	void OnAttackEnded(class UAnimMontage* Montage, bool bInterrupted);
-	UFUNCTION()
-	void AttackHit();
+
+	virtual void AttackHit();
 
 	virtual float TakeDamage(
 		float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser

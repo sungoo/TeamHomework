@@ -23,9 +23,9 @@ public:
 	virtual void BeginPlay() override;
 	virtual void PostInitializeComponents() override;
 
-	virtual void SetAnimation();
-
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual void AttackHit() override;
 
 	void Move(const FInputActionValue& value);
 	void Turn(const FInputActionValue& value);

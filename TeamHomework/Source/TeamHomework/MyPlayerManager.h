@@ -30,11 +30,13 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UClass* SetDefaultPawn();
+
 	void SetPlayerType(EPlayerType type);
 	EPlayerType GetPlayerType() const;
 
-	FString SetMesh();
-	FString SetAnimMontage();
+	// FString SetMesh();
+	// FString SetAnimInstance();
 
 private:
 	EPlayerType _playerType;

@@ -33,6 +33,12 @@
     <Filter Include="Source\TeamHomework">
       <UniqueIdentifier>{F9F502D8-4D5E-3C58-BFA4-22D2455EEEFC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\Archer.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Archer.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\BTService_FindTarget.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
@@ -43,6 +49,12 @@
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\Creature.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Knight.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Knight.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyAIController.cpp">

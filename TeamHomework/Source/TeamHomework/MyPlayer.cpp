@@ -39,34 +39,12 @@ void AMyPlayer::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FString meshPath = PlayerManager->SetMesh();
-	USkeletalMesh* skeletalMesh = LoadObject<USkeletalMesh>(nullptr, *meshPath);
-	if (skeletalMesh)
-	{
-		GetMesh()->SetSkeletalMesh(skeletalMesh);
-	}
-
 	SetAnimation();
 }
 
 void AMyPlayer::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
-}
-
-void AMyPlayer::SetAnimation()
-{
-	Super::SetAnimation();
-
-	FString montagePath = PlayerManager->SetAnimMontage();
-	UAnimMontage* animMontage = LoadObject<UAnimMontage>(nullptr, *montagePath);
-	if (animMontage)
-	{
-		if (_animInstance->IsValidLowLevel())
-		{
-			_animInstance->SetAnimMontage(animMontage);
-		}
-	}
 }
 
 void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -98,6 +76,11 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 		// View Inventory
 		EnhancedInputComponent->BindAction(_viewInventoryAction, ETriggerEvent::Started, this, &AMyPlayer::ViewInventory);
 	}
+}
+
+void AMyPlayer::AttackHit()
+{
+
 }
 
 void AMyPlayer::Move(const FInputActionValue& value)

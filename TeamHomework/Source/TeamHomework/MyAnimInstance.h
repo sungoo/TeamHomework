@@ -22,7 +22,6 @@ public:
 	UMyAnimInstance();
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
 
-	void SetAnimMontage(UAnimMontage* animMontage);
 	void PlayAttackMontage();
 	void JumpToSection(int32 sectionIndex);
 

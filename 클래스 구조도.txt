@@ -21,3 +21,44 @@ StoreComponent
  - 보스가 맞을때 어그로 시스템이 눈으로 보이면 좋음 (표)
  - 보스가 공격하는 것 -> 장판형태 / 평타
 --> 이를 잘 피하고 어그로를 잘 관리해서 이기면 끝
+
+
+Creature별로 달라져야 할 내용
+<AttackHit>
+** 현재 Creature 함수로 들어있음
+
+- Player
+-- knight - 근거리, sphere 충돌
+-- Archer - 원거리, capsule 충돌, 입력방식 길게 눌렀다 떼기
+
+- Monster -> ???
+- Boss -> ???
+
+
+<AnimMontage>
+** 현재 myAnimInstance 생성자에서 불러오고 있음
+
+각각
+- 기본 AnimBP
+- BlendSpace_BP (jog)
+- AnimMontage_BP (attack)
+
+
+<Skeletal Mesh>
+** 현재 Creature 생성자에서 불러오고 있음
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

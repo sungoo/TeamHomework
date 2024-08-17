@@ -34,11 +34,6 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	}
 }
 
-void UMyAnimInstance::SetAnimMontage(UAnimMontage* animMontage)
-{
-	_myAnimMontage = animMontage;
-}
-
 void UMyAnimInstance::PlayAttackMontage()
 {
 	if (!Montage_IsPlaying(_myAnimMontage))
