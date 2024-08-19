@@ -56,7 +56,7 @@ private:
 
 	//Montages
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn, Meta = (AllowPrivateAccess = true))
-	class UAnimMontage* _myAnimMontage;
+	class UAnimMontage* _myAttackMontage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn, Meta = (AllowPrivateAccess = true))
 	class UAnimMontage* _myDamagedMontage;

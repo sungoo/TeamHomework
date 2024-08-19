@@ -36,9 +36,9 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 void UMyAnimInstance::PlayAttackMontage()
 {
-	if (!Montage_IsPlaying(_myAnimMontage))
+	if (!Montage_IsPlaying(_myAttackMontage))
 	{
-		Montage_Play(_myAnimMontage);
+		Montage_Play(_myAttackMontage);
 	}
 }
 
@@ -46,6 +46,7 @@ void UMyAnimInstance::PlayDamagedMontage()
 {
 	if (!Montage_IsPlaying(_myDamagedMontage))
 	{
+		UE_LOG(LogTemp, Display, TEXT("Damaged Montage"));
 		Montage_Play(_myDamagedMontage);
 	}
 }
