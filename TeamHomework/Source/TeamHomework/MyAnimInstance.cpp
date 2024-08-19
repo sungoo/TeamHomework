@@ -42,6 +42,22 @@ void UMyAnimInstance::PlayAttackMontage()
 	}
 }
 
+void UMyAnimInstance::PlayDamagedMontage()
+{
+	if (!Montage_IsPlaying(_myDamagedMontage))
+	{
+		Montage_Play(_myDamagedMontage);
+	}
+}
+
+void UMyAnimInstance::PlayDeathMontage()
+{
+	if (!Montage_IsPlaying(_myDeathMontage))
+	{
+		Montage_Play(_myDeathMontage);
+	}
+}
+
 void UMyAnimInstance::JumpToSection(int32 sectionIndex)
 {
 	FName sectionName = FName(*FString::Printf(TEXT("Attack%d"), sectionIndex));
@@ -51,9 +67,11 @@ void UMyAnimInstance::JumpToSection(int32 sectionIndex)
 void UMyAnimInstance::AnimNotify_AttackHit()
 {
 	_attackDelegate.Broadcast();
+	UE_LOG(LogTemp, Warning, TEXT("Attack Hit!"));
 }
 
 void UMyAnimInstance::AnimNotify_Death()
 {
 	_deathDelegate.Broadcast();
+	UE_LOG(LogTemp, Error, TEXT("Death!"));
 }

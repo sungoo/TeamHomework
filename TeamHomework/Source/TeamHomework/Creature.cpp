@@ -156,13 +156,14 @@ float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, ACont
 
 	if (_animInstance != nullptr && _statCom->GetCurHP() > 0)
 	{
-		_animInstance->PlayAttackMontage();
+		_animInstance->PlayDamagedMontage();
 	}
 
 	if (_animInstance != nullptr && _statCom->GetCurHP() <= 0)
 	{
 		_statCom->AddCurHP(-999);// _hp = 0
 		_isActive = false;
+		_animInstance->PlayDeathMontage();
 		
 		//DropAllItems();
 	}

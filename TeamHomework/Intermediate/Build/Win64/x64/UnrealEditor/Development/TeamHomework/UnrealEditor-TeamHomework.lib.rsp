@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-TeamHomework.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"D:\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-"D:\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\Development\TeamHomework\Module.TeamHomework.cpp.obj"
-"D:\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\Development\TeamHomework\Default.rc2.res"
-/OUT:"D:\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\Development\TeamHomework\UnrealEditor-TeamHomework.lib"
+"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\Development\TeamHomework\Module.TeamHomework.cpp.obj"
+"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\Development\TeamHomework\Default.rc2.res"
+/OUT:"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\Development\TeamHomework\UnrealEditor-TeamHomework.lib"
