@@ -51,14 +51,6 @@ void UMyAnimInstance::PlayDamagedMontage()
 	}
 }
 
-void UMyAnimInstance::PlayDeathMontage()
-{
-	if (!Montage_IsPlaying(_myDeathMontage))
-	{
-		Montage_Play(_myDeathMontage);
-	}
-}
-
 void UMyAnimInstance::JumpToSection(int32 sectionIndex)
 {
 	FName sectionName = FName(*FString::Printf(TEXT("Attack%d"), sectionIndex));

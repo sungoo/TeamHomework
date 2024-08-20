@@ -50,7 +50,7 @@ protected:
 	int32 _maxhp = 100;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
-	int32 _atk_default = 10;
+	int32 _atk_default = 50;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
-	int32 _atk = 0;
+	int32 _atk = 50;
 };

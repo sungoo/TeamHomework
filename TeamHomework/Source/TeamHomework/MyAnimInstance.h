@@ -24,7 +24,6 @@ public:
 
 	void PlayAttackMontage();
 	void PlayDamagedMontage();
-	void PlayDeathMontage();
 	void JumpToSection(int32 sectionIndex);
 
 	UFUNCTION()
@@ -60,7 +59,4 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn, Meta = (AllowPrivateAccess = true))
 	class UAnimMontage* _myDamagedMontage;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn, Meta = (AllowPrivateAccess = true))
-	class UAnimMontage* _myDeathMontage;
 };
