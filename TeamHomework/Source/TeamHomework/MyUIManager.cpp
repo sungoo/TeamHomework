@@ -4,6 +4,7 @@
 #include "MyUIManager.h"
 
 #include "MyInventoryUI.h"
+#include "PlayerSelectionUI.h"
 #include "MyHpBar.h"
 
 #include "Components/Image.h"
@@ -24,6 +25,12 @@ AMyUIManager::AMyUIManager()
 	{
 		_inventoryUI = CreateWidget<UMyInventoryUI>(GetWorld(), inventoryClass.Class);
 	}
+
+	static ConstructorHelpers::FClassFinder<UUserWidget> playerSelectionClass(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/Blueprint/UI/PlayerSelection_BP.PlayerSelection_BP_C'"));
+	if (playerSelectionClass.Succeeded())
+	{
+		_playerSelectionUI = CreateWidget<UPlayerSelectionUI>(GetWorld(), playerSelectionClass.Class);
+	}
 }
 
 // Called when the game starts or when spawned
@@ -33,6 +40,8 @@ void AMyUIManager::BeginPlay()
 	
 	_inventoryUI->AddToViewport();
 	_inventoryUI->SetVisibility(ESlateVisibility::Hidden);
+
+	_playerSelectionUI->AddToViewport();
 }
 
 // Called every frame

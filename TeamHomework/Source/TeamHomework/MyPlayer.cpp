@@ -102,7 +102,6 @@ void AMyPlayer::Turn(const FInputActionValue& value)
 	FVector2D LookAxisVector = value.Get<FVector2D>();
 	if (Controller != nullptr)
 	{
-		// add yaw and pitch input to controller
 		AddControllerYawInput(LookAxisVector.X);
 	}
 }

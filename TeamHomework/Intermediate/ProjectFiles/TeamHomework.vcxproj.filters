@@ -141,6 +141,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\MyUIManager.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\PlayerSelectionUI.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\PlayerSelectionUI.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <None Include="..\..\Source\TeamHomework\TeamHomework.Build.cs">
       <Filter>Source\TeamHomework</Filter>
     </None>

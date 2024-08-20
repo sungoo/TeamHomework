@@ -38,4 +38,6 @@ private:
 	UPROPERTY()
 	class UMyInventoryUI* _inventoryUI;
 
+	UPROPERTY()
+	class UPlayerSelectionUI* _playerSelectionUI;
 };

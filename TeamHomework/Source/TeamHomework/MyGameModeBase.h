@@ -19,4 +19,6 @@ public:
 	AMyGameModeBase();
 
 	virtual void BeginPlay() override;
+
+	void SetSelectedPlayer();
 };

@@ -7,20 +7,33 @@
 #include "MyGameInstance.h"
 #include "MyPlayerManager.h"
 
+#include "Kismet/GameplayStatics.h"
+
 AMyGameModeBase::AMyGameModeBase()
 {
+    APlayerController* playerController = UGameplayStatics::GetPlayerController(this, 0);
+    if (playerController)
+    {
+        FInputModeUIOnly InputMode;
+        InputMode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+        playerController->SetInputMode(InputMode);
+        playerController->bShowMouseCursor = true;
+    }
 }
 
 void AMyGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
+}
 
-	UClass* playerClass = PlayerManager->SetDefaultPawn();
+void AMyGameModeBase::SetSelectedPlayer()
+{
+    UClass* playerClass = PlayerManager->SetDefaultPawnClass();
 
-	if (playerClass)
-	{
-		DefaultPawnClass = playerClass;
-	}
+    if (playerClass)
+    {
+        DefaultPawnClass = playerClass;
+    }
 
     APlayerController* playerController = GetWorld()->GetFirstPlayerController();
     if (playerController)
@@ -36,12 +49,6 @@ void AMyGameModeBase::BeginPlay()
         {
             // PlayerController가 스폰된 Pawn을 소유하게 함
             playerController->Possess(spawnedPawn);
-
-            UE_LOG(LogTemp, Log, TEXT("Pawn spawned and possessed successfully."));
-        }
-        else
-        {
-            UE_LOG(LogTemp, Error, TEXT("Failed to spawn pawn."));
         }
     }
 }

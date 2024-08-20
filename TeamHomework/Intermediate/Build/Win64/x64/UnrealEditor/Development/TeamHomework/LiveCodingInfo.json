@@ -20,6 +20,7 @@
 			"MyPlayerManager.gen.cpp.obj",
 			"MyStatComponent.gen.cpp.obj",
 			"MyUIManager.gen.cpp.obj",
+			"PlayerSelectionUI.gen.cpp.obj",
 			"TeamHomework.init.gen.cpp.obj",
 			"Archer.cpp.obj",
 			"BTService_FindTarget.cpp.obj",
@@ -39,6 +40,7 @@
 			"MyPlayerManager.cpp.obj",
 			"MyStatComponent.cpp.obj",
 			"MyUIManager.cpp.obj",
+			"PlayerSelectionUI.cpp.obj",
 			"TeamHomework.cpp.obj"
 		]
 	}
