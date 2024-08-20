@@ -30,7 +30,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UClass* SetDefaultPawn();
+	UClass* SetDefaultPawnClass();
 
 	void SetPlayerType(EPlayerType type);
 	EPlayerType GetPlayerType() const;

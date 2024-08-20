@@ -11,7 +11,6 @@ void AArcher::AttackHit()
 	Super::AttackHit();
 
 	FHitResult hitResult;
-	//본인은 무시..
 	FCollisionQueryParams params(NAME_None, false, this);
 
 	float attackRange = 1000.0f;

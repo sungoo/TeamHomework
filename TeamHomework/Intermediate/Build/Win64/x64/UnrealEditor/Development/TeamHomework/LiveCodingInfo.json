@@ -2,6 +2,23 @@
 	"RemapUnityFiles": 
 	{
 		"Module.TeamHomework.cpp.obj": [
+			"PlayerSelectionUI.gen.cpp.obj",
+			"Archer.cpp.obj",
+			"BTService_FindTarget.cpp.obj",
+			"MyAIController.cpp.obj",
+			"MyGameInstance.cpp.obj",
+			"MyGameModeBase.cpp.obj",
+			"MyHpBar.cpp.obj",
+			"MyInventoryComponent.cpp.obj",
+			"MyInventoryUI.cpp.obj",
+			"MyItem.cpp.obj",
+			"MyMonster.cpp.obj",
+			"MyPlayer.cpp.obj",
+			"MyPlayerController.cpp.obj",
+			"MyPlayerManager.cpp.obj",
+			"MyUIManager.cpp.obj",
+			"PlayerSelectionUI.cpp.obj",
+			"TeamHomework.cpp.obj",
 			"Archer.gen.cpp.obj",
 			"BTService_FindTarget.gen.cpp.obj",
 			"Creature.gen.cpp.obj",
@@ -21,25 +38,10 @@
 			"MyStatComponent.gen.cpp.obj",
 			"MyUIManager.gen.cpp.obj",
 			"TeamHomework.init.gen.cpp.obj",
-			"Archer.cpp.obj",
-			"BTService_FindTarget.cpp.obj",
 			"Creature.cpp.obj",
 			"Knight.cpp.obj",
-			"MyAIController.cpp.obj",
 			"MyAnimInstance.cpp.obj",
-			"MyGameInstance.cpp.obj",
-			"MyGameModeBase.cpp.obj",
-			"MyHpBar.cpp.obj",
-			"MyInventoryComponent.cpp.obj",
-			"MyInventoryUI.cpp.obj",
-			"MyItem.cpp.obj",
-			"MyMonster.cpp.obj",
-			"MyPlayer.cpp.obj",
-			"MyPlayerController.cpp.obj",
-			"MyPlayerManager.cpp.obj",
-			"MyStatComponent.cpp.obj",
-			"MyUIManager.cpp.obj",
-			"TeamHomework.cpp.obj"
+			"MyStatComponent.cpp.obj"
 		]
 	}
 }
