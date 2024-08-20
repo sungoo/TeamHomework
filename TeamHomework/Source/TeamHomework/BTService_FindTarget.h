@@ -14,4 +14,8 @@ class TEAMHOMEWORK_API UBTService_FindTarget : public UBTService
 {
 	GENERATED_BODY()
 	
+public:
+	UBTService_FindTarget();
+
+	virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
 };

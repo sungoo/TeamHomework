@@ -27,9 +27,9 @@ public:
 private:
 	FTimerHandle _timerHandle;
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, Meta = (AllowPrivateAccess = true))
 	class UBlackboardData* _bd;
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, Meta = (AllowPrivateAccess = true))
 	class UBehaviorTree* _bt;
 };

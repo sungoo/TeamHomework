@@ -74,7 +74,6 @@ template<> TEAMHOMEWORK_API UClass* StaticClass<UBTService_FindTarget>()
 {
 	return UBTService_FindTarget::StaticClass();
 }
-UBTService_FindTarget::UBTService_FindTarget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UBTService_FindTarget);
 UBTService_FindTarget::~UBTService_FindTarget() {}
 // End Class UBTService_FindTarget

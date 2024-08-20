@@ -24,8 +24,6 @@ public: \
 
 
 #define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_BTService_FindTarget_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UBTService_FindTarget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UBTService_FindTarget(UBTService_FindTarget&&); \
@@ -33,7 +31,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UBTService_FindTarget); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UBTService_FindTarget); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UBTService_FindTarget) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UBTService_FindTarget) \
 	NO_API virtual ~UBTService_FindTarget();
 
 
