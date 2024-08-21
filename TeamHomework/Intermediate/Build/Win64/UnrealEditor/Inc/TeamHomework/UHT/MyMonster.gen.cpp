@@ -75,7 +75,6 @@ template<> TEAMHOMEWORK_API UClass* StaticClass<AMyMonster>()
 {
 	return AMyMonster::StaticClass();
 }
-AMyMonster::AMyMonster() {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AMyMonster);
 AMyMonster::~AMyMonster() {}
 // End Class AMyMonster

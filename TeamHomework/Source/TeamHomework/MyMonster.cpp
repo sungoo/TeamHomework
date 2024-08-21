@@ -3,3 +3,13 @@
 
 #include "MyMonster.h"
 
+AMyMonster::AMyMonster()
+{
+}
+
+void AMyMonster::BeginPlay()
+{
+	Super::BeginPlay();
+
+	SetAnimation();
+}
