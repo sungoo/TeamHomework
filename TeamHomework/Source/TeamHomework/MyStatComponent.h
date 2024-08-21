@@ -6,6 +6,22 @@
 #include "Components/ActorComponent.h"
 #include "MyStatComponent.generated.h"
 
+USTRUCT()
+struct FMyStatData : public FTableRowBase
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 level;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 maxHp;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 attack;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 gold;
+};
+
+
 DECLARE_MULTICAST_DELEGATE_OneParam(HpChanged, float);
 DECLARE_MULTICAST_DELEGATE(DeathDelegate);
 

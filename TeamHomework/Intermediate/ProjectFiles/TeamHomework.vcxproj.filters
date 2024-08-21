@@ -111,6 +111,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\MyMonster.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyNPC.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyNPC.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyPlayer.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>

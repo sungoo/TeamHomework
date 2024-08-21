@@ -2,7 +2,6 @@
 	"RemapUnityFiles": 
 	{
 		"Module.TeamHomework.cpp.obj": [
-			"MyAIController.gen.cpp.obj",
 			"Archer.cpp.obj",
 			"BTService_FindTarget.cpp.obj",
 			"Creature.cpp.obj",
@@ -19,7 +18,6 @@
 			"MyPlayer.cpp.obj",
 			"MyPlayerController.cpp.obj",
 			"MyPlayerManager.cpp.obj",
-			"MyStatComponent.cpp.obj",
 			"MyUIManager.cpp.obj",
 			"PlayerSelectionUI.cpp.obj",
 			"TeamHomework.cpp.obj",
@@ -27,6 +25,7 @@
 			"BTService_FindTarget.gen.cpp.obj",
 			"Creature.gen.cpp.obj",
 			"Knight.gen.cpp.obj",
+			"MyAIController.gen.cpp.obj",
 			"MyAnimInstance.gen.cpp.obj",
 			"MyGameInstance.gen.cpp.obj",
 			"MyGameModeBase.gen.cpp.obj",
@@ -35,13 +34,16 @@
 			"MyInventoryUI.gen.cpp.obj",
 			"MyItem.gen.cpp.obj",
 			"MyMonster.gen.cpp.obj",
+			"MyNPC.gen.cpp.obj",
 			"MyPlayer.gen.cpp.obj",
 			"MyPlayerController.gen.cpp.obj",
 			"MyPlayerManager.gen.cpp.obj",
 			"MyStatComponent.gen.cpp.obj",
 			"MyUIManager.gen.cpp.obj",
 			"PlayerSelectionUI.gen.cpp.obj",
-			"TeamHomework.init.gen.cpp.obj"
+			"TeamHomework.init.gen.cpp.obj",
+			"MyNPC.cpp.obj",
+			"MyStatComponent.cpp.obj"
 		]
 	}
 }
