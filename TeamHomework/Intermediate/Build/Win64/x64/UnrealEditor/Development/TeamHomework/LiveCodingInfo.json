@@ -2,8 +2,12 @@
 	"RemapUnityFiles": 
 	{
 		"Module.TeamHomework.cpp.obj": [
+			"BTService_PrimeSetting.gen.cpp.obj",
+			"BTTask_SetRandomPos.gen.cpp.obj",
+			"BTTask_SetTargetPos.gen.cpp.obj",
 			"Archer.cpp.obj",
-			"BTService_FindTarget.cpp.obj",
+			"BTService_PrimeSetting.cpp.obj",
+			"BTTask_SetTargetPos.cpp.obj",
 			"Creature.cpp.obj",
 			"Knight.cpp.obj",
 			"MyAIController.cpp.obj",
@@ -15,13 +19,16 @@
 			"MyInventoryUI.cpp.obj",
 			"MyItem.cpp.obj",
 			"MyMonster.cpp.obj",
+			"MyNPC.cpp.obj",
 			"MyPlayer.cpp.obj",
 			"MyPlayerController.cpp.obj",
 			"MyPlayerManager.cpp.obj",
+			"MyStatComponent.cpp.obj",
 			"MyUIManager.cpp.obj",
 			"PlayerSelectionUI.cpp.obj",
 			"TeamHomework.cpp.obj",
 			"Archer.gen.cpp.obj",
+			"BTDeco_TargetIsTooFar.gen.cpp.obj",
 			"BTService_FindTarget.gen.cpp.obj",
 			"Creature.gen.cpp.obj",
 			"Knight.gen.cpp.obj",
@@ -42,8 +49,9 @@
 			"MyUIManager.gen.cpp.obj",
 			"PlayerSelectionUI.gen.cpp.obj",
 			"TeamHomework.init.gen.cpp.obj",
-			"MyNPC.cpp.obj",
-			"MyStatComponent.cpp.obj"
+			"BTDeco_TargetIsTooFar.cpp.obj",
+			"BTService_FindTarget.cpp.obj",
+			"BTTask_SetRandomPos.cpp.obj"
 		]
 	}
 }

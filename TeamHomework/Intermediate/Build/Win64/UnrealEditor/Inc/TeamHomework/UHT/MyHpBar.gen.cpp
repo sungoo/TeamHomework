@@ -93,14 +93,14 @@ UMyHpBar::~UMyHpBar() {}
 // End Class UMyHpBar
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyHpBar_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyHpBar_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UMyHpBar, UMyHpBar::StaticClass, TEXT("UMyHpBar"), &Z_Registration_Info_UClass_UMyHpBar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyHpBar), 3093927467U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyHpBar_h_3216900927(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyHpBar_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyHpBar_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyHpBar_h_3216900927(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyHpBar_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyHpBar_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

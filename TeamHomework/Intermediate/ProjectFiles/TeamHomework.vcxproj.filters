@@ -39,6 +39,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\Archer.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\BTDeco_TargetIsTooFar.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTDeco_TargetIsTooFar.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\BTService_FindTarget.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>

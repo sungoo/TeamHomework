@@ -162,14 +162,14 @@ UPlayerSelectionUI::~UPlayerSelectionUI() {}
 // End Class UPlayerSelectionUI
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UPlayerSelectionUI, UPlayerSelectionUI::StaticClass, TEXT("UPlayerSelectionUI"), &Z_Registration_Info_UClass_UPlayerSelectionUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSelectionUI), 3670955558U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_2737322445(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_2737322445(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
