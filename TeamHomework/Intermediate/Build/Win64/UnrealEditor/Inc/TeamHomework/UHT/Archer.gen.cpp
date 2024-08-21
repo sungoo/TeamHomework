@@ -81,14 +81,22 @@ AArcher::~AArcher() {}
 // End Class AArcher
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Archer_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Archer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
+<<<<<<< HEAD
 		{ Z_Construct_UClass_AArcher, AArcher::StaticClass, TEXT("AArcher"), &Z_Registration_Info_UClass_AArcher, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArcher), 1008582327U) },
 	};
 };
 static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Archer_h_1500060569(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Archer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_Archer_h_Statics::ClassInfo),
+=======
+		{ Z_Construct_UClass_AArcher, AArcher::StaticClass, TEXT("AArcher"), &Z_Registration_Info_UClass_AArcher, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AArcher), 3731268087U) },
+	};
+};
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Archer_h_165146626(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Archer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Archer_h_Statics::ClassInfo),
+>>>>>>> Monster-AI
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

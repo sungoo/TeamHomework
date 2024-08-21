@@ -3,6 +3,8 @@
 
 #include "BTTask_SetRandomPos.h"
 
+#include "NavigationSystem.h"
+
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BlackboardData.h"
 #include "BehaviorTree/BlackboardComponent.h"
@@ -20,9 +22,27 @@ EBTNodeResult::Type UBTTask_SetRandomPos::ExecuteTask(UBehaviorTreeComponent& Ow
 	EBTNodeResult::Type result = Super::ExecuteTask(OwnerComp, NodeMemory);
 
 	auto blackboard = OwnerComp.GetBlackboardComponent();
+	if (blackboard == nullptr)
+		return EBTNodeResult::Failed;
+
 	auto aiOwner = OwnerComp.GetAIOwner()->GetPawn();
+	if (!aiOwner->IsValidLowLevel())
+		return EBTNodeResult::Failed;
 
+	FVector nowPos = aiOwner->GetActorLocation();
+	float radius = 500.0f;
 
+	auto NaviSystem = UNavigationSystemV1::GetNavigationSystem(GetWorld());
+	if(NaviSystem == nullptr)
+		return EBTNodeResult::Failed;
+
+	FNavLocation randomLoc;
+
+	NaviSystem->GetRandomPointInNavigableRadius(nowPos, radius, randomLoc);
+	
+	FVector randomPos = randomLoc.Location;
+
+	blackboard->SetValueAsVector(FName("RandomPos"), randomPos);
 
 	return result;
 }

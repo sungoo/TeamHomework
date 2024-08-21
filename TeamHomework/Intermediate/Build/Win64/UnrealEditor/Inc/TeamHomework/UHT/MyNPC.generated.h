@@ -17,6 +17,7 @@ struct FHitResult;
 #endif
 #define TEAMHOMEWORK_MyNPC_generated_h
 
+<<<<<<< HEAD
 #define FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execCharacterOverlapped); \
 	DECLARE_FUNCTION(execOnMyCharacterOverlapEnd); \
@@ -24,6 +25,9 @@ struct FHitResult;
 
 
 #define FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_INCLASS_NO_PURE_DECLS \
+=======
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_15_INCLASS_NO_PURE_DECLS \
+>>>>>>> Monster-AI
 private: \
 	static void StaticRegisterNativesAMyNPC(); \
 	friend struct Z_Construct_UClass_AMyNPC_Statics; \
@@ -32,7 +36,13 @@ public: \
 	DECLARE_SERIALIZER(AMyNPC)
 
 
+<<<<<<< HEAD
 #define FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_ENHANCED_CONSTRUCTORS \
+=======
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_15_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API AMyNPC(); \
+>>>>>>> Monster-AI
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyNPC(AMyNPC&&); \
@@ -44,13 +54,18 @@ public: \
 	NO_API virtual ~AMyNPC();
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyNPC_h_12_PROLOG
-#define FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_GENERATED_BODY \
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_12_PROLOG
+#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+<<<<<<< HEAD
 	FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_INCLASS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_ENHANCED_CONSTRUCTORS \
+=======
+	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_15_ENHANCED_CONSTRUCTORS \
+>>>>>>> Monster-AI
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -58,7 +73,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class AMyNPC>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_MyNPC_h
+#define CURRENT_FILE_ID FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

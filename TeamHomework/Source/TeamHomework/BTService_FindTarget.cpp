@@ -35,7 +35,7 @@ void UBTService_FindTarget::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* N
 		return;
 
 	FVector center = aiOwner->GetActorLocation();
-	float searchRadius = 500.0f;
+	float searchRadius = 1000.0f;
 	auto brush = FColor::Green;
 
 	TArray<FOverlapResult> overlapResult;
