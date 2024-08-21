@@ -77,6 +77,35 @@ void FDelegate_Death_DelegateWrapper(const FMulticastScriptDelegate& Delegate_De
 }
 // End Delegate FDelegate_Death
 
+// Begin Class ACreature Function AI_Attack
+struct Z_Construct_UFunction_ACreature_AI_Attack_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Creature.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACreature_AI_Attack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACreature, nullptr, "AI_Attack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACreature_AI_Attack_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACreature_AI_Attack_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ACreature_AI_Attack()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACreature_AI_Attack_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACreature::execAI_Attack)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AI_Attack();
+	P_NATIVE_END;
+}
+// End Class ACreature Function AI_Attack
+
 // Begin Class ACreature Function Disable
 struct Z_Construct_UFunction_ACreature_Disable_Statics
 {
@@ -198,6 +227,7 @@ void ACreature::StaticRegisterNativesACreature()
 {
 	UClass* Class = ACreature::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "AI_Attack", &ACreature::execAI_Attack },
 		{ "Disable", &ACreature::execDisable },
 		{ "OnAttackEnded", &ACreature::execOnAttackEnded },
 		{ "Unpossess", &ACreature::execUnpossess },
@@ -328,6 +358,7 @@ struct Z_Construct_UClass_ACreature_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACreature_AI_Attack, "AI_Attack" }, // 3458764608
 		{ &Z_Construct_UFunction_ACreature_Disable, "Disable" }, // 3573987638
 		{ &Z_Construct_UFunction_ACreature_OnAttackEnded, "OnAttackEnded" }, // 2246755119
 		{ &Z_Construct_UFunction_ACreature_Unpossess, "Unpossess" }, // 694565750
@@ -417,10 +448,10 @@ ACreature::~ACreature() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 1300662793U) },
+		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 1175945918U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_2721841265(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_23494349(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

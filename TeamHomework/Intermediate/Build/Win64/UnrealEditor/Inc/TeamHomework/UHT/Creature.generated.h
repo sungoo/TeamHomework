@@ -24,6 +24,7 @@ TEAMHOMEWORK_API void FDelegate_Death_DelegateWrapper(const FMulticastScriptDele
 
 
 #define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execAI_Attack); \
 	DECLARE_FUNCTION(execOnAttackEnded); \
 	DECLARE_FUNCTION(execUnpossess); \
 	DECLARE_FUNCTION(execDisable);

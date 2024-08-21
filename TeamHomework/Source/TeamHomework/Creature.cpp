@@ -148,6 +148,22 @@ void ACreature::AttackHit()
 {
 }
 
+void ACreature::AI_Attack()
+{
+	if (_statCom->IsDead())
+		return;
+	if (!_isAttacking && _animInstance == nullptr)
+	{
+		_isAttacking = true;
+		_animInstance->PlayAttackMontage();
+
+		_curAttackIndex %= 3;
+		_curAttackIndex++;
+
+		_animInstance->JumpToSection(_curAttackIndex);
+	}
+}
+
 float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	float damage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
