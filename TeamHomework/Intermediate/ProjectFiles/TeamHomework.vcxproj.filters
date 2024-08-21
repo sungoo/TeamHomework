@@ -135,6 +135,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\MyNPC.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyNPCUI.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyNPCUI.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyPlayer.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
@@ -157,6 +163,12 @@
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\MyStatComponent.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\MyStoreUI.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\MyStoreUI.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\MyUIManager.cpp">

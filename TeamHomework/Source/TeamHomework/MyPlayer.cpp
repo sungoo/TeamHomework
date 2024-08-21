@@ -75,6 +75,9 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 		// View Inventory
 		EnhancedInputComponent->BindAction(_viewInventoryAction, ETriggerEvent::Started, this, &AMyPlayer::ViewInventory);
+	
+		// View Store
+		EnhancedInputComponent->BindAction(_viewStoreAction, ETriggerEvent::Started, this, &AMyPlayer::ViewStore);
 	}
 }
 
@@ -149,6 +152,22 @@ void AMyPlayer::ViewInventory(const FInputActionValue& value)
 	if (isPressed)
 	{
 		UIManager->ToggleInventory();
+	}
+}
+
+void AMyPlayer::ViewStore(const FInputActionValue& value)
+{
+	bool isPressed = value.Get<bool>();
+
+	if (isPressed && _meetNPC)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("view store"));
+		UIManager->ToggleStore();
+
+		if (_viewStore)
+			_viewStore = false;
+		else
+			_viewStore = true;
 	}
 }
 

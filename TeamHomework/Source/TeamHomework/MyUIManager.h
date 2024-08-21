@@ -29,6 +29,9 @@ public:
 	void ToggleInventory();
 
 	UFUNCTION()
+	void ToggleStore();
+
+	UFUNCTION()
 	void AddItem(class UMyInventoryComponent* inventoryComponent);
 
 	UFUNCTION()
@@ -40,4 +43,7 @@ private:
 
 	UPROPERTY()
 	class UPlayerSelectionUI* _playerSelectionUI;
+
+	UPROPERTY()
+	class UMyStoreUI* _storeUI;
 };

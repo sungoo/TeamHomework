@@ -18,6 +18,7 @@ class UMyInventoryComponent;
 #define FID_TeamHomework_Source_TeamHomework_MyUIManager_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDropItem); \
 	DECLARE_FUNCTION(execAddItem); \
+	DECLARE_FUNCTION(execToggleStore); \
 	DECLARE_FUNCTION(execToggleInventory);
 
 

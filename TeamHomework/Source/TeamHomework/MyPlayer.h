@@ -33,6 +33,7 @@ public:
 	void JumpA(const FInputActionValue& value);
 	void AttackA(const FInputActionValue& value);
 	void ViewInventory(const FInputActionValue& value);
+	void ViewStore(const FInputActionValue& value);
 
 	void TryGetItem(const FInputActionValue& value);
 	void TryGetItemEnd(const FInputActionValue& value);
@@ -42,6 +43,12 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	bool _tryGetItem = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	bool _meetNPC = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	bool _viewStore = false;
 
 	// Action
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
@@ -67,6 +74,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* _viewInventoryAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* _viewStoreAction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = SpringArm, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* _springArm;

@@ -6,6 +6,7 @@
 #include "MyInventoryUI.h"
 #include "PlayerSelectionUI.h"
 #include "MyHpBar.h"
+#include "MyStoreUI.h"
 
 #include "Components/Image.h"
 
@@ -31,6 +32,12 @@ AMyUIManager::AMyUIManager()
 	{
 		_playerSelectionUI = CreateWidget<UPlayerSelectionUI>(GetWorld(), playerSelectionClass.Class);
 	}
+
+	static ConstructorHelpers::FClassFinder<UUserWidget> storeClass(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/Blueprint/UI/MyStoreUI_BP.MyStoreUI_BP_C'"));
+	if (storeClass.Succeeded())
+	{
+		_storeUI = CreateWidget<UMyStoreUI>(GetWorld(), storeClass.Class);
+	}
 }
 
 // Called when the game starts or when spawned
@@ -38,10 +45,14 @@ void AMyUIManager::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	_playerSelectionUI->AddToViewport();
+
+
 	_inventoryUI->AddToViewport();
 	_inventoryUI->SetVisibility(ESlateVisibility::Hidden);
 
-	_playerSelectionUI->AddToViewport();
+	_storeUI->AddToViewport();
+	_storeUI->SetVisibility(ESlateVisibility::Hidden);
 }
 
 // Called every frame
@@ -54,6 +65,12 @@ void AMyUIManager::Tick(float DeltaTime)
 void AMyUIManager::ToggleInventory()
 {
 	_inventoryUI->ToggleVisibility();
+}
+
+void AMyUIManager::ToggleStore()
+{
+	_storeUI->ToggleVisibility();
+	UE_LOG(LogTemp, Error, TEXT("toggle store"));
 }
 
 void AMyUIManager::AddItem(UMyInventoryComponent* inventoryComponent)

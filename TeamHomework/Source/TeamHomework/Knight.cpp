@@ -14,13 +14,13 @@ void AKnight::AttackHit()
 
 	FCollisionQueryParams params(NAME_None, false, this);
 
-	float attackRange = 300.0f;
+	float attackRange = 150.0f;
 	float attackRadius = 50.0f;
 
 	bool bResult = GetWorld()->SweepSingleByChannel
 	(
 		hitResult,
-		GetActorLocation(),
+		GetActorLocation() + GetActorForwardVector() * attackRange,
 		GetActorLocation() + GetActorForwardVector() * attackRange,
 		FQuat::Identity,
 		ECollisionChannel::ECC_GameTraceChannel2,
@@ -42,6 +42,6 @@ void AKnight::AttackHit()
 		drawColor = FColor::Red;
 	}
 
-	FVector center = GetActorLocation() + GetActorForwardVector() * attackRange * 0.5;
+	FVector center = GetActorLocation() + GetActorForwardVector() * attackRange;
 	DrawDebugSphere(GetWorld(), center, attackRadius, 30, drawColor, false, 2.0f);
 }

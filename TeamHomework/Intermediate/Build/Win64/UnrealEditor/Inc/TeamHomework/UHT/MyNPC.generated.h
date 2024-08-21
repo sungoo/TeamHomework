@@ -9,10 +9,19 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
 #ifdef TEAMHOMEWORK_MyNPC_generated_h
 #error "MyNPC.generated.h already included, missing '#pragma once' in MyNPC.h"
 #endif
 #define TEAMHOMEWORK_MyNPC_generated_h
+
+#define FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execCharacterOverlapped); \
+	DECLARE_FUNCTION(execOnMyCharacterOverlapEnd); \
+	DECLARE_FUNCTION(execOnMyCharacterOverlap);
+
 
 #define FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_INCLASS_NO_PURE_DECLS \
 private: \
@@ -24,8 +33,6 @@ public: \
 
 
 #define FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AMyNPC(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyNPC(AMyNPC&&); \
@@ -41,6 +48,7 @@ public: \
 #define FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_INCLASS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_MyNPC_h_15_ENHANCED_CONSTRUCTORS \
 private: \
