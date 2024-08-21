@@ -14,4 +14,8 @@ class TEAMHOMEWORK_API AMyMonster : public ACreature
 {
 	GENERATED_BODY()
 	
+public:
+	AMyMonster();
+
+	virtual void BeginPlay() override;
 };

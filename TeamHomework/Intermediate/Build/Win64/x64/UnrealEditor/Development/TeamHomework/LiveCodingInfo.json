@@ -4,6 +4,8 @@
 		"Module.TeamHomework.cpp.obj": [
 			"Archer.gen.cpp.obj",
 			"BTService_FindTarget.gen.cpp.obj",
+			"BTService_PrimeSetting.gen.cpp.obj",
+			"BTTask_SetTargetPos.gen.cpp.obj",
 			"Creature.gen.cpp.obj",
 			"Knight.gen.cpp.obj",
 			"MyAIController.gen.cpp.obj",
@@ -14,7 +16,6 @@
 			"MyInventoryComponent.gen.cpp.obj",
 			"MyInventoryUI.gen.cpp.obj",
 			"MyItem.gen.cpp.obj",
-			"MyMonster.gen.cpp.obj",
 			"MyPlayer.gen.cpp.obj",
 			"MyPlayerController.gen.cpp.obj",
 			"MyPlayerManager.gen.cpp.obj",
@@ -23,6 +24,8 @@
 			"PlayerSelectionUI.gen.cpp.obj",
 			"Archer.cpp.obj",
 			"BTService_FindTarget.cpp.obj",
+			"BTService_PrimeSetting.cpp.obj",
+			"BTTask_SetTargetPos.cpp.obj",
 			"Creature.cpp.obj",
 			"Knight.cpp.obj",
 			"MyAIController.cpp.obj",
@@ -33,7 +36,6 @@
 			"MyInventoryComponent.cpp.obj",
 			"MyInventoryUI.cpp.obj",
 			"MyItem.cpp.obj",
-			"MyMonster.cpp.obj",
 			"MyPlayer.cpp.obj",
 			"MyPlayerController.cpp.obj",
 			"MyPlayerManager.cpp.obj",
@@ -41,11 +43,11 @@
 			"MyUIManager.cpp.obj",
 			"PlayerSelectionUI.cpp.obj",
 			"TeamHomework.cpp.obj",
-			"BTService_PrimeSetting.gen.cpp.obj",
-			"BTTask_SetTargetPos.gen.cpp.obj",
+			"BTTask_SetRandomPos.gen.cpp.obj",
+			"MyMonster.gen.cpp.obj",
 			"TeamHomework.init.gen.cpp.obj",
-			"BTService_PrimeSetting.cpp.obj",
-			"BTTask_SetTargetPos.cpp.obj"
+			"BTTask_SetRandomPos.cpp.obj",
+			"MyMonster.cpp.obj"
 		]
 	}
 }

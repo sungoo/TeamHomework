@@ -24,8 +24,6 @@ public: \
 
 
 #define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyMonster_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AMyMonster(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyMonster(AMyMonster&&); \
