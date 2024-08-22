@@ -26,8 +26,10 @@ bool UBTDeco_CanAttack::CalculateRawConditionValue(UBehaviorTreeComponent& Owner
 	auto target = Cast<ACreature>(blackboard->GetValueAsObject(FName(TEXT("Target"))));
 	if (target == nullptr)
 		return false;
+
+	auto owner = OwnerComp.GetAIOwner()->GetPawn();
 	
-	FVector nowPos = OwnerComp.GetOwner()->GetActorLocation();
+	FVector nowPos = owner->GetActorLocation();
 	FVector targetPos = target->GetActorLocation();
 
 	return FVector::Distance(nowPos, targetPos) < 100.0f;

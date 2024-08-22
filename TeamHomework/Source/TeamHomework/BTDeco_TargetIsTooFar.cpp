@@ -27,12 +27,13 @@ bool UBTDeco_TargetIsTooFar::CalculateRawConditionValue(UBehaviorTreeComponent& 
 	if (target == nullptr)
 		return true;
 
-	FVector primePos = blackboard->GetValueAsVector(FName("PrimePos"));
+	FVector nowPos = OwnerComp.GetAIOwner()->GetPawn()->GetActorLocation();
 	FVector targetPos = target->GetActorLocation();
 	float maxSearchRange = blackboard->GetValueAsFloat(FName("MaxRange"));
 
-	float dist = FVector::Dist(primePos, targetPos);
+	float dist = FVector::Dist(nowPos, targetPos);
 	UE_LOG(LogTemp, Error, TEXT("%f"), dist);
+	UE_LOG(LogTemp, Error, TEXT("%s"), *nowPos.ToString());
 
 	if (dist - maxSearchRange > 0)
 		return true;

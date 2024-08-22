@@ -29,8 +29,10 @@ EBTNodeResult::Type UBTTask_SetRandomPos::ExecuteTask(UBehaviorTreeComponent& Ow
 	if (!aiOwner->IsValidLowLevel())
 		return EBTNodeResult::Failed;
 
+	FVector primePos = blackboard->GetValueAsVector(FName(TEXT("PrimePos")));
 	FVector nowPos = aiOwner->GetActorLocation();
-	float radius = 500.0f;
+	float radius = 200.0f;
+	float maxRange = blackboard->GetValueAsFloat(FName(TEXT("MaxRange")));
 
 	auto NaviSystem = UNavigationSystemV1::GetNavigationSystem(GetWorld());
 	if(NaviSystem == nullptr)
@@ -42,7 +44,12 @@ EBTNodeResult::Type UBTTask_SetRandomPos::ExecuteTask(UBehaviorTreeComponent& Ow
 	
 	FVector randomPos = randomLoc.Location;
 
-	blackboard->SetValueAsVector(FName("RandomPos"), randomPos);
+	float dist = FVector::Distance(randomPos, primePos);
+
+	if(dist <= maxRange)
+		blackboard->SetValueAsVector(FName("RandomPos"), randomPos);
+	else
+		blackboard->SetValueAsVector(FName("RandomPos"), primePos);
 
 	return result;
 }

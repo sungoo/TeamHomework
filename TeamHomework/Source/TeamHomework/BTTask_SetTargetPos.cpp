@@ -34,7 +34,6 @@ EBTNodeResult::Type UBTTask_SetTargetPos::ExecuteTask(UBehaviorTreeComponent& Ow
 		blackboard->SetValueAsVector(FName(TEXT("TargetPos")), primePos);
 
 	blackboard->SetValueAsVector(FName(TEXT("TargetPos")), targetPos);
-	UE_LOG(LogTemp, Warning, TEXT("Set Targit Pos!"));
 
 	return EBTNodeResult::Succeeded;
 

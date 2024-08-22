@@ -274,13 +274,8 @@ struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamH
 		{ Z_Construct_UClass_AMyUIManager, AMyUIManager::StaticClass, TEXT("AMyUIManager"), &Z_Registration_Info_UClass_AMyUIManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyUIManager), 113800525U) },
 	};
 };
-<<<<<<< HEAD
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyUIManager_h_1712210310(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::ClassInfo),
-=======
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_2724898373(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_1712210310(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::ClassInfo),
->>>>>>> Monster-AI
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
