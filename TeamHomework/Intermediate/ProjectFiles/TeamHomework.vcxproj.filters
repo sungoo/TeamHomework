@@ -216,6 +216,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\TeamHomework.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI_BaseDisplay.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI_BaseDisplay.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\VFX_Manager.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>

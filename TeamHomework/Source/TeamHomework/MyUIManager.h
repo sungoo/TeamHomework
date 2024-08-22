@@ -6,6 +6,17 @@
 #include "GameFramework/Actor.h"
 #include "MyUIManager.generated.h"
 
+UENUM()
+enum class UI_List
+{
+	//UI List Sorted by "Z-Index".
+	//UI will Stack like this list (top to bottom)
+	BaseDisplay,
+	PlayerSelection,
+	Inventory,
+	Store,
+};
+
 UCLASS()
 class TEAMHOMEWORK_API AMyUIManager : public AActor
 {
@@ -38,6 +49,12 @@ public:
 	void DropItem(class UMyInventoryComponent* inventoryComponent);
 
 private:
+	UPROPERTY()
+	TArray<UUserWidget*> _widgets;
+
+	UPROPERTY()
+	class UUI_BaseDisplay* _baseDisplayUI;
+
 	UPROPERTY()
 	class UMyInventoryUI* _inventoryUI;
 

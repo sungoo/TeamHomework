@@ -7,6 +7,7 @@
 #include "PlayerSelectionUI.h"
 #include "MyHpBar.h"
 #include "MyStoreUI.h"
+#include "UI_BaseDisplay.h"
 
 #include "Components/Image.h"
 
@@ -20,6 +21,12 @@ AMyUIManager::AMyUIManager()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	static ConstructorHelpers::FClassFinder<UUserWidget> baseDisplay(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/Blueprint/UI/BaseDisplay_BP.BaseDisplay_BP_C'"));
+	if (baseDisplay.Succeeded())
+	{
+		_baseDisplayUI = CreateWidget<UUI_BaseDisplay>(GetWorld(), baseDisplay.Class);
+	}
 
 	static ConstructorHelpers::FClassFinder<UUserWidget> inventoryClass(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/BluePrint/UI/MyInventory_BP.MyInventory_BP_C'"));
 	if (inventoryClass.Succeeded())
