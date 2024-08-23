@@ -8,5 +8,8 @@
 /NODEFAULTLIB
 "C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.obj"
 "C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\Module.TeamHomework.cpp.obj"
+"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyItem.cpp.obj"
+"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyItem.gen.cpp.obj"
+"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\TeamHomework.init.gen.cpp.obj"
 "C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\Default.rc2.res"
 /OUT:"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\UnrealEditor-TeamHomework-Win64-DebugGame.lib"

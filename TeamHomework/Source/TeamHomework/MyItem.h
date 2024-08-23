@@ -36,7 +36,7 @@ struct FItemData : public FTableRowBase
 	TYPE type;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 addValue;
+	int32 statAddValue;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 price;

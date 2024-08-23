@@ -20,7 +20,6 @@
 			"MyHpBar.gen.cpp.obj",
 			"MyInventoryComponent.gen.cpp.obj",
 			"MyInventoryUI.gen.cpp.obj",
-			"MyItem.gen.cpp.obj",
 			"MyMonster.gen.cpp.obj",
 			"MyNPC.gen.cpp.obj",
 			"MyNPCUI.gen.cpp.obj",
@@ -31,7 +30,6 @@
 			"MyStoreUI.gen.cpp.obj",
 			"MyUIManager.gen.cpp.obj",
 			"PlayerSelectionUI.gen.cpp.obj",
-			"TeamHomework.init.gen.cpp.obj",
 			"UI_BaseDisplay.gen.cpp.obj",
 			"VFX_Manager.gen.cpp.obj",
 			"Archer.cpp.obj",
@@ -52,7 +50,6 @@
 			"MyHpBar.cpp.obj",
 			"MyInventoryComponent.cpp.obj",
 			"MyInventoryUI.cpp.obj",
-			"MyItem.cpp.obj",
 			"MyMonster.cpp.obj",
 			"MyNPC.cpp.obj",
 			"MyNPCUI.cpp.obj",
@@ -65,7 +62,10 @@
 			"PlayerSelectionUI.cpp.obj",
 			"TeamHomework.cpp.obj",
 			"UI_BaseDisplay.cpp.obj",
-			"VFX_Manager.cpp.obj"
+			"VFX_Manager.cpp.obj",
+			"MyItem.gen.cpp.obj",
+			"TeamHomework.init.gen.cpp.obj",
+			"MyItem.cpp.obj"
 		]
 	}
 }
