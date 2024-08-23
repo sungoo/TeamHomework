@@ -27,14 +27,13 @@ public:
 	virtual void Init() override;
 
 	// FMyStatData* GetStatDataByLevel(int level);
+	struct FItemData* GetItemDataByCode(int code);
 
 	class AMyUIManager* GetUIManager() { return _uiManager; };
 	class AMyPlayerManager* GetPlayerManager() { return _playerManager; };
 	// class AMyEffectManager* GetEffectManager() { return _effectManager; };
 
 private:
-	UPROPERTY()
-	class UDataTable* _statTable;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	class AMyUIManager* _uiManager;
@@ -44,4 +43,11 @@ private:
 	
 	// UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	// class AMyEffectManager* _effectManager;
+
+	//Data Table
+	UPROPERTY()
+	class UDataTable* _statTable;
+
+	UPROPERTY()
+	class UDataTable* _itemData;
 };

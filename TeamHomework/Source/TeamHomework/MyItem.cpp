@@ -2,6 +2,9 @@
 
 
 #include "MyItem.h"
+
+#include "MyGameInstance.h"
+
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
 #include "MyPlayer.h"
@@ -75,4 +78,22 @@ void AMyItem::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	
 	CharacterOverlapped();
+}
+
+void AMyItem::InitItemByCode(int32 code)
+{
+	auto gameinstance = Cast<UMyGameInstance>(GetWorld()->GetGameInstance());
+	if (gameinstance != nullptr)
+	{
+		FItemData* data = gameinstance->GetItemDataByCode(code);
+
+		_name = data->name;
+		_textuer = data->textuer;
+		_mesh = data->mesh;
+		_type = data->type;
+		_statAddValue = data->statAddValue;
+		_price = data->price;
+
+		_meshComponent->SetStaticMesh(_mesh);
+	}
 }

@@ -15,7 +15,6 @@
 			"Knight.gen.cpp.obj",
 			"MyAIController.gen.cpp.obj",
 			"MyAnimInstance.gen.cpp.obj",
-			"MyGameInstance.gen.cpp.obj",
 			"MyGameModeBase.gen.cpp.obj",
 			"MyHpBar.gen.cpp.obj",
 			"MyInventoryComponent.gen.cpp.obj",
@@ -45,7 +44,6 @@
 			"Knight.cpp.obj",
 			"MyAIController.cpp.obj",
 			"MyAnimInstance.cpp.obj",
-			"MyGameInstance.cpp.obj",
 			"MyGameModeBase.cpp.obj",
 			"MyHpBar.cpp.obj",
 			"MyInventoryComponent.cpp.obj",
@@ -63,8 +61,10 @@
 			"TeamHomework.cpp.obj",
 			"UI_BaseDisplay.cpp.obj",
 			"VFX_Manager.cpp.obj",
+			"MyGameInstance.gen.cpp.obj",
 			"MyItem.gen.cpp.obj",
 			"TeamHomework.init.gen.cpp.obj",
+			"MyGameInstance.cpp.obj",
 			"MyItem.cpp.obj"
 		]
 	}

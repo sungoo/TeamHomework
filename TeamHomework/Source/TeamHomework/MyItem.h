@@ -91,6 +91,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void InitItemByCode(int32 code);
+
+private:
 	UPROPERTY(VisibleAnywhere)
 	class UStaticMeshComponent* _meshComponent;
 
@@ -104,4 +107,23 @@ public:
 	class AMyPlayer* _player;
 
 	FItemType _itemType;
+
+	//Item Description
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))
+	FName _name;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))
+	class UTexture2D* _textuer;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))
+	class UStaticMesh* _mesh;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))
+	TYPE _type;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))
+	int32 _statAddValue;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))
+	int32 _price;
 };

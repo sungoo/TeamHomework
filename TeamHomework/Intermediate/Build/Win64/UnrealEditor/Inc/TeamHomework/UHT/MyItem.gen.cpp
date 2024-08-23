@@ -514,12 +514,55 @@ struct Z_Construct_UClass_AMyItem_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__player_MetaData[] = {
 		{ "ModuleRelativePath", "MyItem.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__name_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Info" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Item Description\n" },
+#endif
+		{ "ModuleRelativePath", "MyItem.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Item Description" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__textuer_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Info" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__mesh_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Info" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__type_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Info" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__statAddValue_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Info" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__price_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Info" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__meshComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__trigger;
 	static void NewProp__isOverlapped_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__isOverlapped;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__player;
+	static const UECodeGen_Private::FNamePropertyParams NewProp__name;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__textuer;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__mesh;
+	static const UECodeGen_Private::FIntPropertyParams NewProp__type_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp__type;
+	static const UECodeGen_Private::FIntPropertyParams NewProp__statAddValue;
+	static const UECodeGen_Private::FIntPropertyParams NewProp__price;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -533,19 +576,33 @@ struct Z_Construct_UClass_AMyItem_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__meshComponent = { "_meshComponent", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _meshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__meshComponent_MetaData), NewProp__meshComponent_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__trigger = { "_trigger", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _trigger), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__trigger_MetaData), NewProp__trigger_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__meshComponent = { "_meshComponent", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _meshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__meshComponent_MetaData), NewProp__meshComponent_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__trigger = { "_trigger", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _trigger), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__trigger_MetaData), NewProp__trigger_MetaData) };
 void Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped_SetBit(void* Obj)
 {
 	((AMyItem*)Obj)->_isOverlapped = 1;
 }
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped = { "_isOverlapped", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMyItem), &Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__isOverlapped_MetaData), NewProp__isOverlapped_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__player = { "_player", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _player), Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__player_MetaData), NewProp__player_MetaData) };
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped = { "_isOverlapped", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMyItem), &Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__isOverlapped_MetaData), NewProp__isOverlapped_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__player = { "_player", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _player), Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__player_MetaData), NewProp__player_MetaData) };
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__name = { "_name", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _name), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__name_MetaData), NewProp__name_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__textuer = { "_textuer", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _textuer), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__textuer_MetaData), NewProp__textuer_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__mesh = { "_mesh", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _mesh), Z_Construct_UClass_UStaticMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__mesh_MetaData), NewProp__mesh_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__type_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__type = { "_type", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _type), Z_Construct_UEnum_TeamHomework_TYPE, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__type_MetaData), NewProp__type_MetaData) }; // 2262767565
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__statAddValue = { "_statAddValue", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _statAddValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__statAddValue_MetaData), NewProp__statAddValue_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyItem_Statics::NewProp__price = { "_price", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyItem, _price), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__price_MetaData), NewProp__price_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyItem_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__meshComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__trigger,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__isOverlapped,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__player,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__name,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__textuer,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__mesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__type_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__type,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__statAddValue,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyItem_Statics::NewProp__price,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMyItem_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMyItem_Statics::DependentSingletons[])() = {
@@ -596,10 +653,10 @@ struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamH
 		{ FItemDetail::StaticStruct, Z_Construct_UScriptStruct_FItemDetail_Statics::NewStructOps, TEXT("ItemDetail"), &Z_Registration_Info_UScriptStruct_ItemDetail, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemDetail), 556007008U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyItem, AMyItem::StaticClass, TEXT("AMyItem"), &Z_Registration_Info_UClass_AMyItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyItem), 3766222697U) },
+		{ Z_Construct_UClass_AMyItem, AMyItem::StaticClass, TEXT("AMyItem"), &Z_Registration_Info_UClass_AMyItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyItem), 4262773978U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_1098761641(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_4035071284(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::EnumInfo));
