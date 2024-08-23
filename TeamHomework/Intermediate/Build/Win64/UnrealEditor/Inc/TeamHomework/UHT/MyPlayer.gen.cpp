@@ -46,12 +46,17 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__meetNPC_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Input" },
+		{ "Category", "UI" },
 		{ "ModuleRelativePath", "MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__viewStore_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Input" },
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__inventoryOpen_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "UI" },
 		{ "ModuleRelativePath", "MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__moveAction_MetaData[] = {
@@ -124,6 +129,8 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__meetNPC;
 	static void NewProp__viewStore_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__viewStore;
+	static void NewProp__inventoryOpen_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp__inventoryOpen;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__moveAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__turnAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__lookUpAction;
@@ -157,6 +164,11 @@ void Z_Construct_UClass_AMyPlayer_Statics::NewProp__viewStore_SetBit(void* Obj)
 	((AMyPlayer*)Obj)->_viewStore = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__viewStore = { "_viewStore", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMyPlayer), &Z_Construct_UClass_AMyPlayer_Statics::NewProp__viewStore_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__viewStore_MetaData), NewProp__viewStore_MetaData) };
+void Z_Construct_UClass_AMyPlayer_Statics::NewProp__inventoryOpen_SetBit(void* Obj)
+{
+	((AMyPlayer*)Obj)->_inventoryOpen = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__inventoryOpen = { "_inventoryOpen", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMyPlayer), &Z_Construct_UClass_AMyPlayer_Statics::NewProp__inventoryOpen_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__inventoryOpen_MetaData), NewProp__inventoryOpen_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__moveAction = { "_moveAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyPlayer, _moveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__moveAction_MetaData), NewProp__moveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__turnAction = { "_turnAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyPlayer, _turnAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__turnAction_MetaData), NewProp__turnAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__lookUpAction = { "_lookUpAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyPlayer, _lookUpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__lookUpAction_MetaData), NewProp__lookUpAction_MetaData) };
@@ -172,6 +184,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyPlayer
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__tryGetItem,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__meetNPC,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__viewStore,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__inventoryOpen,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__moveAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__turnAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__lookUpAction,
@@ -225,10 +238,10 @@ AMyPlayer::~AMyPlayer() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyPlayer, AMyPlayer::StaticClass, TEXT("AMyPlayer"), &Z_Registration_Info_UClass_AMyPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyPlayer), 2369549230U) },
+		{ Z_Construct_UClass_AMyPlayer, AMyPlayer::StaticClass, TEXT("AMyPlayer"), &Z_Registration_Info_UClass_AMyPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyPlayer), 1399870749U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_73991257(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_1089670258(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

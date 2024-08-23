@@ -151,7 +151,16 @@ void AMyPlayer::ViewInventory(const FInputActionValue& value)
 	
 	if (isPressed)
 	{
-		UIManager->ToggleInventory();
+		if (!_inventoryOpen)
+		{
+			UIManager->OpenUI(UI_List::Inventory);
+			_inventoryOpen = true;
+		}
+		else 
+		{
+			UIManager->CloseUI(UI_List::Inventory);
+			_inventoryOpen = false;
+		}
 	}
 }
 
@@ -162,12 +171,19 @@ void AMyPlayer::ViewStore(const FInputActionValue& value)
 	if (isPressed && _meetNPC)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("view store"));
-		UIManager->ToggleStore();
 
 		if (_viewStore)
+		{
+			UIManager->CloseUI(UI_List::Store);
+			UIManager->CloseUI(UI_List::Inventory);
 			_viewStore = false;
+		}
 		else
+		{
+			UIManager->OpenUI(UI_List::Store);
+			UIManager->OpenUI(UI_List::Inventory);
 			_viewStore = true;
+		}
 	}
 }
 

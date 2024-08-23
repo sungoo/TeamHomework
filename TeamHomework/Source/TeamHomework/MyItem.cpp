@@ -6,7 +6,6 @@
 #include "Components/SphereComponent.h"
 #include "MyPlayer.h"
 
-
 // Sets default values
 AMyItem::AMyItem()
 {
@@ -77,4 +76,3 @@ void AMyItem::Tick(float DeltaTime)
 	
 	CharacterOverlapped();
 }
-

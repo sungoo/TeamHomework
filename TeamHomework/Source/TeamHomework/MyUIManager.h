@@ -34,13 +34,14 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	class UMyInventoryUI* GeInventoryUI() { return _inventoryUI; };
+	void OpenUI(UI_List type);
+	void CloseUI(UI_List type);
+	void CloseAll();
 
-	UFUNCTION()
-	void ToggleInventory();
-
-	UFUNCTION()
-	void ToggleStore();
+	class UUI_BaseDisplay* GetBaseDisplay() { return _baseDisplayUI; }
+	class UMyInventoryUI* GetInventoryUI() { return _inventoryUI; };
+	class UPlayerSelectionUI* GetPlayerSelectionUI() { return _playerSelectionUI; }
+	class UMyStoreUI* GetStoreUI() { return _storeUI; }
 
 	UFUNCTION()
 	void AddItem(class UMyInventoryComponent* inventoryComponent);

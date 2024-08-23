@@ -20,7 +20,7 @@
 AMyUIManager::AMyUIManager()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	static ConstructorHelpers::FClassFinder<UUserWidget> baseDisplay(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/Blueprint/UI/BaseDisplay_BP.BaseDisplay_BP_C'"));
 	if (baseDisplay.Succeeded())
@@ -45,6 +45,11 @@ AMyUIManager::AMyUIManager()
 	{
 		_storeUI = CreateWidget<UMyStoreUI>(GetWorld(), storeClass.Class);
 	}
+
+	_widgets.Add(_baseDisplayUI);
+	_widgets.Add(_playerSelectionUI);
+	_widgets.Add(_inventoryUI);
+	_widgets.Add(_storeUI);
 }
 
 // Called when the game starts or when spawned
@@ -52,14 +57,7 @@ void AMyUIManager::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	_playerSelectionUI->AddToViewport();
-
-
-	_inventoryUI->AddToViewport();
-	_inventoryUI->SetVisibility(ESlateVisibility::Hidden);
-
-	_storeUI->AddToViewport();
-	_storeUI->SetVisibility(ESlateVisibility::Hidden);
+	OpenUI(UI_List::PlayerSelection);
 }
 
 // Called every frame
@@ -69,15 +67,33 @@ void AMyUIManager::Tick(float DeltaTime)
 
 }
 
-void AMyUIManager::ToggleInventory()
+void AMyUIManager::OpenUI(UI_List type)
 {
-	_inventoryUI->ToggleVisibility();
+	int32 UIindex = (int32)type;
+	if (UIindex > _widgets.Num())
+		return;
+
+	_widgets[UIindex]->SetVisibility(ESlateVisibility::Visible);
+	_widgets[UIindex]->AddToViewport(UIindex);
 }
 
-void AMyUIManager::ToggleStore()
+void AMyUIManager::CloseUI(UI_List type)
 {
-	_storeUI->ToggleVisibility();
-	UE_LOG(LogTemp, Error, TEXT("toggle store"));
+	int32 UIindex = (int32)type;
+	if (UIindex > _widgets.Num())
+		return;
+
+	_widgets[UIindex]->SetVisibility(ESlateVisibility::Hidden);
+	_widgets[UIindex]->RemoveFromParent();
+}
+
+void AMyUIManager::CloseAll()
+{
+	for (auto widget : _widgets)
+	{
+		widget->SetVisibility(ESlateVisibility::Hidden);
+		widget->RemoveFromParent();
+	}
 }
 
 void AMyUIManager::AddItem(UMyInventoryComponent* inventoryComponent)

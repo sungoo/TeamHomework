@@ -17,9 +17,7 @@ class UMyInventoryComponent;
 
 #define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDropItem); \
-	DECLARE_FUNCTION(execAddItem); \
-	DECLARE_FUNCTION(execToggleStore); \
-	DECLARE_FUNCTION(execToggleInventory);
+	DECLARE_FUNCTION(execAddItem);
 
 
 #define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_23_INCLASS_NO_PURE_DECLS \

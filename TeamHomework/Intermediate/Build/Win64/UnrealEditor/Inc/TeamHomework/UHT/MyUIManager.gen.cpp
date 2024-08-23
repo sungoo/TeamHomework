@@ -170,64 +170,6 @@ DEFINE_FUNCTION(AMyUIManager::execDropItem)
 }
 // End Class AMyUIManager Function DropItem
 
-// Begin Class AMyUIManager Function ToggleInventory
-struct Z_Construct_UFunction_AMyUIManager_ToggleInventory_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyUIManager.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyUIManager_ToggleInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyUIManager, nullptr, "ToggleInventory", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMyUIManager_ToggleInventory_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMyUIManager_ToggleInventory_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_AMyUIManager_ToggleInventory()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMyUIManager_ToggleInventory_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(AMyUIManager::execToggleInventory)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->ToggleInventory();
-	P_NATIVE_END;
-}
-// End Class AMyUIManager Function ToggleInventory
-
-// Begin Class AMyUIManager Function ToggleStore
-struct Z_Construct_UFunction_AMyUIManager_ToggleStore_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyUIManager.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyUIManager_ToggleStore_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyUIManager, nullptr, "ToggleStore", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMyUIManager_ToggleStore_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMyUIManager_ToggleStore_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_AMyUIManager_ToggleStore()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMyUIManager_ToggleStore_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(AMyUIManager::execToggleStore)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->ToggleStore();
-	P_NATIVE_END;
-}
-// End Class AMyUIManager Function ToggleStore
-
 // Begin Class AMyUIManager
 void AMyUIManager::StaticRegisterNativesAMyUIManager()
 {
@@ -235,8 +177,6 @@ void AMyUIManager::StaticRegisterNativesAMyUIManager()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "AddItem", &AMyUIManager::execAddItem },
 		{ "DropItem", &AMyUIManager::execDropItem },
-		{ "ToggleInventory", &AMyUIManager::execToggleInventory },
-		{ "ToggleStore", &AMyUIManager::execToggleStore },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -284,8 +224,6 @@ struct Z_Construct_UClass_AMyUIManager_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMyUIManager_AddItem, "AddItem" }, // 1852455544
 		{ &Z_Construct_UFunction_AMyUIManager_DropItem, "DropItem" }, // 2183764390
-		{ &Z_Construct_UFunction_AMyUIManager_ToggleInventory, "ToggleInventory" }, // 566204096
-		{ &Z_Construct_UFunction_AMyUIManager_ToggleStore, "ToggleStore" }, // 3407479496
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -351,10 +289,10 @@ struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamH
 		{ UI_List_StaticEnum, TEXT("UI_List"), &Z_Registration_Info_UEnum_UI_List, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1648168724U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyUIManager, AMyUIManager::StaticClass, TEXT("AMyUIManager"), &Z_Registration_Info_UClass_AMyUIManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyUIManager), 715663407U) },
+		{ Z_Construct_UClass_AMyUIManager, AMyUIManager::StaticClass, TEXT("AMyUIManager"), &Z_Registration_Info_UClass_AMyUIManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyUIManager), 1069313340U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_2118724204(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_3093505820(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::EnumInfo));

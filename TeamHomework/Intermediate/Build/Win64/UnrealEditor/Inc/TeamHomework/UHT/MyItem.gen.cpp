@@ -15,16 +15,182 @@ ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UStaticMesh_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTableRowBase();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyItem();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyItem_NoRegister();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyPlayer_NoRegister();
+TEAMHOMEWORK_API UEnum* Z_Construct_UEnum_TeamHomework_TYPE();
+TEAMHOMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
 TEAMHOMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FItemDetail();
 TEAMHOMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FItemType();
 UPackage* Z_Construct_UPackage__Script_TeamHomework();
 // End Cross Module References
+
+// Begin Enum TYPE
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_TYPE;
+static UEnum* TYPE_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_TYPE.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_TYPE.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_TeamHomework_TYPE, (UObject*)Z_Construct_UPackage__Script_TeamHomework(), TEXT("TYPE"));
+	}
+	return Z_Registration_Info_UEnum_TYPE.OuterSingleton;
+}
+template<> TEAMHOMEWORK_API UEnum* StaticEnum<TYPE>()
+{
+	return TYPE_StaticEnum();
+}
+struct Z_Construct_UEnum_TeamHomework_TYPE_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "ATK.Name", "TYPE::ATK" },
+		{ "GOLD.Name", "TYPE::GOLD" },
+		{ "HP.Name", "TYPE::HP" },
+		{ "ModuleRelativePath", "MyItem.h" },
+		{ "SPEED.Name", "TYPE::SPEED" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "TYPE::HP", (int64)TYPE::HP },
+		{ "TYPE::ATK", (int64)TYPE::ATK },
+		{ "TYPE::SPEED", (int64)TYPE::SPEED },
+		{ "TYPE::GOLD", (int64)TYPE::GOLD },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_TeamHomework_TYPE_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_TeamHomework,
+	nullptr,
+	"TYPE",
+	"TYPE",
+	Z_Construct_UEnum_TeamHomework_TYPE_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_TeamHomework_TYPE_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_TeamHomework_TYPE_Statics::Enum_MetaDataParams), Z_Construct_UEnum_TeamHomework_TYPE_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_TeamHomework_TYPE()
+{
+	if (!Z_Registration_Info_UEnum_TYPE.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_TYPE.InnerSingleton, Z_Construct_UEnum_TeamHomework_TYPE_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_TYPE.InnerSingleton;
+}
+// End Enum TYPE
+
+// Begin ScriptStruct FItemData
+static_assert(std::is_polymorphic<FItemData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FItemData cannot be polymorphic unless super FTableRowBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ItemData;
+class UScriptStruct* FItemData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_ItemData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_ItemData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FItemData, (UObject*)Z_Construct_UPackage__Script_TeamHomework(), TEXT("ItemData"));
+	}
+	return Z_Registration_Info_UScriptStruct_ItemData.OuterSingleton;
+}
+template<> TEAMHOMEWORK_API UScriptStruct* StaticStruct<FItemData>()
+{
+	return FItemData::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FItemData_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_name_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_textuer_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_mesh_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_itemCode_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_type_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_addValue_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_price_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "MyItem.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FNamePropertyParams NewProp_name;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_textuer;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_mesh;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_itemCode;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_type_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_type;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_addValue;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_price;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FItemData>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_name = { "name", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, name), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_name_MetaData), NewProp_name_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_textuer = { "textuer", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, textuer), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_textuer_MetaData), NewProp_textuer_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_mesh = { "mesh", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, mesh), Z_Construct_UClass_UStaticMesh_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_mesh_MetaData), NewProp_mesh_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_itemCode = { "itemCode", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, itemCode), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_itemCode_MetaData), NewProp_itemCode_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_type_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_type = { "type", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, type), Z_Construct_UEnum_TeamHomework_TYPE, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_type_MetaData), NewProp_type_MetaData) }; // 2262767565
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_addValue = { "addValue", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, addValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_addValue_MetaData), NewProp_addValue_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_price = { "price", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, price), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_price_MetaData), NewProp_price_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_name,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_textuer,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_mesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_itemCode,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_type_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_type,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_addValue,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_price,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemData_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_TeamHomework,
+	Z_Construct_UScriptStruct_FTableRowBase,
+	&NewStructOps,
+	"ItemData",
+	Z_Construct_UScriptStruct_FItemData_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::PropPointers),
+	sizeof(FItemData),
+	alignof(FItemData),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemData_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FItemData_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FItemData()
+{
+	if (!Z_Registration_Info_UScriptStruct_ItemData.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_ItemData.InnerSingleton, Z_Construct_UScriptStruct_FItemData_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_ItemData.InnerSingleton;
+}
+// End ScriptStruct FItemData
 
 // Begin ScriptStruct FItemType
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ItemType;
@@ -421,7 +587,11 @@ AMyItem::~AMyItem() {}
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics
 {
+	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
+		{ TYPE_StaticEnum, TEXT("TYPE"), &Z_Registration_Info_UEnum_TYPE, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2262767565U) },
+	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
+		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_ItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 1548161068U) },
 		{ FItemType::StaticStruct, Z_Construct_UScriptStruct_FItemType_Statics::NewStructOps, TEXT("ItemType"), &Z_Registration_Info_UScriptStruct_ItemType, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemType), 4276674331U) },
 		{ FItemDetail::StaticStruct, Z_Construct_UScriptStruct_FItemDetail_Statics::NewStructOps, TEXT("ItemDetail"), &Z_Registration_Info_UScriptStruct_ItemDetail, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemDetail), 556007008U) },
 	};
@@ -429,9 +599,9 @@ struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamH
 		{ Z_Construct_UClass_AMyItem, AMyItem::StaticClass, TEXT("AMyItem"), &Z_Registration_Info_UClass_AMyItem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyItem), 3766222697U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_2328519734(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_3814002729(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::ScriptStructInfo),
-	nullptr, 0);
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

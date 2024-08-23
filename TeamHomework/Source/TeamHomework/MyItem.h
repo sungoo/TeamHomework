@@ -6,6 +6,42 @@
 #include "GameFramework/Actor.h"
 #include "MyItem.generated.h"
 
+UENUM()
+enum class TYPE
+{
+	HP,
+	ATK,
+	SPEED,
+	GOLD,
+};
+
+USTRUCT()
+struct FItemData : public FTableRowBase
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName name;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UTexture2D* textuer;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UStaticMesh* mesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 itemCode;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TYPE type;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 addValue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 price;
+};
+
 USTRUCT()
 struct FItemType
 {
