@@ -21,15 +21,16 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
 	void AddItem(class AMyItem* item);
 	void DropItem();
+	void DropItemOfSlot(int32 slotNum);
 
 	UPROPERTY()
 	TArray<class AMyItem*> _items;
 
-	// UPROPERTY()
-	// int32 _inventoryMax;
+	UPROPERTY()
+	int32 _inventoryMax = 9;
+
+	UPROPERTY()
+	TArray<int32> _emptySlots;
 };

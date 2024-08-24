@@ -42,28 +42,6 @@ struct FItemData : public FTableRowBase
 	int32 price;
 };
 
-USTRUCT()
-struct FItemType
-{
-	GENERATED_BODY()
-
-	FItemType() { _texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_Default.Tex_Default'")); };
-
-	UPROPERTY()
-	class UTexture2D* _texture;
-};
-
-
-USTRUCT()
-struct FItemDetail
-{
-	GENERATED_BODY()
-
-	FItemDetail() { _itemType = FItemType(); };
-
-	FItemType _itemType;
-};
-
 UCLASS()
 class TEAMHOMEWORK_API AMyItem : public AActor
 {
@@ -78,20 +56,20 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void PostInitializeComponents() override;
 
+	void Init();
+	void Disable();
+
 	UFUNCTION()
 	void OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-	
-	UFUNCTION()
-	void OnMyCharacterOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-
-	UFUNCTION()
-	void CharacterOverlapped();
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	void InitItemByCode(int32 code);
+
+	void ReleaseItem(FVector location, FRotator rotation = FRotator::ZeroRotator);
+
+	//Getter
+	class UTexture2D* GetItemTexture();
+	class UStaticMesh* GetItemMesh();
 
 private:
 	UPROPERTY(VisibleAnywhere)
@@ -101,12 +79,7 @@ private:
 	class USphereComponent* _trigger;
 
 	UPROPERTY()
-	bool _isOverlapped;
-
-	UPROPERTY()
 	class AMyPlayer* _player;
-
-	FItemType _itemType;
 
 	//Item Description
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))

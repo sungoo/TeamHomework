@@ -34,7 +34,7 @@ AMyItem::AMyItem()
 	_trigger->SetSphereRadius(60.0f);
 
 	UTexture2D* texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_tools_07.Tex_tools_07'"));
-	_itemType._texture = texture;
+	_textuer = texture;
 }
 
 // Called when the game starts or when spawned
@@ -49,35 +49,34 @@ void AMyItem::PostInitializeComponents()
 	Super::PostInitializeComponents();
 
 	_trigger->OnComponentBeginOverlap.AddDynamic(this, &AMyItem::OnMyCharacterOverlap);
-	_trigger->OnComponentEndOverlap.AddDynamic(this, &AMyItem::OnMyCharacterOverlapEnd);
+	//_trigger->OnComponentEndOverlap.AddDynamic(this, &AMyItem::OnMyCharacterOverlapEnd);
+}
+
+void AMyItem::Init()
+{
+	SetActorHiddenInGame(false);
+	SetActorEnableCollision(true);
+	PrimaryActorTick.bCanEverTick = false;
+}
+
+void AMyItem::Disable()
+{
+	SetActorHiddenInGame(true);
+	SetActorEnableCollision(false);
+	PrimaryActorTick.bCanEverTick = false;
 }
 
 void AMyItem::OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	_isOverlapped = true;
 	_player = Cast<AMyPlayer>(OtherActor);
-}
-
-void AMyItem::OnMyCharacterOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
-{
-	_isOverlapped = false;
-}
-
-void AMyItem::CharacterOverlapped()
-{
-	if (_isOverlapped && _player != nullptr)
+	if (_player != nullptr)
 	{
-		if (_player->_tryGetItem)
+		if (_player->_tryGetItem) 
+		{
 			_player->AddItem(this);
+			Disable();
+		}
 	}
-}
-
-// Called every frame
-void AMyItem::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-	
-	CharacterOverlapped();
 }
 
 void AMyItem::InitItemByCode(int32 code)
@@ -96,4 +95,20 @@ void AMyItem::InitItemByCode(int32 code)
 
 		_meshComponent->SetStaticMesh(_mesh);
 	}
+}
+
+void AMyItem::ReleaseItem(FVector location, FRotator rotation)
+{
+	SetActorLocationAndRotation(location, rotation);
+	Init();
+}
+
+UTexture2D* AMyItem::GetItemTexture()
+{
+	return _textuer;
+}
+
+UStaticMesh* AMyItem::GetItemMesh()
+{
+	return _mesh;
 }

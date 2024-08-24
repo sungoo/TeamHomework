@@ -2,7 +2,11 @@
 
 
 #include "MyInventoryComponent.h"
+
+#include "MyGameInstance.h"
+
 #include "MyItem.h"
+#include "MyInventoryUI.h"
 
 // Sets default values for this component's properties
 UMyInventoryComponent::UMyInventoryComponent()
@@ -11,7 +15,7 @@ UMyInventoryComponent::UMyInventoryComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = false;
 
-	// ...
+	
 }
 
 
@@ -24,47 +28,69 @@ void UMyInventoryComponent::BeginPlay()
 	
 }
 
-
-// Called every frame
-void UMyInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
-}
-
 void UMyInventoryComponent::AddItem(AMyItem* item)
 {
-	if (item)
+	//If there is Empty Slot, Add item there first.
+	if (!_emptySlots.IsEmpty())
+	{
+		int32 putSlot = _emptySlots.Pop();
+		_items[putSlot - 1] = item;
+		UIManager->GetInventoryUI()->SetItemImage(putSlot, item);
+	}
+	if (_items.Num() <= _inventoryMax)
 	{
 		_items.Add(item);
-		item->SetActorHiddenInGame(true);
-		item->SetActorEnableCollision(false);
+		int32 itemStack = _items.Num();
+		UIManager->GetInventoryUI()->SetItemImage(itemStack, item);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Inventory is Full!"));
 	}
 }
 
 void UMyInventoryComponent::DropItem()
 {
-	if (_items.Num() > 0)
-	{
-		AMyItem* item = _items[0];
-		if (item)
-		{
-			item->SetActorHiddenInGame(false);
-			item->SetActorEnableCollision(true);
+	if (_items.IsEmpty())
+		return;
 
-			FVector playerPlos = GetOwner()->GetActorLocation();
+	int32 lastPos = _items.Num();
+	AMyItem* item = _items.Pop();
 
-			float randFloat = FMath::FRandRange(0, PI * 2.0f);
+	FVector playerPlos = GetOwner()->GetActorLocation();
 
-			float X = cosf(randFloat) * 300.0f;
-			float Y = sinf(randFloat) * 300.0f;
-			FVector itemPos = playerPlos + FVector(X, Y, 0.0f);
-			itemPos.Z = 0.0f;
-			item->SetActorLocation(itemPos);
+	float randFloat = FMath::FRandRange(0, PI * 2.0f);
 
-			_items.Remove(item);
-		}
-	}
+	float X = cosf(randFloat) * 300.0f;
+	float Y = sinf(randFloat) * 300.0f;
+	FVector itemPos = playerPlos + FVector(X, Y, 0.0f);
+	itemPos.Z = 0.0f;
+
+	item->ReleaseItem(itemPos);
+	UIManager->GetInventoryUI()->SetItemImage(lastPos, nullptr);
+}
+
+void UMyInventoryComponent::DropItemOfSlot(int32 slotNum)
+{
+	if (_items.IsEmpty())
+		return;
+
+	if (slotNum > _items.Num())
+		return;
+
+	AMyItem* item = _items[slotNum - 1];
+	if (item == nullptr)
+		return;
+
+	FVector playerPlos = GetOwner()->GetActorLocation();
+	float randFloat = FMath::FRandRange(0, PI * 2.0f);
+	float X = cosf(randFloat) * 300.0f;
+	float Y = sinf(randFloat) * 300.0f;
+	FVector itemPos = playerPlos + FVector(X, Y, 0.0f);
+	itemPos.Z = 0.0f;
+	item->ReleaseItem(itemPos);
+
+	_items[slotNum - 1] = nullptr;
+	UIManager->GetInventoryUI()->SetItemImage(slotNum, nullptr);
 }
 

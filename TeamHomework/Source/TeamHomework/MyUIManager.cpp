@@ -95,23 +95,3 @@ void AMyUIManager::CloseAll()
 		widget->RemoveFromParent();
 	}
 }
-
-void AMyUIManager::AddItem(UMyInventoryComponent* inventoryComponent)
-{
-	TArray<FItemDetail*> itemDetails = _inventoryUI->_itemDetails;
-	TArray<AMyItem*> items = inventoryComponent->_items;
-
-	for (int i = 0; i < items.Num(); i++)
-	{
-		if (i < itemDetails.Num())
-		{
-			itemDetails[i]->_itemType = items[i]->_itemType;
-			_inventoryUI->SetItemImage(i);
-		}
-	}
-}
-
-void AMyUIManager::DropItem(UMyInventoryComponent* inventoryComponent)
-{
-}
-

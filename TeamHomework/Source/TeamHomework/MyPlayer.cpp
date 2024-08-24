@@ -2,24 +2,26 @@
 
 
 #include "MyPlayer.h"
-
+//Game Instance
+#include "MyGameInstance.h"
+//Camera
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
-
+//Input
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
-
+//Components
 #include "MyStatComponent.h"
 #include "MyInventoryComponent.h"
 #include "MyItem.h"
-
+//Anim
 #include "MyAnimInstance.h"
-
-#include "MyGameInstance.h"
-#include "MyPlayerManager.h"
+//UI
 #include "MyUIManager.h"
+#include "MyPlayerManager.h"
+#include "MyInventoryUI.h"
 
 
 AMyPlayer::AMyPlayer()
@@ -200,9 +202,6 @@ void AMyPlayer::TryGetItemEnd(const FInputActionValue& value)
 void AMyPlayer::AddItem(AMyItem* item)
 {
 	_inventoryCom->AddItem(item);
-	UIManager->AddItem(_inventoryCom);
-
-	// TODO : 아이템 먹으면 stat 상승
 }
 
 void AMyPlayer::DropItem(const FInputActionValue& value)

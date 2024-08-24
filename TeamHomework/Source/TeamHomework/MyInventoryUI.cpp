@@ -17,6 +17,8 @@ void UMyInventoryUI::NativeConstruct()
 {
 	Super::NativeConstruct();
 
+	_defaultTexture = nullptr;
+
 	SetButtons();
 }
 
@@ -31,40 +33,16 @@ void UMyInventoryUI::SetButtons()
 		if (button)
 		{
 			_itemButtons.Add(button);
-			FItemDetail* itemDetail;
-			_itemDetails.Add(itemDetail);
 		}
 	}
 }
 
-void UMyInventoryUI::ToggleVisibility()
+void UMyInventoryUI::SetItemImage(int32 inventoryIndex, AMyItem* item)
 {
-	AMyPlayerController* playerController = Cast<AMyPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
-
-	if (_isVisible)
-	{
-		this->SetVisibility(ESlateVisibility::Hidden);
-		_isVisible = false;
-
-		if (playerController != nullptr)
-		{
-			playerController->HideUI();
-		}
-	}
+	UImage* image = Cast<UImage>(_itemButtons[inventoryIndex]->GetChildAt(0));
+	
+	if (item == nullptr)
+		image->SetBrushFromTexture(_defaultTexture);
 	else
-	{
-		this->SetVisibility(ESlateVisibility::Visible);
-		_isVisible = true;
-
-		if (playerController != nullptr)
-		{
-			playerController->ShowUI();
-		}
-	}
-}
-
-void UMyInventoryUI::SetItemImage(int32 index)
-{
-	UImage* image = Cast<UImage>(_itemButtons[index]->GetChildAt(0));
-	image->SetBrushFromTexture(_itemDetails[index]->_itemType._texture);
+		image->SetBrushFromTexture(item->GetItemTexture());
 }

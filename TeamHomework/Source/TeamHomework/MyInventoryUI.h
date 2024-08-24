@@ -19,9 +19,7 @@ public:
 	virtual void NativeConstruct() override;
 	void SetButtons();
 
-	void ToggleVisibility();
-
-	void SetItemImage(int32 index);
+	void SetItemImage(int32 inventoryIndex, AMyItem* item);
 
 	UPROPERTY(meta = (BindWidget))
 	class UUniformGridPanel* SlotGrid;
@@ -29,8 +27,6 @@ public:
 	UPROPERTY()
 	TArray<class UButton*> _itemButtons;
 
-	TArray<FItemDetail*> _itemDetails;
-
-	UPROPERTY()
-	bool _isVisible = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Texture, meta = (AllowPrivateAccess = "true"))
+	class UTexture2D* _defaultTexture;
 };

@@ -43,12 +43,6 @@ public:
 	class UPlayerSelectionUI* GetPlayerSelectionUI() { return _playerSelectionUI; }
 	class UMyStoreUI* GetStoreUI() { return _storeUI; }
 
-	UFUNCTION()
-	void AddItem(class UMyInventoryComponent* inventoryComponent);
-
-	UFUNCTION()
-	void DropItem(class UMyInventoryComponent* inventoryComponent);
-
 private:
 	UPROPERTY()
 	TArray<UUserWidget*> _widgets;
