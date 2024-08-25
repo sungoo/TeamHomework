@@ -91,6 +91,28 @@ void UMyInventoryComponent::DropItemOfSlot(int32 slotNum)
 	item->ReleaseItem(itemPos);
 
 	_items[slotNum - 1] = nullptr;
+	_emptySlots.Add(slotNum);
 	UIManager->GetInventoryUI()->SetItemImage(slotNum, nullptr);
+}
+
+UTexture2D* UMyInventoryComponent::GetItemTexture(int32 slotNum)
+{
+	if (slotNum > _items.Num() || _items[slotNum - 1] == nullptr)
+		return _defaultTexture;
+	return _items[slotNum - 1]->GetItemTexture();
+}
+
+FName UMyInventoryComponent::GetItemName(int32 slotNum)
+{
+	if (slotNum > _items.Num() || _items[slotNum - 1] == nullptr)
+		return FName(TEXT(""));
+	return _items[slotNum - 1]->GetItemName();
+}
+
+int32 UMyInventoryComponent::GetItemPrice(int32 slotNum)
+{
+	if (slotNum > _items.Num() || _items[slotNum - 1] == nullptr)
+		return 0;
+	return _items[slotNum - 1]->GetItemPrice();
 }
 

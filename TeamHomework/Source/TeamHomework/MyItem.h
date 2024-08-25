@@ -70,6 +70,8 @@ public:
 	//Getter
 	class UTexture2D* GetItemTexture();
 	class UStaticMesh* GetItemMesh();
+	FName GetItemName();
+	int32 GetItemPrice();
 
 private:
 	UPROPERTY(VisibleAnywhere)

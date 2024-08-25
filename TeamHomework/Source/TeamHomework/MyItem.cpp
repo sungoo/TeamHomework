@@ -112,3 +112,13 @@ UStaticMesh* AMyItem::GetItemMesh()
 {
 	return _mesh;
 }
+
+FName AMyItem::GetItemName()
+{
+	return _name;
+}
+
+int32 AMyItem::GetItemPrice()
+{
+	return _price;
+}

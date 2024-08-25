@@ -25,6 +25,10 @@ public:
 	void DropItem();
 	void DropItemOfSlot(int32 slotNum);
 
+	UTexture2D* GetItemTexture(int32 slotNum);
+	FName GetItemName(int32 slotNum);
+	int32 GetItemPrice(int32 slotNum);
+
 	UPROPERTY()
 	TArray<class AMyItem*> _items;
 
@@ -33,4 +37,7 @@ public:
 
 	UPROPERTY()
 	TArray<int32> _emptySlots;
+
+	UPROPERTY()
+	UTexture2D* _defaultTexture;
 };
