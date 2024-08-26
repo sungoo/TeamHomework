@@ -40,7 +40,7 @@ AMyPlayer::AMyPlayer()
 void AMyPlayer::BeginPlay()
 {
 	Super::BeginPlay();
-
+	Init();
 	SetAnimation();
 }
 

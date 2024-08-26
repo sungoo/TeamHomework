@@ -53,8 +53,6 @@ ACreature::ACreature()
 void ACreature::BeginPlay()
 {
 	Super::BeginPlay();
-
-	Init();
 }
 
 void ACreature::PostInitializeComponents()
@@ -94,12 +92,12 @@ void ACreature::Init()
 
 	_statCom->_deathDelegate.AddUObject(this, &ACreature::Unpossess);
 
-	if (_aiController && GetController() == nullptr)
-	{
-		auto ai_Controller = Cast<AMyAIController>(_aiController);
-		if (ai_Controller)
-			ai_Controller->Possess(this);
-	}
+	// if (_aiController && GetController() == nullptr)
+	// {
+	// 	auto ai_Controller = Cast<AMyAIController>(_aiController);
+	// 	if (ai_Controller)
+	// 		ai_Controller->Possess(this);
+	// }
 }
 
 void ACreature::Disable()
@@ -152,7 +150,7 @@ void ACreature::AI_Attack()
 {
 	if (_statCom->IsDead())
 		return;
-	if (!_isAttacking && _animInstance == nullptr)
+	if (!_isAttacking && _animInstance != nullptr)
 	{
 		_isAttacking = true;
 		_animInstance->PlayAttackMontage();

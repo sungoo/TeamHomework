@@ -8,6 +8,7 @@
 #include "BehaviorTree/BlackboardComponent.h"
 
 #include "Creature.h"
+#include "MyMonster.h"
 #include "MyAIController.h"
 
 UBTTask_Attack::UBTTask_Attack()
@@ -19,7 +20,7 @@ EBTNodeResult::Type UBTTask_Attack::ExecuteTask(UBehaviorTreeComponent& OwnerCom
 {
 	EBTNodeResult::Type result = Super::ExecuteTask(OwnerComp, NodeMemory);
 
-	auto owner = Cast<ACreature>(OwnerComp.GetAIOwner()->GetCharacter());
+	auto owner = Cast<AMyMonster>(OwnerComp.GetAIOwner()->GetCharacter());
 
 	if (owner == nullptr)
 		return EBTNodeResult::Failed;

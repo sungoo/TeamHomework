@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAMHOMEWORK_UI_BaseDisplay_generated_h
 
-#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUUI_BaseDisplay(); \
 	friend struct Z_Construct_UClass_UUI_BaseDisplay_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UUI_BaseDisplay)
 
 
-#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UUI_BaseDisplay(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UUI_BaseDisplay();
 
 
-#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_12_PROLOG
-#define FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_GENERATED_BODY \
+#define FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_12_PROLOG
+#define FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_ENHANCED_CONSTRUCTORS \
+	FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_INCLASS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class UUI_BaseDisplay>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h
+#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

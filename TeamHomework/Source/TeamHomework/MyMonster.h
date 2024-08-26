@@ -18,4 +18,8 @@ public:
 	AMyMonster();
 
 	virtual void BeginPlay() override;
+
+	virtual void Init() override;
+
+	virtual void AttackHit() override;
 };

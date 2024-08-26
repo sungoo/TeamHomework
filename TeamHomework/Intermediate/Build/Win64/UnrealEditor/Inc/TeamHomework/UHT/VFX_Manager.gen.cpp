@@ -76,14 +76,14 @@ AVFX_Manager::~AVFX_Manager() {}
 // End Class AVFX_Manager
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_VFX_Manager_h_Statics
+struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_VFX_Manager_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AVFX_Manager, AVFX_Manager::StaticClass, TEXT("AVFX_Manager"), &Z_Registration_Info_UClass_AVFX_Manager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AVFX_Manager), 2544756337U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_VFX_Manager_h_3010832749(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_VFX_Manager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_SGA_Study_TeamHomework_TeamHomework_Source_TeamHomework_VFX_Manager_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_VFX_Manager_h_3010832749(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_VFX_Manager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_VFX_Manager_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

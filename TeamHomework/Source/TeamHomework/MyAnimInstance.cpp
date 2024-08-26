@@ -38,6 +38,7 @@ void UMyAnimInstance::PlayAttackMontage()
 {
 	if (!Montage_IsPlaying(_myAttackMontage))
 	{
+		UE_LOG(LogTemp, Warning, TEXT("play attackMontage"));
 		Montage_Play(_myAttackMontage);
 	}
 }
