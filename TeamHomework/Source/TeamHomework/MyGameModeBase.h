@@ -21,4 +21,8 @@ public:
 	virtual void BeginPlay() override;
 
 	void SetSelectedPlayer();
+
+private:
+	UClass* _itemClass;
+	TArray<class AMyItem*> _items;
 };

@@ -33,7 +33,7 @@ AMyItem::AMyItem()
 	_trigger->SetCollisionProfileName(TEXT("MyItem"));
 	_trigger->SetSphereRadius(60.0f);
 
-	UTexture2D* texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_tools_07.Tex_tools_07'"));
+	UTexture2D* texture = LoadObject<UTexture2D>(nullptr, TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_Default.Tex_Default'"));
 	_textuer = texture;
 }
 
@@ -71,6 +71,7 @@ void AMyItem::OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AAc
 	_player = Cast<AMyPlayer>(OtherActor);
 	if (_player != nullptr)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Player Collision!"));
 		if (_player->_tryGetItem) 
 		{
 			_player->AddItem(this);
@@ -84,14 +85,19 @@ void AMyItem::InitItemByCode(int32 code)
 	auto gameinstance = Cast<UMyGameInstance>(GetWorld()->GetGameInstance());
 	if (gameinstance != nullptr)
 	{
-		FItemData* data = gameinstance->GetItemDataByCode(code);
+		FItemData data = gameinstance->GetItemDataByCode(code);
+		if (data.name == TEXT(""))
+		{
+			UE_LOG(LogTemp, Error, TEXT("Data Load Faild!"));
+			return;
+		}
 
-		_name = data->name;
-		_textuer = data->textuer;
-		_mesh = data->mesh;
-		_type = data->type;
-		_statAddValue = data->statAddValue;
-		_price = data->price;
+		_name = data.name;
+		_textuer = data.textuer;
+		_mesh = data.mesh;
+		_type = data.type;
+		_statAddValue = data.statAddValue;
+		_price = data.price;
 
 		_meshComponent->SetStaticMesh(_mesh);
 	}
@@ -113,7 +119,7 @@ UStaticMesh* AMyItem::GetItemMesh()
 	return _mesh;
 }
 
-FName AMyItem::GetItemName()
+FString AMyItem::GetItemName()
 {
 	return _name;
 }

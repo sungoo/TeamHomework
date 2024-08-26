@@ -15,13 +15,13 @@ enum class TYPE
 	GOLD,
 };
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FItemData : public FTableRowBase
 {
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FName name;
+	FString name;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class UTexture2D* textuer;
@@ -70,7 +70,7 @@ public:
 	//Getter
 	class UTexture2D* GetItemTexture();
 	class UStaticMesh* GetItemMesh();
-	FName GetItemName();
+	FString GetItemName();
 	int32 GetItemPrice();
 
 private:
@@ -85,7 +85,7 @@ private:
 
 	//Item Description
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))
-	FName _name;
+	FString _name;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))
 	class UTexture2D* _textuer;

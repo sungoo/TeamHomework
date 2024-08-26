@@ -13,13 +13,21 @@
 
 #include "Kismet/GameplayStatics.h"
 
+UMyInventoryUI::UMyInventoryUI(const FObjectInitializer& ObjectInitializer)
+:UUserWidget(ObjectInitializer)
+{
+	SetDefaultTexture();
+}
+
 void UMyInventoryUI::NativeConstruct()
 {
 	Super::NativeConstruct();
 
-	_defaultTexture = nullptr;
-
 	SetButtons();
+	for (int i = 0; i < 9; i++)
+	{
+		SetItemImage(i);
+	}
 }
 
 void UMyInventoryUI::SetButtons()
@@ -32,14 +40,25 @@ void UMyInventoryUI::SetButtons()
 		UButton* button = Cast<UButton>(widget);
 		if (button)
 		{
-			_itemButtons.Add(button);
+			Button_.Add(button);
 		}
+	}
+}
+
+void UMyInventoryUI::SetDefaultTexture()
+{
+	static ConstructorHelpers::FObjectFinder<UTexture2D> texture(
+		TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_efault.Tex_Default'")
+	);
+	if (texture.Succeeded())
+	{
+		_defaultTexture = texture.Object;
 	}
 }
 
 void UMyInventoryUI::SetItemImage(int32 inventoryIndex, AMyItem* item)
 {
-	UImage* image = Cast<UImage>(_itemButtons[inventoryIndex]->GetChildAt(0));
+	UImage* image = Cast<UImage>(Button_[inventoryIndex]->GetChildAt(0));
 	
 	if (item == nullptr)
 		image->SetBrushFromTexture(_defaultTexture);

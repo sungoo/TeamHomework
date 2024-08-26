@@ -6,6 +6,7 @@
 
 #include "MyGameInstance.h"
 #include "MyPlayerManager.h"
+#include "MyItem.h"
 
 #include "Kismet/GameplayStatics.h"
 
@@ -19,11 +20,38 @@ AMyGameModeBase::AMyGameModeBase()
         playerController->SetInputMode(InputMode);
         playerController->bShowMouseCursor = true;
     }
+
+    
+    static ConstructorHelpers::FClassFinder<AMyItem> item(
+        TEXT("/Script/CoreUObject.Class'/Script/TeamHomework.MyItem'")
+    );
+    if (item.Succeeded())
+    {
+        _itemClass = item.Class;
+    }
 }
 
 void AMyGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+    // 스폰할 위치와 회전 설정
+    FVector spawnLocation = FVector(0.0f, 0.0f, 20.0f);  // 기본 위치
+    FRotator spawnRotation = FRotator::ZeroRotator;
+
+    for (int i = 0; i < 3; i++)
+    {
+        spawnLocation.X += 100.0f * i;
+
+        AMyItem* item = GetWorld()->SpawnActor<AMyItem>(
+            _itemClass,
+            spawnLocation,
+            spawnRotation
+        );
+        item->InitItemByCode(i+1);
+
+        _items.Add(item);
+    }
 }
 
 void AMyGameModeBase::SetSelectedPlayer()

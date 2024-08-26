@@ -26,7 +26,7 @@ public:
 	void DropItemOfSlot(int32 slotNum);
 
 	UTexture2D* GetItemTexture(int32 slotNum);
-	FName GetItemName(int32 slotNum);
+	FString GetItemName(int32 slotNum);
 	int32 GetItemPrice(int32 slotNum);
 
 	UPROPERTY()

@@ -16,16 +16,20 @@ class TEAMHOMEWORK_API UMyInventoryUI : public UUserWidget
 	GENERATED_BODY()
 	
 public:
+	UMyInventoryUI(const FObjectInitializer& ObjectInitializer);
+
 	virtual void NativeConstruct() override;
 	void SetButtons();
+	
+	void SetDefaultTexture();
 
-	void SetItemImage(int32 inventoryIndex, AMyItem* item);
+	void SetItemImage(int32 inventoryIndex, AMyItem* item = nullptr);
 
 	UPROPERTY(meta = (BindWidget))
 	class UUniformGridPanel* SlotGrid;
 
-	UPROPERTY()
-	TArray<class UButton*> _itemButtons;
+	UPROPERTY(meta = (BindWidget))
+	TArray<class UButton*> Button_;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Texture, meta = (AllowPrivateAccess = "true"))
 	class UTexture2D* _defaultTexture;

@@ -7,14 +7,7 @@
 
 UMyGameInstance::UMyGameInstance()
 {
-	 static ConstructorHelpers::FObjectFinder<UDataTable> itemData
-	 (TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/ItemData.ItemData'"));
-	 
-	 if (itemData.Succeeded())
-	 {
-	 	_itemData = itemData.Object;
-	 	UE_LOG(LogTemp, Error, TEXT("item data Load Complete"));
-	 }
+	GetItemDataTable();
 }
 
 void UMyGameInstance::Init()
@@ -33,12 +26,35 @@ void UMyGameInstance::Init()
 
 	// params.Name = TEXT("EffectManager");
 	// _effectManager = GetWorld()->SpawnActor<AMyEffectManager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
+
+	
 }
 
-FItemData* UMyGameInstance::GetItemDataByCode(int code)
+void UMyGameInstance::GetItemDataTable()
 {
-	auto itemData = _itemData->FindRow<FItemData>(*FString::FromInt(code), TEXT(""));
-	return itemData;
+	static ConstructorHelpers::FObjectFinder<UDataTable> itemData
+	(TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/ItemData.ItemData'"));
+
+	if (itemData.Succeeded())
+	{
+		UDataTable* data = itemData.Object;
+		int32 i = 0;
+		while (true)
+		{
+			FItemData* itemdata = data->FindRow<FItemData>(*FString::FromInt(i), TEXT(""));
+			if (itemdata == nullptr)
+				break;
+			FItemData item = *itemdata;
+			_itemData.Add(i, item);
+
+			i++;
+		}
+	}
+}
+
+FItemData UMyGameInstance::GetItemDataByCode(int32 code)
+{
+	return _itemData[code];
 }
 
 // FMyStatData* UMyGameInstance::GetStatDataByLevel(int level)

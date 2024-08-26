@@ -6,6 +6,7 @@
 #include "Engine/GameInstance.h"
 #include "MyUIManager.h"
 #include "MyPlayerManager.h"
+#include "MyItem.h"
 #include "MyGameInstance.generated.h"
 
 /**
@@ -16,6 +17,8 @@
 #define PlayerManager Cast<UMyGameInstance>(GetWorld()->GetGameInstance())->GetPlayerManager()
 // #define EffectManager Cast<UMyGameInstance>(GetGameInstance())->GetEffectManager()
 
+struct FItemData;
+
 UCLASS()
 class TEAMHOMEWORK_API UMyGameInstance : public UGameInstance
 {
@@ -24,10 +27,12 @@ class TEAMHOMEWORK_API UMyGameInstance : public UGameInstance
 public:
 	UMyGameInstance();
 
+private:
 	virtual void Init() override;
-
+	void GetItemDataTable();
+public:
 	// FMyStatData* GetStatDataByLevel(int level);
-	struct FItemData* GetItemDataByCode(int code);
+	FItemData GetItemDataByCode(int32 code);
 
 	class AMyUIManager* GetUIManager() { return _uiManager; };
 	class AMyPlayerManager* GetPlayerManager() { return _playerManager; };
@@ -49,5 +54,5 @@ private:
 	class UDataTable* _statTable;
 
 	UPROPERTY()
-	class UDataTable* _itemData;
+	TMap<int32, FItemData> _itemData;
 };

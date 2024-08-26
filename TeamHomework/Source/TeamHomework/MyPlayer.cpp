@@ -40,7 +40,7 @@ AMyPlayer::AMyPlayer()
 void AMyPlayer::BeginPlay()
 {
 	Super::BeginPlay();
-	Init();
+
 	SetAnimation();
 }
 
@@ -191,7 +191,10 @@ void AMyPlayer::ViewStore(const FInputActionValue& value)
 
 void AMyPlayer::TryGetItem(const FInputActionValue& value)
 {
-	_tryGetItem = true;
+	bool isPressed = value.Get<bool>();
+
+	if(isPressed)
+		_tryGetItem = true;
 }
 
 void AMyPlayer::TryGetItemEnd(const FInputActionValue& value)

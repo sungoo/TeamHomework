@@ -15,7 +15,13 @@ UMyInventoryComponent::UMyInventoryComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = false;
 
-	
+	static ConstructorHelpers::FObjectFinder<UTexture2D> texture(
+		TEXT("/Script/Engine.Texture2D'/Game/Graphics/Icons/Tex_Default.Tex_Default'")
+	);
+	if (texture.Succeeded())
+	{
+		_defaultTexture = texture.Object;
+	}
 }
 
 
@@ -102,10 +108,10 @@ UTexture2D* UMyInventoryComponent::GetItemTexture(int32 slotNum)
 	return _items[slotNum - 1]->GetItemTexture();
 }
 
-FName UMyInventoryComponent::GetItemName(int32 slotNum)
+FString UMyInventoryComponent::GetItemName(int32 slotNum)
 {
 	if (slotNum > _items.Num() || _items[slotNum - 1] == nullptr)
-		return FName(TEXT(""));
+		return FString(TEXT(""));
 	return _items[slotNum - 1]->GetItemName();
 }
 
