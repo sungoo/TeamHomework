@@ -17,7 +17,7 @@ struct FHitResult;
 #endif
 #define TEAMHOMEWORK_MyItem_generated_h
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_21_GENERATED_BODY \
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_21_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemData_Statics; \
 	TEAMHOMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -25,12 +25,11 @@ struct FHitResult;
 
 template<> TEAMHOMEWORK_API UScriptStruct* StaticStruct<struct FItemData>();
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execOnMyCharacterOverlapEnd); \
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnMyCharacterOverlap);
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_INCLASS_NO_PURE_DECLS \
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_48_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyItem(); \
 	friend struct Z_Construct_UClass_AMyItem_Statics; \
@@ -39,7 +38,7 @@ public: \
 	DECLARE_SERIALIZER(AMyItem)
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_ENHANCED_CONSTRUCTORS \
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_48_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyItem(AMyItem&&); \
@@ -51,13 +50,13 @@ public: \
 	NO_API virtual ~AMyItem();
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_48_PROLOG
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_GENERATED_BODY \
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_45_PROLOG
+#define FID_TeamHomework_Source_TeamHomework_MyItem_h_48_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_ENHANCED_CONSTRUCTORS \
+	FID_TeamHomework_Source_TeamHomework_MyItem_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_MyItem_h_48_INCLASS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_MyItem_h_48_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -65,7 +64,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class AMyItem>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h
+#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_MyItem_h
 
 
 #define FOREACH_ENUM_TYPE(op) \

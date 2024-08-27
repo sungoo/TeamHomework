@@ -9,17 +9,12 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AMyItem;
 #ifdef TEAMHOMEWORK_MyPlayer_generated_h
 #error "MyPlayer.generated.h already included, missing '#pragma once' in MyPlayer.h"
 #endif
 #define TEAMHOMEWORK_MyPlayer_generated_h
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execSetTargitItem);
-
-
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_TeamHomework_Source_TeamHomework_MyPlayer_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyPlayer(); \
 	friend struct Z_Construct_UClass_AMyPlayer_Statics; \
@@ -28,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(AMyPlayer)
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_TeamHomework_Source_TeamHomework_MyPlayer_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyPlayer(AMyPlayer&&); \
@@ -40,13 +35,12 @@ public: \
 	NO_API virtual ~AMyPlayer();
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_14_PROLOG
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_GENERATED_BODY \
+#define FID_TeamHomework_Source_TeamHomework_MyPlayer_h_15_PROLOG
+#define FID_TeamHomework_Source_TeamHomework_MyPlayer_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_ENHANCED_CONSTRUCTORS \
+	FID_TeamHomework_Source_TeamHomework_MyPlayer_h_18_INCLASS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_MyPlayer_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -54,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class AMyPlayer>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h
+#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_MyPlayer_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

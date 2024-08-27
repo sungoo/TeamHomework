@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAMHOMEWORK_BTDeco_CanAttack_generated_h
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUBTDeco_CanAttack(); \
 	friend struct Z_Construct_UClass_UBTDeco_CanAttack_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UBTDeco_CanAttack)
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UBTDeco_CanAttack(UBTDeco_CanAttack&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~UBTDeco_CanAttack();
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_12_PROLOG
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_GENERATED_BODY \
+#define FID_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_12_PROLOG
+#define FID_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_ENHANCED_CONSTRUCTORS \
+	FID_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_INCLASS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class UBTDeco_CanAttack>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h
+#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_BTDeco_CanAttack_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

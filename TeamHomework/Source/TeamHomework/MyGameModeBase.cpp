@@ -3,12 +3,16 @@
 
 #include "MyGameModeBase.h"
 #include "MyPlayer.h"
+#include "BossMonster.h"
+#include "MyStatComponent.h"
 
 #include "MyGameInstance.h"
 #include "MyPlayerManager.h"
 #include "MyItem.h"
 
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetMathLibrary.h"
+
 
 AMyGameModeBase::AMyGameModeBase()
 {
@@ -79,5 +83,35 @@ void AMyGameModeBase::SetSelectedPlayer()
             playerController->Possess(spawnedPawn);
         }
     }
+}
+
+void AMyGameModeBase::StartBossMode(ABossMonster* boss)
+{
+    // Clone Players
+    UClass* playerClass = PlayerManager->SetDefaultPawnClass();
+
+    TArray<AMyPlayer*> players;
+    auto originPlayer = Cast<AMyPlayer>(GetWorld()->GetFirstPlayerController()->GetPawn());
+    players.Add(originPlayer);
+
+    const int32 aggroNum = boss->_aggroNum;
+    const float rad = 500.0f;
+	FVector bossPos = boss->GetActorLocation();
+
+    for (int32 i = 0; i < aggroNum; ++i)
+    {
+        const float Angle = FMath::DegreesToRadians(360.0f / aggroNum * i);
+        const FVector spawnLocation = bossPos + FVector(FMath::Cos(Angle) * rad, FMath::Sin(Angle) * rad, bossPos.Z);
+        FActorSpawnParameters spawnParams;
+
+        FRotator lookAtPlayer = UKismetMathLibrary::FindLookAtRotation(spawnLocation, bossPos);
+  
+        AMyPlayer* player = GetWorld()->SpawnActor<AMyPlayer>(playerClass, spawnLocation, lookAtPlayer, spawnParams);
+        // AIController Possess, 실행 시작
+        players.Add(player);
+        boss->_players = players;
+	}
+
+    _bossModeStarted = true;
 }
 

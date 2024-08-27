@@ -79,14 +79,14 @@ UBTTask_Attack::~UBTTask_Attack() {}
 // End Class UBTTask_Attack
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_Attack_h_Statics
+struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BTTask_Attack_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UBTTask_Attack, UBTTask_Attack::StaticClass, TEXT("UBTTask_Attack"), &Z_Registration_Info_UClass_UBTTask_Attack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTTask_Attack), 3761214209U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_Attack_h_1161239075(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_Attack_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_Attack_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BTTask_Attack_h_1161239075(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BTTask_Attack_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BTTask_Attack_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

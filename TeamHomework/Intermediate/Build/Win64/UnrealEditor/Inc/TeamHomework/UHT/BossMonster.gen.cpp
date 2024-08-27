@@ -166,14 +166,14 @@ struct Z_Construct_UClass_ABossMonster_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isOverlapped_MetaData[] = {
 		{ "ModuleRelativePath", "BossMonster.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__player_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__originPlayer_MetaData[] = {
 		{ "ModuleRelativePath", "BossMonster.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__trigger;
 	static void NewProp__isOverlapped_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__isOverlapped;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp__player;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__originPlayer;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -192,11 +192,11 @@ void Z_Construct_UClass_ABossMonster_Statics::NewProp__isOverlapped_SetBit(void*
 	((ABossMonster*)Obj)->_isOverlapped = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABossMonster_Statics::NewProp__isOverlapped = { "_isOverlapped", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABossMonster), &Z_Construct_UClass_ABossMonster_Statics::NewProp__isOverlapped_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__isOverlapped_MetaData), NewProp__isOverlapped_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABossMonster_Statics::NewProp__player = { "_player", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABossMonster, _player), Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__player_MetaData), NewProp__player_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABossMonster_Statics::NewProp__originPlayer = { "_originPlayer", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABossMonster, _originPlayer), Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__originPlayer_MetaData), NewProp__originPlayer_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABossMonster_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABossMonster_Statics::NewProp__trigger,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABossMonster_Statics::NewProp__isOverlapped,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABossMonster_Statics::NewProp__player,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABossMonster_Statics::NewProp__originPlayer,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABossMonster_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABossMonster_Statics::DependentSingletons[])() = {
@@ -239,10 +239,10 @@ ABossMonster::~ABossMonster() {}
 struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABossMonster, ABossMonster::StaticClass, TEXT("ABossMonster"), &Z_Registration_Info_UClass_ABossMonster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABossMonster), 3378018607U) },
+		{ Z_Construct_UClass_ABossMonster, ABossMonster::StaticClass, TEXT("ABossMonster"), &Z_Registration_Info_UClass_ABossMonster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABossMonster), 1577557738U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_1076342942(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_3406560680(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

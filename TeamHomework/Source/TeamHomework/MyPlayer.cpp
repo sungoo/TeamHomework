@@ -2,6 +2,7 @@
 
 
 #include "MyPlayer.h"
+#include "BossMonster.h"
 //Game Instance
 #include "MyGameInstance.h"
 //Camera

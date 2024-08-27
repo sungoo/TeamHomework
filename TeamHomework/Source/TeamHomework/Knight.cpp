@@ -2,7 +2,7 @@
 
 
 #include "Knight.h"
-
+#include "BossMonster.h"
 #include "MystatComponent.h"
 #include "Engine/DamageEvents.h"
 
@@ -38,6 +38,10 @@ void AKnight::AttackHit()
 		FDamageEvent damageEvent;
 
 		hitResult.GetActor()->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
+
+		ABossMonster* boss = Cast<ABossMonster>(hitResult.GetActor());
+		if (boss)
+			_bossAttack += _statCom->GetAttackDamage();
 
 		drawColor = FColor::Red;
 	}

@@ -9,6 +9,7 @@
 /**
  * 
  */
+
 UCLASS()
 class TEAMHOMEWORK_API ABossMonster : public ACreature
 {
@@ -30,6 +31,9 @@ protected:
 public:
 	virtual void Tick(float DeltaTime) override;
 
+	void AggroAttack();
+
+
 	UPROPERTY(VisibleAnywhere)
 	class USphereComponent* _trigger;
 
@@ -37,5 +41,9 @@ public:
 	bool _isOverlapped;
 
 	UPROPERTY()
-	class AMyPlayer* _player;
+	class AMyPlayer* _originPlayer;
+
+	int32 _aggroNum = 10;
+	int32 _attackNum = 4;
+	TArray<class AMyPlayer*> _players;
 };

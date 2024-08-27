@@ -11,6 +11,7 @@
  * 
  */
 
+
 UCLASS()
 class TEAMHOMEWORK_API AMyPlayer : public ACreature
 {
@@ -101,4 +102,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* _camera;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	int32 _bossAttack = 0;
 };
