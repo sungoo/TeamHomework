@@ -16,6 +16,7 @@ ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_ACreature();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyPlayer();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyPlayer_NoRegister();
+TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyPlayerController_NoRegister();
 UPackage* Z_Construct_UPackage__Script_TeamHomework();
 // End Cross Module References
 
@@ -58,6 +59,22 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "UI" },
 		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__UIopen_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "MyPlayer.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__controller_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Controller" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Controller\n" },
+#endif
+		{ "ModuleRelativePath", "MyPlayer.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Controller" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__moveAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -131,6 +148,9 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__viewStore;
 	static void NewProp__inventoryOpen_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__inventoryOpen;
+	static void NewProp__UIopen_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp__UIopen;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__controller;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__moveAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__turnAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__lookUpAction;
@@ -169,6 +189,12 @@ void Z_Construct_UClass_AMyPlayer_Statics::NewProp__inventoryOpen_SetBit(void* O
 	((AMyPlayer*)Obj)->_inventoryOpen = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__inventoryOpen = { "_inventoryOpen", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMyPlayer), &Z_Construct_UClass_AMyPlayer_Statics::NewProp__inventoryOpen_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__inventoryOpen_MetaData), NewProp__inventoryOpen_MetaData) };
+void Z_Construct_UClass_AMyPlayer_Statics::NewProp__UIopen_SetBit(void* Obj)
+{
+	((AMyPlayer*)Obj)->_UIopen = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__UIopen = { "_UIopen", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMyPlayer), &Z_Construct_UClass_AMyPlayer_Statics::NewProp__UIopen_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__UIopen_MetaData), NewProp__UIopen_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__controller = { "_controller", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyPlayer, _controller), Z_Construct_UClass_AMyPlayerController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__controller_MetaData), NewProp__controller_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__moveAction = { "_moveAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyPlayer, _moveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__moveAction_MetaData), NewProp__moveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__turnAction = { "_turnAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyPlayer, _turnAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__turnAction_MetaData), NewProp__turnAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyPlayer_Statics::NewProp__lookUpAction = { "_lookUpAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyPlayer, _lookUpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__lookUpAction_MetaData), NewProp__lookUpAction_MetaData) };
@@ -185,6 +211,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyPlayer
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__meetNPC,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__viewStore,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__inventoryOpen,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__UIopen,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__controller,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__moveAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__turnAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyPlayer_Statics::NewProp__lookUpAction,
@@ -238,10 +266,10 @@ AMyPlayer::~AMyPlayer() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyPlayer, AMyPlayer::StaticClass, TEXT("AMyPlayer"), &Z_Registration_Info_UClass_AMyPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyPlayer), 1399870749U) },
+		{ Z_Construct_UClass_AMyPlayer, AMyPlayer::StaticClass, TEXT("AMyPlayer"), &Z_Registration_Info_UClass_AMyPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyPlayer), 984693116U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_1089670258(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_3715807675(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

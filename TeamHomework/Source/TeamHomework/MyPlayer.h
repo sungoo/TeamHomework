@@ -25,6 +25,9 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	void ShowUI(bool bGamePaused);
+	void HideUI();
+
 	virtual void AttackHit() override;
 
 	void Move(const FInputActionValue& value);
@@ -52,6 +55,13 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = UI, meta = (AllowPrivateAccess = "true"))
 	bool _inventoryOpen = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = UI, meta = (AllowPrivateAccess = "true"))
+	bool _UIopen = false;
+
+	// Controller
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controller, meta = (AllowPrivateAccess = "true"))
+	class AMyPlayerController* _controller;
 
 	// Action
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))

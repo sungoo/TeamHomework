@@ -5,23 +5,11 @@
 #include "EnhancedInputSubsystems.h"
 #include "Engine/LocalPlayer.h"
 
+#include "Kismet/GameplayStatics.h"
+
 AMyPlayerController::AMyPlayerController()
 {
 	_myPawn = GetPawn();
-}
-
-void AMyPlayerController::ShowUI()
-{
-	// TODO : 터질수도 있음
-	// bShowMouseCursor = true;
-	// Possess(_myPawn);
-}
-
-void AMyPlayerController::HideUI()
-{
-	// TODO : 터질수도 있음
-	// bShowMouseCursor = false;
-	// UnPossess();
 }
 
 void AMyPlayerController::BeginPlay()

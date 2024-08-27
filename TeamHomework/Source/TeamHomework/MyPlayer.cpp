@@ -12,6 +12,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "MyPlayerController.h"
 //Components
 #include "MyStatComponent.h"
 #include "MyInventoryComponent.h"
@@ -23,6 +24,7 @@
 #include "MyPlayerManager.h"
 #include "MyInventoryUI.h"
 
+#include "Kismet/GameplayStatics.h"
 
 AMyPlayer::AMyPlayer()
 {
@@ -42,11 +44,14 @@ void AMyPlayer::BeginPlay()
 	Super::BeginPlay();
 
 	SetAnimation();
+	SetTickableWhenPaused(true);
 }
 
 void AMyPlayer::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
+
+	_controller = Cast<AMyPlayerController>(GetWorld()->GetFirstPlayerController());
 }
 
 void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -77,21 +82,47 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 		// View Inventory
 		EnhancedInputComponent->BindAction(_viewInventoryAction, ETriggerEvent::Started, this, &AMyPlayer::ViewInventory);
-	
+		
 		// View Store
 		EnhancedInputComponent->BindAction(_viewStoreAction, ETriggerEvent::Started, this, &AMyPlayer::ViewStore);
 	}
 }
 
+void AMyPlayer::ShowUI(bool bGamePaused)
+{
+	if (_controller == nullptr)
+		return;
+
+	FInputModeGameAndUI inputMode;
+	_controller->SetInputMode(inputMode);
+	_UIopen = true;
+	_controller->bShowMouseCursor = true;
+	//UGameplayStatics::SetGamePaused(GetWorld(), bGamePaused);
+	_controller->SetPause(bGamePaused);
+}
+
+void AMyPlayer::HideUI()
+{
+	if (_controller == nullptr)
+		return;
+
+	FInputModeGameOnly inputMode;
+	_controller->SetInputMode(inputMode);
+	_UIopen = false;
+	_controller->bShowMouseCursor = false;
+	_controller->SetPause(false);
+}
+
 void AMyPlayer::AttackHit()
 {
-
+	if (_UIopen)
+		return;
 }
 
 void AMyPlayer::Move(const FInputActionValue& value)
 {
 	FVector2D MovementVector = value.Get<FVector2D>();
-	if (Controller != nullptr)
+	if (Controller != nullptr && !_UIopen)
 	{
 		// add movement 
 		_vertical = MovementVector.Y;
@@ -105,7 +136,7 @@ void AMyPlayer::Move(const FInputActionValue& value)
 void AMyPlayer::Turn(const FInputActionValue& value)
 {
 	FVector2D LookAxisVector = value.Get<FVector2D>();
-	if (Controller != nullptr)
+	if (Controller != nullptr && !_UIopen)
 	{
 		AddControllerYawInput(LookAxisVector.X);
 	}
@@ -114,7 +145,7 @@ void AMyPlayer::Turn(const FInputActionValue& value)
 void AMyPlayer::LookUp(const FInputActionValue& value)
 {
 	FVector2D LookAxisVector = value.Get<FVector2D>();
-	if (Controller != nullptr)
+	if (Controller != nullptr && !_UIopen)
 	{
 		AddControllerPitchInput(LookAxisVector.X);
 	}
@@ -124,7 +155,7 @@ void AMyPlayer::JumpA(const FInputActionValue& value)
 {
 	bool isPressed = value.Get<bool>();
 
-	if (isPressed)
+	if (isPressed && !_UIopen)
 	{
 		ACharacter::Jump();
 		FVector MoveMentVector = GetActorLocation();
@@ -136,7 +167,7 @@ void AMyPlayer::AttackA(const FInputActionValue& value)
 {
 	bool isPressed = value.Get<bool>();
 	
-	if (isPressed && _isAttacking == false && _animInstance != nullptr)
+	if (isPressed && _isAttacking == false && _animInstance != nullptr && !_UIopen)
 	{
 		_animInstance->PlayAttackMontage();
 		_isAttacking = true;
@@ -151,17 +182,17 @@ void AMyPlayer::ViewInventory(const FInputActionValue& value)
 {
 	bool isPressed = value.Get<bool>();
 	
-	if (isPressed)
+	if (isPressed && !_viewStore)
 	{
-		if (!_inventoryOpen)
+		if (!_UIopen)
 		{
 			UIManager->OpenUI(UI_List::Inventory);
-			_inventoryOpen = true;
+			ShowUI(false);
 		}
 		else 
 		{
 			UIManager->CloseUI(UI_List::Inventory);
-			_inventoryOpen = false;
+			HideUI();
 		}
 	}
 }
@@ -170,21 +201,19 @@ void AMyPlayer::ViewStore(const FInputActionValue& value)
 {
 	bool isPressed = value.Get<bool>();
 
-	if (isPressed && _meetNPC)
+	if (isPressed && _meetNPC && !_inventoryOpen)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("view store"));
 
-		if (_viewStore)
+		if (_UIopen)
 		{
 			UIManager->CloseUI(UI_List::Store);
-			UIManager->CloseUI(UI_List::Inventory);
-			_viewStore = false;
+			HideUI();
 		}
 		else
 		{
 			UIManager->OpenUI(UI_List::Store);
-			UIManager->OpenUI(UI_List::Inventory);
-			_viewStore = true;
+			ShowUI(false);
 		}
 	}
 }
