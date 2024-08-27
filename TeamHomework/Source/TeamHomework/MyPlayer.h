@@ -41,6 +41,8 @@ public:
 	void TryGetItem(const FInputActionValue& value);
 	void TryGetItemEnd(const FInputActionValue& value);
 
+	UFUNCTION()
+	void SetTargitItem(class AMyItem* item);
 	void AddItem(class AMyItem* item);
 	void DropItem(const FInputActionValue& value);
 
@@ -62,6 +64,9 @@ public:
 	// Controller
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Controller, meta = (AllowPrivateAccess = "true"))
 	class AMyPlayerController* _controller;
+
+	UPROPERTY()
+	class AMyItem* _item;
 
 	// Action
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))

@@ -29,7 +29,10 @@ public:
 	FString GetItemName(int32 slotNum);
 	int32 GetItemPrice(int32 slotNum);
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Inventory, meta = (AllowPrivateAccess = "true"))
+	int32 _gold;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Inventory, meta = (AllowPrivateAccess = "true"))
 	TArray<class AMyItem*> _items;
 
 	UPROPERTY()
@@ -38,6 +41,6 @@ public:
 	UPROPERTY()
 	TArray<int32> _emptySlots;
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Texture, meta = (AllowPrivateAccess = "true"))
 	UTexture2D* _defaultTexture;
 };

@@ -25,11 +25,16 @@ public:
 
 	void SetItemImage(int32 inventoryIndex, AMyItem* item = nullptr);
 
+	void ShowItem();
+
 	UPROPERTY(meta = (BindWidget))
 	class UUniformGridPanel* SlotGrid;
 
 	UPROPERTY(meta = (BindWidget))
 	TArray<class UButton*> Button_;
+
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* Text_itemName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Texture, meta = (AllowPrivateAccess = "true"))
 	class UTexture2D* _defaultTexture;

@@ -14,6 +14,7 @@ ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_UMyInventoryUI();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_UMyInventoryUI_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUniformGridPanel_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget();
 UPackage* Z_Construct_UPackage__Script_TeamHomework();
@@ -49,6 +50,11 @@ struct Z_Construct_UClass_UMyInventoryUI_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "MyInventoryUI.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Text_itemName_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "MyInventoryUI.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__defaultTexture_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Texture" },
@@ -58,6 +64,7 @@ struct Z_Construct_UClass_UMyInventoryUI_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SlotGrid;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Button__Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Button_;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Text_itemName;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__defaultTexture;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -69,11 +76,13 @@ struct Z_Construct_UClass_UMyInventoryUI_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyInventoryUI_Statics::NewProp_SlotGrid = { "SlotGrid", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyInventoryUI, SlotGrid), Z_Construct_UClass_UUniformGridPanel_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SlotGrid_MetaData), NewProp_SlotGrid_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyInventoryUI_Statics::NewProp_Button__Inner = { "Button_", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UMyInventoryUI_Statics::NewProp_Button_ = { "Button_", nullptr, (EPropertyFlags)0x0010008000000008, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyInventoryUI, Button_), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Button__MetaData), NewProp_Button__MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyInventoryUI_Statics::NewProp_Text_itemName = { "Text_itemName", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyInventoryUI, Text_itemName), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Text_itemName_MetaData), NewProp_Text_itemName_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyInventoryUI_Statics::NewProp__defaultTexture = { "_defaultTexture", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyInventoryUI, _defaultTexture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__defaultTexture_MetaData), NewProp__defaultTexture_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMyInventoryUI_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyInventoryUI_Statics::NewProp_SlotGrid,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyInventoryUI_Statics::NewProp_Button__Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyInventoryUI_Statics::NewProp_Button_,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyInventoryUI_Statics::NewProp_Text_itemName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyInventoryUI_Statics::NewProp__defaultTexture,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UMyInventoryUI_Statics::PropPointers) < 2048);
@@ -117,10 +126,10 @@ UMyInventoryUI::~UMyInventoryUI() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryUI_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyInventoryUI, UMyInventoryUI::StaticClass, TEXT("UMyInventoryUI"), &Z_Registration_Info_UClass_UMyInventoryUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyInventoryUI), 37701130U) },
+		{ Z_Construct_UClass_UMyInventoryUI, UMyInventoryUI::StaticClass, TEXT("UMyInventoryUI"), &Z_Registration_Info_UClass_UMyInventoryUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyInventoryUI), 1545510008U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryUI_h_3858280036(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryUI_h_3016431932(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryUI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -8,6 +8,7 @@
 #include "Components/Button.h"
 #include "Components/Image.h"
 #include "Components/PanelWidget.h"
+#include "Components/TextBlock.h"
 
 #include "MyPlayerController.h"
 
@@ -27,7 +28,7 @@ void UMyInventoryUI::NativeConstruct()
 	for (int i = 0; i < 9; i++)
 	{
 		SetItemImage(i);
-	}
+	}	
 }
 
 void UMyInventoryUI::SetButtons()
@@ -40,6 +41,8 @@ void UMyInventoryUI::SetButtons()
 		UButton* button = Cast<UButton>(widget);
 		if (button)
 		{
+			//TODO : Why Unable to Bind??
+			button->OnClicked.AddDynamic(this, &UMyInventoryUI::ShowItem);
 			Button_.Add(button);
 		}
 	}
@@ -63,5 +66,16 @@ void UMyInventoryUI::SetItemImage(int32 inventoryIndex, AMyItem* item)
 	if (item == nullptr)
 		image->SetBrushFromTexture(_defaultTexture);
 	else
-		image->SetBrushFromTexture(item->GetItemTexture());
+	{
+		//TODO : Exactlly getting itemTexture Successfully
+		//		 But, Why it isn't working??
+		UTexture2D* itemTexture = item->GetItemTexture();
+		image->SetBrushFromTexture(itemTexture);
+		UE_LOG(LogTemp, Display, TEXT("%d image changed"), inventoryIndex);
+	}
+}
+
+void UMyInventoryUI::ShowItem()
+{
+	Text_itemName->SetText(FText::FromString(TEXT("aaa")));
 }

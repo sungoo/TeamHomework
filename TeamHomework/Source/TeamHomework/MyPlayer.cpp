@@ -52,6 +52,8 @@ void AMyPlayer::PostInitializeComponents()
 	Super::PostInitializeComponents();
 
 	_controller = Cast<AMyPlayerController>(GetWorld()->GetFirstPlayerController());
+	//_item->ItemOverlapDelegate.AddUObject(this, &AMyPlayer::SetTargitItem);
+	//_item->OverlapEndDelegate.AddUObject(this, &AMyPlayer::SetTargitItem);
 }
 
 void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -222,8 +224,12 @@ void AMyPlayer::TryGetItem(const FInputActionValue& value)
 {
 	bool isPressed = value.Get<bool>();
 
-	if(isPressed)
+	if (isPressed)
+	{
+		//AddItem(_item);
 		_tryGetItem = true;
+		UE_LOG(LogTemp, Display, TEXT("Try get Item"));
+	}
 }
 
 void AMyPlayer::TryGetItemEnd(const FInputActionValue& value)
@@ -231,8 +237,15 @@ void AMyPlayer::TryGetItemEnd(const FInputActionValue& value)
 	_tryGetItem = false;
 }
 
+void AMyPlayer::SetTargitItem(AMyItem* item)
+{
+	_item = item;
+}
+
 void AMyPlayer::AddItem(AMyItem* item)
 {
+	if (item == nullptr)
+		return;
 	_inventoryCom->AddItem(item);
 }
 

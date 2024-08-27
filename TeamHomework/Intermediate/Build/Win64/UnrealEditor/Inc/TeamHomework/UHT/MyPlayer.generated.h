@@ -9,10 +9,15 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AMyItem;
 #ifdef TEAMHOMEWORK_MyPlayer_generated_h
 #error "MyPlayer.generated.h already included, missing '#pragma once' in MyPlayer.h"
 #endif
 #define TEAMHOMEWORK_MyPlayer_generated_h
+
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetTargitItem);
+
 
 #define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +44,7 @@ public: \
 #define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_INCLASS_NO_PURE_DECLS \
 	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_17_ENHANCED_CONSTRUCTORS \
 private: \

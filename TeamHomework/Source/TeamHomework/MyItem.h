@@ -42,6 +42,9 @@ struct FItemData : public FTableRowBase
 	int32 price;
 };
 
+DECLARE_MULTICAST_DELEGATE_OneParam(ItemOverlap, class AMyItem*);
+DECLARE_MULTICAST_DELEGATE_OneParam(ItemOverlapEnd, class AMyItem*);
+
 UCLASS()
 class TEAMHOMEWORK_API AMyItem : public AActor
 {
@@ -61,6 +64,8 @@ protected:
 
 	UFUNCTION()
 	void OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	UFUNCTION()
+	void OnMyCharacterOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 public:	
 	void InitItemByCode(int32 code);
@@ -72,6 +77,9 @@ public:
 	class UStaticMesh* GetItemMesh();
 	FString GetItemName();
 	int32 GetItemPrice();
+
+	ItemOverlap ItemOverlapDelegate;
+	ItemOverlapEnd OverlapEndDelegate;
 
 private:
 	UPROPERTY(VisibleAnywhere)

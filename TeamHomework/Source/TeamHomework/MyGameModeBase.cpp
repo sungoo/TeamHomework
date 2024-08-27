@@ -36,12 +36,12 @@ void AMyGameModeBase::BeginPlay()
 	Super::BeginPlay();
 
     // 스폰할 위치와 회전 설정
-    FVector spawnLocation = FVector(0.0f, 0.0f, 20.0f);  // 기본 위치
+    FVector spawnLocation = FVector(200.0f, 0.0f, 20.0f);  // 기본 위치
     FRotator spawnRotation = FRotator::ZeroRotator;
 
     for (int i = 0; i < 3; i++)
     {
-        spawnLocation.X += 100.0f * i;
+        spawnLocation.X += 500.0f * i;
 
         AMyItem* item = GetWorld()->SpawnActor<AMyItem>(
             _itemClass,

@@ -49,7 +49,7 @@ void AMyItem::PostInitializeComponents()
 	Super::PostInitializeComponents();
 
 	_trigger->OnComponentBeginOverlap.AddDynamic(this, &AMyItem::OnMyCharacterOverlap);
-	//_trigger->OnComponentEndOverlap.AddDynamic(this, &AMyItem::OnMyCharacterOverlapEnd);
+	_trigger->OnComponentEndOverlap.AddDynamic(this, &AMyItem::OnMyCharacterOverlapEnd);
 }
 
 void AMyItem::Init()
@@ -72,13 +72,22 @@ void AMyItem::OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AAc
 	if (_player != nullptr)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Player Collision!"));
-		if (_player->_tryGetItem) 
+		//ItemOverlapDelegate.Broadcast(this);
+		/*if (_player->_tryGetItem) 
 		{
-			_player->AddItem(this);
-			Disable();
-		}
+		}*/
+		_player->AddItem(this);
+		Disable();
 	}
 }
+
+void AMyItem::OnMyCharacterOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	_player = nullptr;
+	UE_LOG(LogTemp, Warning, TEXT("Player Collision End!"));
+	//OverlapEndDelegate.Broadcast(nullptr);
+}
+
 
 void AMyItem::InitItemByCode(int32 code)
 {

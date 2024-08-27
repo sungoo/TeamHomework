@@ -25,11 +25,12 @@ struct FHitResult;
 
 template<> TEAMHOMEWORK_API UScriptStruct* StaticStruct<struct FItemData>();
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnMyCharacterOverlapEnd); \
 	DECLARE_FUNCTION(execOnMyCharacterOverlap);
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_48_INCLASS_NO_PURE_DECLS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyItem(); \
 	friend struct Z_Construct_UClass_AMyItem_Statics; \
@@ -38,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(AMyItem)
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_48_ENHANCED_CONSTRUCTORS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyItem(AMyItem&&); \
@@ -50,13 +51,13 @@ public: \
 	NO_API virtual ~AMyItem();
 
 
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_45_PROLOG
-#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_48_GENERATED_BODY \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_48_PROLOG
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_48_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_48_ENHANCED_CONSTRUCTORS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_INCLASS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyItem_h_51_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
