@@ -18,7 +18,6 @@ struct FHitResult;
 #define TEAMHOMEWORK_BossMonster_generated_h
 
 #define FID_TeamHomework_Source_TeamHomework_BossMonster_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execCharacterOverlapped); \
 	DECLARE_FUNCTION(execOnMyCharacterOverlap);
 
 

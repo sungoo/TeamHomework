@@ -20,7 +20,7 @@ EBTNodeResult::Type UBTTask_Attack::ExecuteTask(UBehaviorTreeComponent& OwnerCom
 {
 	EBTNodeResult::Type result = Super::ExecuteTask(OwnerComp, NodeMemory);
 
-	auto owner = Cast<AMyMonster>(OwnerComp.GetAIOwner()->GetCharacter());
+	auto owner = Cast<ACreature>(OwnerComp.GetAIOwner()->GetCharacter());
 
 	if (owner == nullptr)
 		return EBTNodeResult::Failed;

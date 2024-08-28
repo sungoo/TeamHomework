@@ -105,4 +105,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	int32 _bossAttack = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	bool _damagedByBoss = false;
+
+	FTimerHandle damageResetTimerHandle;
 };

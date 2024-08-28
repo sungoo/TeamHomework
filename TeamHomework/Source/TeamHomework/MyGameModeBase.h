@@ -23,7 +23,6 @@ public:
 	void SetSelectedPlayer();
 
 	void StartBossMode(class ABossMonster* boss);
-	bool _bossModeStarted = false;
 
 private:
 	UClass* _itemClass;

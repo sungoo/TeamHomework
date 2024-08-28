@@ -10,6 +10,8 @@
 #include "MyPlayerManager.h"
 #include "MyItem.h"
 
+#include "MyAIController.h"
+
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 
@@ -94,24 +96,39 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
     auto originPlayer = Cast<AMyPlayer>(GetWorld()->GetFirstPlayerController()->GetPawn());
     players.Add(originPlayer);
 
+    AMyAIController* aiController = GetWorld()->SpawnActor<AMyAIController>();
+
     const int32 aggroNum = boss->_aggroNum;
     const float rad = 500.0f;
 	FVector bossPos = boss->GetActorLocation();
 
     for (int32 i = 0; i < aggroNum; ++i)
     {
-        const float Angle = FMath::DegreesToRadians(360.0f / aggroNum * i);
-        const FVector spawnLocation = bossPos + FVector(FMath::Cos(Angle) * rad, FMath::Sin(Angle) * rad, bossPos.Z);
+        // 기본 각도 계산
+        const float angle = FMath::DegreesToRadians(360.0f / aggroNum * i);
+
+        // 스폰 위치에 랜덤 오프셋 추가
+        const float randomOffsetX = FMath::RandRange(-300.0f, 300.0f); // X축 랜덤 오프셋
+        const float randomOffsetY = FMath::RandRange(-300.0f, 300.0f); // Y축 랜덤 오프셋
+
+        const FVector spawnLocation = bossPos + FVector(FMath::Cos(angle) * rad + randomOffsetX, FMath::Sin(angle) * rad + randomOffsetY, bossPos.Z);
+
         FActorSpawnParameters spawnParams;
 
+        // 회전을 랜덤하게 설정
         FRotator lookAtPlayer = UKismetMathLibrary::FindLookAtRotation(spawnLocation, bossPos);
-  
+        lookAtPlayer.Yaw += FMath::RandRange(-30.0f, 30.0f); // Yaw에 랜덤한 오프셋 추가
+
         AMyPlayer* player = GetWorld()->SpawnActor<AMyPlayer>(playerClass, spawnLocation, lookAtPlayer, spawnParams);
-        // AIController Possess, 실행 시작
+
+        // if (aiController)
+        // {
+        //     aiController->Possess(player);
+        // }
+
         players.Add(player);
-        boss->_players = players;
 	}
 
-    _bossModeStarted = true;
+    boss->_players = players;
 }
 

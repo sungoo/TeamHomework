@@ -270,10 +270,18 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\BTDeco_CanAttack.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\BTDeco_IsDamagedByBoss.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTDeco_IsDamagedByBoss.h"/>
     <ClCompile Include="..\..\Source\TeamHomework\BTDeco_TargetIsTooFar.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\BTDeco_TargetIsTooFar.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\BTService_FindBoss.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTService_FindBoss.h"/>
     <ClCompile Include="..\..\Source\TeamHomework\BTService_FindTarget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -282,10 +290,18 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\BTService_PrimeSetting.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\BTTask_AggroAttack.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTTask_AggroAttack.h"/>
     <ClCompile Include="..\..\Source\TeamHomework\BTTask_Attack.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\BTTask_Attack.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\BTTask_RunAway.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTTask_RunAway.h"/>
     <ClCompile Include="..\..\Source\TeamHomework\BTTask_SetRandomPos.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

@@ -30,10 +30,8 @@ void AKnight::AttackHit()
 
 	FColor drawColor = FColor::Green;
 
-	if (bResult && hitResult.GetActor()->IsValidLowLevel())
+	if (bResult && hitResult.GetActor()->IsValidLowLevel() && !hitResult.GetActor()->IsA(this->GetClass()))
 	{
-		// && !hitResult.GetActor()->IsA(this->GetClass())
-
 		UE_LOG(LogTemp, Warning, TEXT("Hit Success"));
 		FDamageEvent damageEvent;
 

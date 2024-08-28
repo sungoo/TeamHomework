@@ -25,13 +25,11 @@ protected:
 	UFUNCTION()
 	void OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
-	UFUNCTION()
-	void CharacterOverlapped();
-
 public:
 	virtual void Tick(float DeltaTime) override;
 
 	void AggroAttack();
+	virtual void AttackHit() override;
 
 
 	UPROPERTY(VisibleAnywhere)
@@ -42,6 +40,8 @@ public:
 
 	UPROPERTY()
 	class AMyPlayer* _originPlayer;
+
+	bool _bossModeStarted = false;
 
 	int32 _aggroNum = 10;
 	int32 _attackNum = 4;
