@@ -18,7 +18,7 @@
 			"MyGameInstance.gen.cpp.obj",
 			"MyGameModeBase.gen.cpp.obj",
 			"MyHpBar.gen.cpp.obj",
-			"MyInventoryUI.gen.cpp.obj",
+			"MyInventoryComponent.gen.cpp.obj",
 			"MyItem.gen.cpp.obj",
 			"MyMonster.gen.cpp.obj",
 			"MyNPC.gen.cpp.obj",
@@ -48,7 +48,7 @@
 			"MyGameInstance.cpp.obj",
 			"MyGameModeBase.cpp.obj",
 			"MyHpBar.cpp.obj",
-			"MyInventoryUI.cpp.obj",
+			"MyItem.cpp.obj",
 			"MyMonster.cpp.obj",
 			"MyNPC.cpp.obj",
 			"MyNPCUI.cpp.obj",
@@ -62,10 +62,12 @@
 			"TeamHomework.cpp.obj",
 			"UI_BaseDisplay.cpp.obj",
 			"VFX_Manager.cpp.obj",
-			"MyInventoryComponent.gen.cpp.obj",
+			"MyInventoryUI.gen.cpp.obj",
 			"TeamHomework.init.gen.cpp.obj",
+			"UI_E_MyButton.gen.cpp.obj",
 			"MyInventoryComponent.cpp.obj",
-			"MyItem.cpp.obj"
+			"MyInventoryUI.cpp.obj",
+			"UI_E_MyButton.cpp.obj"
 		]
 	}
 }

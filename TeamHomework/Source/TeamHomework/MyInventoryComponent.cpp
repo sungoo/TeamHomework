@@ -46,7 +46,7 @@ void UMyInventoryComponent::AddItem(AMyItem* item)
 	if (_items.Num() <= _inventoryMax)
 	{
 		_items.Add(item);
-		int32 itemStack = _items.Num();
+		int32 itemStack = _items.Num() - 1;
 		UIManager->GetInventoryUI()->SetItemImage(itemStack, item);
 	}
 	else

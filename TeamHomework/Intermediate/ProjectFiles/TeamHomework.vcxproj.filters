@@ -222,6 +222,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\UI_BaseDisplay.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI_E_MyButton.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI_E_MyButton.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\VFX_Manager.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
