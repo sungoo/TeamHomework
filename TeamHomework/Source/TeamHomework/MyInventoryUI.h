@@ -10,7 +10,9 @@
 /**
  * 
  */
+DECLARE_DELEGATE_OneParam(ItemDropIndexDelegate, int32);
 DECLARE_MULTICAST_DELEGATE(ItemDropDelegate);
+DECLARE_DELEGATE_OneParam(ItemUseIndexDelegate, int32);
 DECLARE_MULTICAST_DELEGATE(ItemUseDelegate);
 
 UCLASS()
@@ -60,6 +62,9 @@ public:
 	//Delegate
 	ItemUseDelegate itemUSE;
 	ItemDropDelegate itemDROP;
+
+	ItemUseIndexDelegate itemUseIndex;
+	ItemDropIndexDelegate itemDropIndex;
 
 	UPROPERTY(meta = (BindWidget))
 	class UUniformGridPanel* SlotGrid;

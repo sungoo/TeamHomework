@@ -24,26 +24,28 @@ UMyInventoryComponent::UMyInventoryComponent()
 	}
 }
 
-
 // Called when the game starts
 void UMyInventoryComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	UIManager->GetInventoryUI()->itemDropIndex.BindUObject(this, &UMyInventoryComponent::DropItemOfSlot);
+	UIManager->GetInventoryUI()->itemUseIndex.BindUObject(this, &UMyInventoryComponent::RemoveItemOfSlot);
 	
 }
 
 void UMyInventoryComponent::AddItem(AMyItem* item)
 {
+
 	//If there is Empty Slot, Add item there first.
 	if (!_emptySlots.IsEmpty())
 	{
-		int32 putSlot = _emptySlots.Pop();
-		_items[putSlot - 1] = item;
+		int32 putSlot;
+		_emptySlots.HeapPop(putSlot, true);
+		_items[putSlot] = item;
 		UIManager->GetInventoryUI()->SetItemImage(putSlot, item);
 	}
-	if (_items.Num() <= _inventoryMax)
+	else if (_items.Num() <= _inventoryMax)
 	{
 		_items.Add(item);
 		int32 itemStack = _items.Num() - 1;
@@ -84,7 +86,7 @@ void UMyInventoryComponent::DropItemOfSlot(int32 slotNum)
 	if (slotNum > _items.Num())
 		return;
 
-	AMyItem* item = _items[slotNum - 1];
+	AMyItem* item = _items[slotNum];
 	if (item == nullptr)
 		return;
 
@@ -96,29 +98,48 @@ void UMyInventoryComponent::DropItemOfSlot(int32 slotNum)
 	itemPos.Z = 0.0f;
 	item->ReleaseItem(itemPos);
 
-	_items[slotNum - 1] = nullptr;
+	_items[slotNum] = nullptr;
 	_emptySlots.Add(slotNum);
-	UIManager->GetInventoryUI()->SetItemImage(slotNum, nullptr);
+	//UIManager->GetInventoryUI()->SetItemImage(slotNum, nullptr);
+	UE_LOG(LogTemp, Warning, TEXT("Item Drop Success!"));
+}
+
+void UMyInventoryComponent::RemoveItemOfSlot(int32 slotNum)
+{
+	if (_items.IsEmpty())
+		return;
+
+	if (slotNum > _items.Num())
+		return;
+
+	AMyItem* item = _items[slotNum];
+	if (item == nullptr)
+		return;
+
+	_items[slotNum] = nullptr;
+	_emptySlots.Add(slotNum);
+	//UIManager->GetInventoryUI()->SetItemImage(slotNum, nullptr);
+	UE_LOG(LogTemp, Warning, TEXT("Item Remove Success!"));
 }
 
 UTexture2D* UMyInventoryComponent::GetItemTexture(int32 slotNum)
 {
-	if (slotNum > _items.Num() || _items[slotNum - 1] == nullptr)
+	if (slotNum > _items.Num() || _items[slotNum] == nullptr)
 		return _defaultTexture;
-	return _items[slotNum - 1]->GetItemTexture();
+	return _items[slotNum]->GetItemTexture();
 }
 
 FString UMyInventoryComponent::GetItemName(int32 slotNum)
 {
-	if (slotNum > _items.Num() || _items[slotNum - 1] == nullptr)
+	if (slotNum > _items.Num() || _items[slotNum] == nullptr)
 		return FString(TEXT(""));
-	return _items[slotNum - 1]->GetItemName();
+	return _items[slotNum]->GetItemName();
 }
 
 int32 UMyInventoryComponent::GetItemPrice(int32 slotNum)
 {
-	if (slotNum > _items.Num() || _items[slotNum - 1] == nullptr)
+	if (slotNum > _items.Num() || _items[slotNum] == nullptr)
 		return 0;
-	return _items[slotNum - 1]->GetItemPrice();
+	return _items[slotNum]->GetItemPrice();
 }
 
