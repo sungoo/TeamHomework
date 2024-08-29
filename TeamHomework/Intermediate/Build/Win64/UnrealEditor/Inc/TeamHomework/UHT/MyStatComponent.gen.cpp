@@ -127,17 +127,35 @@ struct Z_Construct_UClass_UMyStatComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__maxhp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// int32 _maxhp = 100;\n" },
+#endif
 		{ "ModuleRelativePath", "MyStatComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "int32 _maxhp = 100;" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__atk_default_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// int32 _atk_default = 50;\n" },
+#endif
 		{ "ModuleRelativePath", "MyStatComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "int32 _atk_default = 50;" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__atk_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// int32 _atk = 50;\n" },
+#endif
 		{ "ModuleRelativePath", "MyStatComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "int32 _atk = 50;" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__gold_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -207,18 +225,18 @@ UMyStatComponent::~UMyStatComponent() {}
 // End Class UMyStatComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FMyStatData::StaticStruct, Z_Construct_UScriptStruct_FMyStatData_Statics::NewStructOps, TEXT("MyStatData"), &Z_Registration_Info_UScriptStruct_MyStatData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMyStatData), 123644553U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyStatComponent, UMyStatComponent::StaticClass, TEXT("UMyStatComponent"), &Z_Registration_Info_UClass_UMyStatComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyStatComponent), 2802936854U) },
+		{ Z_Construct_UClass_UMyStatComponent, UMyStatComponent::StaticClass, TEXT("UMyStatComponent"), &Z_Registration_Info_UClass_UMyStatComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyStatComponent), 596991515U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_366583526(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_2916448330(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

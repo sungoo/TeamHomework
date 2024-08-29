@@ -17,9 +17,9 @@ class TEAMHOMEWORK_API UUI_AggroInfo : public UUserWidget
 public:
 	virtual void NativeConstruct() override;
 
-	void SetPlayerInfo(TArray<class AMyPlayer*> players);
-	void SetDamageValue(float ratio);
-	void SetHpValue(float ratio);
+	void SetPlayerInfo(TArray<TTuple<class AMyPlayer*, int32>> players);
+	void SetDamageValue(float dmg, class AMyPlayer* player);
+	void SetHpValue(float ratio, int32 index);
 
 	UPROPERTY(meta = (BindWidget))
 	class UVerticalBox* NameBox;
@@ -31,8 +31,11 @@ public:
 	class UVerticalBox* HpBox;
 
 	UPROPERTY()
-	TMap<class AMyPlayer*, class UProgressBar*> _damageInfo;
+	TMap<class AMyPlayer*, int32> _playerIndex;
 
 	UPROPERTY()
-	TMap<class AMyPlayer*, class UProgressBar*> _hpInfo;
+	TMap<int32, class UProgressBar*> _damageInfo;
+
+	UPROPERTY()
+	TMap<int32, class UProgressBar*> _hpInfo;
 };

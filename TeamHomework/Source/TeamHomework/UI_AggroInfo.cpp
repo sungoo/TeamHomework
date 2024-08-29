@@ -11,7 +11,7 @@ void UUI_AggroInfo::NativeConstruct()
 { 
 }
 
-void UUI_AggroInfo::SetPlayerInfo(TArray<AMyPlayer*> players)
+void UUI_AggroInfo::SetPlayerInfo(TArray<TTuple<AMyPlayer*, int32>> players)
 {
 	TArray<UWidget*> damageBars = DamageBox->GetAllChildren();
 	for (int32 i = 0; i < damageBars.Num(); i++)
@@ -19,26 +19,72 @@ void UUI_AggroInfo::SetPlayerInfo(TArray<AMyPlayer*> players)
 		UProgressBar* damageBar = Cast<UProgressBar>(damageBars[i]);
 		if (damageBar)
 		{
-			_damageInfo.Add(players[i], damageBar);
+			_playerIndex.Add(players[i].Key, i);
+			_damageInfo.Add(i, damageBar);
 		}
 	}
 
 	TArray<UWidget*> hpBars = HpBox->GetAllChildren();
-	for (int32 i = 0; i < hpBars.Num(); i++)
+	for (int32 i = 0; i < hpBars.Num() - 1; i++)
 	{
 		UProgressBar* hpBar = Cast<UProgressBar>(hpBars[i]);
 		if (hpBar)
 		{
-			_damageInfo.Add(players[i], hpBar);
+			_hpInfo.Add(i, hpBar);
 		}
 	}
 }
 
-void UUI_AggroInfo::SetDamageValue(float ratio)
+void UUI_AggroInfo::SetDamageValue(float dmg, AMyPlayer* player)
 {
-	
+
+	if (int32* index = _playerIndex.Find(player))
+	{
+		if (*index)
+		{
+			UProgressBar** progressBarPtr = _damageInfo.Find(*index);
+
+			if (*progressBarPtr)
+			{
+				// 새로운 데미지를 누적합니다.
+				float newPercent = dmg / 100;
+
+				// ProgressBar의 Percent를 업데이트합니다.
+				(*progressBarPtr)->SetPercent(newPercent);
+			}
+		}
+	}
 }
 
-void UUI_AggroInfo::SetHpValue(float ratio)
+void UUI_AggroInfo::SetHpValue(float ratio, int32 index)
 {
+	for (auto& elem : _damageInfo)
+	{
+		UProgressBar* bar = elem.Value;
+		bar->SetFillColorAndOpacity(FLinearColor::Black);
+	}
+
+	for (auto& elem : _hpInfo)
+	{
+		UProgressBar* bar = elem.Value;
+		bar->SetFillColorAndOpacity(FLinearColor::Black);
+	}
+
+	if (UProgressBar** progressBarPtr = _hpInfo.Find(index))
+	{
+		if (*progressBarPtr)
+		{
+			(*progressBarPtr)->SetPercent(ratio);
+			(*progressBarPtr)->SetFillColorAndOpacity(FLinearColor::Red);
+
+		}
+	}
+
+	if (UProgressBar** progressBarPtr = _damageInfo.Find(index))
+	{
+		if (*progressBarPtr)
+		{
+			(*progressBarPtr)->SetFillColorAndOpacity(FLinearColor::Green);
+		}
+	}
 }

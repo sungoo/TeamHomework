@@ -29,7 +29,7 @@ EBTNodeResult::Type UBTTask_SetTarget::ExecuteTask(UBehaviorTreeComponent& Owner
 	{
 		if(!boss->_players.IsEmpty())
 		{ 
-			auto targetPlayer = (boss->_players)[0];
+			auto targetPlayer = (boss->_players)[0].Key;
 			OwnerComp.GetBlackboardComponent()->SetValueAsObject(FName(TEXT("Target")), targetPlayer);
 			OwnerComp.GetBlackboardComponent()->SetValueAsVector(FName(TEXT("TargetPos")), targetPlayer->GetActorLocation());
 		}

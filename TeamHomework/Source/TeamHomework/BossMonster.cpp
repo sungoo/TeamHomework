@@ -12,6 +12,7 @@
 #include "MyStatComponent.h"
 
 
+
 ABossMonster::ABossMonster()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -37,7 +38,7 @@ void ABossMonster::PostInitializeComponents()
 	
 	// 삭제 예정
 	_statCom->SetHp(500.0f);
-	_statCom->AddAttackDamage(50.0f);
+	// _statCom->AddAttackDamage(50.0f);
 }
 
 void ABossMonster::OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -75,23 +76,26 @@ void ABossMonster::AggroAttack()
 void ABossMonster::AttackHit()
 {
 	// 죽은 플레이어 제외
-	_players.RemoveAll([](AMyPlayer* player)
-		{ return player->_statCom->IsDead(); });
+	_players.RemoveAll([](TTuple<AMyPlayer*, int32> player)
+		{ return player.Key->_statCom->IsDead(); });
 
 	// 모두 죽었으면 끝
 	if (_players.IsEmpty())
 		return;
 
 	// 공격력 순으로 정렬
-	Algo::Sort(_players, [](AMyPlayer* player1, AMyPlayer* player2)
-		{ return player1->_bossAttack > player2->_bossAttack; });
+	Algo::Sort(_players, [](const TTuple<AMyPlayer*, int32>& player1, const TTuple<AMyPlayer*, int32>& player2)
+		{ return player1.Key->_bossAttack > player2.Key->_bossAttack; });
 
 	// 최상위 1명 공격
 	FDamageEvent damageEvent;
-	_players[0]->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
-	_players[0]->_damagedByBoss = true;
+	_players[0].Key->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
+	_aggroHpChangedDelegate.Broadcast(_statCom->HpRatio(), _players[0].Value);
+	
 
-	GetWorld()->GetTimerManager().SetTimer(_players[0]->damageResetTimerHandle, FTimerDelegate::CreateLambda([this, player = _players[0]]()
+	_players[0].Key->_damagedByBoss = true;
+
+	GetWorld()->GetTimerManager().SetTimer(_players[0].Key->damageResetTimerHandle, FTimerDelegate::CreateLambda([this, player = _players[0].Key]()
 		{
 			player->_damagedByBoss = false;
 		}), 1.0f, false);

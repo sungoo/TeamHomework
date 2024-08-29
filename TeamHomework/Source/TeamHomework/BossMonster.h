@@ -10,6 +10,9 @@
  * 
  */
 
+DECLARE_MULTICAST_DELEGATE_TwoParams(AggroDamageDelegate, float, class AMyPlayer*);
+DECLARE_MULTICAST_DELEGATE_TwoParams(AggroHpChangedDelegate, float, int32);
+
 UCLASS()
 class TEAMHOMEWORK_API ABossMonster : public ACreature
 {
@@ -44,5 +47,8 @@ public:
 	bool _bossModeStarted = false;
 
 	int32 _aggroNum = 10;
-	TArray<class AMyPlayer*> _players;
+	TArray<TTuple<class AMyPlayer*, int32>> _players;
+
+	AggroDamageDelegate _aggroDamageDelegate;
+	AggroHpChangedDelegate _aggroHpChangedDelegate;
 };

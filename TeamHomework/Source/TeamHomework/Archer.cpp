@@ -2,6 +2,7 @@
 
 
 #include "Archer.h"
+#include "BossMonster.h"
 
 #include "MystatComponent.h"
 #include "Engine/DamageEvents.h"
@@ -48,6 +49,13 @@ void AArcher::AttackHit()
 
 		//_attackHitEventDelegate.Broadcast();
 		//EffectManager->Play("Shoot", _hitPoint);
+
+		ABossMonster* boss = Cast<ABossMonster>(hitResult.GetActor());
+		if (boss)
+		{
+			_bossAttack += _statCom->GetAttackDamage();
+			boss->_aggroDamageDelegate.Broadcast(_bossAttack, this);
+		}
 
 		DrawDebugCapsule(GetWorld(), center, attackRange * 0.5f, attackRadius, quat, FColor::Red, false, 2.0f);
 	}

@@ -96,9 +96,9 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
     // Clone Players
     UClass* playerClass = PlayerManager->SetDefaultPawnClass();
 
-    TArray<AMyPlayer*> players;
+    TArray<TTuple<AMyPlayer*, int32>> players;
     auto originPlayer = Cast<AMyPlayer>(GetWorld()->GetFirstPlayerController()->GetPawn());
-    players.Add(originPlayer);
+    players.Add(MakeTuple(originPlayer, 0));
 
     AMyAIController* aiController = GetWorld()->SpawnActor<AMyAIController>();
 
@@ -127,12 +127,16 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
         player->_hpBarWidget->SetVisibility(false);
         player->_hpBarWidget->Deactivate();
 
-        players.Add(player);
-
-        UIManager->GetAggroInfoUI()->SetPlayerInfo(players);
-        UIManager->OpenUI(UI_List::AggroInfo);
+        players.Add(MakeTuple(player, i + 1));
 	}
 
     boss->_players = players;
+
+    UIManager->GetAggroInfoUI()->SetPlayerInfo(players);
+    UIManager->OpenUI(UI_List::AggroInfo);
+
+    boss->_aggroDamageDelegate.AddUObject(UIManager->GetAggroInfoUI(), &UUI_AggroInfo::SetDamageValue);
+    boss->_aggroHpChangedDelegate.AddUObject(UIManager->GetAggroInfoUI(), &UUI_AggroInfo::SetHpValue);
+
 }
 

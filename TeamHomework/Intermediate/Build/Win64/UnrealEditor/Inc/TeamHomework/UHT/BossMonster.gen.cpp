@@ -121,9 +121,6 @@ struct Z_Construct_UClass_ABossMonster_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "BossMonster.h" },
 		{ "ModuleRelativePath", "BossMonster.h" },
@@ -208,10 +205,10 @@ ABossMonster::~ABossMonster() {}
 struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABossMonster, ABossMonster::StaticClass, TEXT("ABossMonster"), &Z_Registration_Info_UClass_ABossMonster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABossMonster), 1670430205U) },
+		{ Z_Construct_UClass_ABossMonster, ABossMonster::StaticClass, TEXT("ABossMonster"), &Z_Registration_Info_UClass_ABossMonster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABossMonster), 2388163383U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_3832101823(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_1311183111(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_BossMonster_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

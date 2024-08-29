@@ -5,6 +5,7 @@
 #include "BossMonster.h"
 #include "MystatComponent.h"
 #include "Engine/DamageEvents.h"
+#include "UI_AggroInfo.h"
 
 void AKnight::AttackHit()
 {
@@ -36,10 +37,14 @@ void AKnight::AttackHit()
 		FDamageEvent damageEvent;
 
 		hitResult.GetActor()->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
+		_hitPoint = hitResult.ImpactPoint;
 
 		ABossMonster* boss = Cast<ABossMonster>(hitResult.GetActor());
 		if (boss)
+		{
 			_bossAttack += _statCom->GetAttackDamage();
+			boss->_aggroDamageDelegate.Broadcast(_bossAttack, this);
+		}
 
 		drawColor = FColor::Red;
 	}
