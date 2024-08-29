@@ -77,3 +77,8 @@ void UMyStatComponent::AddAttackDamage(float amount)
 	UE_LOG(LogTemp, Warning, TEXT("ATK UP : %d"), GetAttackDamage());
 }
 
+void UMyStatComponent::AddGold(int32 amount)
+{
+	_gold += amount;
+}
+

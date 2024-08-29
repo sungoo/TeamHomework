@@ -26,7 +26,7 @@ public:
 	UFUNCTION()
 	void DropItemOfSlot(int32 slotNum);
 	UFUNCTION()
-	void RemoveItemOfSlot(int32 slotNum);
+	void UseItemOfSlot(int32 slotNum);
 
 	UTexture2D* GetItemTexture(int32 slotNum);
 	FString GetItemName(int32 slotNum);

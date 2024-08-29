@@ -15,7 +15,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TEAMHOMEWORK_MyInventoryComponent_generated_h
 
 #define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execRemoveItemOfSlot); \
+	DECLARE_FUNCTION(execUseItemOfSlot); \
 	DECLARE_FUNCTION(execDropItemOfSlot);
 
 
