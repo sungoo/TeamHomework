@@ -5,6 +5,7 @@
 
 #include "MyGameInstance.h"
 
+#include "MyPlayer.h"
 #include "MyItem.h"
 #include "MyInventoryUI.h"
 
@@ -30,7 +31,7 @@ void UMyInventoryComponent::BeginPlay()
 	Super::BeginPlay();
 
 	UIManager->GetInventoryUI()->itemDropIndex.BindUObject(this, &UMyInventoryComponent::DropItemOfSlot);
-	UIManager->GetInventoryUI()->itemUseIndex.BindUObject(this, &UMyInventoryComponent::RemoveItemOfSlot);
+	UIManager->GetInventoryUI()->itemUseIndex.BindUObject(this, &UMyInventoryComponent::UseItemOfSlot);
 	
 }
 
@@ -104,7 +105,7 @@ void UMyInventoryComponent::DropItemOfSlot(int32 slotNum)
 	UE_LOG(LogTemp, Warning, TEXT("Item Drop Success!"));
 }
 
-void UMyInventoryComponent::RemoveItemOfSlot(int32 slotNum)
+void UMyInventoryComponent::UseItemOfSlot(int32 slotNum)
 {
 	if (_items.IsEmpty())
 		return;
@@ -115,6 +116,12 @@ void UMyInventoryComponent::RemoveItemOfSlot(int32 slotNum)
 	AMyItem* item = _items[slotNum];
 	if (item == nullptr)
 		return;
+
+	auto Owner = Cast<AMyPlayer>(GetOwner());
+	if (Owner)
+	{
+
+	}
 
 	_items[slotNum] = nullptr;
 	_emptySlots.Add(slotNum);
