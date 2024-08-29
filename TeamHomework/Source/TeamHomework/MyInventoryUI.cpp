@@ -111,6 +111,10 @@ void UMyInventoryUI::DropItem()
 		return;
 	itemDROP.Broadcast();
 
+	//TODO : Why It is can't read it.
+	if(itemDropIndex.IsBound())
+		itemDropIndex.Execute(_targetIndex);
+
 	_targetItem = nullptr;
 	ShowItem();
 	SetItemImage(_targetIndex, nullptr);
@@ -122,6 +126,8 @@ void UMyInventoryUI::UseItem()
 	if (_targetItem == nullptr)
 		return;
 	itemUSE.Broadcast();
+	if(itemUseIndex.IsBound())
+		itemUseIndex.Execute(_targetIndex);
 
 	_targetItem = nullptr;
 	ShowItem();
