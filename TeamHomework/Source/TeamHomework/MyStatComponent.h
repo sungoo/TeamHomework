@@ -55,6 +55,9 @@ public:
 	void AddAttackDamage(float amount);
 	bool IsDead() { return _curhp <= 0; }
 
+	void AddGold(int32 amount);
+	int32 ShowGold() { return _gold; }
+
 	HpChanged _hpChangedDelegate;
 	DeathDelegate _deathDelegate;
 
@@ -62,6 +65,7 @@ public:
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
 	int32 _curhp = 1;
+<<<<<<< HEAD
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
 	int32 _maxhp = 500;
 
@@ -69,4 +73,16 @@ protected:
 	int32 _atk_default = 5;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
 	int32 _atk = 5;
+=======
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	int32 _maxhp = 100;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	int32 _atk_default = 50;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	int32 _atk = 50;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	int32 _gold = 0;
+>>>>>>> Item-get-drop
 };

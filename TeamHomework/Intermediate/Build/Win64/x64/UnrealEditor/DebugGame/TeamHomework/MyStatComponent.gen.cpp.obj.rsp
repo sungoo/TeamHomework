@@ -1,11 +1,11 @@
-"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\UnrealEditor\Inc\TeamHomework\UHT\MyStatComponent.gen.cpp"
-/FI"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h"
-/FI"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\Definitions.TeamHomework.h"
-/Yu"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h"
-/Fp"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.pch"
-/Fo"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyStatComponent.gen.cpp.obj"
-/sourceDependencies "C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyStatComponent.gen.cpp.dep.json"
-@"C:\Users\User\Desktop\SGA_Study\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\TeamHomework.Shared.rsp"
+"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\UnrealEditor\Inc\TeamHomework\UHT\MyStatComponent.gen.cpp"
+/FI"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h"
+/FI"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\Definitions.TeamHomework.h"
+/Yu"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h"
+/Fp"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.pch"
+/Fo"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyStatComponent.gen.cpp.obj"
+/sourceDependencies "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyStatComponent.gen.cpp.dep.json"
+@"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\TeamHomework.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
