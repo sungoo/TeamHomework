@@ -46,6 +46,13 @@ void AMyPlayer::BeginPlay()
 
 	SetAnimation();
 	SetTickableWhenPaused(true);
+
+	if (_controller->IsLocalPlayerController())
+	{
+		UIManager->OpenUI(UI_List::BaseDisplay);
+	}
+
+	
 }
 
 void AMyPlayer::PostInitializeComponents()

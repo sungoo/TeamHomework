@@ -36,13 +36,13 @@ struct Z_Construct_UClass_UUI_BaseDisplay_Statics
 		{ "IncludePath", "UI_BaseDisplay.h" },
 		{ "ModuleRelativePath", "UI_BaseDisplay.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__GoldValue_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GoldValue_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI_BaseDisplay.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp__GoldValue;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_GoldValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -50,9 +50,9 @@ struct Z_Construct_UClass_UUI_BaseDisplay_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUI_BaseDisplay_Statics::NewProp__GoldValue = { "_GoldValue", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UUI_BaseDisplay, _GoldValue), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__GoldValue_MetaData), NewProp__GoldValue_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUI_BaseDisplay_Statics::NewProp_GoldValue = { "GoldValue", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UUI_BaseDisplay, GoldValue), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GoldValue_MetaData), NewProp_GoldValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UUI_BaseDisplay_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_BaseDisplay_Statics::NewProp__GoldValue,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_BaseDisplay_Statics::NewProp_GoldValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UUI_BaseDisplay_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UUI_BaseDisplay_Statics::DependentSingletons[])() = {
@@ -93,14 +93,14 @@ UUI_BaseDisplay::~UUI_BaseDisplay() {}
 // End Class UUI_BaseDisplay
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UUI_BaseDisplay, UUI_BaseDisplay::StaticClass, TEXT("UUI_BaseDisplay"), &Z_Registration_Info_UClass_UUI_BaseDisplay, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_BaseDisplay), 223110083U) },
+		{ Z_Construct_UClass_UUI_BaseDisplay, UUI_BaseDisplay::StaticClass, TEXT("UUI_BaseDisplay"), &Z_Registration_Info_UClass_UUI_BaseDisplay, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_BaseDisplay), 3519746381U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_1480267564(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_1932449409(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

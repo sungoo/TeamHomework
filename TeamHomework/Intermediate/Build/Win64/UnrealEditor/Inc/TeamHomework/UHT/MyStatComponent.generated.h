@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAMHOMEWORK_MyStatComponent_generated_h
 
-#define FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_12_GENERATED_BODY \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_12_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FMyStatData_Statics; \
 	TEAMHOMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> TEAMHOMEWORK_API UScriptStruct* StaticStruct<struct FMyStatData>();
 
-#define FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_31_INCLASS_NO_PURE_DECLS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_33_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMyStatComponent(); \
 	friend struct Z_Construct_UClass_UMyStatComponent_Statics; \
@@ -31,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(UMyStatComponent)
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_31_ENHANCED_CONSTRUCTORS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_33_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UMyStatComponent(UMyStatComponent&&); \
@@ -43,12 +43,12 @@ public: \
 	NO_API virtual ~UMyStatComponent();
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_28_PROLOG
-#define FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_31_GENERATED_BODY \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_30_PROLOG
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_33_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_31_INCLASS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_MyStatComponent_h_31_ENHANCED_CONSTRUCTORS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_33_INCLASS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_33_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -56,7 +56,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class UMyStatComponent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_MyStatComponent_h
+#define CURRENT_FILE_ID FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

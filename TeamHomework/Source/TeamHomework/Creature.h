@@ -59,6 +59,9 @@ public:
 	) override;
 	int32 GetcurHP();
 
+	class UMyInventoryComponent* GetInventory() { return _inventoryCom; }
+	class UMyStatComponent* GetStatus() { return _statCom; }
+
 	Delegate_AttackEnded _attackEndedDelegate;
 
 	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = Event, meta = (AllowPrivateAccess = "true"))

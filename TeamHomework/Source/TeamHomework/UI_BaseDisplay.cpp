@@ -5,12 +5,20 @@
 
 #include "Components/TextBlock.h"
 
+void UUI_BaseDisplay::NativeConstruct()
+{
+	Super::NativeConstruct();
+
+	UpdateDisplayGold();
+}
+
 void UUI_BaseDisplay::UpdateNowGold(int amount)
 {
 	_gold += amount;
+	UpdateDisplayGold();
 }
 
 void UUI_BaseDisplay::UpdateDisplayGold()
 {
-	_GoldValue->SetText(FText::FromString(FString::FromInt(_gold)));
+	GoldValue->SetText(FText::FromString(FString::FromInt(_gold)));
 }

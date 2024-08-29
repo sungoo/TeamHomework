@@ -13,9 +13,9 @@ enum class UI_List
 	//UI will Stack like this list (top to bottom)
 	BaseDisplay,
 	PlayerSelection,
-	Inventory,
+	AggroInfo,
 	Store,
-	AggroInfo
+	Inventory,
 };
 
 UCLASS()

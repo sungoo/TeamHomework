@@ -18,6 +18,8 @@ struct FMyStatData : public FTableRowBase
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 attack;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 speed;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 gold;
 };
 
@@ -53,6 +55,7 @@ public:
 
 	int AddCurHP(float amount);
 	void AddAttackDamage(float amount);
+	void AddSpeed(float amount);
 	bool IsDead() { return _curhp <= 0; }
 
 	void AddGold(int32 amount);
@@ -65,17 +68,16 @@ public:
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
 	int32 _curhp = 1;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	int32 _maxhp = 100;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stat, meta = (AllowPrivateAccess = "true"))
-	// int32 _maxhp = 100;
-	int32 _maxhp = 500;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stat, meta = (AllowPrivateAccess = "true"))
-	// int32 _atk_default = 50;
-	int32 _atk_default = 5;
+	int32 _atk_default = 50;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
-	// int32 _atk = 50;
-	int32 _atk = 5;
+	int32 _atk = 50;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	int32 _speed = 100;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stat, meta = (AllowPrivateAccess = "true"))
 	int32 _gold = 0;

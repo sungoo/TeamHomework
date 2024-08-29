@@ -55,9 +55,9 @@ AMyUIManager::AMyUIManager()
 
 	_widgets.Add(_baseDisplayUI);
 	_widgets.Add(_playerSelectionUI);
-	_widgets.Add(_inventoryUI);
-	_widgets.Add(_storeUI);
 	_widgets.Add(_aggroInfoUI);
+	_widgets.Add(_storeUI);
+	_widgets.Add(_inventoryUI);
 }
 
 // Called when the game starts or when spawned
