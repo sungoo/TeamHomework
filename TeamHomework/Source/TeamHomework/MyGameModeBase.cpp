@@ -6,6 +6,9 @@
 #include "BossMonster.h"
 #include "MyStatComponent.h"
 
+#include "Knight.h"
+#include "Archer.h"
+
 #include "MyGameInstance.h"
 #include "MyUIManager.h"
 #include "MyPlayerManager.h"
@@ -94,7 +97,8 @@ void AMyGameModeBase::SetSelectedPlayer()
 void AMyGameModeBase::StartBossMode(ABossMonster* boss)
 {
     // Clone Players
-    UClass* playerClass = PlayerManager->SetDefaultPawnClass();
+    UClass* knightClass = StaticLoadClass(AKnight::StaticClass(), nullptr, TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/Knight_BP.Knight_BP_C'"));
+    UClass* archerClass = StaticLoadClass(AArcher::StaticClass(), nullptr, TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/Archer_BP.Archer_BP_C'"));
 
     TArray<TTuple<AMyPlayer*, int32>> players;
     auto originPlayer = Cast<AMyPlayer>(GetWorld()->GetFirstPlayerController()->GetPawn());
@@ -122,6 +126,12 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
         // 회전을 랜덤하게 설정
         FRotator lookAtPlayer = UKismetMathLibrary::FindLookAtRotation(spawnLocation, bossPos);
         lookAtPlayer.Yaw += FMath::RandRange(-30.0f, 30.0f); // Yaw에 랜덤한 오프셋 추가
+
+        UClass* playerClass;
+        if (i % 2 == 0)
+            playerClass = knightClass;
+        else
+            playerClass = archerClass;
 
         AMyPlayer* player = GetWorld()->SpawnActor<AMyPlayer>(playerClass, spawnLocation, lookAtPlayer, spawnParams);
         player->_hpBarWidget->SetVisibility(false);

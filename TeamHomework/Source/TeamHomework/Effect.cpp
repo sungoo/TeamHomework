@@ -2,8 +2,9 @@
 
 
 #include "Effect.h"
-
+#include "Particles/ParticleSystem.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "NiagaraSystem.h"
 #include "NiagaraComponent.h"
 
 // Sets default values
@@ -12,6 +13,12 @@ AEffect::AEffect()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
+	_particleCom = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Particle"));
+
+	RootComponent = _particleCom;
+
+	_niagaraCom = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Niagara"));
+	_niagaraCom->SetupAttachment(RootComponent);
 }
 
 // Called when the game starts or when spawned
@@ -19,13 +26,17 @@ void AEffect::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	_particleCom->OnSystemFinished.AddDynamic(this, &AEffect::EndParticle);
+	EndParticle(_particleCom);
+
+	_niagaraCom->OnSystemFinished.AddDynamic(this, &AEffect::EndNiagara);
+	EndNiagara(_niagaraCom);
 }
 
 // Called every frame
 void AEffect::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void AEffect::Play(FVector location, FRotator rotation)
@@ -41,25 +52,18 @@ void AEffect::Play(FVector location, FRotator rotation)
 		_niagaraCom->ActivateSystem();
 }
 
-void AEffect::StopParticle()
+void AEffect::EndParticle(UParticleSystemComponent* particle)
 {
-	if (_particleCom == nullptr)
-		return;
-	_particleCom->DeactivateSystem();
+	if (particle)
+		particle->DeactivateSystem();
 }
 
-void AEffect::StopNiagara()
+void AEffect::EndNiagara(UNiagaraComponent* niagara)
 {
-	if (_niagaraCom == nullptr)
-		return;
-	_niagaraCom->Deactivate();
+	if (niagara)
+		niagara->Deactivate();
 }
 
-void AEffect::Stop()
-{
-	StopParticle();
-	StopNiagara();
-}
 
 bool AEffect::IsPlaying()
 {

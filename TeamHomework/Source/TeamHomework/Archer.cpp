@@ -37,7 +37,7 @@ void AArcher::AttackHit()
 
 	FColor drawColor = FColor::Green;
 
-	if (bResult && hitResult.GetActor()->IsValidLowLevel())
+	if (bResult && hitResult.GetActor()->IsValidLowLevel() && !hitResult.GetActor()->IsA(AMyPlayer::StaticClass()))
 	{
 		drawColor = FColor::Red;
 		UE_LOG(LogTemp, Log, TEXT("HitActor : %s"), *hitResult.GetActor()->GetName());
@@ -45,10 +45,10 @@ void AArcher::AttackHit()
 		//Todo : Takedamage
 		FDamageEvent damageEvent;
 		hitResult.GetActor()->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
+		
 		_hitPoint = hitResult.ImpactPoint;
-
-		//_attackHitEventDelegate.Broadcast();
-		//EffectManager->Play("Shoot", _hitPoint);
+		_attackHitEventDelegate.Broadcast();
+		VFXManager->Play("Explosion", _hitPoint);
 
 		ABossMonster* boss = Cast<ABossMonster>(hitResult.GetActor());
 		if (boss)
@@ -57,11 +57,11 @@ void AArcher::AttackHit()
 			boss->_aggroDamageDelegate.Broadcast(_bossAttack, this);
 		}
 
-		DrawDebugCapsule(GetWorld(), center, attackRange * 0.5f, attackRadius, quat, FColor::Red, false, 2.0f);
+		// DrawDebugCapsule(GetWorld(), center, attackRange * 0.5f, attackRadius, quat, FColor::Red, false, 2.0f);
 	}
 
 	else
 	{
-		DrawDebugCapsule(GetWorld(), center, attackRange * 0.5f, attackRadius, quat, FColor::Green, false, 2.0f);
+		// DrawDebugCapsule(GetWorld(), center, attackRange * 0.5f, attackRadius, quat, FColor::Green, false, 2.0f);
 	}
 }

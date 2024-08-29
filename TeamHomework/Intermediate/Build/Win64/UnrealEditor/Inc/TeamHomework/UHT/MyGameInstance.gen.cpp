@@ -15,6 +15,7 @@ ENGINE_API UClass* Z_Construct_UClass_UDataTable_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UGameInstance();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyPlayerManager_NoRegister();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyUIManager_NoRegister();
+TEAMHOMEWORK_API UClass* Z_Construct_UClass_AVFX_Manager_NoRegister();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_UMyGameInstance();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_UMyGameInstance_NoRegister();
 TEAMHOMEWORK_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
@@ -47,6 +48,11 @@ struct Z_Construct_UClass_UMyGameInstance_Statics
 		{ "Category", "MyGameInstance" },
 		{ "ModuleRelativePath", "MyGameInstance.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__vfxManager_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "MyGameInstance" },
+		{ "ModuleRelativePath", "MyGameInstance.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__statTable_MetaData[] = {
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Data Table\n" },
@@ -62,6 +68,7 @@ struct Z_Construct_UClass_UMyGameInstance_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__uiManager;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__playerManager;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__vfxManager;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__statTable;
 	static const UECodeGen_Private::FStructPropertyParams NewProp__itemData_ValueProp;
 	static const UECodeGen_Private::FIntPropertyParams NewProp__itemData_Key_KeyProp;
@@ -75,6 +82,7 @@ struct Z_Construct_UClass_UMyGameInstance_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__uiManager = { "_uiManager", nullptr, (EPropertyFlags)0x0040000000020005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyGameInstance, _uiManager), Z_Construct_UClass_AMyUIManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__uiManager_MetaData), NewProp__uiManager_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__playerManager = { "_playerManager", nullptr, (EPropertyFlags)0x0040000000020005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyGameInstance, _playerManager), Z_Construct_UClass_AMyPlayerManager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__playerManager_MetaData), NewProp__playerManager_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__vfxManager = { "_vfxManager", nullptr, (EPropertyFlags)0x0040000000020005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyGameInstance, _vfxManager), Z_Construct_UClass_AVFX_Manager_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__vfxManager_MetaData), NewProp__vfxManager_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__statTable = { "_statTable", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyGameInstance, _statTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__statTable_MetaData), NewProp__statTable_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData_ValueProp = { "_itemData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UScriptStruct_FItemData, METADATA_PARAMS(0, nullptr) }; // 1428854118
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData_Key_KeyProp = { "_itemData_Key", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
@@ -82,6 +90,7 @@ const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UMyGameInstance_S
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMyGameInstance_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__uiManager,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__playerManager,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__vfxManager,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__statTable,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData_Key_KeyProp,
@@ -128,10 +137,10 @@ UMyGameInstance::~UMyGameInstance() {}
 struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyGameInstance, UMyGameInstance::StaticClass, TEXT("UMyGameInstance"), &Z_Registration_Info_UClass_UMyGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyGameInstance), 4168427876U) },
+		{ Z_Construct_UClass_UMyGameInstance, UMyGameInstance::StaticClass, TEXT("UMyGameInstance"), &Z_Registration_Info_UClass_UMyGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyGameInstance), 2161854518U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_3620416241(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_614546097(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyGameInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

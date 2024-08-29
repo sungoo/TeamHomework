@@ -6,6 +6,7 @@
 #include "Engine/GameInstance.h"
 #include "MyUIManager.h"
 #include "MyPlayerManager.h"
+#include "VFX_Manager.h"
 #include "MyItem.h"
 #include "MyGameInstance.generated.h"
 
@@ -15,7 +16,7 @@
 
 #define UIManager Cast<UMyGameInstance>(GetWorld()->GetGameInstance())->GetUIManager()
 #define PlayerManager Cast<UMyGameInstance>(GetWorld()->GetGameInstance())->GetPlayerManager()
-// #define EffectManager Cast<UMyGameInstance>(GetGameInstance())->GetEffectManager()
+#define VFXManager Cast<UMyGameInstance>(GetGameInstance())->GetVFXManager()
 
 struct FItemData;
 
@@ -36,7 +37,7 @@ public:
 
 	class AMyUIManager* GetUIManager() { return _uiManager; };
 	class AMyPlayerManager* GetPlayerManager() { return _playerManager; };
-	// class AMyEffectManager* GetEffectManager() { return _effectManager; };
+	class AVFX_Manager* GetVFXManager() { return _vfxManager; };
 
 private:
 
@@ -46,8 +47,8 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	class AMyPlayerManager* _playerManager;
 	
-	// UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-	// class AMyEffectManager* _effectManager;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	class AVFX_Manager* _vfxManager;
 
 	//Data Table
 	UPROPERTY()

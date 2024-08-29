@@ -88,17 +88,47 @@ void ABossMonster::AttackHit()
 		{ return player1.Key->_bossAttack > player2.Key->_bossAttack; });
 
 	// 최상위 1명 공격
-	FDamageEvent damageEvent;
-	_players[0].Key->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
+	FHitResult hitResult;
+
+	FCollisionQueryParams params(NAME_None, false, this);
+
+	float attackRange = 500.0f;
+	float attackRadius = 1000.0f;
+
+	bool bResult = GetWorld()->SweepSingleByChannel
+	(
+		hitResult,
+		GetActorLocation() + GetActorForwardVector() * attackRange,
+		GetActorLocation() + GetActorForwardVector() * attackRange,
+		FQuat::Identity,
+		ECollisionChannel::ECC_GameTraceChannel2,
+		FCollisionShape::MakeSphere(attackRadius),
+		params
+	);
+
+	if (bResult && hitResult.GetActor()->IsValidLowLevel() && hitResult.GetActor() == _players[0].Key)
+	{
+		FDamageEvent damageEvent;
+
+		hitResult.GetActor()->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
+		
+		_hitPoint = hitResult.ImpactPoint;
+		_attackHitEventDelegate.Broadcast();
+		VFXManager->Play("Explosion", _hitPoint);
+
+		_players[0].Key->_damagedByBoss = true;
+
+		GetWorld()->GetTimerManager().SetTimer(_players[0].Key->damageResetTimerHandle, FTimerDelegate::CreateLambda([this, player = _players[0].Key]()
+			{
+				player->_damagedByBoss = false;
+			}), 1.0f, false);
+	}
+
 	_aggroHpChangedDelegate.Broadcast(_statCom->HpRatio(), _players[0].Value);
+
+	// FDamageEvent damageEvent;
+	// _players[0].Key->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
 	
-
-	_players[0].Key->_damagedByBoss = true;
-
-	GetWorld()->GetTimerManager().SetTimer(_players[0].Key->damageResetTimerHandle, FTimerDelegate::CreateLambda([this, player = _players[0].Key]()
-		{
-			player->_damagedByBoss = false;
-		}), 1.0f, false);
 }
 
 void ABossMonster::Tick(float DeltaTime)

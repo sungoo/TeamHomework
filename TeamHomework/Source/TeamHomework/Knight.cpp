@@ -31,13 +31,16 @@ void AKnight::AttackHit()
 
 	FColor drawColor = FColor::Green;
 
-	if (bResult && hitResult.GetActor()->IsValidLowLevel() && !hitResult.GetActor()->IsA(this->GetClass()))
+	if (bResult && hitResult.GetActor()->IsValidLowLevel() && !hitResult.GetActor()->IsA(AMyPlayer::StaticClass()))
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Hit Success"));
 		FDamageEvent damageEvent;
 
 		hitResult.GetActor()->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
+
 		_hitPoint = hitResult.ImpactPoint;
+		_attackHitEventDelegate.Broadcast();
+		VFXManager->Play("Explosion", _hitPoint);
 
 		ABossMonster* boss = Cast<ABossMonster>(hitResult.GetActor());
 		if (boss)
@@ -50,5 +53,5 @@ void AKnight::AttackHit()
 	}
 
 	FVector center = GetActorLocation() + GetActorForwardVector() * attackRange;
-	DrawDebugSphere(GetWorld(), center, attackRadius, 30, drawColor, false, 2.0f);
+	// DrawDebugSphere(GetWorld(), center, attackRadius, 30, drawColor, false, 2.0f);
 }

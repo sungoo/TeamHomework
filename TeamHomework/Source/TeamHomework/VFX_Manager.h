@@ -21,9 +21,23 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	void CreateParticleClass(FString name, FString path);
+	void CreateEffect();
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void Play(FString name, FVector location, FRotator rotator = FRotator::ZeroRotator);
 
+private:
+	int32 _poolCount = 20;
+
+	UPROPERTY()
+	TMap<FString, TSubclassOf<class AEffect>> _classTable;
+
+	TMap<FString, TArray<class AEffect*>> _effectTable;
+
+	UPROPERTY()
+	class USceneComponent* _rootComponent;
 };

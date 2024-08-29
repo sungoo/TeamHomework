@@ -9,10 +9,17 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UNiagaraComponent;
+class UParticleSystemComponent;
 #ifdef TEAMHOMEWORK_Effect_generated_h
 #error "Effect.generated.h already included, missing '#pragma once' in Effect.h"
 #endif
 #define TEAMHOMEWORK_Effect_generated_h
+
+#define FID_TeamHomework_Source_TeamHomework_Effect_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execEndNiagara); \
+	DECLARE_FUNCTION(execEndParticle);
+
 
 #define FID_TeamHomework_Source_TeamHomework_Effect_h_15_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +46,7 @@ public: \
 #define FID_TeamHomework_Source_TeamHomework_Effect_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_TeamHomework_Source_TeamHomework_Effect_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_Effect_h_15_INCLASS_NO_PURE_DECLS \
 	FID_TeamHomework_Source_TeamHomework_Effect_h_15_ENHANCED_CONSTRUCTORS \
 private: \

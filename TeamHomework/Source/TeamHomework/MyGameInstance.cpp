@@ -24,10 +24,8 @@ void UMyGameInstance::Init()
 	params.Name = TEXT("PlayerManager");
 	_playerManager = GetWorld()->SpawnActor<AMyPlayerManager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
 
-	// params.Name = TEXT("EffectManager");
-	// _effectManager = GetWorld()->SpawnActor<AMyEffectManager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
-
-	
+	params.Name = TEXT("vfxManager");
+	_vfxManager = GetWorld()->SpawnActor<AVFX_Manager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
 }
 
 void UMyGameInstance::GetItemDataTable()

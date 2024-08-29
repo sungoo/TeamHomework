@@ -25,7 +25,7 @@ void UUI_AggroInfo::SetPlayerInfo(TArray<TTuple<AMyPlayer*, int32>> players)
 	}
 
 	TArray<UWidget*> hpBars = HpBox->GetAllChildren();
-	for (int32 i = 0; i < hpBars.Num() - 1; i++)
+	for (int32 i = 0; i < hpBars.Num(); i++)
 	{
 		UProgressBar* hpBar = Cast<UProgressBar>(hpBars[i]);
 		if (hpBar)
