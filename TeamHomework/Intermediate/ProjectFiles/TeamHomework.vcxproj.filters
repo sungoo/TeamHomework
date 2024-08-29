@@ -105,6 +105,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\BTTask_SetRandomPos.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\BTTask_SetTarget.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTTask_SetTarget.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\BTTask_SetTargetPos.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
@@ -244,6 +250,12 @@
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\TeamHomework.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI_AggroInfo.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI_AggroInfo.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\UI_BaseDisplay.cpp">

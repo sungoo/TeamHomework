@@ -9,6 +9,8 @@
 #include "MyGameInstance.h"
 #include "MyPlayerManager.h"
 #include "MyItem.h"
+#include "MyHpBar.h"
+#include "Components/WidgetComponent.h"
 
 #include "MyAIController.h"
 
@@ -120,11 +122,8 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
         lookAtPlayer.Yaw += FMath::RandRange(-30.0f, 30.0f); // Yaw에 랜덤한 오프셋 추가
 
         AMyPlayer* player = GetWorld()->SpawnActor<AMyPlayer>(playerClass, spawnLocation, lookAtPlayer, spawnParams);
-
-        // if (aiController)
-        // {
-        //     aiController->Possess(player);
-        // }
+        player->_hpBarWidget->SetVisibility(false);
+        player->_hpBarWidget->Deactivate();
 
         players.Add(player);
 	}

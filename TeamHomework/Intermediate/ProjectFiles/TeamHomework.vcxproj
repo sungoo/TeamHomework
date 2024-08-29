@@ -306,6 +306,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\BTTask_SetRandomPos.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\BTTask_SetTarget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTTask_SetTarget.h"/>
     <ClCompile Include="..\..\Source\TeamHomework\BTTask_SetTargetPos.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -399,6 +403,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\TeamHomework.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\UI_AggroInfo.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI_AggroInfo.h"/>
     <ClCompile Include="..\..\Source\TeamHomework\UI_BaseDisplay.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

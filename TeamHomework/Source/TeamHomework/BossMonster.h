@@ -44,6 +44,5 @@ public:
 	bool _bossModeStarted = false;
 
 	int32 _aggroNum = 10;
-	int32 _attackNum = 4;
 	TArray<class AMyPlayer*> _players;
 };

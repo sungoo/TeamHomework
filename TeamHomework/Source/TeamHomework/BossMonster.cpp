@@ -86,22 +86,15 @@ void ABossMonster::AttackHit()
 	Algo::Sort(_players, [](AMyPlayer* player1, AMyPlayer* player2)
 		{ return player1->_bossAttack > player2->_bossAttack; });
 
-	// 최대 4명 공격
-	if (_players.Num() < _attackNum)
-		_attackNum = _players.Num();
-
+	// 최상위 1명 공격
 	FDamageEvent damageEvent;
-	for (int i = 0; i < _attackNum; i++)
-	{
-		// TODO : 장판 커짐
-		_players[i]->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
-		_players[i]->_damagedByBoss = true;
+	_players[0]->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
+	_players[0]->_damagedByBoss = true;
 
-		GetWorld()->GetTimerManager().SetTimer(_players[i]->damageResetTimerHandle, FTimerDelegate::CreateLambda([this, player = _players[i]]()
-			{
-				player->_damagedByBoss = false;
-			}), 1.0f, false);
-	}
+	GetWorld()->GetTimerManager().SetTimer(_players[0]->damageResetTimerHandle, FTimerDelegate::CreateLambda([this, player = _players[0]]()
+		{
+			player->_damagedByBoss = false;
+		}), 1.0f, false);
 }
 
 void ABossMonster::Tick(float DeltaTime)
