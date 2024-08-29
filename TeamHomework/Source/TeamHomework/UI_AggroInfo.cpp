@@ -13,15 +13,25 @@ void UUI_AggroInfo::NativeConstruct()
 
 void UUI_AggroInfo::SetPlayerInfo(TArray<AMyPlayer*> players)
 {
-	// TArray<UWidget*> damageBars = DamageBox->GetAllChildren();
-	// for (int32 i = 0; i < damageBars.Num(); i++)
-	// {
-	// 	UProgressBar* damageBar = Cast<UProgressBar>(damageBars[i]);
-	// 	if (damageBar)
-	// 	{
-	// 		if ()
-	// 	}
-	// }
+	TArray<UWidget*> damageBars = DamageBox->GetAllChildren();
+	for (int32 i = 0; i < damageBars.Num(); i++)
+	{
+		UProgressBar* damageBar = Cast<UProgressBar>(damageBars[i]);
+		if (damageBar)
+		{
+			_damageInfo.Add(players[i], damageBar);
+		}
+	}
+
+	TArray<UWidget*> hpBars = HpBox->GetAllChildren();
+	for (int32 i = 0; i < hpBars.Num(); i++)
+	{
+		UProgressBar* hpBar = Cast<UProgressBar>(hpBars[i]);
+		if (hpBar)
+		{
+			_damageInfo.Add(players[i], hpBar);
+		}
+	}
 }
 
 void UUI_AggroInfo::SetDamageValue(float ratio)
