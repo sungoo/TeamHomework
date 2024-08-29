@@ -15,6 +15,7 @@ enum class UI_List
 	PlayerSelection,
 	Inventory,
 	Store,
+	AggroInfo
 };
 
 UCLASS()
@@ -42,6 +43,7 @@ public:
 	class UMyInventoryUI* GetInventoryUI() { return _inventoryUI; };
 	class UPlayerSelectionUI* GetPlayerSelectionUI() { return _playerSelectionUI; }
 	class UMyStoreUI* GetStoreUI() { return _storeUI; }
+	class UUI_AggroInfo* GetAggroInfoUI() { return _aggroInfoUI; }
 
 private:
 	UPROPERTY()
@@ -58,4 +60,7 @@ private:
 
 	UPROPERTY()
 	class UMyStoreUI* _storeUI;
+
+	UPROPERTY()
+	class UUI_AggroInfo* _aggroInfoUI;
 };

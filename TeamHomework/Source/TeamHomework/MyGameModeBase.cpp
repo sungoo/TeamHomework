@@ -7,10 +7,12 @@
 #include "MyStatComponent.h"
 
 #include "MyGameInstance.h"
+#include "MyUIManager.h"
 #include "MyPlayerManager.h"
 #include "MyItem.h"
 #include "MyHpBar.h"
 #include "Components/WidgetComponent.h"
+#include "UI_AggroInfo.h"
 
 #include "MyAIController.h"
 
@@ -126,6 +128,9 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
         player->_hpBarWidget->Deactivate();
 
         players.Add(player);
+
+        UIManager->GetAggroInfoUI()->SetPlayerInfo(players);
+        UIManager->OpenUI(UI_List::AggroInfo);
 	}
 
     boss->_players = players;

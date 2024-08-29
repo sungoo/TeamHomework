@@ -8,6 +8,7 @@
 #include "MyHpBar.h"
 #include "MyStoreUI.h"
 #include "UI_BaseDisplay.h"
+#include "UI_AggroInfo.h"
 
 #include "Components/Image.h"
 
@@ -19,7 +20,7 @@
 // Sets default values
 AMyUIManager::AMyUIManager()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
 	static ConstructorHelpers::FClassFinder<UUserWidget> baseDisplay(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/Blueprint/UI/BaseDisplay_BP.BaseDisplay_BP_C'"));
@@ -46,10 +47,17 @@ AMyUIManager::AMyUIManager()
 		_storeUI = CreateWidget<UMyStoreUI>(GetWorld(), storeClass.Class);
 	}
 
+	static ConstructorHelpers::FClassFinder<UUserWidget> aggroClass(TEXT("/Script/UMGEditor.WidgetBlueprint'/Game/Blueprint/UI/AggroInfo_BP.AggroInfo_BP_C'"));
+	{
+		_aggroInfoUI = CreateWidget<UUI_AggroInfo>(GetWorld(), aggroClass.Class);
+
+	}
+
 	_widgets.Add(_baseDisplayUI);
 	_widgets.Add(_playerSelectionUI);
 	_widgets.Add(_inventoryUI);
 	_widgets.Add(_storeUI);
+	_widgets.Add(_aggroInfoUI);
 }
 
 // Called when the game starts or when spawned

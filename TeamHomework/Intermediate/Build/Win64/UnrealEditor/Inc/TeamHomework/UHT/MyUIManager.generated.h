@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAMHOMEWORK_MyUIManager_generated_h
 
-#define FID_TeamHomework_Source_TeamHomework_MyUIManager_h_23_INCLASS_NO_PURE_DECLS \
+#define FID_TeamHomework_Source_TeamHomework_MyUIManager_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyUIManager(); \
 	friend struct Z_Construct_UClass_AMyUIManager_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(AMyUIManager)
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyUIManager_h_23_ENHANCED_CONSTRUCTORS \
+#define FID_TeamHomework_Source_TeamHomework_MyUIManager_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AMyUIManager(AMyUIManager&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~AMyUIManager();
 
 
-#define FID_TeamHomework_Source_TeamHomework_MyUIManager_h_20_PROLOG
-#define FID_TeamHomework_Source_TeamHomework_MyUIManager_h_23_GENERATED_BODY \
+#define FID_TeamHomework_Source_TeamHomework_MyUIManager_h_21_PROLOG
+#define FID_TeamHomework_Source_TeamHomework_MyUIManager_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_TeamHomework_Source_TeamHomework_MyUIManager_h_23_INCLASS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_MyUIManager_h_23_ENHANCED_CONSTRUCTORS \
+	FID_TeamHomework_Source_TeamHomework_MyUIManager_h_24_INCLASS_NO_PURE_DECLS \
+	FID_TeamHomework_Source_TeamHomework_MyUIManager_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,7 +55,8 @@ template<> TEAMHOMEWORK_API UClass* StaticClass<class AMyUIManager>();
 	op(UI_List::BaseDisplay) \
 	op(UI_List::PlayerSelection) \
 	op(UI_List::Inventory) \
-	op(UI_List::Store) 
+	op(UI_List::Store) \
+	op(UI_List::AggroInfo) 
 
 enum class UI_List;
 template<> struct TIsUEnumClass<UI_List> { enum { Value = true }; };
