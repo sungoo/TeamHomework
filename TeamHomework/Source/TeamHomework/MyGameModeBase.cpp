@@ -49,19 +49,19 @@ void AMyGameModeBase::BeginPlay()
 	Super::BeginPlay();
 
     // 스폰할 위치와 회전 설정
-    FVector spawnLocation = FVector(200.0f, 0.0f, 20.0f);  // 기본 위치
+    FVector spawnLocation = FVector(0.0f, 100.0f, 0.0f);  // 기본 위치
     FRotator spawnRotation = FRotator::ZeroRotator;
 
     for (int i = 0; i < 3; i++)
     {
-        spawnLocation.X += 500.0f * i;
+        spawnLocation.Y += 300.0f * i;
 
         AMyItem* item = GetWorld()->SpawnActor<AMyItem>(
             _itemClass,
             spawnLocation,
             spawnRotation
         );
-        item->InitItemByCode(i+1);
+        item->InitItemByCode(i+3);
 
         _items.Add(item);
     }
@@ -80,7 +80,7 @@ void AMyGameModeBase::SetSelectedPlayer()
     if (playerController)
     {
         // 스폰할 위치와 회전 설정
-        FVector spawnLocation = FVector(0.0f, 0.0f, 500.0f);  // 기본 위치
+        FVector spawnLocation = FVector(0.0f, 0.0f, 0.0f);  // 기본 위치
         FRotator spawnRotation = FRotator::ZeroRotator;
 
         // Pawn을 수동으로 스폰
