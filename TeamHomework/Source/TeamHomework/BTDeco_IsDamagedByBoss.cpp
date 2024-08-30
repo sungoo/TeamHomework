@@ -21,18 +21,15 @@ UBTDeco_IsDamagedByBoss::UBTDeco_IsDamagedByBoss()
 
 bool UBTDeco_IsDamagedByBoss::CalculateRawConditionValue(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) const
 {
-	bool result = Super::CalculateRawConditionValue(OwnerComp, NodeMemory);
+    bool result = Super::CalculateRawConditionValue(OwnerComp, NodeMemory);
 
-	auto aiOwner = OwnerComp.GetAIOwner()->GetPawn();
-	if (aiOwner == nullptr)
-		return false;
+    result = OwnerComp.GetBlackboardComponent()->GetValueAsBool(TEXT("IsDamaged"));
 
-	auto player = Cast<AMyPlayer>(aiOwner);
-	if (player)
-	{
-		if (player->_damagedByBoss)
-			return true;
-	}
+    if (result)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("damaged by boss"));
+    }
 
-	return false;
+    return result;
+
 }

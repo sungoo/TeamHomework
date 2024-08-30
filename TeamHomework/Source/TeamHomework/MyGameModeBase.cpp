@@ -101,7 +101,7 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
     UClass* archerClass = StaticLoadClass(AArcher::StaticClass(), nullptr, TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/Archer_BP.Archer_BP_C'"));
 
     TArray<TTuple<AMyPlayer*, int32>> players;
-    auto originPlayer = Cast<AMyPlayer>(GetWorld()->GetFirstPlayerController()->GetPawn());
+    AMyPlayer* originPlayer = Cast<AMyPlayer>(GetWorld()->GetFirstPlayerController()->GetPawn());
     players.Add(MakeTuple(originPlayer, 0));
 
     AMyAIController* aiController = GetWorld()->SpawnActor<AMyAIController>();

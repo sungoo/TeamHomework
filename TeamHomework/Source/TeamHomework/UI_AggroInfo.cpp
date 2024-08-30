@@ -40,7 +40,7 @@ void UUI_AggroInfo::SetDamageValue(float dmg, AMyPlayer* player)
 
 	if (int32* index = _playerIndex.Find(player))
 	{
-		if (*index)
+		if (*index >= 0)
 		{
 			UProgressBar** progressBarPtr = _damageInfo.Find(*index);
 

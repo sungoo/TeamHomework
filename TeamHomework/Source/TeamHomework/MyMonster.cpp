@@ -8,7 +8,8 @@
 #include "Engine/DamageEvents.h"
 #include "MyItem.h"
 #include "Components/WidgetComponent.h"
-
+#include "MyGameInstance.h"
+#include "VFX_Manager.h"
 
 
 AMyMonster::AMyMonster()
@@ -49,6 +50,9 @@ void AMyMonster::BeginPlay()
 
 	Init();
 	SetAnimation();
+
+	_statCom->SetMaxHp(10.0f);
+	_statCom->SetHp(10.0f);
 }
 
 void AMyMonster::Init()
@@ -71,7 +75,7 @@ void AMyMonster::Disable()
 			if (_statUpWidget)
 			{
 				_statUpWidget->SetVisibility(false);
-				SetActorHiddenInGame(true); // 액터를 게임에서 숨깁니다.
+				// SetActorHiddenInGame(true); // 액터를 게임에서 숨깁니다.
 				SetActorEnableCollision(false); // 충돌 비활성화
 				// SetActorTickEnabled(false); // Tick 비활성화
 				PrimaryActorTick.bCanEverTick = false;
@@ -126,9 +130,13 @@ void AMyMonster::AttackHit()
 
 		hitResult.GetActor()->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
 
+		_hitPoint = hitResult.ImpactPoint;
+		_attackHitEventDelegate.Broadcast();
+		VFXManager->Play("Explosion", _hitPoint);
+
 		drawColor = FColor::Red;
 	}
 
 	FVector center = GetActorLocation() + GetActorForwardVector() * attackRange;
-	DrawDebugSphere(GetWorld(), center, attackRadius, 30, drawColor, false, 2.0f);
+	// DrawDebugSphere(GetWorld(), center, attackRadius, 30, drawColor, false, 2.0f);
 }

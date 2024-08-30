@@ -15,6 +15,11 @@
 
 #include "Kismet/GameplayStatics.h"
 
+#include "MyGameInstance.h"
+#include "VFX_Manager.h"
+
+#include "MyPlayer.h"
+
 UMyInventoryUI::UMyInventoryUI(const FObjectInitializer& ObjectInitializer)
 :UUserWidget(ObjectInitializer)
 {
@@ -133,6 +138,9 @@ void UMyInventoryUI::UseItem()
 	ShowItem();
 	SetItemImage(_targetIndex, nullptr);
 	_targetIndex = -1;
+
+	AMyPlayer* originPlayer = Cast<AMyPlayer>(GetWorld()->GetFirstPlayerController()->GetPawn());
+	VFXManager->Play("ItemEffect", originPlayer->GetActorLocation());
 }
 
 void UMyInventoryUI::ShowItem()

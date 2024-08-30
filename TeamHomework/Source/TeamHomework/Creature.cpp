@@ -63,7 +63,7 @@ void ACreature::PostInitializeComponents()
 
 	_hpBarWidget->InitWidget();
 	auto hpBar = Cast<UMyHpBar>(_hpBarWidget->GetUserWidgetObject());
-	if (hpBar)
+	if (hpBar && _statCom)
 	{
 		_statCom->_hpChangedDelegate.AddUObject(hpBar, &UMyHpBar::SetHpBarValue);
 	}
@@ -185,6 +185,9 @@ float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, ACont
 
 int32 ACreature::GetcurHP()
 {
+	if (!_statCom)
+		return 0;
+
 	return _statCom->GetCurHP();
 }
 

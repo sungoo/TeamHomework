@@ -20,6 +20,7 @@ AVFX_Manager::AVFX_Manager()
 	RootComponent = _rootComponent;
 
 	CreateParticleClass(TEXT("Explosion"), TEXT("/Script/Engine.Blueprint'/Game/Blueprint/VFX/Effect_BP.Effect_BP_C'"));
+	CreateParticleClass(TEXT("ItemEffect"), TEXT("/Script/Engine.Blueprint'/Game/Blueprint/VFX/ItemEffect_BP.ItemEffect_BP_C'"));
 }
 
 // Called when the game starts or when spawned
