@@ -3,7 +3,10 @@
 	{
 		"Module.TeamHomework.cpp.obj": [
 			"Archer.cpp.obj",
+<<<<<<< HEAD
 			"BossMonster.cpp.obj",
+=======
+>>>>>>> Develop_V1
 			"BTDeco_CanAttack.cpp.obj",
 			"BTDeco_IsDamagedByBoss.cpp.obj",
 			"BTDeco_TargetIsTooFar.cpp.obj",
@@ -22,17 +25,28 @@
 			"MyAIController.cpp.obj",
 			"MyAnimInstance.cpp.obj",
 			"MyGameInstance.cpp.obj",
+<<<<<<< HEAD
 			"MyGameModeBase.cpp.obj",
+=======
+>>>>>>> Develop_V1
 			"MyHpBar.cpp.obj",
 			"MyInventoryComponent.cpp.obj",
 			"MyInventoryUI.cpp.obj",
 			"MyItem.cpp.obj",
+<<<<<<< HEAD
 			"MyMonster.cpp.obj",
+=======
+			"MyNPC.cpp.obj",
+>>>>>>> Develop_V1
 			"MyNPCUI.cpp.obj",
 			"MyPlayer.cpp.obj",
 			"MyPlayerController.cpp.obj",
 			"MyPlayerManager.cpp.obj",
 			"MyStatComponent.cpp.obj",
+<<<<<<< HEAD
+=======
+			"MyStoreUI.cpp.obj",
+>>>>>>> Develop_V1
 			"MyUIManager.cpp.obj",
 			"PlayerSelectionUI.cpp.obj",
 			"TeamHomework.cpp.obj",
@@ -83,9 +97,15 @@
 			"UI_E_MyButton.gen.cpp.obj",
 			"UI_StatUp.gen.cpp.obj",
 			"VFX_Manager.gen.cpp.obj",
+<<<<<<< HEAD
 			"MyNPC.cpp.obj",
 			"MyStoreUI.cpp.obj",
 			"StoreComponent.cpp.obj"
+=======
+			"BossMonster.cpp.obj",
+			"MyGameModeBase.cpp.obj",
+			"MyMonster.cpp.obj"
+>>>>>>> Develop_V1
 		]
 	}
 }

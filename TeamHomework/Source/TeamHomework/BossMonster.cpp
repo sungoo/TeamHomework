@@ -29,6 +29,9 @@ void ABossMonster::BeginPlay()
 	Super::BeginPlay();
 
 	SetAnimation();
+
+	_statCom->SetMaxHp(1000.0f);
+	_statCom->AddAttackDamage(1000.0f);
 }
 
 void ABossMonster::PostInitializeComponents()
@@ -115,19 +118,17 @@ void ABossMonster::AttackHit()
 		_hitPoint = hitResult.ImpactPoint;
 		_attackHitEventDelegate.Broadcast();
 		VFXManager->Play("Explosion", _hitPoint);
-
-		_players[0].Key->_damagedByBoss = true;
-
-		GetWorld()->GetTimerManager().SetTimer(_players[0].Key->damageResetTimerHandle, FTimerDelegate::CreateLambda([this, player = _players[0].Key]()
-			{
-				player->_damagedByBoss = false;
-			}), 1.0f, false);
 	}
-
+	
+	
+	_players[0].Key->_damagedByBoss = true;
+	
+	GetWorld()->GetTimerManager().SetTimer(timerHandle, FTimerDelegate::CreateLambda([this, player = _players[0].Key]()
+		{
+			player->_damagedByBoss = false;
+		}), 1.0f, false);
+	
 	_aggroHpChangedDelegate.Broadcast(_statCom->HpRatio(), _players[0].Value);
-
-	// FDamageEvent damageEvent;
-	// _players[0].Key->TakeDamage(_statCom->GetAttackDamage(), damageEvent, GetController(), this);
 	
 }
 

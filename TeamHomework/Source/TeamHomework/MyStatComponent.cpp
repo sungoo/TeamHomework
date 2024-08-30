@@ -40,6 +40,8 @@ void UMyStatComponent::Reset()
 
 void UMyStatComponent::SetHp(int32 hp)
 {
+	if (this == nullptr)
+		return;
 	_curhp = hp;
 	if (_curhp <= 0)
 	{

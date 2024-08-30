@@ -38,9 +38,15 @@
 /NATVIS:"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\Niagara.natvis"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\TeamHomeworkEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.h.obj"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\Module.TeamHomework.cpp.obj"
+<<<<<<< HEAD
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyNPC.cpp.obj"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyStoreUI.cpp.obj"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\StoreComponent.cpp.obj"
+=======
+"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\BossMonster.cpp.obj"
+"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyGameModeBase.cpp.obj"
+"C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyMonster.cpp.obj"
+>>>>>>> Develop_V1
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\Archer.gen.cpp.obj"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\BossMonster.gen.cpp.obj"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\BTDeco_CanAttack.gen.cpp.obj"
@@ -76,7 +82,10 @@
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyStoreUI.gen.cpp.obj"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\MyUIManager.gen.cpp.obj"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\PlayerSelectionUI.gen.cpp.obj"
+<<<<<<< HEAD
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\StoreComponent.gen.cpp.obj"
+=======
+>>>>>>> Develop_V1
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\TeamHomework.init.gen.cpp.obj"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\UI_AggroInfo.gen.cpp.obj"
 "C:\Users\User\Desktop\TeamProject\TeamHomework\TeamHomework\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\TeamHomework\UI_BaseDisplay.gen.cpp.obj"

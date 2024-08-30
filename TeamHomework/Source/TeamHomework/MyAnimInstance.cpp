@@ -29,7 +29,10 @@ void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		_isFalling = creature->GetMovementComponent()->IsFalling();
 		_vertical = _vertical + (creature->_vertical - _vertical) * DeltaSeconds;
 		_horizontal = _horizontal + (creature->_horizontal - _horizontal) * DeltaSeconds;
-		_height = (_height + (creature->_height - _height) * DeltaSeconds) / _height;
+		if (_height != 0.0f)
+		{
+			_height = (_height + (creature->_height - _height) * DeltaSeconds) / _height;
+		}
 		_isDead = (creature->GetcurHP() <= 0);
 	}
 }

@@ -37,4 +37,12 @@ void UBTService_FindBoss::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* Nod
 		FVector bossLocation = boss->GetActorLocation();
 		OwnerComp.GetBlackboardComponent()->SetValueAsVector(FName(TEXT("BossPos")), bossLocation);
 	}
+
+	auto player = Cast<AMyPlayer>(aiOwner);
+	if (player)
+	{
+		OwnerComp.GetBlackboardComponent()->SetValueAsBool(TEXT("IsDamaged"), player->_damagedByBoss);
+		UE_LOG(LogTemp, Warning, TEXT("IsDamaged set to: %s"), player->_damagedByBoss ? TEXT("True") : TEXT("False"));
+
+	}
 }

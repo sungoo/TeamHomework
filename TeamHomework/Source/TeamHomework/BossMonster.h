@@ -51,4 +51,7 @@ public:
 
 	AggroDamageDelegate _aggroDamageDelegate;
 	AggroHpChangedDelegate _aggroHpChangedDelegate;
+
+private:
+	FTimerHandle timerHandle;
 };
