@@ -3,6 +3,7 @@
 
 #include "MyGameInstance.h"
 
+#include "MyStatComponent.h"
 #include "MyItem.h"
 
 UMyGameInstance::UMyGameInstance()
@@ -14,9 +15,6 @@ void UMyGameInstance::Init()
 {
 	Super::Init();
 
-	// auto statData = GetStatDataByLevel(2);
-	// UE_LOG(LogTemp, Warning, TEXT("Level : %d, MaxHp : %d, Attack : %d"), statData->level, statData->maxHp, statData->attack);
-	// 
 	FActorSpawnParameters params;
 	params.Name = TEXT("UIManager");
 	_uiManager = GetWorld()->SpawnActor<AMyUIManager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
@@ -50,13 +48,66 @@ void UMyGameInstance::GetItemDataTable()
 	}
 }
 
+void UMyGameInstance::GetStatDataTable()
+{
+	static ConstructorHelpers::FObjectFinder<UDataTable> playerData
+	(TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/PlayerData.PlayerData'"));
+
+	if (playerData.Succeeded())
+	{
+		UDataTable* data = playerData.Object;
+		int32 i = 0;
+		while (true)
+		{
+			FMyStatData* playerdata = data->FindRow<FMyStatData>(*FString::FromInt(i), TEXT(""));
+			if (playerdata == nullptr)
+				break;
+			FMyStatData stat = *playerdata;
+			_playerData.Add(i, stat);
+
+			i++;
+		}
+	}
+
+	static ConstructorHelpers::FObjectFinder<UDataTable> monsterData
+	(TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/PlayerData.PlayerData'"));
+
+	if (monsterData.Succeeded())
+	{
+		UDataTable* data = monsterData.Object;
+		int32 i = 0;
+		while (true)
+		{
+			FMyStatData* monsterdata = data->FindRow<FMyStatData>(*FString::FromInt(i), TEXT(""));
+			if (monsterdata == nullptr)
+				break;
+			FMyStatData stat = *monsterdata;
+			_monsterData.Add(i, stat);
+
+			i++;
+		}
+	}
+}
+
+FMyStatData UMyGameInstance::GetStatDataByTypeAndLevel(CreatureType type, int32 level)
+{
+	switch (type)
+	{
+	case CreatureType::Archer:
+	case CreatureType::Knight:
+		return _playerData[level];
+		break;
+	case CreatureType::Monster:
+	case CreatureType::BossMonster:
+		return _monsterData[level];
+		break;
+	default:
+		break;
+	}
+	return _playerData[level];
+}
+
 FItemData UMyGameInstance::GetItemDataByCode(int32 code)
 {
 	return _itemData[code];
 }
-
-// FMyStatData* UMyGameInstance::GetStatDataByLevel(int level)
-// {
-// 	auto statData = _statTable->FindRow<FMyStatData>(*FString::FromInt(level), TEXT(""));
-// 	return statData;
-// }

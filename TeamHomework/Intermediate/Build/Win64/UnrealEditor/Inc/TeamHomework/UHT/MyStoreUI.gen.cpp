@@ -496,11 +496,7 @@ struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_Tea
 		{ Z_Construct_UClass_UMyStoreUI, UMyStoreUI::StaticClass, TEXT("UMyStoreUI"), &Z_Registration_Info_UClass_UMyStoreUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyStoreUI), 1826910817U) },
 	};
 };
-<<<<<<< HEAD
 static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_16213691(TEXT("/Script/TeamHomework"),
-=======
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_4117534206(TEXT("/Script/TeamHomework"),
->>>>>>> Develop_V1
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

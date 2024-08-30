@@ -14,7 +14,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAMHOMEWORK_MyStoreUI_generated_h
 
-<<<<<<< HEAD
 #define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execShowItem); \
 	DECLARE_FUNCTION(execSetTargetItem8); \
@@ -28,8 +27,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execSetTargetItem0);
 
 
-=======
->>>>>>> Develop_V1
 #define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMyStoreUI(); \
@@ -57,10 +54,7 @@ public: \
 #define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-<<<<<<< HEAD
 	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-=======
->>>>>>> Develop_V1
 	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_15_ENHANCED_CONSTRUCTORS \
 private: \

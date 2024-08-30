@@ -7,6 +7,7 @@
 #include "MyUIManager.h"
 #include "MyPlayerManager.h"
 #include "VFX_Manager.h"
+#include "MyStatComponent.h"
 #include "MyItem.h"
 #include "MyGameInstance.generated.h"
 
@@ -19,6 +20,7 @@
 #define VFXManager Cast<UMyGameInstance>(GetGameInstance())->GetVFXManager()
 
 struct FItemData;
+struct FMyStatData;
 
 UCLASS()
 class TEAMHOMEWORK_API UMyGameInstance : public UGameInstance
@@ -31,8 +33,9 @@ public:
 private:
 	virtual void Init() override;
 	void GetItemDataTable();
+	void GetStatDataTable();
 public:
-	// FMyStatData* GetStatDataByLevel(int level);
+	FMyStatData GetStatDataByTypeAndLevel(CreatureType type, int32 level);
 	FItemData GetItemDataByCode(int32 code);
 
 	class AMyUIManager* GetUIManager() { return _uiManager; };
@@ -52,7 +55,9 @@ private:
 
 	//Data Table
 	UPROPERTY()
-	class UDataTable* _statTable;
+	TMap<int32, FMyStatData> _playerData;
+	UPROPERTY()
+	TMap<int32, FMyStatData> _monsterData;
 
 	UPROPERTY()
 	TMap<int32, FItemData> _itemData;

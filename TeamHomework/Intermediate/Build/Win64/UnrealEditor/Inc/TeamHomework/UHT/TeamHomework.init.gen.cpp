@@ -23,22 +23,13 @@ void EmptyLinkFunctionForGeneratedCodeTeamHomework_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-<<<<<<< HEAD
-				0xD3D02FE7,
-				0x6F4E6E11,
-=======
-				0x27FB283F,
-				0x751B19B2,
->>>>>>> Develop_V1
+				0xC75DAA7F,
+				0x3FE6BF22,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_TeamHomework.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_TeamHomework.OuterSingleton;
 	}
-<<<<<<< HEAD
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TeamHomework(Z_Construct_UPackage__Script_TeamHomework, TEXT("/Script/TeamHomework"), Z_Registration_Info_UPackage__Script_TeamHomework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xD3D02FE7, 0x6F4E6E11));
-=======
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TeamHomework(Z_Construct_UPackage__Script_TeamHomework, TEXT("/Script/TeamHomework"), Z_Registration_Info_UPackage__Script_TeamHomework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x27FB283F, 0x751B19B2));
->>>>>>> Develop_V1
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TeamHomework(Z_Construct_UPackage__Script_TeamHomework, TEXT("/Script/TeamHomework"), Z_Registration_Info_UPackage__Script_TeamHomework, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xC75DAA7F, 0x3FE6BF22));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

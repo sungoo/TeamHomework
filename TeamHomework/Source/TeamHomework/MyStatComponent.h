@@ -6,19 +6,32 @@
 #include "Components/ActorComponent.h"
 #include "MyStatComponent.generated.h"
 
+UENUM()
+enum class CreatureType
+{
+	Archer,
+	Knight,
+	Monster,
+	BossMonster,
+};
+
 USTRUCT()
 struct FMyStatData : public FTableRowBase
 {
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	CreatureType type;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 level;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 exp;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 maxHp;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 attack;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int32 speed;
+	float speed;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 gold;
 };
@@ -67,6 +80,16 @@ public:
 
 	//Stats
 protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	CreatureType _type;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	int32 _level;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	int32 _expToLevelUp;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
+	int32 _curExp;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
 	int32 _curhp = 1;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Stat, meta = (AllowPrivateAccess = "true"))
