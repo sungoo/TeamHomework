@@ -19,6 +19,7 @@ TEAMHOMEWORK_API UClass* Z_Construct_UClass_ACreature();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyNPC();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyNPC_NoRegister();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyPlayer_NoRegister();
+TEAMHOMEWORK_API UClass* Z_Construct_UClass_UStoreComponent_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_TeamHomework();
 // End Cross Module References
@@ -240,12 +241,17 @@ struct Z_Construct_UClass_AMyNPC_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "MyNPC.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__storeCom_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "MyNPC.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__trigger;
 	static void NewProp__isOverlapped_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp__isOverlapped;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__player;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__npcUI;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__storeCom;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -267,11 +273,13 @@ void Z_Construct_UClass_AMyNPC_Statics::NewProp__isOverlapped_SetBit(void* Obj)
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyNPC_Statics::NewProp__isOverlapped = { "_isOverlapped", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMyNPC), &Z_Construct_UClass_AMyNPC_Statics::NewProp__isOverlapped_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__isOverlapped_MetaData), NewProp__isOverlapped_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyNPC_Statics::NewProp__player = { "_player", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyNPC, _player), Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__player_MetaData), NewProp__player_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyNPC_Statics::NewProp__npcUI = { "_npcUI", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyNPC, _npcUI), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__npcUI_MetaData), NewProp__npcUI_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMyNPC_Statics::NewProp__storeCom = { "_storeCom", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyNPC, _storeCom), Z_Construct_UClass_UStoreComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__storeCom_MetaData), NewProp__storeCom_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyNPC_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyNPC_Statics::NewProp__trigger,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyNPC_Statics::NewProp__isOverlapped,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyNPC_Statics::NewProp__player,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyNPC_Statics::NewProp__npcUI,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyNPC_Statics::NewProp__storeCom,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMyNPC_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMyNPC_Statics::DependentSingletons[])() = {
@@ -311,14 +319,14 @@ AMyNPC::~AMyNPC() {}
 // End Class AMyNPC
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyNPC_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyNPC, AMyNPC::StaticClass, TEXT("AMyNPC"), &Z_Registration_Info_UClass_AMyNPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyNPC), 4189110999U) },
+		{ Z_Construct_UClass_AMyNPC, AMyNPC::StaticClass, TEXT("AMyNPC"), &Z_Registration_Info_UClass_AMyNPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyNPC), 16098007U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyNPC_h_1279090362(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyNPC_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyNPC_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_2606714758(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

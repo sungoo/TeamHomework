@@ -47,4 +47,7 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = UI, meta = (AllowPrivateAccess = "true"))
 	class UWidgetComponent* _npcUI;
+
+	UPROPERTY()
+	class UStoreComponent* _storeCom;
 };

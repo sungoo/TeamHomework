@@ -2,12 +2,16 @@
 
 
 #include "MyNPC.h"
+
+#include "MyGameInstance.h"
+
 #include "Components/SphereComponent.h"
 #include "Components/WidgetComponent.h"
+
+#include "StoreComponent.h"
 #include "MyPlayer.h"
 #include "MyHpBar.h"
 #include "MyNPCUI.h"
-#include "MyGameInstance.h"
 
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
@@ -41,6 +45,9 @@ AMyNPC::AMyNPC()
 	{
 		_npcUI->SetWidgetClass(npcUI.Class);
 	}
+
+	//Store
+	_storeCom = CreateDefaultSubobject<UStoreComponent>(TEXT("Store"));
 }
 
 void AMyNPC::BeginPlay()
@@ -79,9 +86,15 @@ void AMyNPC::CharacterOverlapped()
 		_player->_meetNPC = true;
 
 		if (_player->_viewStore)
+		{
+			_storeCom->StoreOpen(_player);
 			_npcUI->SetVisibility(false);
+		}
 		else
+		{
+			_storeCom->StoreOpen(nullptr);
 			_npcUI->SetVisibility(true);
+		}
 
 		// EffectManager->이펙트 띄워주기
 	}

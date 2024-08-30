@@ -17,11 +17,11 @@ struct FHitResult;
 #endif
 #define TEAMHOMEWORK_BossMonster_generated_h
 
-#define FID_TeamHomework_Source_TeamHomework_BossMonster_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BossMonster_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOnMyCharacterOverlap);
 
 
-#define FID_TeamHomework_Source_TeamHomework_BossMonster_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BossMonster_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABossMonster(); \
 	friend struct Z_Construct_UClass_ABossMonster_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ABossMonster)
 
 
-#define FID_TeamHomework_Source_TeamHomework_BossMonster_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BossMonster_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABossMonster(ABossMonster&&); \
@@ -42,13 +42,13 @@ public: \
 	NO_API virtual ~ABossMonster();
 
 
-#define FID_TeamHomework_Source_TeamHomework_BossMonster_h_16_PROLOG
-#define FID_TeamHomework_Source_TeamHomework_BossMonster_h_19_GENERATED_BODY \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BossMonster_h_16_PROLOG
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BossMonster_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_TeamHomework_Source_TeamHomework_BossMonster_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_BossMonster_h_19_INCLASS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_BossMonster_h_19_ENHANCED_CONSTRUCTORS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BossMonster_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BossMonster_h_19_INCLASS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BossMonster_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -56,7 +56,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class ABossMonster>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_BossMonster_h
+#define CURRENT_FILE_ID FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BossMonster_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
