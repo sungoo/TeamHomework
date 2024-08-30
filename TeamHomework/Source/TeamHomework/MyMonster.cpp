@@ -53,6 +53,7 @@ void AMyMonster::BeginPlay()
 
 	_statCom->SetMaxHp(10.0f);
 	_statCom->SetHp(10.0f);
+	_statCom->AddAttackDamage(-50.0f);
 }
 
 void AMyMonster::Init()
@@ -93,7 +94,7 @@ void AMyMonster::Disable()
 			FRotator::ZeroRotator
 		);
 
-		item->InitItemByCode(1);
+		item->InitItemByCode(5);
 	}
 }
 

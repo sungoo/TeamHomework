@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\TeamHomework\\TeamHomework\\Source\\TeamHomework\\TeamHomework.Build.cs",
-		"D:\\TeamHomework\\TeamHomework\\Source\\TeamHomework.Target.cs",
-		"D:\\TeamHomework\\TeamHomework\\Source\\TeamHomeworkEditor.Target.cs"
+		"C:\\Users\\User\\Desktop\\TeamProject\\TeamHomework\\TeamHomework\\Source\\TeamHomework\\TeamHomework.Build.cs",
+		"C:\\Users\\User\\Desktop\\TeamProject\\TeamHomework\\TeamHomework\\Source\\TeamHomework.Target.cs",
+		"C:\\Users\\User\\Desktop\\TeamProject\\TeamHomework\\TeamHomework\\Source\\TeamHomeworkEditor.Target.cs"
 	],
 	"EngineVersion": "5.4.3"
 }

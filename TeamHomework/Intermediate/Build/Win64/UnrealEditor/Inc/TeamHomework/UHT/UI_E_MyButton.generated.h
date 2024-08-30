@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAMHOMEWORK_UI_E_MyButton_generated_h
 
-#define FID_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUUI_E_MyButton(); \
 	friend struct Z_Construct_UClass_UUI_E_MyButton_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UUI_E_MyButton)
 
 
-#define FID_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UUI_E_MyButton(UUI_E_MyButton&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~UUI_E_MyButton();
 
 
-#define FID_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_12_PROLOG
-#define FID_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_GENERATED_BODY \
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_12_PROLOG
+#define FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_INCLASS_NO_PURE_DECLS \
-	FID_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAMHOMEWORK_API UClass* StaticClass<class UUI_E_MyButton>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_TeamHomework_Source_TeamHomework_UI_E_MyButton_h
+#define CURRENT_FILE_ID FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
