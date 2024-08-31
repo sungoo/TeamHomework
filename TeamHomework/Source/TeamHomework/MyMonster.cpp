@@ -48,8 +48,13 @@ void AMyMonster::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Init();
 	SetAnimation();
+	if (_statCom)
+	{
+		_statCom->SetCreatureType(CreatureType::Monster);
+		_statCom->SetLevelAndInit(1);
+	}
+	Init();
 }
 
 void AMyMonster::Init()

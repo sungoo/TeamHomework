@@ -15,5 +15,6 @@ class TEAMHOMEWORK_API AArcher : public AMyPlayer
 	GENERATED_BODY()
 	
 public:
+	virtual void BeginPlay() override;
 	virtual void AttackHit() override;
 };

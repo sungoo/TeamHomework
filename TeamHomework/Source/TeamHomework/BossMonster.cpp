@@ -29,6 +29,11 @@ void ABossMonster::BeginPlay()
 	Super::BeginPlay();
 
 	SetAnimation();
+	if (_statCom)
+	{
+		_statCom->SetCreatureType(CreatureType::BossMonster);
+		_statCom->SetLevelAndInit(1);
+	}
 }
 
 void ABossMonster::PostInitializeComponents()

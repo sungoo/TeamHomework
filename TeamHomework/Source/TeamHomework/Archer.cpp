@@ -7,6 +7,15 @@
 #include "MystatComponent.h"
 #include "Engine/DamageEvents.h"
 
+void AArcher::BeginPlay()
+{
+	if (_statCom)
+	{
+		_statCom->SetCreatureType(CreatureType::Archer);
+		_statCom->SetLevelAndInit(1);
+	}
+}
+
 void AArcher::AttackHit()
 {
 	Super::AttackHit();

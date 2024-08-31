@@ -7,6 +7,15 @@
 #include "Engine/DamageEvents.h"
 #include "UI_AggroInfo.h"
 
+void AKnight::BeginPlay()
+{
+	if (_statCom)
+	{
+		_statCom->SetCreatureType(CreatureType::Knight);
+		_statCom->SetLevelAndInit(1);
+	}
+}
+
 void AKnight::AttackHit()
 {
 	Super::AttackHit();

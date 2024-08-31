@@ -9,6 +9,7 @@
 UMyGameInstance::UMyGameInstance()
 {
 	GetItemDataTable();
+	GetStatDataTable();
 }
 
 void UMyGameInstance::Init()
