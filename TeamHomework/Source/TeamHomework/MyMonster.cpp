@@ -50,10 +50,6 @@ void AMyMonster::BeginPlay()
 
 	Init();
 	SetAnimation();
-
-	_statCom->SetMaxHp(10.0f);
-	_statCom->SetHp(10.0f);
-	_statCom->AddAttackDamage(-50.0f);
 }
 
 void AMyMonster::Init()

@@ -55,7 +55,9 @@ private:
 
 	//Data Table
 	UPROPERTY()
-	TMap<int32, FMyStatData> _playerData;
+	TMap<int32, FMyStatData> _archerData;
+	UPROPERTY()
+	TMap<int32, FMyStatData> _knightData;
 	UPROPERTY()
 	TMap<int32, FMyStatData> _monsterData;
 

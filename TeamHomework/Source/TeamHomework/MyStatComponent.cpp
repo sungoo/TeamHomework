@@ -3,6 +3,8 @@
 
 #include "MyStatComponent.h"
 
+#include "MyGameInstance.h"
+
 // Sets default values for this component's properties
 UMyStatComponent::UMyStatComponent()
 {
@@ -34,8 +36,10 @@ void UMyStatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 void UMyStatComponent::Reset()
 {
-	_curhp = _maxhp;
-	_atk = _atk_default;
+	_curhp = _maxhp + _modHP;
+	_atk = _atk_default + _modATK;
+	_speed = 1 + _modSpeed;
+	_curExp = 0;
 }
 
 void UMyStatComponent::SetHp(int32 hp)
@@ -49,8 +53,8 @@ void UMyStatComponent::SetHp(int32 hp)
 		_deathDelegate.Broadcast();
 		_deathDelegate.Clear();
 	}
-	if (_curhp >= _maxhp)
-		_curhp = _maxhp;
+	if (_curhp >= _maxhp + _modHP)
+		_curhp = _maxhp + _modHP;
 
 	float ratio = HpRatio();
 
@@ -59,7 +63,23 @@ void UMyStatComponent::SetHp(int32 hp)
 
 void UMyStatComponent::SetLevelAndInit(int level)
 {
-	// TODO
+	auto gameinstance = Cast<UMyGameInstance>(GetWorld()->GetGameInstance());
+	if (gameinstance != nullptr)
+	{
+		FMyStatData data = gameinstance->GetStatDataByTypeAndLevel(_type, level);
+		if (data.type != _type)
+		{
+			UE_LOG(LogTemp, Error, TEXT("Data Load Faild!"));
+			return;
+		}
+
+		_level = data.level;
+		_expToLevelUp = data.exp;
+		_maxhp = data.maxHp;
+		_atk_default = data.attack;
+		_speed = data.speed;
+		_gold = data.gold;
+	}
 }
 
 int UMyStatComponent::AddCurHP(float amount)
@@ -73,19 +93,27 @@ int UMyStatComponent::AddCurHP(float amount)
 	return afterHp - beforeHP;
 }
 
-void UMyStatComponent::AddAttackDamage(float amount)
+void UMyStatComponent::ModMaxHP(int32 amount)
 {
-	_atk += amount;
-	UE_LOG(LogTemp, Warning, TEXT("ATK UP : %d"), GetAttackDamage());
+	_modHP += amount;
+	_curhp = _maxhp + _modHP;
 }
 
-void UMyStatComponent::AddSpeed(float amount)
+void UMyStatComponent::ModATK(int32 amount)
 {
-	_speed += amount;
+	_modATK += amount;
+	_atk = _atk_default + _modATK;
+}
+
+void UMyStatComponent::ModSpeed(float amount)
+{
+	_modSpeed += amount;
+	_speed += _modSpeed;
 }
 
 void UMyStatComponent::AddGold(int32 amount)
 {
-	_gold += amount;
+	_modGold += amount;
+	_gold += _modGold;
 }
 

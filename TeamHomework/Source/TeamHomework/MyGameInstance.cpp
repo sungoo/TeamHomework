@@ -50,20 +50,39 @@ void UMyGameInstance::GetItemDataTable()
 
 void UMyGameInstance::GetStatDataTable()
 {
-	static ConstructorHelpers::FObjectFinder<UDataTable> playerData
-	(TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/PlayerData.PlayerData'"));
+	static ConstructorHelpers::FObjectFinder<UDataTable> archerData
+	(TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/ArcherData.ArcherData'"));
 
-	if (playerData.Succeeded())
+	if (archerData.Succeeded())
 	{
-		UDataTable* data = playerData.Object;
+		UDataTable* data = archerData.Object;
 		int32 i = 0;
 		while (true)
 		{
-			FMyStatData* playerdata = data->FindRow<FMyStatData>(*FString::FromInt(i), TEXT(""));
-			if (playerdata == nullptr)
+			FMyStatData* archerdata = data->FindRow<FMyStatData>(*FString::FromInt(i), TEXT(""));
+			if (archerdata == nullptr)
 				break;
-			FMyStatData stat = *playerdata;
-			_playerData.Add(i, stat);
+			FMyStatData stat = *archerdata;
+			_archerData.Add(i, stat);
+
+			i++;
+		}
+	}
+
+	static ConstructorHelpers::FObjectFinder<UDataTable> knightData
+	(TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/KnightData.KnightData'"));
+
+	if (knightData.Succeeded())
+	{
+		UDataTable* data = knightData.Object;
+		int32 i = 0;
+		while (true)
+		{
+			FMyStatData* knightdata = data->FindRow<FMyStatData>(*FString::FromInt(i), TEXT(""));
+			if (knightdata == nullptr)
+				break;
+			FMyStatData stat = *knightdata;
+			_knightData.Add(i, stat);
 
 			i++;
 		}
@@ -94,8 +113,10 @@ FMyStatData UMyGameInstance::GetStatDataByTypeAndLevel(CreatureType type, int32 
 	switch (type)
 	{
 	case CreatureType::Archer:
+		return _archerData[level];
+		break;
 	case CreatureType::Knight:
-		return _playerData[level];
+		return _knightData[level];
 		break;
 	case CreatureType::Monster:
 	case CreatureType::BossMonster:
@@ -104,7 +125,7 @@ FMyStatData UMyGameInstance::GetStatDataByTypeAndLevel(CreatureType type, int32 
 	default:
 		break;
 	}
-	return _playerData[level];
+	return _archerData[level];
 }
 
 FItemData UMyGameInstance::GetItemDataByCode(int32 code)

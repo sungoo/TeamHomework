@@ -29,9 +29,6 @@ void ABossMonster::BeginPlay()
 	Super::BeginPlay();
 
 	SetAnimation();
-
-	_statCom->SetMaxHp(1000.0f);
-	_statCom->AddAttackDamage(1000.0f);
 }
 
 void ABossMonster::PostInitializeComponents()
