@@ -57,7 +57,7 @@ void UMyGameInstance::GetStatDataTable()
 	if (archerData.Succeeded())
 	{
 		UDataTable* data = archerData.Object;
-		int32 i = 0;
+		int32 i = 1;
 		while (true)
 		{
 			FMyStatData* archerdata = data->FindRow<FMyStatData>(*FString::FromInt(i), TEXT(""));
@@ -76,7 +76,7 @@ void UMyGameInstance::GetStatDataTable()
 	if (knightData.Succeeded())
 	{
 		UDataTable* data = knightData.Object;
-		int32 i = 0;
+		int32 i = 1;
 		while (true)
 		{
 			FMyStatData* knightdata = data->FindRow<FMyStatData>(*FString::FromInt(i), TEXT(""));
@@ -90,12 +90,12 @@ void UMyGameInstance::GetStatDataTable()
 	}
 
 	static ConstructorHelpers::FObjectFinder<UDataTable> monsterData
-	(TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/PlayerData.PlayerData'"));
+	(TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/MonsterData.MonsterData'"));
 
 	if (monsterData.Succeeded())
 	{
 		UDataTable* data = monsterData.Object;
-		int32 i = 0;
+		int32 i = 1;
 		while (true)
 		{
 			FMyStatData* monsterdata = data->FindRow<FMyStatData>(*FString::FromInt(i), TEXT(""));
@@ -103,6 +103,25 @@ void UMyGameInstance::GetStatDataTable()
 				break;
 			FMyStatData stat = *monsterdata;
 			_monsterData.Add(i, stat);
+
+			i++;
+		}
+	}
+
+	static ConstructorHelpers::FObjectFinder<UDataTable> bossData
+	(TEXT("/Script/Engine.DataTable'/Game/Blueprint/Data/BossData.BossData'"));
+
+	if (bossData.Succeeded())
+	{
+		UDataTable* data = bossData.Object;
+		int32 i = 1;
+		while (true)
+		{
+			FMyStatData* bossdata = data->FindRow<FMyStatData>(*FString::FromInt(i), TEXT(""));
+			if (bossdata == nullptr)
+				break;
+			FMyStatData stat = *bossdata;
+			_bossData.Add(i, stat);
 
 			i++;
 		}
@@ -120,8 +139,10 @@ FMyStatData UMyGameInstance::GetStatDataByTypeAndLevel(CreatureType type, int32 
 		return _knightData[level];
 		break;
 	case CreatureType::Monster:
-	case CreatureType::BossMonster:
 		return _monsterData[level];
+		break;
+	case CreatureType::BossMonster:
+		return _bossData[level];
 		break;
 	default:
 		break;
