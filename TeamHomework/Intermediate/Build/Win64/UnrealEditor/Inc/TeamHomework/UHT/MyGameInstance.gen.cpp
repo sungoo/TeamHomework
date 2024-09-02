@@ -69,9 +69,6 @@ struct Z_Construct_UClass_UMyGameInstance_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__monsterData_MetaData[] = {
 		{ "ModuleRelativePath", "MyGameInstance.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__bossData_MetaData[] = {
-		{ "ModuleRelativePath", "MyGameInstance.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__itemData_MetaData[] = {
 		{ "ModuleRelativePath", "MyGameInstance.h" },
 	};
@@ -88,9 +85,6 @@ struct Z_Construct_UClass_UMyGameInstance_Statics
 	static const UECodeGen_Private::FStructPropertyParams NewProp__monsterData_ValueProp;
 	static const UECodeGen_Private::FIntPropertyParams NewProp__monsterData_Key_KeyProp;
 	static const UECodeGen_Private::FMapPropertyParams NewProp__monsterData;
-	static const UECodeGen_Private::FStructPropertyParams NewProp__bossData_ValueProp;
-	static const UECodeGen_Private::FIntPropertyParams NewProp__bossData_Key_KeyProp;
-	static const UECodeGen_Private::FMapPropertyParams NewProp__bossData;
 	static const UECodeGen_Private::FStructPropertyParams NewProp__itemData_ValueProp;
 	static const UECodeGen_Private::FIntPropertyParams NewProp__itemData_Key_KeyProp;
 	static const UECodeGen_Private::FMapPropertyParams NewProp__itemData;
@@ -113,9 +107,6 @@ const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UMyGameInstance_S
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__monsterData_ValueProp = { "_monsterData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UScriptStruct_FMyStatData, METADATA_PARAMS(0, nullptr) }; // 1979384079
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__monsterData_Key_KeyProp = { "_monsterData_Key", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__monsterData = { "_monsterData", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyGameInstance, _monsterData), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__monsterData_MetaData), NewProp__monsterData_MetaData) }; // 1979384079
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__bossData_ValueProp = { "_bossData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UScriptStruct_FMyStatData, METADATA_PARAMS(0, nullptr) }; // 1979384079
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__bossData_Key_KeyProp = { "_bossData_Key", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__bossData = { "_bossData", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyGameInstance, _bossData), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__bossData_MetaData), NewProp__bossData_MetaData) }; // 1979384079
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData_ValueProp = { "_itemData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UScriptStruct_FItemData, METADATA_PARAMS(0, nullptr) }; // 1428854118
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData_Key_KeyProp = { "_itemData_Key", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData = { "_itemData", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UMyGameInstance, _itemData), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__itemData_MetaData), NewProp__itemData_MetaData) }; // 1428854118
@@ -132,9 +123,6 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMyGameIn
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__monsterData_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__monsterData_Key_KeyProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__monsterData,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__bossData_ValueProp,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__bossData_Key_KeyProp,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__bossData,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData_Key_KeyProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyGameInstance_Statics::NewProp__itemData,
@@ -180,10 +168,10 @@ UMyGameInstance::~UMyGameInstance() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyGameInstance, UMyGameInstance::StaticClass, TEXT("UMyGameInstance"), &Z_Registration_Info_UClass_UMyGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyGameInstance), 4259030030U) },
+		{ Z_Construct_UClass_UMyGameInstance, UMyGameInstance::StaticClass, TEXT("UMyGameInstance"), &Z_Registration_Info_UClass_UMyGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyGameInstance), 2803217945U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_2019177899(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_2974264162(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyGameInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

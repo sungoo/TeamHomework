@@ -60,8 +60,6 @@ private:
 	TMap<int32, FMyStatData> _knightData;
 	UPROPERTY()
 	TMap<int32, FMyStatData> _monsterData;
-	UPROPERTY()
-	TMap<int32, FMyStatData> _bossData;
 
 	UPROPERTY()
 	TMap<int32, FItemData> _itemData;

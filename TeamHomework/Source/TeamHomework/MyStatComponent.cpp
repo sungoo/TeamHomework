@@ -64,7 +64,6 @@ void UMyStatComponent::SetHp(int32 hp)
 void UMyStatComponent::SetLevelAndInit(int level)
 {
 	auto gameinstance = Cast<UMyGameInstance>(GetWorld()->GetGameInstance());
-	
 	if (gameinstance != nullptr)
 	{
 		FMyStatData data = gameinstance->GetStatDataByTypeAndLevel(_type, level);
