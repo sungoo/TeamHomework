@@ -76,6 +76,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintAssignable, Category = Event, meta = (AllowPrivateAccess = "true"))
 	FDelegate_Death _deathEventDelegate;
 
+protected:
+	//keys
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Stat, meta = (AllowPrivateAccess = "true"))
 	bool _isActive = true;
 

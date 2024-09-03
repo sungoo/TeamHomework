@@ -134,8 +134,8 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
             playerClass = archerClass;
 
         AMyPlayer* player = GetWorld()->SpawnActor<AMyPlayer>(playerClass, spawnLocation, lookAtPlayer, spawnParams);
-        player->_hpBarWidget->SetVisibility(false);
-        player->_hpBarWidget->Deactivate();
+        player->GetHpBar()->SetVisibility(false);
+        player->GetHpBar()->Deactivate();
 
         players.Add(MakeTuple(player, i + 1));
 	}

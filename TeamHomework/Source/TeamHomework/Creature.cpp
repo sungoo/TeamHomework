@@ -91,13 +91,6 @@ void ACreature::Init()
 	PrimaryActorTick.bCanEverTick = true;
 
 	_statCom->_deathDelegate.AddUObject(this, &ACreature::Unpossess);
-
-	// if (_aiController && GetController() == nullptr)
-	// {
-	// 	auto ai_Controller = Cast<AMyAIController>(_aiController);
-	// 	if (ai_Controller)
-	// 		ai_Controller->Possess(this);
-	// }
 }
 
 void ACreature::Disable()
@@ -105,9 +98,6 @@ void ACreature::Disable()
 	SetActorHiddenInGame(true);
 	SetActorEnableCollision(false);
 	PrimaryActorTick.bCanEverTick = false;
-
-	//_deathEventDelegate.Broadcast();
-	//EffectManager->Play("Death", GetActorLocation());
 
 	Unpossess();
 }
@@ -175,10 +165,9 @@ float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, ACont
 
 	if (_animInstance != nullptr && _statCom->GetCurHP() <= 0)
 	{
-		_statCom->AddCurHP(-999);// _hp = 0
+		_statCom->AddCurHP(-999);
 		_isActive = false;
 		
-		//DropAllItems();
 	}
 	return damage;
 }

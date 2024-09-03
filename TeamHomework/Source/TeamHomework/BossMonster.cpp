@@ -75,19 +75,15 @@ void ABossMonster::AggroAttack()
 
 void ABossMonster::AttackHit()
 {
-	// 죽은 플레이어 제외
 	_players.RemoveAll([](TTuple<AMyPlayer*, int32> player)
-		{ return player.Key->_statCom->IsDead(); });
+		{ return player.Key->GetStatus()->IsDead(); });
 
-	// 모두 죽었으면 끝
 	if (_players.IsEmpty())
 		return;
 
-	// 공격력 순으로 정렬
 	Algo::Sort(_players, [](const TTuple<AMyPlayer*, int32>& player1, const TTuple<AMyPlayer*, int32>& player2)
 		{ return player1.Key->_bossAttack > player2.Key->_bossAttack; });
 
-	// 최상위 1명 공격
 	FHitResult hitResult;
 
 	FCollisionQueryParams params(NAME_None, false, this);
