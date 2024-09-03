@@ -70,15 +70,17 @@ void AMyNPC::OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 void AMyNPC::OnMyCharacterOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	_isOverlapped = false;
+	_player->MeetNPC(false);
+	_player = nullptr;
 }
 
 void AMyNPC::CharacterOverlapped()
 {
 	if (_isOverlapped && _player != nullptr)
 	{
-		_player->_meetNPC = true;
+		_player->MeetNPC(true);
 
-		if (_player->_viewStore)
+		if (_player->IsViewStore())
 			_npcUI->SetVisibility(false);
 		else
 			_npcUI->SetVisibility(true);

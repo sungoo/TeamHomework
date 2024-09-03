@@ -45,8 +45,8 @@ void AKnight::AttackHit()
 		{
 			float randomFactor = FMath::RandRange(0.8f, 1.2f); // 80%에서 120% 사이의 랜덤한 배율 적용
 			finalDamage = baseDamage * randomFactor;
-			_bossAttack += finalDamage; // 누적되는 데미지도 랜덤 데미지로 설정
-			boss->_aggroDamageDelegate.Broadcast(_bossAttack, this);
+			_damageToBoss += finalDamage; // 누적되는 데미지도 랜덤 데미지로 설정
+			boss->_aggroDamageDelegate.Broadcast(_damageToBoss, this);
 		}
 
 		hitResult.GetActor()->TakeDamage(finalDamage, damageEvent, GetController(), this);

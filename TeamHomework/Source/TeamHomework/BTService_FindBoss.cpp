@@ -41,8 +41,8 @@ void UBTService_FindBoss::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* Nod
 	auto player = Cast<AMyPlayer>(aiOwner);
 	if (player)
 	{
-		OwnerComp.GetBlackboardComponent()->SetValueAsBool(TEXT("IsDamaged"), player->_damagedByBoss);
-		UE_LOG(LogTemp, Warning, TEXT("IsDamaged set to: %s"), player->_damagedByBoss ? TEXT("True") : TEXT("False"));
+		OwnerComp.GetBlackboardComponent()->SetValueAsBool(TEXT("IsDamaged"), player->IsDamagedByBoss());
+		UE_LOG(LogTemp, Warning, TEXT("IsDamaged set to: %s"), player->IsDamagedByBoss() ? TEXT("True") : TEXT("False"));
 
 	}
 }

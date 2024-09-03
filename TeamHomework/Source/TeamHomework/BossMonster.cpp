@@ -82,7 +82,7 @@ void ABossMonster::AttackHit()
 		return;
 
 	Algo::Sort(_players, [](const TTuple<AMyPlayer*, int32>& player1, const TTuple<AMyPlayer*, int32>& player2)
-		{ return player1.Key->_bossAttack > player2.Key->_bossAttack; });
+		{ return player1.Key->TakenDamageAmount() > player2.Key->TakenDamageAmount(); });
 
 	FHitResult hitResult;
 
@@ -114,11 +114,11 @@ void ABossMonster::AttackHit()
 	}
 	
 	
-	_players[0].Key->_damagedByBoss = true;
+	_players[0].Key->DamagedByBoss(true);
 	
 	GetWorld()->GetTimerManager().SetTimer(timerHandle, FTimerDelegate::CreateLambda([this, player = _players[0].Key]()
 		{
-			player->_damagedByBoss = false;
+			player->DamagedByBoss(false);
 		}), 1.0f, false);
 	
 	_aggroHpChangedDelegate.Broadcast(_statCom->HpRatio(), _players[0].Value);
