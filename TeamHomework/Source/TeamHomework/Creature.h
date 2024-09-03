@@ -59,8 +59,14 @@ public:
 	) override;
 	int32 GetcurHP();
 
+	class UMyAnimInstance* GetAnimInstance() { return _animInstance; }
 	class UMyInventoryComponent* GetInventory() { return _inventoryCom; }
 	class UMyStatComponent* GetStatus() { return _statCom; }
+	class UWidgetComponent* GetHpBar() { return _hpBarWidget; }
+
+	bool IsActive() { return _isActive; }
+	FVector2D GetMovement() { return FVector2D(_vertical, _horizontal); }
+	float GetHeight() { return _height; }
 
 	Delegate_AttackEnded _attackEndedDelegate;
 

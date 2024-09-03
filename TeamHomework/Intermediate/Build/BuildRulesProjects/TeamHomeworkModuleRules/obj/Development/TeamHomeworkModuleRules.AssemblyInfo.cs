@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeamHomeworkModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34a00a8cbc65f6a570a38b858be48f7164c92315")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f17d6ae2d1ec147574afc89853f82297411b03c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeamHomeworkModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeamHomeworkModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
