@@ -32,7 +32,6 @@ AMyPlayer::AMyPlayer()
 	_springArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	_camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 
-	// 상속관계 설정
 	_springArm->SetupAttachment(GetCapsuleComponent());
 	_camera->SetupAttachment(_springArm);
 
@@ -60,8 +59,6 @@ void AMyPlayer::PostInitializeComponents()
 	Super::PostInitializeComponents();
 
 	_controller = Cast<AMyPlayerController>(GetWorld()->GetFirstPlayerController());
-	//_item->ItemOverlapDelegate.AddUObject(this, &AMyPlayer::SetTargitItem);
-	//_item->OverlapEndDelegate.AddUObject(this, &AMyPlayer::SetTargitItem);
 }
 
 void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -107,7 +104,6 @@ void AMyPlayer::ShowUI(bool bGamePaused)
 	_controller->SetInputMode(inputMode);
 	_UIopen = true;
 	_controller->bShowMouseCursor = true;
-	//UGameplayStatics::SetGamePaused(GetWorld(), bGamePaused);
 	_controller->SetPause(bGamePaused);
 }
 
@@ -234,7 +230,6 @@ void AMyPlayer::TryGetItem(const FInputActionValue& value)
 
 	if (isPressed)
 	{
-		//AddItem(_item);
 		_tryGetItem = true;
 		UE_LOG(LogTemp, Display, TEXT("Try get Item"));
 	}
@@ -261,5 +256,4 @@ void AMyPlayer::DropItem(const FInputActionValue& value)
 {
 	_inventoryCom->DropItem();
 	
-	// TODO : 아이템 먹으면 sata 감소
 }

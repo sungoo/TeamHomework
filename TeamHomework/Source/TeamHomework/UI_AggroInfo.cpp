@@ -6,6 +6,7 @@
 #include "Components/Widget.h"
 #include "Components/VerticalBox.h"
 #include "Components/ProgressBar.h"
+#include "Components/TextBlock.h"
 
 void UUI_AggroInfo::NativeConstruct()
 { 
@@ -19,8 +20,11 @@ void UUI_AggroInfo::SetPlayerInfo(TArray<TTuple<AMyPlayer*, int32>> players)
 		UProgressBar* damageBar = Cast<UProgressBar>(damageBars[i]);
 		if (damageBar)
 		{
-			_playerIndex.Add(players[i].Key, i);
-			_damageInfo.Add(i, damageBar);
+			if (i < players.Num())
+			{
+				_playerIndex.Add(players[i].Key, i);
+				_damageInfo.Add(i, damageBar);
+			}
 		}
 	}
 
@@ -31,6 +35,26 @@ void UUI_AggroInfo::SetPlayerInfo(TArray<TTuple<AMyPlayer*, int32>> players)
 		if (hpBar)
 		{
 			_hpInfo.Add(i, hpBar);
+		}
+	}
+
+	TArray<UWidget*> pName = NameBox->GetAllChildren();
+	for (int32 i = 0; i < pName.Num(); i++)
+	{
+		UTextBlock* playerName = Cast<UTextBlock>(pName[i]);
+		if (playerName)
+		{
+			FString playername;
+			if (i < players.Num())
+			{
+				playername = FString(TEXT("Player") + FString::FromInt(i));
+			}
+			else
+			{
+				playername = FString(TEXT("N/A"));
+			}
+			playerName->SetText(FText::FromString(playername));
+			_playerName.Add(i, playerName);
 		}
 	}
 }

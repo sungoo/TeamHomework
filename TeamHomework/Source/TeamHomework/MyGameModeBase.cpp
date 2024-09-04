@@ -48,7 +48,6 @@ void AMyGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
 
-    // 스폰할 위치와 회전 설정
     FVector spawnLocation = FVector(200.0f, 0.0f, 20.0f);  // 기본 위치
     FRotator spawnRotation = FRotator::ZeroRotator;
 
@@ -79,16 +78,13 @@ void AMyGameModeBase::SetSelectedPlayer()
     APlayerController* playerController = GetWorld()->GetFirstPlayerController();
     if (playerController)
     {
-        // 스폰할 위치와 회전 설정
         FVector spawnLocation = FVector(0.0f, 0.0f, 500.0f);  // 기본 위치
         FRotator spawnRotation = FRotator::ZeroRotator;
 
-        // Pawn을 수동으로 스폰
         APawn* spawnedPawn = GetWorld()->SpawnActor<APawn>(DefaultPawnClass, spawnLocation, spawnRotation);
 
         if (spawnedPawn)
         {
-            // PlayerController가 스폰된 Pawn을 소유하게 함
             playerController->Possess(spawnedPawn);
         }
     }
@@ -96,7 +92,6 @@ void AMyGameModeBase::SetSelectedPlayer()
 
 void AMyGameModeBase::StartBossMode(ABossMonster* boss)
 {
-    // Clone Players
     UClass* knightClass = StaticLoadClass(AKnight::StaticClass(), nullptr, TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/Knight_BP.Knight_BP_C'"));
     UClass* archerClass = StaticLoadClass(AArcher::StaticClass(), nullptr, TEXT("/Script/Engine.Blueprint'/Game/Blueprint/Player/Archer_BP.Archer_BP_C'"));
 
@@ -112,10 +107,8 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
 
     for (int32 i = 0; i < aggroNum; ++i)
     {
-        // 기본 각도 계산
         const float angle = FMath::DegreesToRadians(360.0f / aggroNum * i);
 
-        // 스폰 위치에 랜덤 오프셋 추가
         const float randomOffsetX = FMath::RandRange(-300.0f, 300.0f); // X축 랜덤 오프셋
         const float randomOffsetY = FMath::RandRange(-300.0f, 300.0f); // Y축 랜덤 오프셋
 
@@ -123,7 +116,6 @@ void AMyGameModeBase::StartBossMode(ABossMonster* boss)
 
         FActorSpawnParameters spawnParams;
 
-        // 회전을 랜덤하게 설정
         FRotator lookAtPlayer = UKismetMathLibrary::FindLookAtRotation(spawnLocation, bossPos);
         lookAtPlayer.Yaw += FMath::RandRange(-30.0f, 30.0f); // Yaw에 랜덤한 오프셋 추가
 

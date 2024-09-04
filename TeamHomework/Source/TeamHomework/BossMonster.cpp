@@ -36,9 +36,7 @@ void ABossMonster::PostInitializeComponents()
 	Super::PostInitializeComponents();
 	_trigger->OnComponentBeginOverlap.AddDynamic(this, &ABossMonster::OnMyCharacterOverlap);
 	
-	// 삭제 예정
 	_statCom->SetHp(500.0f);
-	// _statCom->AddAttackDamage(50.0f);
 }
 
 void ABossMonster::OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -59,7 +57,6 @@ void ABossMonster::OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent
 
 void ABossMonster::AggroAttack()
 {
-	// 공격 애니메이션 재생
 	if (!_isAttacking && _animInstance != nullptr)
 	{
 		_isAttacking = true;

@@ -35,17 +35,15 @@ void AKnight::AttackHit()
 	{
 		FDamageEvent damageEvent;
 
-		// 기본 공격 데미지를 가져옵니다.
 		float baseDamage = _statCom->GetAttackDamage();
 		float finalDamage = baseDamage;
 
-		// 보스인 경우에만 랜덤 요소 추가
 		ABossMonster* boss = Cast<ABossMonster>(hitResult.GetActor());
 		if (boss)
 		{
-			float randomFactor = FMath::RandRange(0.8f, 1.2f); // 80%에서 120% 사이의 랜덤한 배율 적용
+			float randomFactor = FMath::RandRange(0.8f, 1.2f);
 			finalDamage = baseDamage * randomFactor;
-			_damageToBoss += finalDamage; // 누적되는 데미지도 랜덤 데미지로 설정
+			_damageToBoss += finalDamage;
 			boss->_aggroDamageDelegate.Broadcast(_damageToBoss, this);
 		}
 
@@ -59,5 +57,5 @@ void AKnight::AttackHit()
 	}
 
 	FVector center = GetActorLocation() + GetActorForwardVector() * attackRange;
-	// DrawDebugSphere(GetWorld(), center, attackRadius, 30, drawColor, false, 2.0f);
+	
 }

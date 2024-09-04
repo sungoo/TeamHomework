@@ -14,9 +14,6 @@ void UMyGameInstance::Init()
 {
 	Super::Init();
 
-	// auto statData = GetStatDataByLevel(2);
-	// UE_LOG(LogTemp, Warning, TEXT("Level : %d, MaxHp : %d, Attack : %d"), statData->level, statData->maxHp, statData->attack);
-	// 
 	FActorSpawnParameters params;
 	params.Name = TEXT("UIManager");
 	_uiManager = GetWorld()->SpawnActor<AMyUIManager>(FVector::ZeroVector, FRotator::ZeroRotator, params);

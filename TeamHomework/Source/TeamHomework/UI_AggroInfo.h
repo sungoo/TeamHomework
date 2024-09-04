@@ -34,6 +34,9 @@ public:
 	TMap<class AMyPlayer*, int32> _playerIndex;
 
 	UPROPERTY()
+	TMap<int32, class UTextBlock*> _playerName;
+
+	UPROPERTY()
 	TMap<int32, class UProgressBar*> _damageInfo;
 
 	UPROPERTY()

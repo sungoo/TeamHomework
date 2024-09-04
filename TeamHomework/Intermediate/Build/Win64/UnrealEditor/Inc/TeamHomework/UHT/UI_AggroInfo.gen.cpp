@@ -14,6 +14,7 @@ TEAMHOMEWORK_API UClass* Z_Construct_UClass_AMyPlayer_NoRegister();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_UUI_AggroInfo();
 TEAMHOMEWORK_API UClass* Z_Construct_UClass_UUI_AggroInfo_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UProgressBar_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget();
 UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
 UPackage* Z_Construct_UPackage__Script_TeamHomework();
@@ -56,6 +57,10 @@ struct Z_Construct_UClass_UUI_AggroInfo_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__playerIndex_MetaData[] = {
 		{ "ModuleRelativePath", "UI_AggroInfo.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__playerName_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI_AggroInfo.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__damageInfo_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "UI_AggroInfo.h" },
@@ -71,6 +76,9 @@ struct Z_Construct_UClass_UUI_AggroInfo_Statics
 	static const UECodeGen_Private::FIntPropertyParams NewProp__playerIndex_ValueProp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__playerIndex_Key_KeyProp;
 	static const UECodeGen_Private::FMapPropertyParams NewProp__playerIndex;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp__playerName_ValueProp;
+	static const UECodeGen_Private::FIntPropertyParams NewProp__playerName_Key_KeyProp;
+	static const UECodeGen_Private::FMapPropertyParams NewProp__playerName;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__damageInfo_ValueProp;
 	static const UECodeGen_Private::FIntPropertyParams NewProp__damageInfo_Key_KeyProp;
 	static const UECodeGen_Private::FMapPropertyParams NewProp__damageInfo;
@@ -90,6 +98,9 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUI_AggroInfo_
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerIndex_ValueProp = { "_playerIndex", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerIndex_Key_KeyProp = { "_playerIndex_Key", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AMyPlayer_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerIndex = { "_playerIndex", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UUI_AggroInfo, _playerIndex), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__playerIndex_MetaData), NewProp__playerIndex_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerName_ValueProp = { "_playerName", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerName_Key_KeyProp = { "_playerName_Key", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerName = { "_playerName", nullptr, (EPropertyFlags)0x0010008000000008, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UUI_AggroInfo, _playerName), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__playerName_MetaData), NewProp__playerName_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__damageInfo_ValueProp = { "_damageInfo", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__damageInfo_Key_KeyProp = { "_damageInfo_Key", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__damageInfo = { "_damageInfo", nullptr, (EPropertyFlags)0x0010008000000008, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UUI_AggroInfo, _damageInfo), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__damageInfo_MetaData), NewProp__damageInfo_MetaData) };
@@ -103,6 +114,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UUI_Aggro
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerIndex_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerIndex_Key_KeyProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerIndex,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerName_ValueProp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerName_Key_KeyProp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__playerName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__damageInfo_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__damageInfo_Key_KeyProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UUI_AggroInfo_Statics::NewProp__damageInfo,
@@ -152,10 +166,10 @@ UUI_AggroInfo::~UUI_AggroInfo() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_AggroInfo_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UUI_AggroInfo, UUI_AggroInfo::StaticClass, TEXT("UUI_AggroInfo"), &Z_Registration_Info_UClass_UUI_AggroInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_AggroInfo), 584809890U) },
+		{ Z_Construct_UClass_UUI_AggroInfo, UUI_AggroInfo::StaticClass, TEXT("UUI_AggroInfo"), &Z_Registration_Info_UClass_UUI_AggroInfo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_AggroInfo), 1800934983U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_AggroInfo_h_3551658418(TEXT("/Script/TeamHomework"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_AggroInfo_h_2548312508(TEXT("/Script/TeamHomework"),
 	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_AggroInfo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_AggroInfo_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

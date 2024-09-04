@@ -46,7 +46,7 @@ public:
 
 	bool _bossModeStarted = false;
 
-	int32 _aggroNum = 10;
+	int32 _aggroNum = 5;
 	TArray<TTuple<class AMyPlayer*, int32>> _players;
 
 	AggroDamageDelegate _aggroDamageDelegate;
