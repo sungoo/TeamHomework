@@ -270,6 +270,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\BTDeco_CanAttack.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\BTDeco_IsBossDead.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTDeco_IsBossDead.h"/>
     <ClCompile Include="..\..\Source\TeamHomework\BTDeco_IsDamagedByBoss.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

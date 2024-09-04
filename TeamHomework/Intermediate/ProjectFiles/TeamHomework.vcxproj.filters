@@ -51,6 +51,12 @@
     <ClInclude Include="..\..\Source\TeamHomework\BTDeco_CanAttack.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\BTDeco_IsBossDead.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTDeco_IsBossDead.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\BTDeco_IsDamagedByBoss.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>
