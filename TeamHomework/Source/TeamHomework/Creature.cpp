@@ -167,7 +167,7 @@ float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, ACont
 	{
 		_statCom->AddCurHP(-999);
 		_isActive = false;
-		
+		Unpossess();
 	}
 	return damage;
 }

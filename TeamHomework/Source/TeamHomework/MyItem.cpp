@@ -142,6 +142,7 @@ void AMyItem::UseItem()
 	default:
 		break;
 	}
+	_owner = nullptr;
 }
 
 UTexture2D* AMyItem::GetItemTexture()
