@@ -117,11 +117,7 @@ void UMyInventoryComponent::UseItemOfSlot(int32 slotNum)
 	if (item == nullptr)
 		return;
 
-	auto Owner = Cast<AMyPlayer>(GetOwner());
-	if (Owner)
-	{
-
-	}
+	item->UseItem();
 
 	_items[slotNum] = nullptr;
 	_emptySlots.Add(slotNum);

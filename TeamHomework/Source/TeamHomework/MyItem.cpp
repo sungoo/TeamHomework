@@ -8,6 +8,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
 #include "MyPlayer.h"
+#include "MyStatComponent.h"
 
 // Sets default values
 AMyItem::AMyItem()
@@ -77,6 +78,7 @@ void AMyItem::OnMyCharacterOverlap(UPrimitiveComponent* OverlappedComponent, AAc
 		{
 		}*/
 		_player->AddItem(this);
+		_owner = _player;
 		Disable();
 	}
 }
@@ -112,10 +114,34 @@ void AMyItem::InitItemByCode(int32 code)
 	}
 }
 
+void AMyItem::SetItemOwner(AMyPlayer* player)
+{
+	_owner = player;
+}
+
 void AMyItem::ReleaseItem(FVector location, FRotator rotation)
 {
 	SetActorLocationAndRotation(location, rotation);
+	_owner = nullptr;
 	Init();
+}
+
+void AMyItem::UseItem()
+{
+	switch (_type)
+	{
+	case TYPE::HP:
+		break;
+	case TYPE::ATK:
+		break;
+	case TYPE::SPEED:
+		break;
+	case TYPE::GOLD:
+		_owner->GetStatus()->AddGold(_statAddValue);
+		break;
+	default:
+		break;
+	}
 }
 
 UTexture2D* AMyItem::GetItemTexture()

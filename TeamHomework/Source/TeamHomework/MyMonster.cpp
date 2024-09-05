@@ -75,9 +75,7 @@ void AMyMonster::Disable()
 			if (_statUpWidget)
 			{
 				_statUpWidget->SetVisibility(false);
-				// SetActorHiddenInGame(true); // 액터를 게임에서 숨깁니다.
-				SetActorEnableCollision(false); // 충돌 비활성화
-				// SetActorTickEnabled(false); // Tick 비활성화
+				SetActorEnableCollision(false);
 				PrimaryActorTick.bCanEverTick = false;
 				_isDead = true;
 			}
@@ -93,7 +91,7 @@ void AMyMonster::Disable()
 			FRotator::ZeroRotator
 		);
 
-		item->InitItemByCode(1);
+		item->InitItemByCode(9);
 	}
 }
 

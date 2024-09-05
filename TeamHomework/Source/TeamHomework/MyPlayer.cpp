@@ -250,6 +250,7 @@ void AMyPlayer::AddItem(AMyItem* item)
 	if (item == nullptr)
 		return;
 	_inventoryCom->AddItem(item);
+	item->SetOwner(this);
 }
 
 void AMyPlayer::DropItem(const FInputActionValue& value)

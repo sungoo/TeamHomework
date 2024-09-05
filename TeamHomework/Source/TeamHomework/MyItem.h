@@ -70,7 +70,9 @@ protected:
 public:	
 	void InitItemByCode(int32 code);
 
+	void SetItemOwner(class AMyPlayer* player);
 	void ReleaseItem(FVector location, FRotator rotation = FRotator::ZeroRotator);
+	void UseItem();
 
 	//Getter
 	class UTexture2D* GetItemTexture();
@@ -90,6 +92,8 @@ private:
 
 	UPROPERTY()
 	class AMyPlayer* _player;
+	UPROPERTY()
+	class AMyPlayer* _owner;
 
 	//Item Description
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Info, meta = (AllowPrivateAccess = "true"))
