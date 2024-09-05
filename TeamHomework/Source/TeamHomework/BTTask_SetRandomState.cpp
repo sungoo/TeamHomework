@@ -21,11 +21,9 @@ EBTNodeResult::Type UBTTask_SetRandomState::ExecuteTask(UBehaviorTreeComponent& 
 		return EBTNodeResult::Failed;
 
 	int32 originNum = blackboard->GetValueAsInt(FName(TEXT("RandomNum")));
+	int32 maxState = blackboard->GetValueAsInt(FName(TEXT("MaxState")));
 
-	int32 randomNum = FMath::Rand() % _stateMax;
-	
-	if (originNum == randomNum)
-		randomNum = (randomNum + 1) % _stateMax;
+	int32 randomNum = FMath::Rand() % maxState;
 
 	blackboard->SetValueAsInt(FName(TEXT("RandomNum")), randomNum);
 

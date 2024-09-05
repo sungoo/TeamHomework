@@ -18,6 +18,4 @@ class TEAMHOMEWORK_API UBTTask_SetRandomState : public UBTTaskNode
 	
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
 
-private:
-	int32 _stateMax = 3;
 };

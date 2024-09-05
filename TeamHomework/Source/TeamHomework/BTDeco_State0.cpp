@@ -24,6 +24,8 @@ bool UBTDeco_State0::CalculateRawConditionValue(UBehaviorTreeComponent& OwnerCom
 
 	if (nowState == 0)
 		return true;
+	else
+		return false;
 
 	return result;
 }

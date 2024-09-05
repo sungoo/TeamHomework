@@ -306,6 +306,14 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\BTTask_Attack.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\BTTask_Cast.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTTask_Cast.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\BTTask_GotoNextState.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTTask_GotoNextState.h"/>
     <ClCompile Include="..\..\Source\TeamHomework\BTTask_RunAway.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

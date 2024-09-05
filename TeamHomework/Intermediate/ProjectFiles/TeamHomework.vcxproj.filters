@@ -105,6 +105,18 @@
     <ClInclude Include="..\..\Source\TeamHomework\BTTask_Attack.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\BTTask_Cast.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTTask_Cast.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\BTTask_GotoNextState.cpp">
+      <Filter>Source\TeamHomework</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\BTTask_GotoNextState.h">
+      <Filter>Source\TeamHomework</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TeamHomework\BTTask_RunAway.cpp">
       <Filter>Source\TeamHomework</Filter>
     </ClCompile>

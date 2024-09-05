@@ -11,13 +11,7 @@
 
 UMyAnimInstance::UMyAnimInstance()
 {
-	// static ConstructorHelpers::FObjectFinder<UAnimMontage> am
-	// (TEXT("/Script/Engine.AnimMontage'/Game/BluePrint/Animation/KnightAnimMontage.KnightAnimMontage'"));
-	// 
-	// if (am.Succeeded())
-	// {
-	// 	_myAnimMontage = am.Object;
-	// }
+	
 }
 
 void UMyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
@@ -53,6 +47,16 @@ void UMyAnimInstance::PlayDamagedMontage()
 		UE_LOG(LogTemp, Display, TEXT("Damaged Montage"));
 		Montage_Play(_myDamagedMontage);
 	}
+}
+
+void UMyAnimInstance::PlayMontage(FString montageName)
+{
+	if (!_Montages.Find(montageName))
+		return;
+
+	auto nowPlaying = _Montages[montageName];
+	if (!Montage_IsPlaying(nowPlaying))
+		Montage_Play(nowPlaying);
 }
 
 void UMyAnimInstance::JumpToSection(int32 sectionIndex)
