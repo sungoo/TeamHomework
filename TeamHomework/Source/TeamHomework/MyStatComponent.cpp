@@ -2,6 +2,8 @@
 
 
 #include "MyStatComponent.h"
+#include "MyGameInstance.h"
+#include "UI_BaseDisplay.h"
 
 // Sets default values for this component's properties
 UMyStatComponent::UMyStatComponent()
@@ -87,5 +89,7 @@ void UMyStatComponent::AddSpeed(float amount)
 void UMyStatComponent::AddGold(int32 amount)
 {
 	_gold += amount;
+	
+	UIManager->GetBaseDisplay()->UpdateNowGold(_gold);
 }
 
