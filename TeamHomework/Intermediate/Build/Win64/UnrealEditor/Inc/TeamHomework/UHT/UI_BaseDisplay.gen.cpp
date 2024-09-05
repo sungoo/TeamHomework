@@ -93,14 +93,14 @@ UUI_BaseDisplay::~UUI_BaseDisplay() {}
 // End Class UUI_BaseDisplay
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics
+struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UUI_BaseDisplay, UUI_BaseDisplay::StaticClass, TEXT("UUI_BaseDisplay"), &Z_Registration_Info_UClass_UUI_BaseDisplay, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_BaseDisplay), 3519746381U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_1932449409(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_1932449409(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

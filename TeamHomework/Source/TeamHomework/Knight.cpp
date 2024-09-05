@@ -59,3 +59,11 @@ void AKnight::AttackHit()
 	FVector center = GetActorLocation() + GetActorForwardVector() * attackRange;
 	
 }
+
+float AKnight::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float damage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	SoundManager->Play("KnightAttack", _hitPoint, FRotator::ZeroRotator);
+
+	return damage;
+}

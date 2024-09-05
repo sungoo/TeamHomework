@@ -140,3 +140,11 @@ void AMyMonster::AttackHit()
 	FVector center = GetActorLocation() + GetActorForwardVector() * attackRange;
 	// DrawDebugSphere(GetWorld(), center, attackRadius, 30, drawColor, false, 2.0f);
 }
+
+float AMyMonster::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float damage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	SoundManager->Play("MonsterAttack", _hitPoint, FRotator::ZeroRotator);
+
+	return damage;
+}

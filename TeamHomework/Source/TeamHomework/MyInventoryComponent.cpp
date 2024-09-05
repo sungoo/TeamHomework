@@ -73,7 +73,7 @@ void UMyInventoryComponent::DropItem()
 	float X = cosf(randFloat) * 300.0f;
 	float Y = sinf(randFloat) * 300.0f;
 	FVector itemPos = playerPlos + FVector(X, Y, 0.0f);
-	itemPos.Z = 0.0f;
+	itemPos.Z = 50.0f;
 
 	item->ReleaseItem(itemPos);
 	UIManager->GetInventoryUI()->SetItemImage(lastPos, nullptr);
@@ -96,7 +96,7 @@ void UMyInventoryComponent::DropItemOfSlot(int32 slotNum)
 	float X = cosf(randFloat) * 300.0f;
 	float Y = sinf(randFloat) * 300.0f;
 	FVector itemPos = playerPlos + FVector(X, Y, 0.0f);
-	itemPos.Z = 0.0f;
+	itemPos.Z = 50.0f;
 	item->ReleaseItem(itemPos);
 
 	_items[slotNum] = nullptr;

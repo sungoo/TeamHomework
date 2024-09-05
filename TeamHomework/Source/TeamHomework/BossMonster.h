@@ -33,7 +33,9 @@ public:
 
 	void AggroAttack();
 	virtual void AttackHit() override;
-
+	virtual float TakeDamage(
+		float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser
+	) override;
 
 	UPROPERTY(VisibleAnywhere)
 	class USphereComponent* _trigger;

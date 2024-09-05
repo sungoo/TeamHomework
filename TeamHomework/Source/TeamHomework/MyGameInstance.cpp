@@ -23,6 +23,9 @@ void UMyGameInstance::Init()
 
 	params.Name = TEXT("vfxManager");
 	_vfxManager = GetWorld()->SpawnActor<AVFX_Manager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
+
+	params.Name = TEXT("SoundManager");
+	_soundManager = GetWorld()->SpawnActor<ASoundManager>(FVector::ZeroVector, FRotator::ZeroRotator, params);
 }
 
 void UMyGameInstance::GetItemDataTable()

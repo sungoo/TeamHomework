@@ -48,19 +48,19 @@ void AMyGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
 
-    FVector spawnLocation = FVector(200.0f, 0.0f, 20.0f);  // 기본 위치
+    FVector spawnLocation = FVector(-200.0f, 0.0f, 50.0f);  // 기본 위치
     FRotator spawnRotation = FRotator::ZeroRotator;
 
     for (int i = 0; i < 3; i++)
     {
-        spawnLocation.X += 500.0f * i;
+        spawnLocation.X -= 400.0f * i;
 
         AMyItem* item = GetWorld()->SpawnActor<AMyItem>(
             _itemClass,
             spawnLocation,
             spawnRotation
         );
-        item->InitItemByCode(i+1);
+        item->InitItemByCode(i+3);
 
         _items.Add(item);
     }

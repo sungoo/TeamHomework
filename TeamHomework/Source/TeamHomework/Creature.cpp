@@ -20,6 +20,8 @@
 
 #include "Engine/DamageEvents.h"
 
+#include "MyGameInstance.h"
+
 // Sets default values
 ACreature::ACreature()
 {
@@ -169,6 +171,7 @@ float ACreature::TakeDamage(float Damage, FDamageEvent const& DamageEvent, ACont
 		_isActive = false;
 		
 	}
+
 	return damage;
 }
 

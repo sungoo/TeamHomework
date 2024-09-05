@@ -23,7 +23,7 @@ EBTNodeResult::Type UBTTask_GotoNextState::ExecuteTask(UBehaviorTreeComponent& O
 	int32 originNum = blackboard->GetValueAsInt(FName(TEXT("RandomNum")));
 	int32 maxState = blackboard->GetValueAsInt(FName(TEXT("MaxState")));
 	
-	int32 next = (++originNum) % maxState;
+	int32 next = (++originNum) % (maxState + 1);
 
 	blackboard->SetValueAsInt(FName(TEXT("RandomNum")), next);
 

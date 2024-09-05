@@ -122,6 +122,14 @@ void ABossMonster::AttackHit()
 	
 }
 
+float ABossMonster::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float damage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	SoundManager->Play("BossAttack", _hitPoint, FRotator::ZeroRotator);
+
+	return damage;
+}
+
 void ABossMonster::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);

@@ -25,7 +25,9 @@ public:
 	virtual void Disable() override;
 
 	virtual void AttackHit() override;
-
+	virtual float TakeDamage(
+		float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser
+	) override;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	bool _isDead = false;

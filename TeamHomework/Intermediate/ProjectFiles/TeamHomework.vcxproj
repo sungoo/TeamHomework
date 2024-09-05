@@ -67,7 +67,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C2FABB4B-A66D-3C00-B1E9-1780D9549660}</ProjectGuid>
+    <ProjectGuid>{25267B97-0B8E-3B4A-AB18-E6F081E0917B}</ProjectGuid>
     <RootNamespace>TeamHomework</RootNamespace>
   </PropertyGroup>
   <Import Project="UECommon.props" />
@@ -418,6 +418,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\TeamHomework\PlayerSelectionUI.h"/>
+    <ClCompile Include="..\..\Source\TeamHomework\SoundManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\SoundManager.h"/>
     <None Include="..\..\Source\TeamHomework\TeamHomework.Build.cs"/>
     <ClCompile Include="..\..\Source\TeamHomework\TeamHomework.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
