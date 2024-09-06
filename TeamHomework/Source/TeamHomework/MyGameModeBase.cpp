@@ -85,7 +85,7 @@ void AMyGameModeBase::SetSelectedPlayer()
     if (playerController)
     {
         FVector spawnLocation = FVector(0.0f, 0.0f, 150.0f);  // 기본 위치
-        FRotator spawnRotation = FRotator::ZeroRotator;
+        FRotator spawnRotation = FRotator(0.0f, 180.0f, 0.0f);
 
         APawn* spawnedPawn = GetWorld()->SpawnActor<APawn>(DefaultPawnClass, spawnLocation, spawnRotation);
 
