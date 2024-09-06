@@ -18,6 +18,35 @@ TEAMHOMEWORK_API UClass* Z_Construct_UClass_UMyAnimInstance_NoRegister();
 UPackage* Z_Construct_UPackage__Script_TeamHomework();
 // End Cross Module References
 
+// Begin Class UMyAnimInstance Function AnimNotify_AttackEnd
+struct Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "MyAnimInstance.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMyAnimInstance, nullptr, "AnimNotify_AttackEnd", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd_Statics::Function_MetaDataParams), Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UMyAnimInstance::execAnimNotify_AttackEnd)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AnimNotify_AttackEnd();
+	P_NATIVE_END;
+}
+// End Class UMyAnimInstance Function AnimNotify_AttackEnd
+
 // Begin Class UMyAnimInstance Function AnimNotify_AttackHit
 struct Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackHit_Statics
 {
@@ -81,6 +110,7 @@ void UMyAnimInstance::StaticRegisterNativesUMyAnimInstance()
 {
 	UClass* Class = UMyAnimInstance::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "AnimNotify_AttackEnd", &UMyAnimInstance::execAnimNotify_AttackEnd },
 		{ "AnimNotify_AttackHit", &UMyAnimInstance::execAnimNotify_AttackHit },
 		{ "AnimNotify_Death", &UMyAnimInstance::execAnimNotify_Death },
 	};
@@ -167,6 +197,7 @@ struct Z_Construct_UClass_UMyAnimInstance_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd, "AnimNotify_AttackEnd" }, // 355041592
 		{ &Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackHit, "AnimNotify_AttackHit" }, // 1892156150
 		{ &Z_Construct_UFunction_UMyAnimInstance_AnimNotify_Death, "AnimNotify_Death" }, // 2587699694
 	};
@@ -246,14 +277,14 @@ UMyAnimInstance::~UMyAnimInstance() {}
 // End Class UMyAnimInstance
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyAnimInstance_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 3398225164U) },
+		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 1007432689U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyAnimInstance_h_2293178031(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TeamHomework_Source_TeamHomework_MyAnimInstance_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAnimInstance_h_3105238372(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

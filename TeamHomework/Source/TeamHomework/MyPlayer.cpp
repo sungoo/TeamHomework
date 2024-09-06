@@ -214,11 +214,13 @@ void AMyPlayer::ViewStore(const FInputActionValue& value)
 		if (_UIopen)
 		{
 			UIManager->CloseUI(UI_List::Store);
+			UIManager->CloseUI(UI_List::Inventory);
 			HideUI();
 		}
 		else
 		{
 			UIManager->OpenUI(UI_List::Store);
+			UIManager->OpenUI(UI_List::Inventory);
 			ShowUI(false);
 		}
 	}

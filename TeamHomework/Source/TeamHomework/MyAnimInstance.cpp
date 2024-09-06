@@ -8,6 +8,8 @@
 
 #include "MyGameInstance.h"
 #include "MyPlayerManager.h"
+#include "GameFramework/CharacterMovementComponent.h"
+
 
 UMyAnimInstance::UMyAnimInstance()
 {
@@ -37,6 +39,8 @@ void UMyAnimInstance::PlayAttackMontage()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("play attackMontage"));
 		Montage_Play(_myAttackMontage);
+		ACreature* creature = Cast<ACreature>(TryGetPawnOwner());
+		creature->GetCharacterMovement()->DisableMovement();
 	}
 }
 
@@ -63,6 +67,12 @@ void UMyAnimInstance::JumpToSection(int32 sectionIndex)
 {
 	FName sectionName = FName(*FString::Printf(TEXT("Attack%d"), sectionIndex));
 	Montage_JumpToSection(sectionName);
+}
+
+void UMyAnimInstance::AnimNotify_AttackEnd()
+{
+	ACreature* creature = Cast<ACreature>(TryGetPawnOwner());
+	creature->GetCharacterMovement()->SetDefaultMovementMode();
 }
 
 void UMyAnimInstance::AnimNotify_AttackHit()

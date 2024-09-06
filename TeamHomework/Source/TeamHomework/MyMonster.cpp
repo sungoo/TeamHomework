@@ -2,6 +2,7 @@
 
 
 #include "MyMonster.h"
+#include "MyGameModeBase.h"
 #include "MyAIController.h"
 #include "Creature.h"
 #include "MystatComponent.h"
@@ -82,16 +83,13 @@ void AMyMonster::Disable()
 		}, 1.0f, false);
 
 	FVector itemPos = GetActorLocation();
-	itemPos.Z = 20.0f;
+	itemPos.Z = 70.0f;
 	if (_isDead == false)
 	{
-		AMyItem* item = GetWorld()->SpawnActor<AMyItem>(
-			_itemClass,
-			itemPos,
-			FRotator::ZeroRotator
-		);
-
-		item->InitItemByCode(9);
+		auto gamemode = Cast<AMyGameModeBase>(GetWorld()->GetAuthGameMode());
+		if (gamemode == nullptr)
+			return;
+		gamemode->SpawnItem(itemPos, FRotator::ZeroRotator, 9);
 	}
 }
 

@@ -49,21 +49,27 @@ void AMyGameModeBase::BeginPlay()
 	Super::BeginPlay();
 
     FVector spawnLocation = FVector(-200.0f, 0.0f, 50.0f);  // 기본 위치
-    FRotator spawnRotation = FRotator::ZeroRotator;
+    FRotator spawnRotation = FRotator(0.0f, 90.0f, 0.0f);
 
     for (int i = 0; i < 3; i++)
     {
         spawnLocation.X -= 400.0f * i;
 
-        AMyItem* item = GetWorld()->SpawnActor<AMyItem>(
-            _itemClass,
-            spawnLocation,
-            spawnRotation
-        );
-        item->InitItemByCode(i+3);
-
-        _items.Add(item);
+        SpawnItem(spawnLocation, spawnRotation, i);
     }
+}
+
+void AMyGameModeBase::SpawnItem(FVector Location, FRotator Rotation, int32 itemCode)
+{
+    AMyItem* item = GetWorld()->SpawnActor<AMyItem>(
+        _itemClass,
+        Location,
+        Rotation
+    );
+    item->InitItemByCode(itemCode);
+    item->SetActorScale3D(FVector(2.0f));
+
+    _items.Add(item);
 }
 
 void AMyGameModeBase::SetSelectedPlayer()
@@ -78,7 +84,7 @@ void AMyGameModeBase::SetSelectedPlayer()
     APlayerController* playerController = GetWorld()->GetFirstPlayerController();
     if (playerController)
     {
-        FVector spawnLocation = FVector(0.0f, 0.0f, 500.0f);  // 기본 위치
+        FVector spawnLocation = FVector(0.0f, 0.0f, 150.0f);  // 기본 위치
         FRotator spawnRotation = FRotator::ZeroRotator;
 
         APawn* spawnedPawn = GetWorld()->SpawnActor<APawn>(DefaultPawnClass, spawnLocation, spawnRotation);

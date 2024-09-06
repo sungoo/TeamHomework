@@ -116,7 +116,6 @@ void ACreature::Unpossess()
 void ACreature::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input

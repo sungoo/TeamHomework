@@ -12,7 +12,7 @@
 ASoundManager::ASoundManager()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	_rootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
 	RootComponent = _rootComponent;
@@ -95,32 +95,32 @@ void ASoundManager::Play(FString name, FVector location, FRotator rotator)
 	}
 
 	// 플레이어의 위치를 가져옵니다.
-	APlayerController* playerController = UGameplayStatics::GetPlayerController(this, 0);
-	if (playerController)
-	{
-		APawn* playerPawn = playerController->GetPawn();
-		if (playerPawn)
-		{
-			FVector playerLocation = playerPawn->GetActorLocation();
+	//APlayerController* playerController = UGameplayStatics::GetPlayerController(this, 0);
+	//if (playerController)
+	//{
+	//	APawn* playerPawn = playerController->GetPawn();
+	//	if (playerPawn)
+	//	{
+	//		FVector playerLocation = playerPawn->GetActorLocation();
 
-			// 플레이어 위치 근처에서 소리를 재생하도록 위치를 설정
-			FVector soundLocation = playerLocation + FVector(200.0f, 200.0f, 0.0f);  // 플레이어 위치에서 약간 떨어진 곳
+	//		// 플레이어 위치 근처에서 소리를 재생하도록 위치를 설정
+	//		FVector soundLocation = playerLocation + FVector(200.0f, 200.0f, 0.0f);  // 플레이어 위치에서 약간 떨어진 곳
 
-			USoundBase** availableSound = _soundTable[name].FindByPredicate([](USoundBase* sound) -> bool
-				{
-					return sound != nullptr;
-				});
+	//		USoundBase** availableSound = _soundTable[name].FindByPredicate([](USoundBase* sound) -> bool
+	//			{
+	//				return sound != nullptr;
+	//			});
 
-			if (availableSound && *availableSound)
-			{
-				UGameplayStatics::PlaySoundAtLocation(this, *availableSound, soundLocation, rotator);
-				UE_LOG(LogTemp, Log, TEXT("Playing sound: %s at player location: %s"), *name, *soundLocation.ToString());
-			}
-			else
-			{
-				UE_LOG(LogTemp, Warning, TEXT("No available sound to play for: %s"), *name);
-			}
-		}
-	}
+	//		if (availableSound && *availableSound)
+	//		{
+	//			UGameplayStatics::PlaySoundAtLocation(this, *availableSound, soundLocation, rotator);
+	//			UE_LOG(LogTemp, Log, TEXT("Playing sound: %s at player location: %s"), *name, *soundLocation.ToString());
+	//		}
+	//		else
+	//		{
+	//			UE_LOG(LogTemp, Warning, TEXT("No available sound to play for: %s"), *name);
+	//		}
+	//	}
+	//}
 }
 

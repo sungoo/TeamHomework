@@ -26,6 +26,8 @@ public:
 	void PlayDamagedMontage();
 	void PlayMontage(FString montageName);
 	void JumpToSection(int32 sectionIndex);
+	UFUNCTION()
+	void AnimNotify_AttackEnd();
 
 	UFUNCTION()
 	void AnimNotify_AttackHit();

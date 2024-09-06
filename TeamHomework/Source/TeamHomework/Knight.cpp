@@ -7,6 +7,14 @@
 #include "Engine/DamageEvents.h"
 #include "UI_AggroInfo.h"
 
+void AKnight::BeginPlay()
+{
+	Super::BeginPlay();
+
+	_statCom->SetMaxHp(1000);
+	_statCom->AddAttackDamage(20.0f);
+}
+
 void AKnight::AttackHit()
 {
 	Super::AttackHit();
