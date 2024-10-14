@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/UI_StatUp.h"
+#include "TeamHomework/UI/UI_StatUp.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUI_StatUp() {}
 
@@ -32,8 +32,8 @@ struct Z_Construct_UClass_UUI_StatUp_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "UI_StatUp.h" },
-		{ "ModuleRelativePath", "UI_StatUp.h" },
+		{ "IncludePath", "UI/UI_StatUp.h" },
+		{ "ModuleRelativePath", "UI/UI_StatUp.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -80,14 +80,14 @@ UUI_StatUp::~UUI_StatUp() {}
 // End Class UUI_StatUp
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_StatUp_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_StatUp_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UUI_StatUp, UUI_StatUp::StaticClass, TEXT("UUI_StatUp"), &Z_Registration_Info_UClass_UUI_StatUp, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_StatUp), 3200411236U) },
+		{ Z_Construct_UClass_UUI_StatUp, UUI_StatUp::StaticClass, TEXT("UUI_StatUp"), &Z_Registration_Info_UClass_UUI_StatUp, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_StatUp), 378797896U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_StatUp_h_3120774858(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_StatUp_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_StatUp_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_StatUp_h_3873172277(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_StatUp_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_StatUp_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/BTService_PrimeSetting.h"
+#include "TeamHomework/Behaviors/BTService_PrimeSetting.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBTService_PrimeSetting() {}
 
@@ -32,8 +32,8 @@ struct Z_Construct_UClass_UBTService_PrimeSetting_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "BTService_PrimeSetting.h" },
-		{ "ModuleRelativePath", "BTService_PrimeSetting.h" },
+		{ "IncludePath", "Behaviors/BTService_PrimeSetting.h" },
+		{ "ModuleRelativePath", "Behaviors/BTService_PrimeSetting.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -79,14 +79,14 @@ UBTService_PrimeSetting::~UBTService_PrimeSetting() {}
 // End Class UBTService_PrimeSetting
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTService_PrimeSetting_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTService_PrimeSetting_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTService_PrimeSetting, UBTService_PrimeSetting::StaticClass, TEXT("UBTService_PrimeSetting"), &Z_Registration_Info_UClass_UBTService_PrimeSetting, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTService_PrimeSetting), 3582720163U) },
+		{ Z_Construct_UClass_UBTService_PrimeSetting, UBTService_PrimeSetting::StaticClass, TEXT("UBTService_PrimeSetting"), &Z_Registration_Info_UClass_UBTService_PrimeSetting, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTService_PrimeSetting), 3384628989U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTService_PrimeSetting_h_3015155641(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTService_PrimeSetting_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTService_PrimeSetting_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTService_PrimeSetting_h_293861715(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTService_PrimeSetting_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTService_PrimeSetting_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

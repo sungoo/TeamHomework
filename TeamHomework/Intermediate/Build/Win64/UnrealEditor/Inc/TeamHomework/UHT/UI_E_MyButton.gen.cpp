@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/UI_E_MyButton.h"
+#include "TeamHomework/UI/UI_E_MyButton.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUI_E_MyButton() {}
 
@@ -33,14 +33,14 @@ struct Z_Construct_UClass_UUI_E_MyButton_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "UI_E_MyButton.h" },
-		{ "ModuleRelativePath", "UI_E_MyButton.h" },
+		{ "IncludePath", "UI/UI_E_MyButton.h" },
+		{ "ModuleRelativePath", "UI/UI_E_MyButton.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_index_MetaData[] = {
-		{ "ModuleRelativePath", "UI_E_MyButton.h" },
+		{ "ModuleRelativePath", "UI/UI_E_MyButton.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__itemSetting_MetaData[] = {
-		{ "ModuleRelativePath", "UI_E_MyButton.h" },
+		{ "ModuleRelativePath", "UI/UI_E_MyButton.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_index;
@@ -96,14 +96,14 @@ UUI_E_MyButton::~UUI_E_MyButton() {}
 // End Class UUI_E_MyButton
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_E_MyButton_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UUI_E_MyButton, UUI_E_MyButton::StaticClass, TEXT("UUI_E_MyButton"), &Z_Registration_Info_UClass_UUI_E_MyButton, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_E_MyButton), 4149607368U) },
+		{ Z_Construct_UClass_UUI_E_MyButton, UUI_E_MyButton::StaticClass, TEXT("UUI_E_MyButton"), &Z_Registration_Info_UClass_UUI_E_MyButton, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_E_MyButton), 912311313U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_740307988(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_E_MyButton_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_E_MyButton_h_2287681704(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_E_MyButton_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_E_MyButton_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

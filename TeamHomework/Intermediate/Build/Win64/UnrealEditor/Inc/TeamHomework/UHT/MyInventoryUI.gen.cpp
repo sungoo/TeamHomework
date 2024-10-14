@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyInventoryUI.h"
+#include "TeamHomework/UI/MyInventoryUI.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyInventoryUI() {}
 
@@ -28,7 +28,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_DropItem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -57,7 +57,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_SetTargetItem0_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -86,7 +86,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_SetTargetItem1_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -115,7 +115,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_SetTargetItem2_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -144,7 +144,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_SetTargetItem3_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -173,7 +173,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_SetTargetItem4_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -202,7 +202,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_SetTargetItem5_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -231,7 +231,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_SetTargetItem6_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -260,7 +260,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_SetTargetItem7_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -289,7 +289,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_SetTargetItem8_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -318,7 +318,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_ShowItem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -347,7 +347,7 @@ struct Z_Construct_UFunction_UMyInventoryUI_UseItem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -400,60 +400,60 @@ struct Z_Construct_UClass_UMyInventoryUI_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "MyInventoryUI.h" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "IncludePath", "UI/MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SlotGrid_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Button__MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Image__MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Item_texture_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Text_itemName_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DropButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UseButton_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__defaultTexture_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Texture" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__defaultText_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Texture" },
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__targetItem_MetaData[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__targetIndex_MetaData[] = {
-		{ "ModuleRelativePath", "MyInventoryUI.h" },
+		{ "ModuleRelativePath", "UI/MyInventoryUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SlotGrid;
@@ -472,18 +472,18 @@ struct Z_Construct_UClass_UMyInventoryUI_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMyInventoryUI_DropItem, "DropItem" }, // 896678160
-		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem0, "SetTargetItem0" }, // 3530609380
-		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem1, "SetTargetItem1" }, // 2420813776
-		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem2, "SetTargetItem2" }, // 3098026421
-		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem3, "SetTargetItem3" }, // 3052880004
-		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem4, "SetTargetItem4" }, // 1863150777
-		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem5, "SetTargetItem5" }, // 980330152
-		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem6, "SetTargetItem6" }, // 870156726
-		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem7, "SetTargetItem7" }, // 1885140482
-		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem8, "SetTargetItem8" }, // 1911323325
-		{ &Z_Construct_UFunction_UMyInventoryUI_ShowItem, "ShowItem" }, // 2646490832
-		{ &Z_Construct_UFunction_UMyInventoryUI_UseItem, "UseItem" }, // 1272042867
+		{ &Z_Construct_UFunction_UMyInventoryUI_DropItem, "DropItem" }, // 994341402
+		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem0, "SetTargetItem0" }, // 483589160
+		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem1, "SetTargetItem1" }, // 3907380257
+		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem2, "SetTargetItem2" }, // 1570945185
+		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem3, "SetTargetItem3" }, // 2867134284
+		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem4, "SetTargetItem4" }, // 2720120169
+		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem5, "SetTargetItem5" }, // 636557579
+		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem6, "SetTargetItem6" }, // 3307646732
+		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem7, "SetTargetItem7" }, // 3422524131
+		{ &Z_Construct_UFunction_UMyInventoryUI_SetTargetItem8, "SetTargetItem8" }, // 3029416301
+		{ &Z_Construct_UFunction_UMyInventoryUI_ShowItem, "ShowItem" }, // 939110591
+		{ &Z_Construct_UFunction_UMyInventoryUI_UseItem, "UseItem" }, // 1964895066
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -557,14 +557,14 @@ UMyInventoryUI::~UMyInventoryUI() {}
 // End Class UMyInventoryUI
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryUI_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_MyInventoryUI_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyInventoryUI, UMyInventoryUI::StaticClass, TEXT("UMyInventoryUI"), &Z_Registration_Info_UClass_UMyInventoryUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyInventoryUI), 136630763U) },
+		{ Z_Construct_UClass_UMyInventoryUI, UMyInventoryUI::StaticClass, TEXT("UMyInventoryUI"), &Z_Registration_Info_UClass_UMyInventoryUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyInventoryUI), 3386297702U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryUI_h_688981270(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryUI_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_MyInventoryUI_h_4043205551(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_MyInventoryUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_MyInventoryUI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

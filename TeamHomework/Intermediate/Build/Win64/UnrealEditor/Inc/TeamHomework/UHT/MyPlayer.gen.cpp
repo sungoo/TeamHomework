@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyPlayer.h"
+#include "TeamHomework/Characters/MyPlayer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyPlayer() {}
 
@@ -33,7 +33,7 @@ struct Z_Construct_UFunction_AMyPlayer_SetTargitItem_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//inventory func\n" },
 #endif
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "inventory func" },
 #endif
@@ -91,18 +91,18 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 		{ "Comment", "/**\n * \n */" },
 #endif
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "MyPlayer.h" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "IncludePath", "Characters/MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__tryGetItem_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__meetNPC_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__viewStore_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -110,7 +110,7 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//UI key\n" },
 #endif
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "UI key" },
 #endif
@@ -118,12 +118,12 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__inventoryOpen_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__UIopen_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__controller_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -131,13 +131,13 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Controller\n" },
 #endif
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Controller" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__item_MetaData[] = {
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__moveAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -145,7 +145,7 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Action\n" },
 #endif
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Action" },
 #endif
@@ -153,64 +153,64 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__turnAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__lookUpAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__jumpAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__attackAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__getItemAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__dropItemAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__viewInventoryAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__viewStoreAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__springArm_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "SpringArm" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__camera_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__damageToBoss_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__damagedByBoss_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
-		{ "ModuleRelativePath", "MyPlayer.h" },
+		{ "ModuleRelativePath", "Characters/MyPlayer.h" },
 	};
 #endif // WITH_METADATA
 	static void NewProp__tryGetItem_SetBit(void* Obj);
@@ -242,7 +242,7 @@ struct Z_Construct_UClass_AMyPlayer_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMyPlayer_SetTargitItem, "SetTargitItem" }, // 2964229375
+		{ &Z_Construct_UFunction_AMyPlayer_SetTargitItem, "SetTargitItem" }, // 900795045
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -354,14 +354,14 @@ AMyPlayer::~AMyPlayer() {}
 // End Class AMyPlayer
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyPlayer_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyPlayer, AMyPlayer::StaticClass, TEXT("AMyPlayer"), &Z_Registration_Info_UClass_AMyPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyPlayer), 1867793080U) },
+		{ Z_Construct_UClass_AMyPlayer, AMyPlayer::StaticClass, TEXT("AMyPlayer"), &Z_Registration_Info_UClass_AMyPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyPlayer), 3141076675U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_3638274021(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayer_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyPlayer_h_3235666460(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyPlayer_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

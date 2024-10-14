@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/PlayerSelectionUI.h"
+#include "TeamHomework/UI/PlayerSelectionUI.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePlayerSelectionUI() {}
 
@@ -22,7 +22,7 @@ struct Z_Construct_UFunction_UPlayerSelectionUI_OnArcherButtonClicked_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "PlayerSelectionUI.h" },
+		{ "ModuleRelativePath", "UI/PlayerSelectionUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -51,7 +51,7 @@ struct Z_Construct_UFunction_UPlayerSelectionUI_OnKnightButtonClicked_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "PlayerSelectionUI.h" },
+		{ "ModuleRelativePath", "UI/PlayerSelectionUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -97,21 +97,21 @@ struct Z_Construct_UClass_UPlayerSelectionUI_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "PlayerSelectionUI.h" },
-		{ "ModuleRelativePath", "PlayerSelectionUI.h" },
+		{ "IncludePath", "UI/PlayerSelectionUI.h" },
+		{ "ModuleRelativePath", "UI/PlayerSelectionUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SlotGrid_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "PlayerSelectionUI.h" },
+		{ "ModuleRelativePath", "UI/PlayerSelectionUI.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SlotGrid;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UPlayerSelectionUI_OnArcherButtonClicked, "OnArcherButtonClicked" }, // 1801481641
-		{ &Z_Construct_UFunction_UPlayerSelectionUI_OnKnightButtonClicked, "OnKnightButtonClicked" }, // 3738138775
+		{ &Z_Construct_UFunction_UPlayerSelectionUI_OnArcherButtonClicked, "OnArcherButtonClicked" }, // 2347243883
+		{ &Z_Construct_UFunction_UPlayerSelectionUI_OnKnightButtonClicked, "OnKnightButtonClicked" }, // 3870083623
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -162,14 +162,14 @@ UPlayerSelectionUI::~UPlayerSelectionUI() {}
 // End Class UPlayerSelectionUI
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_PlayerSelectionUI_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerSelectionUI, UPlayerSelectionUI::StaticClass, TEXT("UPlayerSelectionUI"), &Z_Registration_Info_UClass_UPlayerSelectionUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSelectionUI), 3670955558U) },
+		{ Z_Construct_UClass_UPlayerSelectionUI, UPlayerSelectionUI::StaticClass, TEXT("UPlayerSelectionUI"), &Z_Registration_Info_UClass_UPlayerSelectionUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerSelectionUI), 473407031U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_2737322445(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_PlayerSelectionUI_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_PlayerSelectionUI_h_4065750284(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_PlayerSelectionUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_PlayerSelectionUI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

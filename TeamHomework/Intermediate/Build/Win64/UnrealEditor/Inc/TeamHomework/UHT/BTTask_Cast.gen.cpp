@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/BTTask_Cast.h"
+#include "TeamHomework/Behaviors/BTTask_Cast.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBTTask_Cast() {}
 
@@ -32,8 +32,8 @@ struct Z_Construct_UClass_UBTTask_Cast_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "BTTask_Cast.h" },
-		{ "ModuleRelativePath", "BTTask_Cast.h" },
+		{ "IncludePath", "Behaviors/BTTask_Cast.h" },
+		{ "ModuleRelativePath", "Behaviors/BTTask_Cast.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -79,14 +79,14 @@ UBTTask_Cast::~UBTTask_Cast() {}
 // End Class UBTTask_Cast
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_Cast_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_Cast_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTTask_Cast, UBTTask_Cast::StaticClass, TEXT("UBTTask_Cast"), &Z_Registration_Info_UClass_UBTTask_Cast, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTTask_Cast), 2704013244U) },
+		{ Z_Construct_UClass_UBTTask_Cast, UBTTask_Cast::StaticClass, TEXT("UBTTask_Cast"), &Z_Registration_Info_UClass_UBTTask_Cast, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTTask_Cast), 1850515912U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_Cast_h_1073057422(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_Cast_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_Cast_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_Cast_h_356269886(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_Cast_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_Cast_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

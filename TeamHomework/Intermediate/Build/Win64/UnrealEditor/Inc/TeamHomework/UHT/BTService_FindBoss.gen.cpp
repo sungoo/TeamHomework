@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/BTService_FindBoss.h"
+#include "TeamHomework/Behaviors/BTService_FindBoss.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBTService_FindBoss() {}
 
@@ -32,8 +32,8 @@ struct Z_Construct_UClass_UBTService_FindBoss_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "BTService_FindBoss.h" },
-		{ "ModuleRelativePath", "BTService_FindBoss.h" },
+		{ "IncludePath", "Behaviors/BTService_FindBoss.h" },
+		{ "ModuleRelativePath", "Behaviors/BTService_FindBoss.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -79,14 +79,14 @@ UBTService_FindBoss::~UBTService_FindBoss() {}
 // End Class UBTService_FindBoss
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTService_FindBoss_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTService_FindBoss_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTService_FindBoss, UBTService_FindBoss::StaticClass, TEXT("UBTService_FindBoss"), &Z_Registration_Info_UClass_UBTService_FindBoss, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTService_FindBoss), 979054727U) },
+		{ Z_Construct_UClass_UBTService_FindBoss, UBTService_FindBoss::StaticClass, TEXT("UBTService_FindBoss"), &Z_Registration_Info_UClass_UBTService_FindBoss, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTService_FindBoss), 4098997397U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTService_FindBoss_h_1177441747(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTService_FindBoss_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTService_FindBoss_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTService_FindBoss_h_89647704(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTService_FindBoss_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTService_FindBoss_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

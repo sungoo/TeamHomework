@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/BTTask_RunAway.h"
+#include "TeamHomework/Behaviors/BTTask_RunAway.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBTTask_RunAway() {}
 
@@ -32,15 +32,15 @@ struct Z_Construct_UClass_UBTTask_RunAway_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "BTTask_RunAway.h" },
-		{ "ModuleRelativePath", "BTTask_RunAway.h" },
+		{ "IncludePath", "Behaviors/BTTask_RunAway.h" },
+		{ "ModuleRelativePath", "Behaviors/BTTask_RunAway.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_runDistance_MetaData[] = {
 		{ "Category", "RunAway" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/** Distance to run away from the boss */" },
 #endif
-		{ "ModuleRelativePath", "BTTask_RunAway.h" },
+		{ "ModuleRelativePath", "Behaviors/BTTask_RunAway.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Distance to run away from the boss" },
 #endif
@@ -96,14 +96,14 @@ UBTTask_RunAway::~UBTTask_RunAway() {}
 // End Class UBTTask_RunAway
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_RunAway_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_RunAway_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTTask_RunAway, UBTTask_RunAway::StaticClass, TEXT("UBTTask_RunAway"), &Z_Registration_Info_UClass_UBTTask_RunAway, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTTask_RunAway), 3671665887U) },
+		{ Z_Construct_UClass_UBTTask_RunAway, UBTTask_RunAway::StaticClass, TEXT("UBTTask_RunAway"), &Z_Registration_Info_UClass_UBTTask_RunAway, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTTask_RunAway), 540590983U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_RunAway_h_3938377086(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_RunAway_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_RunAway_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_RunAway_h_3493870001(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_RunAway_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_RunAway_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

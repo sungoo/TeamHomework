@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/BTDeco_IsBossDead.h"
+#include "TeamHomework/Behaviors/BTDeco_IsBossDead.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBTDeco_IsBossDead() {}
 
@@ -32,8 +32,8 @@ struct Z_Construct_UClass_UBTDeco_IsBossDead_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "BTDeco_IsBossDead.h" },
-		{ "ModuleRelativePath", "BTDeco_IsBossDead.h" },
+		{ "IncludePath", "Behaviors/BTDeco_IsBossDead.h" },
+		{ "ModuleRelativePath", "Behaviors/BTDeco_IsBossDead.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -79,14 +79,14 @@ UBTDeco_IsBossDead::~UBTDeco_IsBossDead() {}
 // End Class UBTDeco_IsBossDead
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_IsBossDead_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTDeco_IsBossDead_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTDeco_IsBossDead, UBTDeco_IsBossDead::StaticClass, TEXT("UBTDeco_IsBossDead"), &Z_Registration_Info_UClass_UBTDeco_IsBossDead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTDeco_IsBossDead), 3434163411U) },
+		{ Z_Construct_UClass_UBTDeco_IsBossDead, UBTDeco_IsBossDead::StaticClass, TEXT("UBTDeco_IsBossDead"), &Z_Registration_Info_UClass_UBTDeco_IsBossDead, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTDeco_IsBossDead), 3825148536U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_IsBossDead_h_2630916269(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_IsBossDead_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_IsBossDead_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTDeco_IsBossDead_h_41260856(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTDeco_IsBossDead_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTDeco_IsBossDead_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

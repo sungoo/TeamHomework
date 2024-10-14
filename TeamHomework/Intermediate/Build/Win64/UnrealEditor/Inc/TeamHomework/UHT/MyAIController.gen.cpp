@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyAIController.h"
+#include "TeamHomework/Behaviors/MyAIController.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyAIController() {}
 
@@ -35,18 +35,18 @@ struct Z_Construct_UClass_AMyAIController_Statics
 		{ "Comment", "/**\n * \n */" },
 #endif
 		{ "HideCategories", "Collision Rendering Transformation" },
-		{ "IncludePath", "MyAIController.h" },
-		{ "ModuleRelativePath", "MyAIController.h" },
+		{ "IncludePath", "Behaviors/MyAIController.h" },
+		{ "ModuleRelativePath", "Behaviors/MyAIController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__bd_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "AI" },
-		{ "ModuleRelativePath", "MyAIController.h" },
+		{ "ModuleRelativePath", "Behaviors/MyAIController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__bt_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "AI" },
-		{ "ModuleRelativePath", "MyAIController.h" },
+		{ "ModuleRelativePath", "Behaviors/MyAIController.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__bd;
@@ -102,14 +102,14 @@ AMyAIController::~AMyAIController() {}
 // End Class AMyAIController
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAIController_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_MyAIController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyAIController, AMyAIController::StaticClass, TEXT("AMyAIController"), &Z_Registration_Info_UClass_AMyAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyAIController), 2547386086U) },
+		{ Z_Construct_UClass_AMyAIController, AMyAIController::StaticClass, TEXT("AMyAIController"), &Z_Registration_Info_UClass_AMyAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyAIController), 4001165418U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAIController_h_3082583029(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAIController_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_MyAIController_h_4191885949(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_MyAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_MyAIController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

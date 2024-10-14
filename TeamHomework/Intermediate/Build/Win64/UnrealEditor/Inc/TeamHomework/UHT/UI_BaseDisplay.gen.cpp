@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/UI_BaseDisplay.h"
+#include "TeamHomework/UI/UI_BaseDisplay.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUI_BaseDisplay() {}
 
@@ -33,13 +33,13 @@ struct Z_Construct_UClass_UUI_BaseDisplay_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "UI_BaseDisplay.h" },
-		{ "ModuleRelativePath", "UI_BaseDisplay.h" },
+		{ "IncludePath", "UI/UI_BaseDisplay.h" },
+		{ "ModuleRelativePath", "UI/UI_BaseDisplay.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GoldValue_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "UI_BaseDisplay.h" },
+		{ "ModuleRelativePath", "UI/UI_BaseDisplay.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_GoldValue;
@@ -93,14 +93,14 @@ UUI_BaseDisplay::~UUI_BaseDisplay() {}
 // End Class UUI_BaseDisplay
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_BaseDisplay_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UUI_BaseDisplay, UUI_BaseDisplay::StaticClass, TEXT("UUI_BaseDisplay"), &Z_Registration_Info_UClass_UUI_BaseDisplay, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_BaseDisplay), 3519746381U) },
+		{ Z_Construct_UClass_UUI_BaseDisplay, UUI_BaseDisplay::StaticClass, TEXT("UUI_BaseDisplay"), &Z_Registration_Info_UClass_UUI_BaseDisplay, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUI_BaseDisplay), 2181666284U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_1932449409(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_BaseDisplay_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_BaseDisplay_h_3967165009(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_BaseDisplay_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_UI_BaseDisplay_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

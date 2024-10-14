@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyStatComponent.h"
+#include "TeamHomework/ActorComponents/MyStatComponent.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyStatComponent() {}
 
@@ -37,27 +37,27 @@ struct Z_Construct_UScriptStruct_FMyStatData_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_level_MetaData[] = {
 		{ "Category", "MyStatData" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_maxHp_MetaData[] = {
 		{ "Category", "MyStatData" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_attack_MetaData[] = {
 		{ "Category", "MyStatData" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_speed_MetaData[] = {
 		{ "Category", "MyStatData" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_gold_MetaData[] = {
 		{ "Category", "MyStatData" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_level;
@@ -123,38 +123,38 @@ struct Z_Construct_UClass_UMyStatComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
-		{ "IncludePath", "MyStatComponent.h" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "IncludePath", "ActorComponents/MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__curhp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__maxhp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__atk_default_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__atk_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__speed_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__gold_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Stat" },
-		{ "ModuleRelativePath", "MyStatComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyStatComponent.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp__curhp;
@@ -222,18 +222,18 @@ UMyStatComponent::~UMyStatComponent() {}
 // End Class UMyStatComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyStatComponent_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FMyStatData::StaticStruct, Z_Construct_UScriptStruct_FMyStatData_Statics::NewStructOps, TEXT("MyStatData"), &Z_Registration_Info_UScriptStruct_MyStatData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMyStatData), 2299387794U) },
+		{ FMyStatData::StaticStruct, Z_Construct_UScriptStruct_FMyStatData_Statics::NewStructOps, TEXT("MyStatData"), &Z_Registration_Info_UScriptStruct_MyStatData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMyStatData), 139248462U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyStatComponent, UMyStatComponent::StaticClass, TEXT("UMyStatComponent"), &Z_Registration_Info_UClass_UMyStatComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyStatComponent), 1203102951U) },
+		{ Z_Construct_UClass_UMyStatComponent, UMyStatComponent::StaticClass, TEXT("UMyStatComponent"), &Z_Registration_Info_UClass_UMyStatComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyStatComponent), 3616102369U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_2138744851(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStatComponent_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyStatComponent_h_2538900377(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyStatComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyStatComponent_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyStatComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyStatComponent_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

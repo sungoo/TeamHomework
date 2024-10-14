@@ -33,258 +33,6 @@
     <Filter Include="Source\TeamHomework">
       <UniqueIdentifier>{F9F502D8-4D5E-3C58-BFA4-22D2455EEEFC}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\TeamHomework\Archer.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\Archer.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BossMonster.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BossMonster.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTDeco_CanAttack.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTDeco_CanAttack.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTDeco_IsBossDead.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTDeco_IsBossDead.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTDeco_IsDamagedByBoss.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTDeco_IsDamagedByBoss.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTDeco_State0.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTDeco_State0.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTDeco_TargetIsTooFar.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTDeco_TargetIsTooFar.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTService_FindBoss.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTService_FindBoss.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTService_FindTarget.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTService_FindTarget.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTService_PrimeSetting.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTService_PrimeSetting.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTTask_AggroAttack.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTTask_AggroAttack.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTTask_Attack.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTTask_Attack.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTTask_Cast.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTTask_Cast.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTTask_GotoNextState.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTTask_GotoNextState.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTTask_RunAway.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTTask_RunAway.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTTask_SetRandomPos.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTTask_SetRandomPos.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTTask_SetRandomState.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTTask_SetRandomState.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTTask_SetTarget.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTTask_SetTarget.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\BTTask_SetTargetPos.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\BTTask_SetTargetPos.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\Creature.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\Creature.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\Effect.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\Effect.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\Knight.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\Knight.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyAIController.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyAIController.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyAnimInstance.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyAnimInstance.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyGameInstance.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyGameInstance.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyGameModeBase.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyGameModeBase.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyHpBar.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyHpBar.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyInventoryComponent.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyInventoryComponent.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyInventoryUI.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyInventoryUI.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyItem.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyItem.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyMonster.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyMonster.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyNPC.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyNPC.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyNPCUI.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyNPCUI.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyPlayer.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyPlayer.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyPlayerController.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyPlayerController.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyPlayerManager.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyPlayerManager.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyStatComponent.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyStatComponent.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyStoreComponent.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyStoreComponent.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyStoreUI.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyStoreUI.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\MyUIManager.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\MyUIManager.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\PlayerSelectionUI.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\PlayerSelectionUI.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\SoundManager.cpp">
-      <Filter>Source\TeamHomework</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\SoundManager.h">
-      <Filter>Source\TeamHomework</Filter>
-    </ClInclude>
     <None Include="..\..\Source\TeamHomework\TeamHomework.Build.cs">
       <Filter>Source\TeamHomework</Filter>
     </None>
@@ -294,35 +42,311 @@
     <ClInclude Include="..\..\Source\TeamHomework\TeamHomework.h">
       <Filter>Source\TeamHomework</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\UI_AggroInfo.cpp">
-      <Filter>Source\TeamHomework</Filter>
+    <Filter Include="Source\TeamHomework\ActorComponents">
+      <UniqueIdentifier>{07035150-035C-35E3-BB21-139D5ECEA149}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\ActorComponents\MyInventoryComponent.cpp">
+      <Filter>Source\TeamHomework\ActorComponents</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\UI_AggroInfo.h">
-      <Filter>Source\TeamHomework</Filter>
+    <ClInclude Include="..\..\Source\TeamHomework\ActorComponents\MyInventoryComponent.h">
+      <Filter>Source\TeamHomework\ActorComponents</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\UI_BaseDisplay.cpp">
-      <Filter>Source\TeamHomework</Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\ActorComponents\MyPlayerController.cpp">
+      <Filter>Source\TeamHomework\ActorComponents</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\UI_BaseDisplay.h">
-      <Filter>Source\TeamHomework</Filter>
+    <ClInclude Include="..\..\Source\TeamHomework\ActorComponents\MyPlayerController.h">
+      <Filter>Source\TeamHomework\ActorComponents</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\UI_E_MyButton.cpp">
-      <Filter>Source\TeamHomework</Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\ActorComponents\MyStatComponent.cpp">
+      <Filter>Source\TeamHomework\ActorComponents</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\UI_E_MyButton.h">
-      <Filter>Source\TeamHomework</Filter>
+    <ClInclude Include="..\..\Source\TeamHomework\ActorComponents\MyStatComponent.h">
+      <Filter>Source\TeamHomework\ActorComponents</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\UI_StatUp.cpp">
-      <Filter>Source\TeamHomework</Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\ActorComponents\MyStoreComponent.cpp">
+      <Filter>Source\TeamHomework\ActorComponents</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\UI_StatUp.h">
-      <Filter>Source\TeamHomework</Filter>
+    <ClInclude Include="..\..\Source\TeamHomework\ActorComponents\MyStoreComponent.h">
+      <Filter>Source\TeamHomework\ActorComponents</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\TeamHomework\VFX_Manager.cpp">
-      <Filter>Source\TeamHomework</Filter>
+    <Filter Include="Source\TeamHomework\Animation">
+      <UniqueIdentifier>{A879D49F-C293-3B1F-AACF-A758716F710C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\Animation\MyAnimInstance.cpp">
+      <Filter>Source\TeamHomework\Animation</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\TeamHomework\VFX_Manager.h">
-      <Filter>Source\TeamHomework</Filter>
+    <ClInclude Include="..\..\Source\TeamHomework\Animation\MyAnimInstance.h">
+      <Filter>Source\TeamHomework\Animation</Filter>
+    </ClInclude>
+    <Filter Include="Source\TeamHomework\Base">
+      <UniqueIdentifier>{F11B966E-0F52-390D-B3F5-98BC626D34B3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\Base\MyGameInstance.cpp">
+      <Filter>Source\TeamHomework\Base</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Base\MyGameInstance.h">
+      <Filter>Source\TeamHomework\Base</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Base\MyGameModeBase.cpp">
+      <Filter>Source\TeamHomework\Base</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Base\MyGameModeBase.h">
+      <Filter>Source\TeamHomework\Base</Filter>
+    </ClInclude>
+    <Filter Include="Source\TeamHomework\Behaviors">
+      <UniqueIdentifier>{E577D24A-9849-36DF-8F34-CA595FB79818}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTDeco_CanAttack.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTDeco_CanAttack.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTDeco_IsBossDead.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTDeco_IsBossDead.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTDeco_IsDamagedByBoss.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTDeco_IsDamagedByBoss.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTDeco_State0.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTDeco_State0.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTDeco_TargetIsTooFar.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTDeco_TargetIsTooFar.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTService_FindBoss.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTService_FindBoss.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTService_FindTarget.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTService_FindTarget.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTService_PrimeSetting.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTService_PrimeSetting.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTTask_AggroAttack.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTTask_AggroAttack.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTTask_Attack.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTTask_Attack.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTTask_Cast.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTTask_Cast.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTTask_GotoNextState.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTTask_GotoNextState.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTTask_RunAway.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTTask_RunAway.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTTask_SetRandomPos.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTTask_SetRandomPos.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTTask_SetRandomState.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTTask_SetRandomState.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTTask_SetTarget.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTTask_SetTarget.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\BTTask_SetTargetPos.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\BTTask_SetTargetPos.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Behaviors\MyAIController.cpp">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Behaviors\MyAIController.h">
+      <Filter>Source\TeamHomework\Behaviors</Filter>
+    </ClInclude>
+    <Filter Include="Source\TeamHomework\Characters">
+      <UniqueIdentifier>{7B2E33A5-318B-38A6-865E-265D15F208E4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\Characters\Archer.cpp">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Characters\Archer.h">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Characters\BossMonster.cpp">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Characters\BossMonster.h">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Characters\Creature.cpp">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Characters\Creature.h">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Characters\Knight.cpp">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Characters\Knight.h">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Characters\MyMonster.cpp">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Characters\MyMonster.h">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Characters\MyNPC.cpp">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Characters\MyNPC.h">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Characters\MyPlayer.cpp">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Characters\MyPlayer.h">
+      <Filter>Source\TeamHomework\Characters</Filter>
+    </ClInclude>
+    <Filter Include="Source\TeamHomework\Item">
+      <UniqueIdentifier>{2B7B0D81-7F4B-3B0B-A10D-0852888C411A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\Item\MyItem.cpp">
+      <Filter>Source\TeamHomework\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Item\MyItem.h">
+      <Filter>Source\TeamHomework\Item</Filter>
+    </ClInclude>
+    <Filter Include="Source\TeamHomework\Managers">
+      <UniqueIdentifier>{A86F8D19-80E1-3F5B-A5E4-9EAAD4127143}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\Managers\Effect.cpp">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Managers\Effect.h">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Managers\MyPlayerManager.cpp">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Managers\MyPlayerManager.h">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Managers\MyUIManager.cpp">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Managers\MyUIManager.h">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Managers\SoundManager.cpp">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Managers\SoundManager.h">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\Managers\VFX_Manager.cpp">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\Managers\VFX_Manager.h">
+      <Filter>Source\TeamHomework\Managers</Filter>
+    </ClInclude>
+    <Filter Include="Source\TeamHomework\UI">
+      <UniqueIdentifier>{0BCFEDDD-620E-398F-9D74-D16A01474142}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TeamHomework\UI\MyHpBar.cpp">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI\MyHpBar.h">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI\MyInventoryUI.cpp">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI\MyInventoryUI.h">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI\MyNPCUI.cpp">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI\MyNPCUI.h">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI\MyStoreUI.cpp">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI\MyStoreUI.h">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI\PlayerSelectionUI.cpp">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI\PlayerSelectionUI.h">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI\UI_AggroInfo.cpp">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI\UI_AggroInfo.h">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI\UI_BaseDisplay.cpp">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI\UI_BaseDisplay.h">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI\UI_E_MyButton.cpp">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI\UI_E_MyButton.h">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TeamHomework\UI\UI_StatUp.cpp">
+      <Filter>Source\TeamHomework\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TeamHomework\UI\UI_StatUp.h">
+      <Filter>Source\TeamHomework\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

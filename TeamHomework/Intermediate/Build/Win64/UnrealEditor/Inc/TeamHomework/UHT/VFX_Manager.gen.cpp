@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/VFX_Manager.h"
+#include "TeamHomework/Managers/VFX_Manager.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeVFX_Manager() {}
 
@@ -32,15 +32,15 @@ struct Z_Construct_UClass_AVFX_Manager_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "VFX_Manager.h" },
-		{ "ModuleRelativePath", "VFX_Manager.h" },
+		{ "IncludePath", "Managers/VFX_Manager.h" },
+		{ "ModuleRelativePath", "Managers/VFX_Manager.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__classTable_MetaData[] = {
-		{ "ModuleRelativePath", "VFX_Manager.h" },
+		{ "ModuleRelativePath", "Managers/VFX_Manager.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__rootComponent_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "VFX_Manager.h" },
+		{ "ModuleRelativePath", "Managers/VFX_Manager.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp__classTable_ValueProp;
@@ -102,14 +102,14 @@ AVFX_Manager::~AVFX_Manager() {}
 // End Class AVFX_Manager
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_VFX_Manager_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_VFX_Manager_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AVFX_Manager, AVFX_Manager::StaticClass, TEXT("AVFX_Manager"), &Z_Registration_Info_UClass_AVFX_Manager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AVFX_Manager), 1215213273U) },
+		{ Z_Construct_UClass_AVFX_Manager, AVFX_Manager::StaticClass, TEXT("AVFX_Manager"), &Z_Registration_Info_UClass_AVFX_Manager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AVFX_Manager), 3064461318U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_VFX_Manager_h_2533992499(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_VFX_Manager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_VFX_Manager_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_VFX_Manager_h_2786508124(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_VFX_Manager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_VFX_Manager_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

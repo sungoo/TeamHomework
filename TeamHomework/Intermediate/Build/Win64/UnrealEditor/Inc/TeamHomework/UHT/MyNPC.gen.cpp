@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyNPC.h"
+#include "TeamHomework/Characters/MyNPC.h"
 #include "Runtime/Engine/Classes/Engine/HitResult.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyNPC() {}
@@ -28,7 +28,7 @@ struct Z_Construct_UFunction_AMyNPC_CharacterOverlapped_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyNPC.h" },
+		{ "ModuleRelativePath", "Characters/MyNPC.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -66,7 +66,7 @@ struct Z_Construct_UFunction_AMyNPC_OnMyCharacterOverlap_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyNPC.h" },
+		{ "ModuleRelativePath", "Characters/MyNPC.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OverlappedComponent_MetaData[] = {
 		{ "EditInline", "true" },
@@ -145,7 +145,7 @@ struct Z_Construct_UFunction_AMyNPC_OnMyCharacterOverlapEnd_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyNPC.h" },
+		{ "ModuleRelativePath", "Characters/MyNPC.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OverlappedComponent_MetaData[] = {
 		{ "EditInline", "true" },
@@ -220,25 +220,25 @@ struct Z_Construct_UClass_AMyNPC_Statics
 		{ "Comment", "/**\n * \n */" },
 #endif
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "MyNPC.h" },
-		{ "ModuleRelativePath", "MyNPC.h" },
+		{ "IncludePath", "Characters/MyNPC.h" },
+		{ "ModuleRelativePath", "Characters/MyNPC.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__trigger_MetaData[] = {
 		{ "Category", "MyNPC" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyNPC.h" },
+		{ "ModuleRelativePath", "Characters/MyNPC.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isOverlapped_MetaData[] = {
-		{ "ModuleRelativePath", "MyNPC.h" },
+		{ "ModuleRelativePath", "Characters/MyNPC.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__player_MetaData[] = {
-		{ "ModuleRelativePath", "MyNPC.h" },
+		{ "ModuleRelativePath", "Characters/MyNPC.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__npcUI_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "UI" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyNPC.h" },
+		{ "ModuleRelativePath", "Characters/MyNPC.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__trigger;
@@ -249,9 +249,9 @@ struct Z_Construct_UClass_AMyNPC_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMyNPC_CharacterOverlapped, "CharacterOverlapped" }, // 2498658877
-		{ &Z_Construct_UFunction_AMyNPC_OnMyCharacterOverlap, "OnMyCharacterOverlap" }, // 1769164515
-		{ &Z_Construct_UFunction_AMyNPC_OnMyCharacterOverlapEnd, "OnMyCharacterOverlapEnd" }, // 3239893020
+		{ &Z_Construct_UFunction_AMyNPC_CharacterOverlapped, "CharacterOverlapped" }, // 3484533010
+		{ &Z_Construct_UFunction_AMyNPC_OnMyCharacterOverlap, "OnMyCharacterOverlap" }, // 962287969
+		{ &Z_Construct_UFunction_AMyNPC_OnMyCharacterOverlapEnd, "OnMyCharacterOverlapEnd" }, // 1970656173
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -311,14 +311,14 @@ AMyNPC::~AMyNPC() {}
 // End Class AMyNPC
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyNPC_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyNPC, AMyNPC::StaticClass, TEXT("AMyNPC"), &Z_Registration_Info_UClass_AMyNPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyNPC), 1244620730U) },
+		{ Z_Construct_UClass_AMyNPC, AMyNPC::StaticClass, TEXT("AMyNPC"), &Z_Registration_Info_UClass_AMyNPC, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyNPC), 1064162472U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_3427651835(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyNPC_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyNPC_h_2162235598(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyNPC_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyNPC_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

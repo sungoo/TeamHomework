@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyMonster.h"
+#include "TeamHomework/Characters/MyMonster.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyMonster() {}
 
@@ -34,19 +34,19 @@ struct Z_Construct_UClass_AMyMonster_Statics
 		{ "Comment", "/**\n * \n */" },
 #endif
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "MyMonster.h" },
-		{ "ModuleRelativePath", "MyMonster.h" },
+		{ "IncludePath", "Characters/MyMonster.h" },
+		{ "ModuleRelativePath", "Characters/MyMonster.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isDead_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "MyMonster.h" },
+		{ "ModuleRelativePath", "Characters/MyMonster.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__statUpWidget_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "UI" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyMonster.h" },
+		{ "ModuleRelativePath", "Characters/MyMonster.h" },
 	};
 #endif // WITH_METADATA
 	static void NewProp__isDead_SetBit(void* Obj);
@@ -107,14 +107,14 @@ AMyMonster::~AMyMonster() {}
 // End Class AMyMonster
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyMonster_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyMonster_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyMonster, AMyMonster::StaticClass, TEXT("AMyMonster"), &Z_Registration_Info_UClass_AMyMonster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyMonster), 2948879875U) },
+		{ Z_Construct_UClass_AMyMonster, AMyMonster::StaticClass, TEXT("AMyMonster"), &Z_Registration_Info_UClass_AMyMonster, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyMonster), 3946539510U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyMonster_h_1313390117(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyMonster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyMonster_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyMonster_h_3953230221(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyMonster_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_MyMonster_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

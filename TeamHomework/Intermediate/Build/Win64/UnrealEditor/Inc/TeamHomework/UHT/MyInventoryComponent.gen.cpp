@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyInventoryComponent.h"
+#include "TeamHomework/ActorComponents/MyInventoryComponent.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyInventoryComponent() {}
 
@@ -27,7 +27,7 @@ struct Z_Construct_UFunction_UMyInventoryComponent_DropItemOfSlot_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyInventoryComponent.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_slotNum;
@@ -69,7 +69,7 @@ struct Z_Construct_UFunction_UMyInventoryComponent_UseItemOfSlot_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyInventoryComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyInventoryComponent.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_slotNum;
@@ -123,29 +123,29 @@ struct Z_Construct_UClass_UMyInventoryComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
-		{ "IncludePath", "MyInventoryComponent.h" },
-		{ "ModuleRelativePath", "MyInventoryComponent.h" },
+		{ "IncludePath", "ActorComponents/MyInventoryComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyInventoryComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__gold_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Inventory" },
-		{ "ModuleRelativePath", "MyInventoryComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyInventoryComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__items_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Inventory" },
-		{ "ModuleRelativePath", "MyInventoryComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyInventoryComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__inventoryMax_MetaData[] = {
-		{ "ModuleRelativePath", "MyInventoryComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyInventoryComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__emptySlots_MetaData[] = {
-		{ "ModuleRelativePath", "MyInventoryComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyInventoryComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__defaultTexture_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Texture" },
-		{ "ModuleRelativePath", "MyInventoryComponent.h" },
+		{ "ModuleRelativePath", "ActorComponents/MyInventoryComponent.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp__gold;
@@ -158,8 +158,8 @@ struct Z_Construct_UClass_UMyInventoryComponent_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMyInventoryComponent_DropItemOfSlot, "DropItemOfSlot" }, // 3460407115
-		{ &Z_Construct_UFunction_UMyInventoryComponent_UseItemOfSlot, "UseItemOfSlot" }, // 2590831797
+		{ &Z_Construct_UFunction_UMyInventoryComponent_DropItemOfSlot, "DropItemOfSlot" }, // 139871126
+		{ &Z_Construct_UFunction_UMyInventoryComponent_UseItemOfSlot, "UseItemOfSlot" }, // 1311716784
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -221,14 +221,14 @@ UMyInventoryComponent::~UMyInventoryComponent() {}
 // End Class UMyInventoryComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyInventoryComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyInventoryComponent, UMyInventoryComponent::StaticClass, TEXT("UMyInventoryComponent"), &Z_Registration_Info_UClass_UMyInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyInventoryComponent), 3969170944U) },
+		{ Z_Construct_UClass_UMyInventoryComponent, UMyInventoryComponent::StaticClass, TEXT("UMyInventoryComponent"), &Z_Registration_Info_UClass_UMyInventoryComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyInventoryComponent), 3716732132U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_2945630092(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyInventoryComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyInventoryComponent_h_1662822511(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyInventoryComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_ActorComponents_MyInventoryComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

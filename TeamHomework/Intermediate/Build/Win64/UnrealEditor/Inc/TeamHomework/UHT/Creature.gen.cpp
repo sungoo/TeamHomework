@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/Creature.h"
+#include "TeamHomework/Characters/Creature.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCreature() {}
 
@@ -30,7 +30,7 @@ struct Z_Construct_UDelegateFunction_TeamHomework_Delegate_AttackHitEvent__Deleg
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -56,7 +56,7 @@ struct Z_Construct_UDelegateFunction_TeamHomework_Delegate_Death__DelegateSignat
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -82,7 +82,7 @@ struct Z_Construct_UFunction_ACreature_AI_Attack_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -111,7 +111,7 @@ struct Z_Construct_UFunction_ACreature_Disable_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -148,7 +148,7 @@ struct Z_Construct_UFunction_ACreature_OnAttackEnded_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Attack function\n" },
 #endif
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Attack function" },
 #endif
@@ -198,7 +198,7 @@ struct Z_Construct_UFunction_ACreature_Unpossess_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -244,18 +244,18 @@ struct Z_Construct_UClass_ACreature_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "Creature.h" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "IncludePath", "Characters/Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__attackHitEventDelegate_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Event" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__deathEventDelegate_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Event" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isActive_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -263,7 +263,7 @@ struct Z_Construct_UClass_ACreature_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//keys\n" },
 #endif
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "keys" },
 #endif
@@ -271,27 +271,27 @@ struct Z_Construct_UClass_ACreature_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isAttacking_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__vertical_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__horizontal_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__height_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__curAttackIndex_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__hitPoint_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -299,7 +299,7 @@ struct Z_Construct_UClass_ACreature_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//AttackHitPoint\n" },
 #endif
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "AttackHitPoint" },
 #endif
@@ -310,7 +310,7 @@ struct Z_Construct_UClass_ACreature_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Animation\n" },
 #endif
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Animation" },
 #endif
@@ -322,7 +322,7 @@ struct Z_Construct_UClass_ACreature_Statics
 		{ "Comment", "//Componenets\n" },
 #endif
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Componenets" },
 #endif
@@ -331,18 +331,18 @@ struct Z_Construct_UClass_ACreature_Statics
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Item" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__hpBarWidget_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "UI" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__aiController_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "AI" },
-		{ "ModuleRelativePath", "Creature.h" },
+		{ "ModuleRelativePath", "Characters/Creature.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp__attackHitEventDelegate;
@@ -364,10 +364,10 @@ struct Z_Construct_UClass_ACreature_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACreature_AI_Attack, "AI_Attack" }, // 3458764608
-		{ &Z_Construct_UFunction_ACreature_Disable, "Disable" }, // 3573987638
-		{ &Z_Construct_UFunction_ACreature_OnAttackEnded, "OnAttackEnded" }, // 2246755119
-		{ &Z_Construct_UFunction_ACreature_Unpossess, "Unpossess" }, // 694565750
+		{ &Z_Construct_UFunction_ACreature_AI_Attack, "AI_Attack" }, // 2396750040
+		{ &Z_Construct_UFunction_ACreature_Disable, "Disable" }, // 3714210934
+		{ &Z_Construct_UFunction_ACreature_OnAttackEnded, "OnAttackEnded" }, // 3173668635
+		{ &Z_Construct_UFunction_ACreature_Unpossess, "Unpossess" }, // 2744602532
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -375,8 +375,8 @@ struct Z_Construct_UClass_ACreature_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__attackHitEventDelegate = { "_attackHitEventDelegate", nullptr, (EPropertyFlags)0x0010000010080001, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _attackHitEventDelegate), Z_Construct_UDelegateFunction_TeamHomework_Delegate_AttackHitEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__attackHitEventDelegate_MetaData), NewProp__attackHitEventDelegate_MetaData) }; // 1263113971
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__deathEventDelegate = { "_deathEventDelegate", nullptr, (EPropertyFlags)0x0010000010080001, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _deathEventDelegate), Z_Construct_UDelegateFunction_TeamHomework_Delegate_Death__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__deathEventDelegate_MetaData), NewProp__deathEventDelegate_MetaData) }; // 2614288937
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__attackHitEventDelegate = { "_attackHitEventDelegate", nullptr, (EPropertyFlags)0x0010000010080001, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _attackHitEventDelegate), Z_Construct_UDelegateFunction_TeamHomework_Delegate_AttackHitEvent__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__attackHitEventDelegate_MetaData), NewProp__attackHitEventDelegate_MetaData) }; // 1355034677
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ACreature_Statics::NewProp__deathEventDelegate = { "_deathEventDelegate", nullptr, (EPropertyFlags)0x0010000010080001, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACreature, _deathEventDelegate), Z_Construct_UDelegateFunction_TeamHomework_Delegate_Death__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp__deathEventDelegate_MetaData), NewProp__deathEventDelegate_MetaData) }; // 1153652102
 void Z_Construct_UClass_ACreature_Statics::NewProp__isActive_SetBit(void* Obj)
 {
 	((ACreature*)Obj)->_isActive = 1;
@@ -451,14 +451,14 @@ ACreature::~ACreature() {}
 // End Class ACreature
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_Creature_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 4078706423U) },
+		{ Z_Construct_UClass_ACreature, ACreature::StaticClass, TEXT("ACreature"), &Z_Registration_Info_UClass_ACreature, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACreature), 2937895016U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_3672766725(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Creature_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_Creature_h_4023026048(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_Creature_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Characters_Creature_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

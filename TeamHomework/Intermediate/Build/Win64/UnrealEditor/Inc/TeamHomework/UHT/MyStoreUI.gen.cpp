@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyStoreUI.h"
+#include "TeamHomework/UI/MyStoreUI.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyStoreUI() {}
 
@@ -32,11 +32,11 @@ struct Z_Construct_UClass_UMyStoreUI_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "MyStoreUI.h" },
-		{ "ModuleRelativePath", "MyStoreUI.h" },
+		{ "IncludePath", "UI/MyStoreUI.h" },
+		{ "ModuleRelativePath", "UI/MyStoreUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isVisible_MetaData[] = {
-		{ "ModuleRelativePath", "MyStoreUI.h" },
+		{ "ModuleRelativePath", "UI/MyStoreUI.h" },
 	};
 #endif // WITH_METADATA
 	static void NewProp__isVisible_SetBit(void* Obj);
@@ -95,14 +95,14 @@ UMyStoreUI::~UMyStoreUI() {}
 // End Class UMyStoreUI
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_MyStoreUI_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyStoreUI, UMyStoreUI::StaticClass, TEXT("UMyStoreUI"), &Z_Registration_Info_UClass_UMyStoreUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyStoreUI), 1136835563U) },
+		{ Z_Construct_UClass_UMyStoreUI, UMyStoreUI::StaticClass, TEXT("UMyStoreUI"), &Z_Registration_Info_UClass_UMyStoreUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyStoreUI), 2723749897U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_4117534206(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyStoreUI_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_MyStoreUI_h_3651282563(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_MyStoreUI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_UI_MyStoreUI_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

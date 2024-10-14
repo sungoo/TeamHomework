@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyPlayerManager.h"
+#include "TeamHomework/Managers/MyPlayerManager.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyPlayerManager() {}
 
@@ -40,7 +40,7 @@ struct Z_Construct_UEnum_TeamHomework_EPlayerType_Statics
 		{ "BlueprintType", "true" },
 		{ "Knight.DisplayName", "Knight" },
 		{ "Knight.Name", "EPlayerType::Knight" },
-		{ "ModuleRelativePath", "MyPlayerManager.h" },
+		{ "ModuleRelativePath", "Managers/MyPlayerManager.h" },
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
@@ -84,8 +84,8 @@ struct Z_Construct_UClass_AMyPlayerManager_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "MyPlayerManager.h" },
-		{ "ModuleRelativePath", "MyPlayerManager.h" },
+		{ "IncludePath", "Managers/MyPlayerManager.h" },
+		{ "ModuleRelativePath", "Managers/MyPlayerManager.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -131,18 +131,18 @@ AMyPlayerManager::~AMyPlayerManager() {}
 // End Class AMyPlayerManager
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayerManager_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyPlayerManager_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EPlayerType_StaticEnum, TEXT("EPlayerType"), &Z_Registration_Info_UEnum_EPlayerType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3076031475U) },
+		{ EPlayerType_StaticEnum, TEXT("EPlayerType"), &Z_Registration_Info_UEnum_EPlayerType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 387096076U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyPlayerManager, AMyPlayerManager::StaticClass, TEXT("AMyPlayerManager"), &Z_Registration_Info_UClass_AMyPlayerManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyPlayerManager), 2835589331U) },
+		{ Z_Construct_UClass_AMyPlayerManager, AMyPlayerManager::StaticClass, TEXT("AMyPlayerManager"), &Z_Registration_Info_UClass_AMyPlayerManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyPlayerManager), 2291262750U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayerManager_h_2022752021(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayerManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayerManager_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyPlayerManager_h_2582800174(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyPlayerManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyPlayerManager_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayerManager_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyPlayerManager_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyPlayerManager_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyPlayerManager_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

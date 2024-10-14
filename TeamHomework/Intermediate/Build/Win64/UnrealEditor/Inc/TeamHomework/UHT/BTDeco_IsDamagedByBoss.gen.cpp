@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/BTDeco_IsDamagedByBoss.h"
+#include "TeamHomework/Behaviors/BTDeco_IsDamagedByBoss.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBTDeco_IsDamagedByBoss() {}
 
@@ -32,8 +32,8 @@ struct Z_Construct_UClass_UBTDeco_IsDamagedByBoss_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "BTDeco_IsDamagedByBoss.h" },
-		{ "ModuleRelativePath", "BTDeco_IsDamagedByBoss.h" },
+		{ "IncludePath", "Behaviors/BTDeco_IsDamagedByBoss.h" },
+		{ "ModuleRelativePath", "Behaviors/BTDeco_IsDamagedByBoss.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -79,14 +79,14 @@ UBTDeco_IsDamagedByBoss::~UBTDeco_IsDamagedByBoss() {}
 // End Class UBTDeco_IsDamagedByBoss
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_IsDamagedByBoss_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTDeco_IsDamagedByBoss_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTDeco_IsDamagedByBoss, UBTDeco_IsDamagedByBoss::StaticClass, TEXT("UBTDeco_IsDamagedByBoss"), &Z_Registration_Info_UClass_UBTDeco_IsDamagedByBoss, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTDeco_IsDamagedByBoss), 1018842649U) },
+		{ Z_Construct_UClass_UBTDeco_IsDamagedByBoss, UBTDeco_IsDamagedByBoss::StaticClass, TEXT("UBTDeco_IsDamagedByBoss"), &Z_Registration_Info_UClass_UBTDeco_IsDamagedByBoss, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTDeco_IsDamagedByBoss), 2875481327U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_IsDamagedByBoss_h_1917226968(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_IsDamagedByBoss_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTDeco_IsDamagedByBoss_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTDeco_IsDamagedByBoss_h_3653200791(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTDeco_IsDamagedByBoss_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTDeco_IsDamagedByBoss_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

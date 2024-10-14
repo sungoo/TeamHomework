@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyUIManager.h"
+#include "TeamHomework/Managers/MyUIManager.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyUIManager() {}
 
@@ -46,7 +46,7 @@ struct Z_Construct_UEnum_TeamHomework_UI_List_Statics
 		{ "BaseDisplay.Name", "UI_List::BaseDisplay" },
 		{ "BaseDisplay.ToolTip", "UI List Sorted by \"Z-Index\".\nUI will Stack like this list (top to bottom)" },
 		{ "Inventory.Name", "UI_List::Inventory" },
-		{ "ModuleRelativePath", "MyUIManager.h" },
+		{ "ModuleRelativePath", "Managers/MyUIManager.h" },
 		{ "PlayerSelection.Name", "UI_List::PlayerSelection" },
 		{ "Store.Name", "UI_List::Store" },
 	};
@@ -95,32 +95,32 @@ struct Z_Construct_UClass_AMyUIManager_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "MyUIManager.h" },
-		{ "ModuleRelativePath", "MyUIManager.h" },
+		{ "IncludePath", "Managers/MyUIManager.h" },
+		{ "ModuleRelativePath", "Managers/MyUIManager.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__widgets_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyUIManager.h" },
+		{ "ModuleRelativePath", "Managers/MyUIManager.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__baseDisplayUI_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyUIManager.h" },
+		{ "ModuleRelativePath", "Managers/MyUIManager.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__inventoryUI_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyUIManager.h" },
+		{ "ModuleRelativePath", "Managers/MyUIManager.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__playerSelectionUI_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyUIManager.h" },
+		{ "ModuleRelativePath", "Managers/MyUIManager.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__storeUI_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyUIManager.h" },
+		{ "ModuleRelativePath", "Managers/MyUIManager.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__aggroInfoUI_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "MyUIManager.h" },
+		{ "ModuleRelativePath", "Managers/MyUIManager.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__widgets_Inner;
@@ -191,18 +191,18 @@ AMyUIManager::~AMyUIManager() {}
 // End Class AMyUIManager
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyUIManager_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ UI_List_StaticEnum, TEXT("UI_List"), &Z_Registration_Info_UEnum_UI_List, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 252709093U) },
+		{ UI_List_StaticEnum, TEXT("UI_List"), &Z_Registration_Info_UEnum_UI_List, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2976701656U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyUIManager, AMyUIManager::StaticClass, TEXT("AMyUIManager"), &Z_Registration_Info_UClass_AMyUIManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyUIManager), 20602490U) },
+		{ Z_Construct_UClass_AMyUIManager, AMyUIManager::StaticClass, TEXT("AMyUIManager"), &Z_Registration_Info_UClass_AMyUIManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyUIManager), 146614416U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_994012975(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyUIManager_h_1380628454(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyUIManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyUIManager_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyUIManager_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyUIManager_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_MyUIManager_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

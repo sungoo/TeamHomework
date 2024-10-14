@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/Effect.h"
+#include "TeamHomework/Managers/Effect.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeEffect() {}
 
@@ -27,7 +27,7 @@ struct Z_Construct_UFunction_AEffect_EndNiagara_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Effect.h" },
+		{ "ModuleRelativePath", "Managers/Effect.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_niagara_MetaData[] = {
 		{ "EditInline", "true" },
@@ -72,7 +72,7 @@ struct Z_Construct_UFunction_AEffect_EndParticle_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Effect.h" },
+		{ "ModuleRelativePath", "Managers/Effect.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_particle_MetaData[] = {
 		{ "EditInline", "true" },
@@ -127,20 +127,20 @@ struct Z_Construct_UClass_AEffect_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "Effect.h" },
-		{ "ModuleRelativePath", "Effect.h" },
+		{ "IncludePath", "Managers/Effect.h" },
+		{ "ModuleRelativePath", "Managers/Effect.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__particleCom_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Effect" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Effect.h" },
+		{ "ModuleRelativePath", "Managers/Effect.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__niagaraCom_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Effect" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Effect.h" },
+		{ "ModuleRelativePath", "Managers/Effect.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp__particleCom;
@@ -148,8 +148,8 @@ struct Z_Construct_UClass_AEffect_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AEffect_EndNiagara, "EndNiagara" }, // 230179969
-		{ &Z_Construct_UFunction_AEffect_EndParticle, "EndParticle" }, // 1243948801
+		{ &Z_Construct_UFunction_AEffect_EndNiagara, "EndNiagara" }, // 115027474
+		{ &Z_Construct_UFunction_AEffect_EndParticle, "EndParticle" }, // 1666173545
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -201,14 +201,14 @@ AEffect::~AEffect() {}
 // End Class AEffect
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Effect_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_Effect_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEffect, AEffect::StaticClass, TEXT("AEffect"), &Z_Registration_Info_UClass_AEffect, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEffect), 601666458U) },
+		{ Z_Construct_UClass_AEffect, AEffect::StaticClass, TEXT("AEffect"), &Z_Registration_Info_UClass_AEffect, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEffect), 3081851458U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Effect_h_2941669755(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Effect_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Effect_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_Effect_h_2078169466(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_Effect_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Managers_Effect_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

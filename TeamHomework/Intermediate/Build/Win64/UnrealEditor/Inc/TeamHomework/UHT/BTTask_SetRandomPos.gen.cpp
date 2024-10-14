@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/BTTask_SetRandomPos.h"
+#include "TeamHomework/Behaviors/BTTask_SetRandomPos.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBTTask_SetRandomPos() {}
 
@@ -32,8 +32,8 @@ struct Z_Construct_UClass_UBTTask_SetRandomPos_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "BTTask_SetRandomPos.h" },
-		{ "ModuleRelativePath", "BTTask_SetRandomPos.h" },
+		{ "IncludePath", "Behaviors/BTTask_SetRandomPos.h" },
+		{ "ModuleRelativePath", "Behaviors/BTTask_SetRandomPos.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -79,14 +79,14 @@ UBTTask_SetRandomPos::~UBTTask_SetRandomPos() {}
 // End Class UBTTask_SetRandomPos
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_SetRandomPos_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_SetRandomPos_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTTask_SetRandomPos, UBTTask_SetRandomPos::StaticClass, TEXT("UBTTask_SetRandomPos"), &Z_Registration_Info_UClass_UBTTask_SetRandomPos, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTTask_SetRandomPos), 133822469U) },
+		{ Z_Construct_UClass_UBTTask_SetRandomPos, UBTTask_SetRandomPos::StaticClass, TEXT("UBTTask_SetRandomPos"), &Z_Registration_Info_UClass_UBTTask_SetRandomPos, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTTask_SetRandomPos), 187259329U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_SetRandomPos_h_241019742(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_SetRandomPos_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_BTTask_SetRandomPos_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_SetRandomPos_h_2757773281(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_SetRandomPos_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Behaviors_BTTask_SetRandomPos_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

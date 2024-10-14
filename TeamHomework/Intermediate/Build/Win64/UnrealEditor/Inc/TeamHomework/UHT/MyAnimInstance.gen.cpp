@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "TeamHomework/MyAnimInstance.h"
+#include "TeamHomework/Animation/MyAnimInstance.h"
 #include "Runtime/Engine/Classes/Components/SkeletalMeshComponent.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMyAnimInstance() {}
@@ -23,7 +23,7 @@ struct Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -52,7 +52,7 @@ struct Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackHit_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -81,7 +81,7 @@ struct Z_Construct_UFunction_UMyAnimInstance_AnimNotify_Death_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -126,38 +126,38 @@ struct Z_Construct_UClass_UMyAnimInstance_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "AnimInstance" },
-		{ "IncludePath", "MyAnimInstance.h" },
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "IncludePath", "Animation/MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__speed_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isFalling_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__isDead_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__vertical_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__horizontal_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__height_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__Montages_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
@@ -165,7 +165,7 @@ struct Z_Construct_UClass_UMyAnimInstance_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Montages\n" },
 #endif
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Montages" },
 #endif
@@ -173,12 +173,12 @@ struct Z_Construct_UClass_UMyAnimInstance_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__myAttackMontage_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp__myDamagedMontage_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "MyAnimInstance.h" },
+		{ "ModuleRelativePath", "Animation/MyAnimInstance.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp__speed;
@@ -197,9 +197,9 @@ struct Z_Construct_UClass_UMyAnimInstance_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd, "AnimNotify_AttackEnd" }, // 355041592
-		{ &Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackHit, "AnimNotify_AttackHit" }, // 1892156150
-		{ &Z_Construct_UFunction_UMyAnimInstance_AnimNotify_Death, "AnimNotify_Death" }, // 2587699694
+		{ &Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackEnd, "AnimNotify_AttackEnd" }, // 2233120907
+		{ &Z_Construct_UFunction_UMyAnimInstance_AnimNotify_AttackHit, "AnimNotify_AttackHit" }, // 2202814750
+		{ &Z_Construct_UFunction_UMyAnimInstance_AnimNotify_Death, "AnimNotify_Death" }, // 3673107602
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -277,14 +277,14 @@ UMyAnimInstance::~UMyAnimInstance() {}
 // End Class UMyAnimInstance
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAnimInstance_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Animation_MyAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 1007432689U) },
+		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 2199067931U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAnimInstance_h_3105238372(TEXT("/Script/TeamHomework"),
-	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_MyAnimInstance_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Animation_MyAnimInstance_h_261884477(TEXT("/Script/TeamHomework"),
+	Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Animation_MyAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Desktop_TeamProject_TeamHomework_TeamHomework_Source_TeamHomework_Animation_MyAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
